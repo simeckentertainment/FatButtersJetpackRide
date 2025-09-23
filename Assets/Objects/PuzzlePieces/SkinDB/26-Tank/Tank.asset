@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf5be9709625ec4f8a08f070d8ed4b2, type: 3}
+  m_Name: Tank
+  m_EditorClassIdentifier: 
+  isPremiumSkin: 1
+  isMemorialSkin: 1
+  memorialWingsCoords: {x: 0, y: -1, z: -0.3}
+  is2DSkin: 0
+  memorialHaloModel: {fileID: 2321817425208614619, guid: 615d8c439a4c5a84fb67c8cabe0aacc5, type: 3}
+  CharacterOverride: {fileID: 1828664184639170654, guid: b94b401eb4659c04398451619bd1ca1d, type: 3}
+  JetpackHolsterMesh: {fileID: 0}
+  combinedJetpack: 1
+  LeftJetpackMesh: {fileID: 0}
+  RightJetpackMesh: {fileID: 0}
+  CombinedJetpackMeshOverride: {fileID: 9123612669818307031, guid: ba58a18d824335a468f7d940190b7a05, type: 3}
+  MainThrusterParticles:
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  PlusThrusterParticles:
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  MinusThrusterParticles:
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  ThrusterLights:
+  - {fileID: -976075210381401797, guid: 5d545c44473b39c479cb2256eed2df32, type: 3}
+  - {fileID: -976075210381401797, guid: 5d545c44473b39c479cb2256eed2df32, type: 3}
+  ThrusterSounds:
+  - {fileID: 8300000, guid: 07cce150cad27224ca55db67e8197b99, type: 3}
+  - {fileID: 8300000, guid: 07cce150cad27224ca55db67e8197b99, type: 3}
+  AnimOverride: {fileID: 0}
+  explosionSound: {fileID: 8300000, guid: 07cce150cad27224ca55db67e8197b99, type: 3}
+  successSound: {fileID: 8300000, guid: 07cce150cad27224ca55db67e8197b99, type: 3}
+  successParticles: {fileID: 4954890983550192915, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  explosionParticles: {fileID: 4954890983550192915, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  explosionLight: {fileID: -976075210381401797, guid: 5d545c44473b39c479cb2256eed2df32, type: 3}
+  barkSounds:
+  - {fileID: 8300000, guid: 81ee8f5d5c2e073468ea6636f378b535, type: 3}
+  - {fileID: 8300000, guid: 4957f18372acb7742b89a7b1284ff35c, type: 3}
+  - {fileID: 8300000, guid: 3ce08f6abc1a8fb4dbbaead6249c0271, type: 3}
+  - {fileID: 8300000, guid: 72ca451d40dd05c4b8657e63f674ef9a, type: 3}
+  PremiumSkinColliderCoords:
+  - {x: -0.39, y: 0, z: 0}
+  - {x: -0.06, y: 0, z: 0}
+  - {x: -0.14, y: 0, z: 0}
+  - {x: -0.14, y: 0, z: 0}
+  - {x: -0.14, y: 0, z: 0}
+  - {x: -0.14, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: -0.37, y: 0, z: 0}
+  - {x: -0.43, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: -0.3, y: 0, z: 0}
+  PremiumSkinColliderRadii:
+  - 0.3
+  - 0.38
+  - 0.14
+  - 0.22
+  - 0.22
+  - 0.14
+  - 0.06
+  - 0.06
+  - 0.06
+  - 0.06
+  - 0.4
+  - 0.45
+  - 0.5
+  - 0.27
+  - 0.27
+  - 0.67
+  PremiumSkinColliderHeights:
+  - 1.12
+  - 1.19
+  - 0.67
+  - 0.67
+  - 0.67
+  - 0.67
+  - 0.6
+  - 0.42
+  - 0.6
+  - 0.42
+  - 0
+  - 1.29
+  - 1.52
+  - 0
+  - 0
+  - 0

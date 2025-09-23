@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FurretNosePokerIdleState : FurretNosePokerState //This state is unused.
+{
+    public FurretNosePokerIdleState(Furret furret, FurretStateMachine furretStateMachine) : base(furret, furretStateMachine){
+
+    }
+
+
+
+    public override void enter(){
+        base.enter();
+    }
+    public override void Update()
+    {
+        base.Update();
+    }
+
+
+    private void RunAudio()
+    {
+    }
+
+
+
+    public override void FixedUpdate()
+    {
+        base.FixedUpdate();
+    }
+
+
+}

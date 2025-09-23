@@ -1,0 +1,578 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Misc
+  m_EditorClassIdentifier: 
+  m_GroupName: Misc
+  m_GUID: 0721b397cc3301540ad374e7bc614130
+  m_SerializeEntries:
+  - m_GUID: 010cefc20d2ede947ae72f7cf8123e06
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/exteriorFactory/Materials/MetalMat2.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 017d67057d641314dbc33d0676d67a05
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/Rock1Normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 027a8a1503b22442ea5ec6eb63ff901f
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/FishFillet.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 03dbbd3d349fb0248bbc7c1401671c49
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Textues/Grass.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c5d4cd3f66fac54e8ec4860a3f7a106
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/Rock1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0d845b5caf3944589ade97bc7971118b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/CheeseWheel.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0de69a46455f344d58a7dcaf12e541f2
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/BreadRoll.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e59d9434e9ba46c6aae63d8af0d4f3c
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/uncooked/DrumstickRaw.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ebfaeff4eb7328498165095f9cfc32f
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Lava_Flowing_Shader/Textures/lava3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0fa9aca141a7eeb429a446e57e5f223d
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Textures/Bark3-2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 132b3943a68df0249ba9595ddaea461d
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/VFX_FireballPack/VFX/Fireball_01_withTrails.vfx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a13323aa943f8e41801e3e5b9eef5f7
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/alpha_floatingplatform_V1.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c046e1d4fe2b417cb7850e6e5426e75
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/AppleRed.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 219e253d2043b4bf382f7fbe08130e26
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/Steak.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24aed17ebf0551f45b2468cfa926d28a
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Meshes/Trees/Pine3.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24e3a849c78e94ad2ac5c461ef248d15
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/BreadSlice.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 273b0a646bf4f410c898f350686cf95d
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/AppleRed.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d3097519d9a4644da160aadc9cb4fdd
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Lava_Flowing_Shader/Textures/invisibleTexture.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e2896db73d5949d680294aae410cff9
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/Sausage.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31321ba15b8f8eb4c954353edc038b1d
+    m_Address: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 334b4f756496f564d9a39c0c02a4e9e5
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/tex/TexturesCom_MetalThreadplate6_Closeup_512_albedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 34bf62139380ab746a7f1308f87321db
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Shader/URP/Color.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36e335017ad71d54fbb10842863188ae
+    m_Address: Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/FallbackShader.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3eb2fab313466eb4a97abd14dd86d00c
+    m_Address: Assets/Scripts/UserData/FatButtersData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f150e9fe57ccdd44837d7ac2dd322e3
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/tex/TexturesCom_Atlas_CautionTapes_512_height.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43ab0442b40729c43ab4438cbe886c2b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/tex/TexturesCom_Atlas_CautionTapes_512_normal.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43c7a14216e2841899c7988a2dec1380
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/WholeBird.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4908cd492df336844ba7c14a6897cb7e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/tex/TexturesCom_MetalThreadplate6_Closeup_512_ao.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ef8d20bf44aa3e4b96b1e32fcafd896
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/Palette_Emission.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5007682bc398b478cac008920be0dfb3
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/SteakCooked.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52b9ed90e5d2d9844b86c1c3608c082e
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Textues/Water 1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 535886e191b2c534d892b54705c8497e
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Textures/Fern_branch.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54a6b1ab5df220e41b84babe34f9f392
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Ball Pack/Prefabs/AtomBall
+      Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5692732296ef05241a829e7da9088fdf
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Meshes/Other/Grass_4.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a88dc76af9764841b2a2e75a65a1ff8
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/AppleGreen.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5bf8d2476e6a21040aad9e9becf3e821
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/tex/TexturesCom_Atlas_CautionTapes_512_roughness.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 602d889b6f2626946812e7b61ce48b01
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/B04610_08_10.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60cdb6d3b264a4649a5e20e4d1397f6b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/Carrot.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62b03dc09f6b94275ada9c0d39e5b2d3
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/CheeseSlice.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 650dd9526735d5b46b79224bc6e94025
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 658b0128092f1409d9072bc0ed8c27b6
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/uncooked/Sausage.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66329e71359754516834c214333a3a8c
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/Onion.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a151f652f5ba03458e9a7cd03ae88e8
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Lava_Flowing_Shader/Shaders/Unlit_Lava_Distort.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ad77e349a0cc4654a38708787ae1eff
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/Onion.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6babded354a0947f5816d671762d9241
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/Carrot.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6bb4a2acb61a07849aa20283a238824c
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Ball Pack/Prefabs/BuckyBall
+      Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79d063a03c2341349a61533399bab287
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Meshes/Other/Grass_3.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f6b1fc3e86e86b4497970014d94455a
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Textures/Larch_branch.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 813e5a3eac9c54fed974f7a8168594c4
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/Drumstick.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8764936ffafc37c458427abee7980fbf
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/bone/glowProfile.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 893b2c824181eef478c6e512ffceb14e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Ball Pack/Prefabs/BombBall
+      Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c790a268b159f641bba40776e51996d
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Textues/Pine.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d2bb70cbf9db8d4da26e15b26e74248
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/SimpleLit.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f3b327bfc1af974283b0cd9941ef840
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Ball Pack/Models/Textures/SplitMetalBallEmissive.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f586378b4e144a9851e7b34d9b748ee
+    m_Address: Assets/TextMesh Pro/Resources_moved/Fonts & Materials/LiberationSans
+      SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 903b7910f2cde4c96b452f0008927d45
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/uncooked/WholeBirdRaw.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 906cd3a5ced535a4a8b6696ca147c911
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SciFi
+      Warehouse Kit/Art/Textures/shelf_a.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 933532a4fcc9baf4fa0491de14d08ed7
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93a726948508cc14eab67fb1abe2daa8
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Lava_Flowing_Shader/Textures/lava1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95ddd7dfadc61e948bbf180d15a48704
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Ball Pack/Prefabs/EyeBall
+      Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98491feab2796fe4ca408e7d30b68607
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/PaletteA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b15e2918b4905244bf821529dea644c
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/tex/TexturesCom_MetalThreadplate6_Closeup_512_metallic.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2214f9a21ff8d849a5d3cab42a33822
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/GhostCloth/GhostClothModel.obj
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5d28b02fb2627442ab04901d5e442a0
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SciFi
+      Warehouse Kit/Art/Textures/shelf_n.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6ff5cebfd92340daabb2abca106d67a
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/BreadRoll.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a80c00c662fe74118b43ad9cbb58853c
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/WholeBird.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a97bdcf094fff104d9f67b004b505dd0
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Ball Pack/Models/BuckyBall.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9a2c456cfd6cbf49a3690e05f15cad5
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/SegwayBear/SegwayBear.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa4b7a554f69a4ef1bc0ac5221d95c08
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/SausageSlice.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac57b13941dd0884ca6b37a1b44faa90
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Ball Pack/Models/Textures/WheelBallEmissive.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad756e02c0b166b469afd64e0a973641
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Models/Buildings/House_1_Desert_Village.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: afd31462bdb48a448aef33dace735692
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/exteriorFactory/Materials/TexturesCom_WornMetal_512_albedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6a8f0793b135fe41bb233a4e1ba42de
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/PaletteC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b907e6c1792bc5a43b5e8ebdcafdb403
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Ball Pack/Prefabs/WheelBall
+      Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba43438e580714421b77702924702e2b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/Ham.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd1c916c2ca07394e976a59d0c5eb28a
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Ball Pack/Prefabs/WoodenBall
+      Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c5d26ae0049bbf044b1d64ad7aad9f51
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/VFX_FireballPack/Flipbooks/FireBall01_8x8.exr
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c696fe80cb0a044d2b5f0b4822969f11
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/CheeseSlice.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6b85ec9c6270844b9d2e8d94c440499
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/tex/TexturesCom_MetalThreadplate6_Closeup_512_height.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca9dc29ce6d8442318be978a0dd79497
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/Ham.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb10480ce1a40437796a4a0eb8d0d498
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/uncooked/BreadLoaf.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cd381c1877caff74d8ea935ed06f2de5
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/PaletteB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf4e8da089f3e7144b4807923ab6a854
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/flag/Materials/2000px-Black_Dragon_Flag.svg.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cfdb452e7316b42e894aa2cb2179004f
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/AppleGreen.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1e116197624a1e49b72f535c7c8037b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Ball Pack/Models/Textures/WheelBall.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1e3a6c529e9c4ecc9260a8dcbc4e6bc
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/Drumstick.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d24157f593f8b2a469bc17baafad2f22
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Ball Pack/Prefabs/SpikeBall
+      Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d36cb6429389843309993f592cb0aa63
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/CheeseWheel.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8ee164b0a7fd47458d8294000a8bcbe
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/FishFillet.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ddd2ed710c62b394d9b651f76a6dfc63
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Models/Plants
+      and Planters/Flower_Desert_Village.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1b2b25d42b0f1b4d8b8171ccb04bdb6
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/tex/TexturesCom_Atlas_CautionTapes_512_ao.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3265ab4bf004d28a9537516768c1c75
+    m_Address: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9d9923dfc3f18c4694b853cb2d999f3
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/PaletteD.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed1d5375668b549b5ab795c790d6d408
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/uncooked/FishFilletCooked.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4192cee6715f534d8c316d1a3a85906
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/tex/TexturesCom_MetalThreadplate6_Closeup_512_normal.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6dafded098e39047b4a62aa1dccc6bd
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Textures/Cedar_branch_big.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: faf87b1f2fcc34766b1fa381687bbf49
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Mesh
+      Form/uncooked/Steak.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb6a049bc22594c0c9a7206681a88d3b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/Prefab
+      Form/BreadSlice.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffc3ed1410ec560418d903cd6f1b9ca4
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Ball Pack/Prefabs/SplitMetalBall
+      Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffdddb468ae8cbb4eb2af2865d16caf9
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Meshes/Trees/Pine4.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 688ce2d51185d19489a5c75bf2019ce5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b0eee1f55a3ef91458e16c8e66bace15, type: 2}
+    - {fileID: 11400000, guid: d23c57d3db9567344ae6c021f84201ff, type: 2}
+    - {fileID: 11400000, guid: aaff003a83d697f40a6fd5f338508db6, type: 2}

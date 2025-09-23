@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf5be9709625ec4f8a08f070d8ed4b2, type: 3}
+  m_Name: Trippp
+  m_EditorClassIdentifier: 
+  isMemorialSkin: 0
+  CharacterOverride: {fileID: 1828664184639170654, guid: b94b401eb4659c04398451619bd1ca1d, type: 3}
+  JetpackHolsterMesh: {fileID: 0}
+  combinedJetpack: 0
+  LeftJetpackMesh: {fileID: 0}
+  RightJetpackMesh: {fileID: 0}
+  CombinedJetpackMeshOverride: {fileID: 0}
+  MainThrusterParticles: []
+  PlusThrusterParticles: []
+  MinusThrusterParticles: []
+  ThrusterLights: []
+  ThrusterSounds: []
+  AnimOverride: {fileID: 0}
+  explosionSound: {fileID: 0}
+  successSound: {fileID: 0}
+  successParticles: {fileID: 0}
+  explosionParticles: {fileID: 0}
+  explosionLight: {fileID: 0}
+  barkSounds:
+  - {fileID: 8300000, guid: 81ee8f5d5c2e073468ea6636f378b535, type: 3}
+  - {fileID: 8300000, guid: 4957f18372acb7742b89a7b1284ff35c, type: 3}
+  - {fileID: 8300000, guid: 3ce08f6abc1a8fb4dbbaead6249c0271, type: 3}
+  - {fileID: 8300000, guid: 72ca451d40dd05c4b8657e63f674ef9a, type: 3}

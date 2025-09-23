@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: SkinData
+  m_EditorClassIdentifier: 
+  m_GroupName: SkinData
+  m_GUID: 581cdae13c4bdcf41b2e25efeec9b90d
+  m_SerializeEntries:
+  - m_GUID: 10f0d935c53a1b54eaf7a04af8fce603
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/Unicorngi.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1befcb54278689d47a09695c2c0e7e3c
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/CorgiModels/DefaultGameplayCorgiAnims.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 274e72d1bfbcaec4db9733caee68a1f0
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/ClockworkButters.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2927fb6a9ffb72348832136e14846929
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/PartyCorg.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30a2b2a6e4bf6b6419e669d18dc9c8ad
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/SecretAgentButters.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b06d13ab56c58548ac5555c84a95389
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/ButtersScotch.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 520e8dbca3dbd7a46b6c242636f3f363
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/SuperCorg.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 592fbcfa6b6eaf64ebc17c8b44d32133
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/ButtersOLantern.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a5dac676d9001645b91eb98b65cc8b6
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/ButterStick.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ca001fe4f7edc149b5d6e91739e17d0
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/ThanksGivingButters.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6504f26596f4d5c4b83daa514df9923d
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/PrincessButters.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6930c59870b439f49957334d94786633
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/ICantBelieveItsNotButters.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ad2b5712c8ca5949a696e7dc658be5d
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/ClownButters.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ab71d862840a6f40853a9facdc8b025
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/BatCorg.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e1ab6168ed50c349a54327374580874
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/Sphinx.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f83da201a44f7e46be4d712862b816f
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/P'nu.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 816120fa650b1c04f91caba83212e1c7
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/Player.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ae48a058fa1cbd4092744600efaa663
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/Cutepid.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9411cacd0d64df942bb967dd1f4ade9e
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/PlayerGameplayPrefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d49a84c75a6e9a34796bd3899efc1b72
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/8bitCorg.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d522abed8393af346aa53afc54215807
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/Slinky.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7f63452ca2ccf94888b4f65e7f452a8
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/GentlemanButters.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df71d510cedca1644a640c1c51b3d6cc
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/Tank.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbee8be2edb725445b4f10d9d8607e4b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/CorgiModels/DynamicAnimSystem/CorgiGameplayAnimController.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 688ce2d51185d19489a5c75bf2019ce5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1fe43cc4e989ed640a6b7c6ad5a20aad, type: 2}
+    - {fileID: 11400000, guid: 52fe1235f5e86eb4ebf1078bf7f248a9, type: 2}

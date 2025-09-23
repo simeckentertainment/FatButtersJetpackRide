@@ -1,0 +1,797 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_GUID: 74c9d58f45504fa40b937ab1c19c9cb1
+  m_SerializeEntries:
+  - m_GUID: 000b2e6fe797fa648b31aee069952f3f
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/flag/flag1.obj
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 019361ef072c0d0499ac07e2f3a69f4a
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Materials/Larch_branch.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 01c0c0adccfa37a48be659a583b9ef1c
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Meshes/Terrains/Forest.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02901576c34df6e4aa9ce7e4b6607b2a
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/GhostCloth/GhostClothMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02c0a84bd64c6f044954d8bde9b46ec8
+    m_Address: Packages/com.unity.postprocessing/PostProcessing/Textures/BlueNoise64px/LDR_LLL1_28.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0406db5a14f94604a8c57ccfbc9f3b46
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Particles/ParticlesUnlit.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 059248b1026c9b44aa46825394cb5281
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/TerrainMods/Lake/LakeV2.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 06cc72b556f222641a3b01967b597084
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Material/URP/Water Material.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09014e39046d9634c89e35747d1c6d38
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Meshes/Cedar03.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cbe99148be170c408579f1ab11f60f3
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/LavaMonster/ground_0027_normal_opengl_2k.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cffd73732fdbdb488507abf10d25e37
+    m_Address: Assets/New Universal Render Pipeline Asset_Renderer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0d2b37dd6ac252e47ad4d194330f92c0
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Meshes/Dandelion02.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12ddc27bfc6c47b4dabb1d7599590e59
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodRocket_rough.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 133347283e115d147a5fcce7f47a538f
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Skyboxes/Sky_LowPoly_01_Day_a
+      1.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 157362dfc6ea5a34aaa4f46fd10b634e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/Cliffs_Dark_5_Desert
+      Village.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1665eb138120d6d48b013d499948a0df
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/TerrainMods/Lake/Snow.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 16e6edc08fd0e8344aa2c22bf01c85dc
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodRocket_occ.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a8fa040e5c684308b95679dd2c1dcd6
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/powerups/foods/P18_FishFilletCooked_UPFB_V001_RSS.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a9ce5640cde5934aae0022f020464a6
+    m_Address: Packages/com.unity.postprocessing/PostProcessing/Textures/BlueNoise64px/LDR_LLL1_40.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1abfe0e165ca1e9428b455ffc9a2d9ef
+    m_Address: Packages/com.unity.postprocessing/PostProcessing/Textures/BlueNoise256px/LDR_LLL1_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1ac7151512d1f2e45ae1f06684dccf7d
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Materials/PaletteC_Desert
+      Village.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1cd78f504b4980143bc19680291027a2
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/Cliffs_Dark_3_Desert
+      Village.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d31056917cc8f24e94747fd1235f375
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/LavaMonster/ground_0027_emissive_2k.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d6958e30e40a254dbe5a54c573eeb3c
+    m_Address: Packages/com.unity.postprocessing/PostProcessing/Textures/BlueNoise64px/LDR_LLL1_37.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f4f37dfb5dbd68448ba17bb5308b913
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Shader/URP/Water.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 218701b136cc1dc4a89824fcee1f1f1d
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/22-HotDog/HotDog.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 229cd89a31ece4149bd439832195eb6e
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Materials/FIRE.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 23dd5c90e64c47743b7affe9ed19c5ca
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/bone/BONE.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 276ec4eb9fd15a94d872c05f58c3c19b
+    m_Address: Assets/Objects/UI/screen-and-frame.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28037eda41aa2f34c99c0fdafecbf47d
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Environment1/house1/floors/wood_0062_color_2k.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2bd57b0b74f27c54d93ff39f7f98809d
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Meshes/Other/Bush_3.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2cdb86016e9263a40b0206bf61b740fe
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/09-JollyOldSaintButters/JollyOldSaintButters.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d796ced94d61438fbab81b194038162
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Skyboxes/Cold Sunset.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 309ab045de886a047b55311417956b2e
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/Fat Butters Skins 1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32f499df0c32e3b41af492f667b7010e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/LavaMonster/Lava_002_OCC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 348fa4d278c53ad4dacd07df1e63a248
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Lava_Flowing_Shader/Textures/lava2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 358295d85265df643b8afbb0deab905a
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodHarnessLeather_rough.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36cbf6c959f1bb54a98a41ea037216cf
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodGoggles_occ.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38f80ba8da35f4345bc7d5d69b9b7d6f
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodGoggles_base.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ab7dc4b79f9d304494bfb5792d44bde
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodCorgi_nor.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c3599ff28e7b2a4a846bcadf358c22b
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/21-Discopup/Discopup.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c69650b57dfd89418015a7013d3c1f3
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/Simple Foods/placeholderMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3cf9c1d3d0ccc0641a554e2be28946cd
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Textures/Dandelion.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3fb43013fdbd3b24db26477f48ee5436
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodHarnessLeather_base.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 41e896ba42c24254b834d4f24fccf6ab
+    m_Address: Assets/Objects/UI/CorgiSense/cantGetRead.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42ddf94695e816440993321ca24d6255
+    m_Address: Assets/Objects/UI/frame.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 455e1383e51f5114ab63cc25ee6ea23b
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/Fat Butters Skins 3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46d0bec982526214e8c7af80e451f702
+    m_Address: Assets/Objects/UI/UIImages/58469c62cef1014c0b5e47f6.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46d65129c883a1f4387c83e6c87cb4ae
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/Fat_Butters_Skins_5.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d53d792f0effc2459d1c848153c3e0f
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Lava_Flowing_Shader/Materials/fallingLavaFlow.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e660590158f54e4799a2e3b980c27c2
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/25-SuchAGoudaBoy/SuchAGoudaBoy.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e9a4bafd5614734ea38f58de6eada73
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Materials/rocketBallsMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 534c1f9f1a45c4f429d1b70046850c81
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/powerups/foods/P18_DrumstickRaw_UPFB_V001_RSS.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 55648a8e4967de349a22c7fe2d26666e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/LavaMonster/Lava_002_NRM.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 580bee4a2ce7ac7469e09da339f2d8f6
+    m_Address: Assets/New Universal Render Pipeline Asset.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59f56164bd1f3ad4b92d7e941d91b7e4
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Meshes/Larch01.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a822460c94534437b7260f2b7c766dd
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/powerups/foods/P18_SteakCooked_UPFB_V001_RSS.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b10f652e6674ae4f8c3aef08dc7e6a3
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodRocket_base.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ca697b782226cc428d298c4449f3ba2
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/23-TimeBork/TimeBork.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5cfa4ab62f100eb4c877fd56aaa35a36
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Meshes/Terrains/Canyon.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d15dda8d3efe7e4185ec62261067b4a
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodCorgi_occ.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d545c44473b39c479cb2256eed2df32
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/NullObjects/NullLight.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e02285271f932b4d97dc7b92e669bfc
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Materials/Fern01_branch.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f35faa6941b48e4a9a538410c31a307
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/exteriorFactory/Materials/rustedPipes/TexturesCom_Metal_PipeRusted9_1.4x0.35_512_albedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60fa557a8b523264fa8f2bca6fab4f8a
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/Cliffs_Dark_1_Desert
+      Village.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61ee3851987a5754786c6b9cf70230c1
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Materials/Cedar_branch.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62899f047c8fcaa43933d6c39b7b834f
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/LavaMonster/LavaMonster.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6342ea557a5af5246a0c1ddd79525072
+    m_Address: Assets/Objects/CharacterSkins/PrincessButters/Princessbutters.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 641c6966494444a97b85534983b279f6
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/powerups/foods/P18_SausageSlice_UPFB_V001_RSS.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64614581a549c27458a3f51ca9f888d7
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/LavaMonster/Lava_002_SPEC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 671d4fd9b305b7740bb144a7ee4a3d18
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Meshes/Fern01.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6981df3e4d2272c459d81be89c700a2b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Models/Cliffs
+      and Rocks/Cliffs_3_Desert_Village.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a9589fcfdc84af4aa7199263d48392a
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Materials/Cliffs_Dark_1_Desert
+      Village.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f0ae7b80033b63468ece30346491c00
+    m_Address: Assets/Objects/CharacterSkins/pnu/PnuRigged.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ff9ff16112422349b2b8c7871d4eb8c
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Material/URP/Rock.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72a3cf3469e77fc438aeff1514191568
+    m_Address: Assets/Objects/UI/Fonts/SuperFunky-lgmWw SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 787cb25de3401c44b939f2599cda764c
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Lava_Flowing_Shader/Materials/mtl_lava_distort.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 796f28bab45c49b4db9a1ea93677f9b8
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/LavaMonster/ground_0027_ao_2k.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8162517b6ec2309499f99e303b29f146
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Skyboxes/Sky_Anime_11_morning_a
+      1.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81ef0588e479a9d4c968a12a8b7af8ae
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/16-Pugalicious/Pugalicious.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8498c4a238301d34a9946e69825460c7
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/AlienShipInterior/marble_0014_normal_opengl_2k.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 889592031f8a6af4e93a1c441917e9b0
+    m_Address: Assets/Objects/UI/screenWithScanlines.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ab11c1025cd2984192170bb74e63264
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodGoggles_height.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b4707c7fef891d42a3ec8ade6e6a99e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Models/Cliffs
+      and Rocks/Cliffs_5_Desert_Village.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c5665f28aade1d47b318a6232c49ffe
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/CorgiModels/TitleScreenBubbas.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c5c4d74a31a5544185a91efed918575
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/TerrainMods/Lake/quarry_wall_02_diff_2k.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e624e1772f0215498b6e472f9958de7
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/TerrainMods/Mountain2V2.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 916a88b3d1937c14fb16cc9e92588cc3
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/rocketCorgi.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94ac3c694805ef141bf638e9c9b78f7b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Materials/PaletteB_Desert
+      Village.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95a25eed09f08ef45bb4910d98e881e2
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/flag/Materials/pole.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 995ead0947d473a4b8b0d2210c5340cc
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Environment1/house1/floors/wood_0062_normal_opengl_2k.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ce6583935388804781e8f883a588852
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodCorgi_base.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ee72e5c027db9c45bcd1df86809f2c3
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Meshes/Plantain.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a133a629a3e6ffc458a6504320599ba8
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodHarnessLeather_height.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a50bffa42aca3104ab125a84bdbb40a6
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/NullObjects/NullParticleSystem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a540e46d3bde6a0458be56b4bbba20c1
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Material/URP/Pine Bark.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a63dcce266ac9dc41bd11321716eb9ea
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/WhirlyDirly/WhirlyDirlyPhysxMat.physicMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a82ec3721c9572d47afbd9777d4a2e56
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/LavaMonster/LavaMonsterCinematicAnimator.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a842d66eb806c53429dccb5d10649539
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Textues/Water 2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a96f652dead598643b543f4d3df988c1
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Material/URP/Tree Bark.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab3c481ef5898f946b745de48196f8d2
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/Cliff_1_normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab4d3f6dd619f714a84eec27dc379e44
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/TerrainMods/Field/Bark3-2.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: abff9a0e7b711f545838fe6043bc2006
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Material/URP/Bush.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad2614403f699974eb530c9c4a060ede
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Meshes/Terrains/Mountain_1.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af155e0a2f2564df784cddcdf02341c1
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/powerups/foods/P18_BreadLoaf_UPFB_V001_RSS.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: afb8e7dd0e29f344dbaa4d66e9f3bb19
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/Fat Butters Skins 2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2099f8fcbeb1574cbe14329b156630e
+    m_Address: Assets/Objects/CharacterSkins/Pugalicious/PugaliciousRig.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b523e3a0e4cfc184ba31a6b131a897b8
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/corgiv3_normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6f7341d2416ee54885783a0c22ffaf6
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Models/Cliffs
+      and Rocks/Cliffs_1_Desert_Village.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7732aaaaf823fd49a81e7543f80f01d
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Meshes/Rocks/Rock_Pile_3.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b930c729cd43d3e429efa4a5ccb23dec
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/Fat Butters Skins 4.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba68a6f543e323c4fbd0c722d8a290b1
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/corgiv3_diffuse.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: baca59ab5ce5b1149bfcdde0ccb3f870
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodHarnessfan_base.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be0901e1b8a46694897fdc586b7c67d2
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/flag/Materials/ground.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be74f1bf49e05fe468c915a6caae0622
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/20-ConeOShame/ConeOShame.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0808e3837765cb46a2422e2e99045c6
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Materials/PaletteA_Desert
+      Village.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c5bcb9cd58674d348b084c8bbc73e7d3
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/ThreadplateMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c94f21dd6e4a6ee499bc51f46c915e14
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Meshes/Other/Grass_1.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9a730097840b7d48970bc110b3f9817
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodGlasses_base.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc60ec32b64abd84ba21af6ca87441bf
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Materials/Bark3-2.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cce6087106ae93b4b924d77af765a269
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Materials/Dandelion.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cdb70b89ea6b15a4ab2d17e9e54ca2cf
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodGoggles_rough.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cff6ad52f477170458b5096a87c5b103
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/TerrainMods/CanyonV2.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d0cdbf93a237f4c45afcd2c100ac27b0
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/blueGlowyTex.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d222cdf8c4493b74e85db4c9696209a6
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/CautionLayerMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d47e95b0a681a8046b9ae47334846b53
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Material/URP/Leaves 2.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d488af32f444def418cd940e524fb9e7
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/27-Trippp/Trippp.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d68034d688cd97b45845badf6c771410
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/Cliff_3_normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7f9c668cb950724e9f5e2ff48ecb01f
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodHarnessLeather_occ.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dba9f38171f739f4095e59fb431610d2
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Meshes/Stump.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc607a7dcd2701b43a7dc4b244894a39
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodGoggles_nor.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dcd0e6681feb1f347945d2059faf8fa2
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/TerrainMods/Field/Cedar03.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd446429778eea3479641272882bb7a8
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/LavaMonster/Lava_002_COLOR.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de4828c7966a28f48b6765d2f717a41b
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Meshes/Other/Grass_2.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e312d8c5a79a8d44eb44f8206c4265d8
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Textures/Plantain.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e31ff88a80dee9649b40f297241384db
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/Cliff_5_normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3765c01f4d312741bb9baf97c72a574
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodRocketBalls_base.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e66e911fb5ab84f4bbb8d1cd5ce106f5
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodHarnessballs_base.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e88eebbe7f8d74341bb36f125df2c4bf
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/TerrainMods/Lake/quarry_wall_02_nor_gl_2k.exr
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea6bc2c773e68d646b35a5a31aeaea9a
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodHarnessfan_occ.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eb0d84ad67db9cd498229b0f237d9bfa
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/24-Slinky/ferretGameplay.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f11a345bca007f94f8ec65458dac4d0d
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodHarnessLeather_nor.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4e8801ec5d2ca54ba2140561eb21b83
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/LavaMonster/ground_0027_color_2k.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f77a7b77a293dd74998025bd672a5de7
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/CartoonWaterShader/Demo/waterMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7f18dab1b893b34195121f0e7421bee
+    m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
+      Kit/Source/Meshes/Rocks/Stone_7.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcbb2e27d3770e040b595735bb25c71f
+    m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodRocketBalls_occ.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fdf19312d22c047f7b92ac36a4ac658d
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/powerups/foods/P18_WholeBirdRaw_UPFB_V001_RSS.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe393ace9b354375a9cb14cdbbc28be4
+    m_Address: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff03692907803cd41a04a4471ee9b472
+    m_Address: Assets/Settings/Medium_PipelineAsset.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 688ce2d51185d19489a5c75bf2019ce5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d8599d35ca24788498fb2e0e1262228f, type: 2}
+    - {fileID: 11400000, guid: 8066b609b88602c47a179da5d28f30cb, type: 2}
+    - {fileID: 11400000, guid: 4443337a18c718a46a020c927da69306, type: 2}

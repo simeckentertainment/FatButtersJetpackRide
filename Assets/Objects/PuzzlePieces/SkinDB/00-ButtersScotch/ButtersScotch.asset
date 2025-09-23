@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf5be9709625ec4f8a08f070d8ed4b2, type: 3}
+  m_Name: ButtersScotch
+  m_EditorClassIdentifier: 
+  PrimaryMeshOverride:
+  - {fileID: 0}
+  JetpackHolsterMesh: {fileID: 6134615409324240125, guid: 54edd7f2f38471043bbe0f0cf777ee26, type: 3}
+  LeftJetpackMesh: {fileID: 8954352814837937593, guid: f4fe4b868216e1247bbfa3d95ea111de, type: 3}
+  RightJetpackMesh: {fileID: 8954352814837937593, guid: f4fe4b868216e1247bbfa3d95ea111de, type: 3}
+  MainThrusterParticles:
+  - {fileID: 1113205305641416, guid: 3187c061693a2bb4b80a28143a4738ea, type: 3}
+  - {fileID: 1113205305641416, guid: 3187c061693a2bb4b80a28143a4738ea, type: 3}
+  PlusThrusterParticles:
+  - {fileID: 1113205305641416, guid: d954ccfc86962674c9c7ab46f7fa59f9, type: 3}
+  - {fileID: 1113205305641416, guid: d954ccfc86962674c9c7ab46f7fa59f9, type: 3}
+  MinusThrusterParticles:
+  - {fileID: 1113205305641416, guid: d1cf8089970f63f45beb927b53303a15, type: 3}
+  - {fileID: 1113205305641416, guid: d1cf8089970f63f45beb927b53303a15, type: 3}
+  ThrusterLights:
+  - {fileID: 9204640683127258516, guid: 7147f360ae3c6a74792f72b350c67978, type: 3}
+  - {fileID: 9204640683127258516, guid: 7147f360ae3c6a74792f72b350c67978, type: 3}
+  ThrusterSounds:
+  - {fileID: 8300000, guid: 9a6477e0c6363334494528d8661fd52b, type: 3}
+  - {fileID: 8300000, guid: 9a6477e0c6363334494528d8661fd52b, type: 3}
+  AnimOverride: {fileID: 9100000, guid: fbee8be2edb725445b4f10d9d8607e4b, type: 2}
+  explosionSound: {fileID: 8300000, guid: 7d199b6b06560b0479159b99cb39e14f, type: 3}
+  successSound: {fileID: 8300000, guid: c7b4752e66dbba049bc36e6f13fa65a3, type: 3}
+  successParticles: {fileID: 198631066050499358, guid: 96d15443bab09384aa3aef928bb130bd, type: 3}
+  explosionParticles: {fileID: 198204746014789312, guid: 60633bd4ae57aaa42b99b23c9b3ecca7, type: 3}
+  explosionLight: {fileID: 3332885413752120023, guid: cf872b25b6f8bdc4a9bc5132f125fc68, type: 3}
+  barkSounds:
+  - {fileID: 8300000, guid: 81ee8f5d5c2e073468ea6636f378b535, type: 3}
+  - {fileID: 8300000, guid: 4957f18372acb7742b89a7b1284ff35c, type: 3}
+  - {fileID: 8300000, guid: 3ce08f6abc1a8fb4dbbaead6249c0271, type: 3}
+  - {fileID: 8300000, guid: 72ca451d40dd05c4b8657e63f674ef9a, type: 3}

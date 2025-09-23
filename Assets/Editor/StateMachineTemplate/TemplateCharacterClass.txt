@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TemplateCharacterClass : MonoBehaviour{
+    [System.NonSerialized] public TemplateStateMachine stateMachine; //This gets set at start.
+    public TemplateIdleSubState templateIdleSubState { get; set; }
+    // Start is called before the first frame update
+    void Start(){
+       stateMachine = GetComponent<TemplateStateMachine>();
+       templateIdleSubState = new TemplateIdleSubState(this, stateMachine);
+       stateMachine.Initialize(templateIdleSubState);
+    }
+
+    // Update is called once per frame
+    void Update(){
+    }
+    private void OnCollisionEnter(Collision other) {
+    }
+}
+
+
+

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a7447630823294db87874e62ac0d91, type: 3}
+  m_Name: ICantBelieveItsNotButtersShopItem
+  m_EditorClassIdentifier: 
+  itemName: I Can't Believe It's Not Butters!
+  itemImg: {fileID: 21300000, guid: 0f4cf26b961f30f4c8bd85c78f1bba84, type: 3}
+  JetpackImg: {fileID: 21300000, guid: 1a9b398ca32078247b68e818112e8681, type: 3}
+  dogHouseButtersImg: {fileID: 21300000, guid: e18a52022473adb488dc68ccef4539ad, type: 3}
+  itemPrice: 10
+  isSkin: 1
+  SkinId: 7

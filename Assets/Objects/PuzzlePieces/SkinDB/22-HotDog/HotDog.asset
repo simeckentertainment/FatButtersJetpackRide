@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf5be9709625ec4f8a08f070d8ed4b2, type: 3}
+  m_Name: HotDog
+  m_EditorClassIdentifier: 
+  PrimaryMeshOverride: []
+  JetpackHolsterMesh: {fileID: 0}
+  LeftJetpackMesh: {fileID: 3239034092887622498, guid: 84f555bb98fcf1e45b9a326f965a8689, type: 3}
+  RightJetpackMesh: {fileID: 3554457664149749373, guid: f497104679739524ea27b2a8170f5660, type: 3}
+  MainThrusterParticles:
+  - {fileID: 8579333278218722503, guid: cf413a15356338746a71d56004eef61a, type: 3}
+  - {fileID: 8745921687999129548, guid: 149b6ef11d101544491d08b7fe982728, type: 3}
+  PlusThrusterParticles:
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  MinusThrusterParticles:
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  ThrusterLights:
+  - {fileID: -976075210381401797, guid: 5d545c44473b39c479cb2256eed2df32, type: 3}
+  - {fileID: -976075210381401797, guid: 5d545c44473b39c479cb2256eed2df32, type: 3}
+  ThrusterSounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  AnimOverride: {fileID: 0}
+  explosionSound: {fileID: 0}
+  successSound: {fileID: 0}
+  successParticles: {fileID: 0}
+  explosionParticles: {fileID: 0}
+  explosionLight: {fileID: 0}
+  barkSounds:
+  - {fileID: 8300000, guid: 81ee8f5d5c2e073468ea6636f378b535, type: 3}
+  - {fileID: 8300000, guid: 4957f18372acb7742b89a7b1284ff35c, type: 3}
+  - {fileID: 8300000, guid: 3ce08f6abc1a8fb4dbbaead6249c0271, type: 3}
+  - {fileID: 8300000, guid: 72ca451d40dd05c4b8657e63f674ef9a, type: 3}

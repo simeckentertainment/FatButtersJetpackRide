@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TemplateIdleSubState : DefaultSuperState{
+    public TemplateIdleSubState(TemplateCharacterClass templateCharacterClass, TemplateStateMachine templateStateMachine) : base(templateCharacterClass, templateStateMachine){
+    }
+
+    public override void enter(){
+        base.enter();
+    }
+    public override void Update(){
+        base.Update();
+    }
+
+    public override void FixedUpdate(){
+        base.FixedUpdate();
+    }
+}
