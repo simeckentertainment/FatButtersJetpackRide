@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf5be9709625ec4f8a08f070d8ed4b2, type: 3}
+  m_Name: ClownButters
+  m_EditorClassIdentifier: 
+  PrimaryMeshOverride: []
+  JetpackHolsterMesh: {fileID: 6134615409324240125, guid: 2a3d86cff01e7934e81a99d3194eb0bf, type: 3}
+  LeftJetpackMesh: {fileID: 4949104665457071012, guid: ff5cc4a675e110848befb89083d59536, type: 3}
+  RightJetpackMesh: {fileID: 4949104665457071012, guid: ff5cc4a675e110848befb89083d59536, type: 3}
+  MainThrusterParticles:
+  - {fileID: 1664836844622050, guid: 08275d2d2ed37b4479e65540e8ead0ab, type: 3}
+  - {fileID: 1664836844622050, guid: 08275d2d2ed37b4479e65540e8ead0ab, type: 3}
+  PlusThrusterParticles:
+  - {fileID: 1664836844622050, guid: d791f3b4de8a75745a191365f412d67e, type: 3}
+  - {fileID: 1664836844622050, guid: d791f3b4de8a75745a191365f412d67e, type: 3}
+  MinusThrusterParticles:
+  - {fileID: 1664836844622050, guid: dadeb7e4a2235d747bc1c71b018e5bf1, type: 3}
+  - {fileID: 1664836844622050, guid: dadeb7e4a2235d747bc1c71b018e5bf1, type: 3}
+  ThrusterLights:
+  - {fileID: 0}
+  - {fileID: 0}
+  ThrusterSounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  AnimOverride: {fileID: 0}
+  explosionSound: {fileID: 8300000, guid: 0b00b1edf0371a948ba8d13fa48e23bd, type: 3}
+  successSound: {fileID: 8300000, guid: b4427bcb895a55b44be0c4b2052fd097, type: 3}
+  successParticles: {fileID: 0}
+  explosionParticles: {fileID: 0}
+  explosionLight: {fileID: 0}
+  barkSounds:
+  - {fileID: 8300000, guid: 81ee8f5d5c2e073468ea6636f378b535, type: 3}
+  - {fileID: 8300000, guid: 4957f18372acb7742b89a7b1284ff35c, type: 3}
+  - {fileID: 8300000, guid: 3ce08f6abc1a8fb4dbbaead6249c0271, type: 3}
+  - {fileID: 8300000, guid: 72ca451d40dd05c4b8657e63f674ef9a, type: 3}

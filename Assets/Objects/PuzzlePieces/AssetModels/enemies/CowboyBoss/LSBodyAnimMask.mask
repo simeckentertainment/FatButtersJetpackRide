@@ -1,0 +1,569 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LSBodyAnimMask
+  m_Mask: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: CowboyBossRig:Cowboy
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:rocketMesh
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:rocketMesh/CowboyBossRig:rocketRocket
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:rocketMesh/CowboyBossRig:RocketBalls
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:HelmetGlass
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:HelmetMain
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:hat
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:RightGun
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:MainBody
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:LeftGun
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:Belt
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:RightHolster
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:RightShoe
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:NeckerchiefEnds
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:NeckerchiefKnot
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:NeckerchiefBody
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:LeftHolster
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:Mouthkerchief
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:BottomTeeth
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:TopTeeth
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:BodyMesh/CowboyBossRig:LeftShoe
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis
+    m_Weight: 1
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:Neck
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:Neck/CowboyBossRig:Head
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:Neck/CowboyBossRig:Head/CowboyBossRig:HatJoint1
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:Neck/CowboyBossRig:Head/CowboyBossRig:HatJoint1/CowboyBossRig:HatJointEnd
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:FK_L UpperArm1
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:FK_L UpperArm1/CowboyBossRig:FK_L
+      Forearm
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:FK_L UpperArm1/CowboyBossRig:FK_L
+      Forearm/CowboyBossRig:FK_L Hand
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:FK_L UpperArm1/CowboyBossRig:FK_L
+      Forearm/CowboyBossRig:FK_L Hand/CowboyBossRig:FK_L Finger2
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:FK_L UpperArm1/CowboyBossRig:FK_L
+      Forearm/CowboyBossRig:FK_L Hand/CowboyBossRig:FK_L Finger2/CowboyBossRig:FK_L
+      Finger21
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:FK_L UpperArm1/CowboyBossRig:FK_L
+      Forearm/CowboyBossRig:FK_L Hand/CowboyBossRig:FK_L Finger2/CowboyBossRig:FK_L
+      Finger21/CowboyBossRig:FK_L Finger22
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:IK_L UpperArm2
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:IK_L UpperArm2/CowboyBossRig:IK_L
+      Forearm
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:IK_L UpperArm2/CowboyBossRig:IK_L
+      Forearm/CowboyBossRig:IK_L Hand
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:IK_L UpperArm2/CowboyBossRig:IK_L
+      Forearm/CowboyBossRig:IK_L Hand/CowboyBossRig:IK_L Finger2
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:IK_L UpperArm2/CowboyBossRig:IK_L
+      Forearm/CowboyBossRig:IK_L Hand/CowboyBossRig:IK_L Finger2/CowboyBossRig:IK_L
+      Finger21
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:IK_L UpperArm2/CowboyBossRig:IK_L
+      Forearm/CowboyBossRig:IK_L Hand/CowboyBossRig:IK_L Finger2/CowboyBossRig:IK_L
+      Finger21/CowboyBossRig:IK_L Finger22
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger0
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger0/CowboyBossRig:L Finger01
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger0/CowboyBossRig:L Finger01/CowboyBossRig:L
+      Finger02
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger1
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger1/CowboyBossRig:L Finger11
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger1/CowboyBossRig:L Finger11/CowboyBossRig:L
+      Finger12
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger2
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger2/CowboyBossRig:L Finger21
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger2/CowboyBossRig:L Finger21/CowboyBossRig:L
+      Finger22
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger3
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger3/CowboyBossRig:L Finger31
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger3/CowboyBossRig:L Finger31/CowboyBossRig:L
+      Finger32
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger4
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger4/CowboyBossRig:L Finger41
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:L
+      Clavicle/CowboyBossRig:LeftArmGrp/CowboyBossRig:L UpperArm/CowboyBossRig:L
+      Forearm/CowboyBossRig:L Hand/CowboyBossRig:L Finger4/CowboyBossRig:L Finger41/CowboyBossRig:L
+      Finger42
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:FK_R UpperArm1
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:FK_R UpperArm1/CowboyBossRig:FK_R
+      Forearm
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:FK_R UpperArm1/CowboyBossRig:FK_R
+      Forearm/CowboyBossRig:FK_R Hand
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:FK_R UpperArm1/CowboyBossRig:FK_R
+      Forearm/CowboyBossRig:FK_R Hand/CowboyBossRig:FK_R Finger2
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:FK_R UpperArm1/CowboyBossRig:FK_R
+      Forearm/CowboyBossRig:FK_R Hand/CowboyBossRig:FK_R Finger2/CowboyBossRig:FK_R
+      Finger21
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:FK_R UpperArm1/CowboyBossRig:FK_R
+      Forearm/CowboyBossRig:FK_R Hand/CowboyBossRig:FK_R Finger2/CowboyBossRig:FK_R
+      Finger21/CowboyBossRig:FK_R Finger22
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:IK_R UpperArm2
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:IK_R UpperArm2/CowboyBossRig:IK_R
+      Forearm
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:IK_R UpperArm2/CowboyBossRig:IK_R
+      Forearm/CowboyBossRig:IK_R Hand
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:IK_R UpperArm2/CowboyBossRig:IK_R
+      Forearm/CowboyBossRig:IK_R Hand/CowboyBossRig:IK_R Finger2
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:IK_R UpperArm2/CowboyBossRig:IK_R
+      Forearm/CowboyBossRig:IK_R Hand/CowboyBossRig:IK_R Finger2/CowboyBossRig:IK_R
+      Finger21
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:IK_R UpperArm2/CowboyBossRig:IK_R
+      Forearm/CowboyBossRig:IK_R Hand/CowboyBossRig:IK_R Finger2/CowboyBossRig:IK_R
+      Finger21/CowboyBossRig:IK_R Finger22
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger0
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger0/CowboyBossRig:R Finger01
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger0/CowboyBossRig:R Finger01/CowboyBossRig:R
+      Finger02
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger1
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger1/CowboyBossRig:R Finger11
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger1/CowboyBossRig:R Finger11/CowboyBossRig:R
+      Finger12
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger2
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger2/CowboyBossRig:R Finger21
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger2/CowboyBossRig:R Finger21/CowboyBossRig:R
+      Finger22
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger3
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger3/CowboyBossRig:R Finger31
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger3/CowboyBossRig:R Finger31/CowboyBossRig:R
+      Finger32
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger4
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger4/CowboyBossRig:R Finger41
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:Spine1/CowboyBossRig:R
+      Clavicle/CowboyBossRig:RightArmGrp/CowboyBossRig:R UpperArm/CowboyBossRig:R
+      Forearm/CowboyBossRig:R Hand/CowboyBossRig:R Finger4/CowboyBossRig:R Finger41/CowboyBossRig:R
+      Finger42
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:RightGun1
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:RightGun1/CowboyBossRig:RightGun2
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:LeftGun1
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:LeftGun1/CowboyBossRig:LeftGun2
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:RocketJoint1
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:RocketJoint1/CowboyBossRig:RocketNoseJoint
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:RocketJoint1/CowboyBossRig:RocketTailJoint
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:RocketLoc
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:LeftGunHipLoc
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:Spine/CowboyBossRig:RightGunHipLoc
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:FK_RightHip
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:FK_RightHip/CowboyBossRig:FK_RightKnee
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:FK_RightHip/CowboyBossRig:FK_RightKnee/CowboyBossRig:FK_RightAnkle
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:FK_RightHip/CowboyBossRig:FK_RightKnee/CowboyBossRig:FK_RightAnkle/CowboyBossRig:FK_RightHeel
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:FK_RightHip/CowboyBossRig:FK_RightKnee/CowboyBossRig:FK_RightAnkle/CowboyBossRig:FK_RightHeel/CowboyBossRig:FK_RightToe
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:IK_RightHip
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:IK_RightHip/CowboyBossRig:IK_RightKnee
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:IK_RightHip/CowboyBossRig:IK_RightKnee/CowboyBossRig:IK_RightAnkle
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:IK_RightHip/CowboyBossRig:IK_RightKnee/CowboyBossRig:IK_RightAnkle/CowboyBossRig:IK_RightHeel
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:IK_RightHip/CowboyBossRig:IK_RightKnee/CowboyBossRig:IK_RightAnkle/CowboyBossRig:IK_RightHeel/CowboyBossRig:IK_RightToe
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:RightHip
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:RightHip/CowboyBossRig:RightKnee
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:RightHip/CowboyBossRig:RightKnee/CowboyBossRig:RightAnkle
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:RightHip/CowboyBossRig:RightKnee/CowboyBossRig:RightAnkle/CowboyBossRig:RightHeel
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:RightHipGrp/CowboyBossRig:RightHip/CowboyBossRig:RightKnee/CowboyBossRig:RightAnkle/CowboyBossRig:RightHeel/CowboyBossRig:RightToe
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:FK_LeftHip
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:FK_LeftHip/CowboyBossRig:FK_LeftKnee
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:FK_LeftHip/CowboyBossRig:FK_LeftKnee/CowboyBossRig:FK_LeftAnkle
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:FK_LeftHip/CowboyBossRig:FK_LeftKnee/CowboyBossRig:FK_LeftAnkle/CowboyBossRig:FK_LeftHeel
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:FK_LeftHip/CowboyBossRig:FK_LeftKnee/CowboyBossRig:FK_LeftAnkle/CowboyBossRig:FK_LeftHeel/CowboyBossRig:FK_LeftToe
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:IK_LeftHip
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:IK_LeftHip/CowboyBossRig:IK_LeftKnee
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:IK_LeftHip/CowboyBossRig:IK_LeftKnee/CowboyBossRig:IK_LeftAnkle
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:IK_LeftHip/CowboyBossRig:IK_LeftKnee/CowboyBossRig:IK_LeftAnkle/CowboyBossRig:IK_LeftHeel
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:IK_LeftHip/CowboyBossRig:IK_LeftKnee/CowboyBossRig:IK_LeftAnkle/CowboyBossRig:IK_LeftHeel/CowboyBossRig:IK_LeftToe
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:LeftHip
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:LeftHip/CowboyBossRig:LeftKnee
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:LeftHip/CowboyBossRig:LeftKnee/CowboyBossRig:LeftAnkle
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:LeftHip/CowboyBossRig:LeftKnee/CowboyBossRig:LeftAnkle/CowboyBossRig:LeftHeel
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:Rig/CowboyBossRig:Pelvis/CowboyBossRig:LeftHipGrp/CowboyBossRig:LeftHip/CowboyBossRig:LeftKnee/CowboyBossRig:LeftAnkle/CowboyBossRig:LeftHeel/CowboyBossRig:LeftToe
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKFKSwitches
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKLimbControls
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKLimbControls/CowboyBossRig:RightFootIKControl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKLimbControls/CowboyBossRig:RightFootIKControl/CowboyBossRig:RightFootControl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKLimbControls/CowboyBossRig:LeftFootIKControl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKLimbControls/CowboyBossRig:LeftFootIKControl/CowboyBossRig:LeftFootControl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKLimbControls/CowboyBossRig:RightHandIKControlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKLimbControls/CowboyBossRig:RightHandIKControlGrp/CowboyBossRig:RightHandIKControl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKLimbControls/CowboyBossRig:LeftHandIKControlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKLimbControls/CowboyBossRig:LeftHandIKControlGrp/CowboyBossRig:LeftHandIKControl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:LHipFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:LHipFKCtrlGrp/CowboyBossRig:LHipFKCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:LHipFKCtrlGrp/CowboyBossRig:LHipFKCtrl/CowboyBossRig:LKneeFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:LHipFKCtrlGrp/CowboyBossRig:LHipFKCtrl/CowboyBossRig:LKneeFKCtrlGrp/CowboyBossRig:LKneeFKCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:LHipFKCtrlGrp/CowboyBossRig:LHipFKCtrl/CowboyBossRig:LKneeFKCtrlGrp/CowboyBossRig:LKneeFKCtrl/CowboyBossRig:LAnkleFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:LHipFKCtrlGrp/CowboyBossRig:LHipFKCtrl/CowboyBossRig:LKneeFKCtrlGrp/CowboyBossRig:LKneeFKCtrl/CowboyBossRig:LAnkleFKCtrlGrp/CowboyBossRig:LAnkleFKCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:RHipFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:RHipFKCtrlGrp/CowboyBossRig:RHipFKCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:RHipFKCtrlGrp/CowboyBossRig:RHipFKCtrl/CowboyBossRig:RKneeFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:RHipFKCtrlGrp/CowboyBossRig:RHipFKCtrl/CowboyBossRig:RKneeFKCtrlGrp/CowboyBossRig:RKneeFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:RHipFKCtrlGrp/CowboyBossRig:RHipFKCtrl/CowboyBossRig:RKneeFKCtrlGrp/CowboyBossRig:RKneeFKCtrlGrp/CowboyBossRig:RAnkleFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:RHipFKCtrlGrp/CowboyBossRig:RHipFKCtrl/CowboyBossRig:RKneeFKCtrlGrp/CowboyBossRig:RKneeFKCtrlGrp/CowboyBossRig:RAnkleFKCtrlGrp/CowboyBossRig:RAnkleFKCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:LShldrFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:LShldrFKCtrlGrp/CowboyBossRig:LShldrFKCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:LShldrFKCtrlGrp/CowboyBossRig:LShldrFKCtrl/CowboyBossRig:LElbowFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:LShldrFKCtrlGrp/CowboyBossRig:LShldrFKCtrl/CowboyBossRig:LElbowFKCtrlGrp/CowboyBossRig:LElbowFKCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:LShldrFKCtrlGrp/CowboyBossRig:LShldrFKCtrl/CowboyBossRig:LElbowFKCtrlGrp/CowboyBossRig:LElbowFKCtrl/CowboyBossRig:LWristFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:LShldrFKCtrlGrp/CowboyBossRig:LShldrFKCtrl/CowboyBossRig:LElbowFKCtrlGrp/CowboyBossRig:LElbowFKCtrl/CowboyBossRig:LWristFKCtrlGrp/CowboyBossRig:LWristFKCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:RShldrFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:RShldrFKCtrlGrp/CowboyBossRig:RShldrFKCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:RShldrFKCtrlGrp/CowboyBossRig:RShldrFKCtrl/CowboyBossRig:RElbowFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:RShldrFKCtrlGrp/CowboyBossRig:RShldrFKCtrl/CowboyBossRig:RElbowFKCtrlGrp/CowboyBossRig:RElbowFKCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:RShldrFKCtrlGrp/CowboyBossRig:RShldrFKCtrl/CowboyBossRig:RElbowFKCtrlGrp/CowboyBossRig:RElbowFKCtrl/CowboyBossRig:RWristFKCtrlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:FKLimbControls/CowboyBossRig:RShldrFKCtrlGrp/CowboyBossRig:RShldrFKCtrl/CowboyBossRig:RElbowFKCtrlGrp/CowboyBossRig:RElbowFKCtrl/CowboyBossRig:RWristFKCtrlGrp/CowboyBossRig:RWristFKCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:MiscControls
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:MiscControls/CowboyBossRig:LeftHandIKFKSwitch
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:MiscControls/CowboyBossRig:RightHandIKFKSwitch
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:MiscControls/CowboyBossRig:LeftLegIKFKSwitch
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:MiscControls/CowboyBossRig:RightLegIKFKSwitch
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:MiscControls/CowboyBossRig:LeftGunControlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:MiscControls/CowboyBossRig:LeftGunControlGrp/CowboyBossRig:LeftGunControl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:MiscControls/CowboyBossRig:RightGunControlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:MiscControls/CowboyBossRig:RightGunControlGrp/CowboyBossRig:RightGunControl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:MiscControls/CowboyBossRig:RocketShipControlGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:MiscControls/CowboyBossRig:RocketShipControlGrp/CowboyBossRig:RocketShipControl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKHandles
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKHandles/CowboyBossRig:LHandIK
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKHandles/CowboyBossRig:LArmIK
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKHandles/CowboyBossRig:RHandIKHandle
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKHandles/CowboyBossRig:RArmIkHandle
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKHandles/CowboyBossRig:LLegIKSolver
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKHandles/CowboyBossRig:RLegIKSolver
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKHandles/CowboyBossRig:LFootIKSolver
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:IKHandles/CowboyBossRig:RFootIKSolver
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:CowboyTorso1Ctrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:CowboyTorso1Ctrl/CowboyBossRig:CowboyTorso2Ctrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:CowboyTorso1Ctrl/CowboyBossRig:CowboyTorso2Ctrl/CowboyBossRig:CowboyTorso3Ctrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:CowboyTorso1Ctrl/CowboyBossRig:CowboyTorso2Ctrl/CowboyBossRig:CowboyTorso3Ctrl/CowboyBossRig:LeftClavCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:CowboyTorso1Ctrl/CowboyBossRig:CowboyTorso2Ctrl/CowboyBossRig:CowboyTorso3Ctrl/CowboyBossRig:RightClavCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:LeftClavLoc
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:RightClavLoc
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:LeftGunLocGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:LeftGunLocGrp/CowboyBossRig:LeftGunLoc
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:RightGunLocGrp
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:RightGunLocGrp/CowboyBossRig:LeftGunLoc
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:NeckheadControlGroup
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:NeckheadControlGroup/CowboyBossRig:NeckHeadControl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:LArmIKPoleVectorCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:RArmIKPoleVectorCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:RLegIKPoleVectorCtrl
+    m_Weight: 0
+  - m_Path: CowboyBossRig:Cowboy/CowboyBossRig:SpaceCowboyMainControl/CowboyBossRig:controls/CowboyBossRig:LLegIKPoleVectorCtrl3
+    m_Weight: 0

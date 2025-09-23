@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a7447630823294db87874e62ac0d91, type: 3}
+  m_Name: ConeOShameShopItem
+  m_EditorClassIdentifier: 
+  itemName: Cone O' Shame
+  itemImg: {fileID: 21300000, guid: be3d58685ed5e5e44b875b71b50b2a29, type: 3}
+  JetpackImg: {fileID: 21300000, guid: d23bd561605ab714991f6c699f22b1b1, type: 3}
+  dogHouseButtersImg: {fileID: 21300000, guid: d21160f3f580a6a4fa4d72c436ae5f90, type: 3}
+  itemPrice: 10
+  isSkin: 1
+  SkinId: 20

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf5be9709625ec4f8a08f070d8ed4b2, type: 3}
+  m_Name: CorgiInBlack_SkinAsset
+  m_EditorClassIdentifier: 
+  PrimaryMeshOverride: []
+  JetpackHolsterMesh: {fileID: 919132149155446097, guid: 5020a03e6c3d4e54cba7b0967b672929, type: 3}
+  combinedJetpack: 0
+  LeftJetpackMesh: {fileID: 5376491129454047794, guid: d14108fca6ec9f44ab4c4a13e5b3a446, type: 3}
+  RightJetpackMesh: {fileID: 5376491129454047794, guid: d14108fca6ec9f44ab4c4a13e5b3a446, type: 3}
+  CombinedJetpackMeshOverride: {fileID: 0}
+  MainThrusterParticles:
+  - {fileID: 1113205305641416, guid: 11aae6e5473a2104197be95358293099, type: 3}
+  - {fileID: 1113205305641416, guid: 11aae6e5473a2104197be95358293099, type: 3}
+  PlusThrusterParticles:
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  MinusThrusterParticles:
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  - {fileID: 815403678456097258, guid: a50bffa42aca3104ab125a84bdbb40a6, type: 3}
+  ThrusterLights:
+  - {fileID: 0}
+  - {fileID: 0}
+  ThrusterSounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  AnimOverride: {fileID: 0}
+  explosionSound: {fileID: 0}
+  successSound: {fileID: 0}
+  successParticles: {fileID: 0}
+  explosionParticles: {fileID: 0}
+  explosionLight: {fileID: 0}
+  barkSounds:
+  - {fileID: 8300000, guid: 81ee8f5d5c2e073468ea6636f378b535, type: 3}
+  - {fileID: 8300000, guid: 4957f18372acb7742b89a7b1284ff35c, type: 3}
+  - {fileID: 8300000, guid: 3ce08f6abc1a8fb4dbbaead6249c0271, type: 3}
+  - {fileID: 8300000, guid: 72ca451d40dd05c4b8657e63f674ef9a, type: 3}

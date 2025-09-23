@@ -1,0 +1,917 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Statics
+  m_EditorClassIdentifier: 
+  m_GroupName: Statics
+  m_GUID: 9a1f8cb20e072114ea09b9116eabf2ac
+  m_SerializeEntries:
+  - m_GUID: 0219044f309a5d94281b70ce19167893
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Pine 5.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 06e2ae56c53e2a54b9c90e0161c6b12b
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Rock_1_Desert_village Rock1 Blue Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0aad07eeaa3739f45a8dfb549cb27309
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/EventTrigger.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0bb8584c7eb785545adcde93ae5499a0
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/lavafalls.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0caa079a07bb6bb4d8189cbe94d69429
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Corridors/Corridor
+      Corner.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e4bdd2115ade4d4488a51806240803c
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
+      Pillar 03.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ef31cdbe65a2f142beeb86422e34425
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Corridors/Corridor
+      Incline Half.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0fa5f51501cace14ba6f3aa587e10048
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/baseCorgiModel.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12480dbebc83dde4f863bb4d6e79fdb5
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Rock_3_Desert_village RockCrack1 Blue Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 140a8ff04f5838245b8249627c693f13
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_3_Desert_Village Grey Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1459856e2a17b05409928194e898acfc
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/effects/moonray.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 150cf7551d9b9ce40aaa3d5b7c355fcb
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Grass 4.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1518a69ed2b87884b99522e9c7e004af
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Plantain.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1762356844ce0e8408c9937aed044fe9
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/floors/floorTemplate.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 179d55d2b464b3147b0c49c43296b68a
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/BackWalls/TileableMarbleWallTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1abe9b17ffff50a4095d3ce081674f89
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/SideWalls/InstantDeathInvisibleWall.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1e3974e3db8c48c41b2604d2478e7e9e
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Props/Crates
+      Barrels Pallets/Barrel.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 207f61281715ab24f9899fdfa960ca48
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
+      Long Rails.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20d9c287fff82dd49bc0a9b23650f1e1
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Pillars
+      and Beams/Wall Support.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2348065e7cd588b48aa99772b2b0dfbd
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/BackWalls/WhiteWallTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 251977d85f345b94c805b990d722732f
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Short
+      Stairs.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 255e4eeacb85d2640a4941ac50c7ccd6
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/SideWalls/TileableMarbleWallTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26c4adebaff476f41b19e4e7195f8b84
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/SideWalls/WhiteWallTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 272f2dc0d3475184c8f244f2d3832c1b
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/AlienShip/AlienShipPortalRoom.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29aa5a78b96148c42bd3f92e5e037e89
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Corridors/Corridor
+      Tee.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a5fa9d0e7de3244d8c68bb414607abc
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/floors/TileableMarbleFloorTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b9adb2e9cd4da34c9f305ba6e735418
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_4_Desert_Village Sand Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e0ae76798a79ef4990fbd097827b42e
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock 10.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 317cef7c4ec02cb4685127dd7da56834
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Tree 7.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32c861a1efb3be94ba017ea94751226d
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Buildings Prefabs/House_1_Desert_Village
+      A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 349b27658057d8b4abd803139815d0d7
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Tree 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35f56a2ed5d61fe468cb7d60a82b297a
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Pine01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37e2bd2e556e6754496a16a6883b0baa
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Plants and
+      Planters Prefabs/Hanging_Planter_2_Desert_Village A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 393271bfdf2255c439d98faf76cf13e0
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3948fc9f165ffe84b893e59d92143613
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Plants and
+      Planters Prefabs/Ivy_Desert_Village IvyA.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 395832dc6bba1a14e9d7c51ec3bc5a8d
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/home/kitchenetteSet.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 39f77877628cf9b429076dde500cea95
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_5_Desert_Village Sand Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c19fd38539b7f04b90d35983ebc23cc
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Structure
+      Props/Fusebox 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ef72c795cb98f3428a42b0346949f83
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Plants and
+      Planters Prefabs/ClayPot_2_Desert Village C Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 40104ca1a72c78b41897dcab07134769
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_4_Desert_Village Brown.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 407e4e65456601c4ba66e0697b1c325c
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Ceiling/Ceiling
+      Skylight.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45f57c8c9970b5849b4693655f18965b
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Larch01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48eb7b3950197e64e8b832e9106dd003
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/BackWalls/TileableBackWallWoodTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e661a4b9cf2fac4dbc610ceb59e77b8
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
+      Rails Long.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e9b719611de2f44cb2b84b292279421
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock Arc.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e9dc74c4334b9a458f53f995ccb9772
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock 3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f1819ea97fb2c147a2281df45df2ea7
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Corridors/Corridor
+      Deadend Window.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 527cc2f006b4de64db963a823b4fe500
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/BackWalls/HalfSquareMarbleTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 528f6c40ba01da34f96f492e501fd927
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Props/Crates
+      Barrels Pallets/Pallet.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52c51744944b30b4395badb88a68a18b
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
+      Short.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 563548899dd15ba459a013209bd2ae36
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_2_Desert_Village Dark Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56553c59a52bf504aaac866c7f4030cd
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Pillars
+      and Beams/Ceiling Support.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a1765c6bda138842beb6a65f826d646
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/AlienShip/AlienShipBossRoom.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c764a9066f66df4495608cd86be25c0
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Stump.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63d248e67db58c04aa37512e19848568
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/CatWalk
+      Stairs Wide.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65467f6b70ddf5e4890bd9f317b3a5b7
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
+      Stairs.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65f39850593acd244899defa6d2e3ea1
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/home/door.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a90fc4f23741bf47b02318b3a4a7aa6
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Grass 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6bfab16f387f95e4bb60f866299be241
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Skyboxes/Sky_Anime_03_Day_a.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 718e3e11005424c4ba3424fe9faaa329
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock 11.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 71d641c5ab7400248a83746a31643ddb
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/TileRoof.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 725564bae3f68e847ad41c0da4390174
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
+      Pillar 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7381ffb3c0a436e43ad0bf21dae4cce8
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/floors/WhiteWoodFloorTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7416536dbe0334cfd888dd1beb75a9fb
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Skyboxes/Epic_BlueSunset.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 765b184104929d447a3222afc028ee7f
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_1_Desert_Village Sand Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 791700cbd82fdd440aae2380f159b722
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_3_Desert_Village Brown.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d8b71fe3c0aa694f9ee8faa617a88b7
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/floors/InvisibleFloorTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e3f523375a441341abd337ac986d569
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Short
+      Stairs Wide.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 811bf22db94faad418fb6fdfffe14569
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Pillars
+      and Beams/Pillar.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 855ad926227c2c646847b5a3be7482cf
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Tree 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86e7551e662d3864297d7fd8f7dde25c
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/home/stairs.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 873df5bb50a2df04c9c3d7abfe84c10a
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock 6.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ae9735de2d008b4aa4278ef4fa65004
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/BackWalls/halfSquareWhiteWallTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b7dd0809c7c6498789fa32a61eaa6cb
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Skyboxes/Epic_GloriousPink.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c5122df7bfed544a9a78a7d56b903ea
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Furniture Prefabs/Table_1_Desert_Village
+      A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ea4197ea15b66c448c06205ddda17f8
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Dandelion02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 91b8fa9065e2bc041ba30dded191b2a6
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Corridors/Corridor
+      Passthrough Windows.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 920dbba2cc1612c45922dde68c3ef673
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Pine 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93d3d6bda70ae0143a7e70b66ac1fa9a
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/floors/TileableFancyRugFloorTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 966ab85822fcf384c850c39a1762e2ba
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/lavasplash.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9bc01b0a028112c40832d6c99d6c4b85
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock 8.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c62758f974dbcb409d18cf6eea7e71a
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Pine 4.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e577247b005a1a4a843dff29663525f
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_3_Desert_Village Dark Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9fd89c45bf7e1304088137c6ba34dbb0
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock Pile 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9fe8f4ee2f072ef48b225626a9556d6b
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Tree 3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a157851e6c66e1545ae48d5a470cdc64
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
+      Pillar 02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a30737512f235064880b0996ad9be997
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/SolarPanel.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a39ce4e2f6953b0478b00d7883793672
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_2_Desert_Village Grey Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a46bac8e41ea01e418395a141f68a4cb
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Tree 4.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6d7c0a4f3409414386349b507a9aa87
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/BackWalls/HalfSquareWoodTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7fdaed90a2d04644bedce64ab6bc736
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/AlienShip/AlienShipSplitCorridorUpDown.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a819f2322f348a24c91f6eb4699a7f8b
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_5_Desert_Village Brown.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8646b2f859fe6d4695acddce00391e7
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/TNTBundle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8e1a9f675e6c0e48836c684b07c1b27
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Rock_1_Desert_village Rock1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a934d038c1a20354a856529f1f7ec805
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Pine 3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aca7a1912fab38f448d190d194001928
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Rock_1_Desert_village Rock1 Dark Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad041dab5f1364c4b8e1a75fdf727ebd
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_3_Desert_Village Sand Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aedebdaeae12a6743b39120d2f5156b0
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Props/Crates
+      Barrels Pallets/Crate Short.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b02cce22f8e17b04cb2e9e3ee1b00722
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Boletus_edulis01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0481f62b0d3d084db3f82bab4650c50
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Tree 6.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0af5191633fdd346a14b66abe9748f2
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock 5.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1819af2bf9a9d14a935d8e7fd7b7cbc
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Bush 3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2d2f355f4eb5bc4ea02cff31ef0b59a
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/AlienShip/AlienShipCorridor.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b3a7f3e90295d1745b843c2b55344dcc
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/effects/sunray2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6b384d4aff70824983aa0e43218822a
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Rock_3_Desert_village RockCrack1 Brown Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b74931458a3a4a943ae86a78d623e480
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/BackWalls/TileableFancyRugWallTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b76f846b3379607468a593969b575654
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
+      Long.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc46106bf6358f8469e5554a5f420e54
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Rock_2_Desert_village Rock1 Brown Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf62c885bb245c54cb05018ff48afa98
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_2_Desert_Village Brown.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c033eb3bc0a9def44baaffe74145799b
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock 4.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c06b03a1b6cf40645bdf7f9e6c16f1a0
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Fern01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1c961cbd00909b45b34d97fd7df5cbf
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Skyboxes/Sky_LowPoly_02_Night_a
+      1.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c459ef4f9d2e09d44ae8f763f2585315
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_1_Desert_Village Grey Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c617f74cd22aa0b4bb1236b3a27e3f8c
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/SideWalls/InvisibleSideWall.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6dfb699b9f68a14c862b39539bcd63c
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Plants and
+      Planters Prefabs/Flower_Desert_Village D Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7b9117993495c44c91027147d1c5620
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/CrashedAlienSpaceship.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c86c24016cb6fbc499527b258d406f6d
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Pine 6.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c87c42a049fe9264587bca3da74325ba
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Grass 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9a552dfe766c804a807929004498afa
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_4_Desert_Village Grey Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cae27e3850d0c804290a044c9e70d6f0
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Pine 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc5db88956188ec4e99ecccc1cc1a855
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Corridors/Corridor
+      Incline Full.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc74979f4fb722b4c90d52eb8ff3b129
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_1_Desert_Village Brown.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cd855204aa12c124189ffacf02f440d2
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Props/Shelves/Shelf
+      Variation 06.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf8443763fc34314490f8a3e2f94dd37
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Floor/Floor
+      Tile 01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d05325e6996e872419019732762eb178
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock 7.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d29d61fd0bdfda3449c1dad4a4161684
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/AlienShip/ForcefieldPlane.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d544a0155c63c424d96527d5ab443c40
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/floors/TileableWoodFloorTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d67580f1cac35b9428d850c413165a7c
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/TechPortal.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6bd4e2c96dcf5648926c8d3b4840170
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Tree 5.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d85d346c82b854b4da4fc5e30887d235
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/BackWalls/HalfWallFancyRugWallTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d890e6bbaa2beb548b26a869f51f693f
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock Pile 3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de3083097e7467e428a2dc805624b4b0
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Bush 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e16cc1b8be9796744b8e44545a6aca19
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Props/Misc
+      Props/Security Cam.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e2065e8f29774454889634d57ec0a96f
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
+      Rails Short.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e24e6d47cae921c418bcba2b580b4e9c
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_5_Desert_Village Dark Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e2fdcaac11701fe438724a8a8b3a76c5
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Props/Crates
+      Barrels Pallets/Crate Long.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e361bee9715c4aa4980bb005ac60d7e9
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Bush 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e37205432e512c841ae7a9bddaefe239
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Tree 8.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3767d304bde90d41bba5a69ec4404d1
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/effects/sunray.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4670071353ecee45ad6bf609edff496
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/floatingPlatform.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e498c0cc744777040960cd84b1e9332b
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/SideWalls/TileableWoodWallTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6a1dab020298a3498715f11387e1f49
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/walls/SideWalls/TileableFancyRugWallTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e70205d70cda9e647a1929f6b2e2979e
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Rock_3_Desert_village RockCrack1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7d3fbdf4def78c43b9fef55ded3a466
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Rock_2_Desert_village Rock1 Dark Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7dfe18f1b067bb40a26978c9683fd39
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Buildings Prefabs/House_1_Desert_Village
+      D Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8752d6a06e37bc49890f00a9d3514d6
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_5_Desert_Village Grey Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8ffd220483c45d41b61cdff865a2f5d
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_4_Desert_Village Dark Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9becde82cd7b324dbafdf93ad50d9dc
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_2_Desert_Village Sand Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eb2cfde91ad31bf4bad84b2c70e9816e
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Corridors/Corridor
+      Passthrough Lights.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eb4b38db67a56dc469a2c2aafcc36add
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Ceiling/Ceiling
+      Closed.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed41a6a40091ae14f96a08fbbbda0411
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock 12.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef27fb0be24555e44a515692cdbcdb20
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Cedar03.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef7f7393d1fc3fc449ca8c5d7019b97d
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Furniture Prefabs/ChairArms_2_Desert_Village
+      D Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1171190d8969d445b0d36f4130e0ec4
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f12aeac418b565246bead5b11dc80561
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Cliffs_1_Desert_Village Dark Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f2b5f3f20933f434e850db1b710542fd
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Skyboxes/AllSky_Overcast4_Low.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f3666c4739f55c24eb42ed8d7b508700
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
+      Corner.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f533d3129260fec48aa145b87c3c9da9
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
+      Pillar Rails.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f53964fc15f727846999dc6a91abb2be
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock 9.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7315e96585d195459d4d5634481e773
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/rocks/Rock Pile 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7b7b0449a5a0c8468c69fd1c8328bc6
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/home/PartialKitchenetteSet.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc2ed2d6e205f8d4abba5a9afbf31fe0
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Buildings Prefabs/House_1_Desert_Village
+      B Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc83294fd0c0fe3449db701c7204a6cb
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
+      Rocks Prefabs/Rock_1_Desert_village Rock1 Brown Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe4ddc300bb879c4f860a9a1954689fb
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/nature/Grass 3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 688ce2d51185d19489a5c75bf2019ce5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 6e8f54c4ee8406f4495d8b76fa006e5f, type: 2}
+    - {fileID: 11400000, guid: 05634372fcd837e47b75a1bd54ee7373, type: 2}
+    - {fileID: 11400000, guid: 710f98cabcc60d74ea76fa33929bdeb4, type: 2}

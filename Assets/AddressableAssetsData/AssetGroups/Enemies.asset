@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Enemies
+  m_EditorClassIdentifier: 
+  m_GroupName: Enemies
+  m_GUID: 8f1a1997e6cbb6e44881226ddd5e1dbb
+  m_SerializeEntries:
+  - m_GUID: 5330793a3d971cd4a85d1b4db59baf59
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/enemies/LavaMonsterCinematic.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5bc7ebb89513f8141b2fe21655d24458
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/enemies/BatSpawner.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82a6bf92d0bd6414a89aa686aefbfc1c
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/enemies/LavaMonsterCombat.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 881c386f994af7042bbac887fbbac428
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/enemies/Cowboy/CowboyRock.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88f9e83d630b05c4187892d07d648b56
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/enemies/CyborgBunny.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8fc4b06520b06a84c9ec881f388096f3
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/enemies/BossCowboy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9175a18281c1d7b40b92a1cbed1d8071
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/enemies/Cowboy/RockThrowingCowboy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc4384a2467cf7746ae4066bf4bb2322
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/enemies/KissyFishSpawner.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f56aaa58bb3dd2a4a8d09931ba9d113a
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/enemies/ScreamBubble.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbb3c68c31c50b04a9ee9012e700a2ed
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/enemies/Ghost.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff5cff5d14f165647a76bbbd4acf8dca
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/enemies/SegwayBear.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 688ce2d51185d19489a5c75bf2019ce5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: c7953cede53596d4aa9b187b45e76101, type: 2}
+    - {fileID: 11400000, guid: ed0bc2abc825f0a48954e80626a34909, type: 2}
+    - {fileID: 11400000, guid: 15f1fed3628453442ace0596d4670eb3, type: 2}

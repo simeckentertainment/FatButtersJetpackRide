@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 20879a29e5139d1468fc8d038ef704c4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - collectibleData: {fileID: 11400000, guid: 3eb2fab313466eb4a97abd14dd86d00c, type: 2}
+  - audioSource: {instanceID: 0}
+  - Level1: {instanceID: 0}
+  - Level2: {instanceID: 0}
+  - Level3: {instanceID: 0}
+  - Tutorial: {instanceID: 0}
+  - BearBossMusic: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

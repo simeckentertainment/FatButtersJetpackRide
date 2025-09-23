@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: ReflectionMaps
+  m_EditorClassIdentifier: 
+  m_GroupName: ReflectionMaps
+  m_GUID: 9d59061fc182a7041a70706eb277d068
+  m_SerializeEntries:
+  - m_GUID: 3f138416698b4964f9aa283686241e83
+    m_Address: Assets/Scenes/TitleScreen/ReflectionProbe-0.exr
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a4409754acdc1644a6ded3b4647e4a8
+    m_Address: Assets/Scenes/TitleScreen/LightingData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 688ce2d51185d19489a5c75bf2019ce5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5b2d18124d7290a4280adc902fb33023, type: 2}
+    - {fileID: 11400000, guid: ec33be35f1ce8734bade9ea474ab00aa, type: 2}

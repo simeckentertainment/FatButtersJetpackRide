@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0043228a2b86034429e61f0a64637999, type: 3}
+  m_Name: House_7_Desert Village B Variant
+  m_EditorClassIdentifier: 
+  Name: 
+  ID: House_7_Desert Village B Variant
+  position: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 1}
+  scale: {x: 0, y: 0, z: 0}
+  model: {fileID: 8079174289216145139, guid: 0a22c3be22fd0104eb0201242d7ef192, type: 3}

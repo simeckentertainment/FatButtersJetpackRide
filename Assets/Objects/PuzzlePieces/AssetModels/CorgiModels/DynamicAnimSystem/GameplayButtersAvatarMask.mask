@@ -1,0 +1,609 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GameplayButtersAvatarMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: butters:ControlsGroup
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:LHip_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:LHip_FKGrp/butters:LHip_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:LHip_FKGrp/butters:LHip_FKCtrl/butters:LKnee_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:LHip_FKGrp/butters:LHip_FKCtrl/butters:LKnee_FKGrp/butters:LKnee_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:LHip_FKGrp/butters:LHip_FKCtrl/butters:LKnee_FKGrp/butters:LKnee_FKCtrl/butters:LAnkle_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:LHip_FKGrp/butters:LHip_FKCtrl/butters:LKnee_FKGrp/butters:LKnee_FKCtrl/butters:LAnkle_FKGrp/butters:LAnkle_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:LHip_FKGrp/butters:LHip_FKCtrl/butters:LKnee_FKGrp/butters:LKnee_FKCtrl/butters:LAnkle_FKGrp/butters:LAnkle_FKCtrl/butters:LToe_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:LHip_FKGrp/butters:LHip_FKCtrl/butters:LKnee_FKGrp/butters:LKnee_FKCtrl/butters:LAnkle_FKGrp/butters:LAnkle_FKCtrl/butters:LToe_FKGrp/butters:LToe_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:Nubbin_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:Nubbin_FKGrp/butters:corgiNubbinControl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:RHip_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:RHip_FKGrp/butters:RHip_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:RHip_FKGrp/butters:RHip_FKCtrl/butters:RKnee_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:RHip_FKGrp/butters:RHip_FKCtrl/butters:RKnee_FKGrp/butters:RKnee_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:RHip_FKGrp/butters:RHip_FKCtrl/butters:RKnee_FKGrp/butters:RKnee_FKCtrl/butters:RAnkle_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:RHip_FKGrp/butters:RHip_FKCtrl/butters:RKnee_FKGrp/butters:RKnee_FKCtrl/butters:RAnkle_FKGrp/butters:RAnkle_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:RHip_FKGrp/butters:RHip_FKCtrl/butters:RKnee_FKGrp/butters:RKnee_FKCtrl/butters:RAnkle_FKGrp/butters:RAnkle_FKCtrl/butters:RToe_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Hip_FKGrp/butters:Hip_Ctrl/butters:RHip_FKGrp/butters:RHip_FKCtrl/butters:RKnee_FKGrp/butters:RKnee_FKCtrl/butters:RAnkle_FKGrp/butters:RAnkle_FKCtrl/butters:RToe_FKGrp/butters:RToe_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:CorgiJawGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:CorgiJawGrp/butters:corgiJawCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:CorgiTongueGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:CorgiTongueGrp/butters:corgiJawCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:LEarGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:LEarGrp/butters:LEarCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:LEyeGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:LEyeGrp/butters:LEyeCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:NoseGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:NoseGrp/butters:NoseCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:REarGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:REarGrp/butters:REarCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:REyeGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:CorgiHeadGrp/butters:CorgiNeckAdjustorGrp/butters:CorgiNeckAdjustor/butters:CorgiHeadCtrl/butters:REyeGrp/butters:REyeCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:LShoulder_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:LShoulder_FKGrp/butters:LShoulder_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:LShoulder_FKGrp/butters:LShoulder_FKCtrl/butters:LElbow_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:LShoulder_FKGrp/butters:LShoulder_FKCtrl/butters:LElbow_FKGrp/butters:LElbow_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:LShoulder_FKGrp/butters:LShoulder_FKCtrl/butters:LElbow_FKGrp/butters:LElbow_FKCtrl/butters:LWrist_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:LShoulder_FKGrp/butters:LShoulder_FKCtrl/butters:LElbow_FKGrp/butters:LElbow_FKCtrl/butters:LWrist_FKGrp/butters:LWrist_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:LShoulder_FKGrp/butters:LShoulder_FKCtrl/butters:LElbow_FKGrp/butters:LElbow_FKCtrl/butters:LWrist_FKGrp/butters:LWrist_FKCtrl/butters:LFinger_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:LShoulder_FKGrp/butters:LShoulder_FKCtrl/butters:LElbow_FKGrp/butters:LElbow_FKCtrl/butters:LWrist_FKGrp/butters:LWrist_FKCtrl/butters:LFinger_FKGrp/butters:LFinger_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:Rshldr_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:Rshldr_FKGrp/butters:RShldr_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:Rshldr_FKGrp/butters:RShldr_FKCtrl/butters:RElbow_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:Rshldr_FKGrp/butters:RShldr_FKCtrl/butters:RElbow_FKGrp/butters:RElbow_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:Rshldr_FKGrp/butters:RShldr_FKCtrl/butters:RElbow_FKGrp/butters:RElbow_FKCtrl/butters:RWrist_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:Rshldr_FKGrp/butters:RShldr_FKCtrl/butters:RElbow_FKGrp/butters:RElbow_FKCtrl/butters:RWrist_FKGrp/butters:RWrist_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:Rshldr_FKGrp/butters:RShldr_FKCtrl/butters:RElbow_FKGrp/butters:RElbow_FKCtrl/butters:RWrist_FKGrp/butters:RWrist_FKCtrl/butters:RFinger_FKGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:FKControls/butters:Waist_FKGrp/butters:Waist_Ctrl/butters:Shldr_FKGrp/butters:Shldr_Ctrl/butters:Rshldr_FKGrp/butters:RShldr_FKCtrl/butters:RElbow_FKGrp/butters:RElbow_FKCtrl/butters:RWrist_FKGrp/butters:RWrist_FKCtrl/butters:RFinger_FKGrp/butters:RFinger_FKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:LFootIKVisGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:LFootIKVisGrp/butters:LFoot_IKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:LFootIKVisGrp/butters:LFoot_IKCtrl/butters:ikHandle7
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:LFootIKVisGrp/butters:LFoot_IKCtrl/butters:ikHandle8
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:LHandIKVisGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:LHandIKVisGrp/butters:LeftHand_IKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:LHandIKVisGrp/butters:LeftHand_IKCtrl/butters:ikHandle9
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:LHandIKVisGrp/butters:LeftHand_IKCtrl/butters:ikHandle10
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:LHand_PVFrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:LHand_PVFrp/butters:LeftShoulderIkAdjusterGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:LHand_PVFrp/butters:LeftShoulderIkAdjusterGrp/butters:LeftShoulderIkAdjuster
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:LHand_PVFrp/butters:LHand_PV
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:LLeg_PVGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:LLeg_PVGrp/butters:LeftHipIkAdjusterGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:LLeg_PVGrp/butters:LeftHipIkAdjusterGrp/butters:LeftHipIkAdjuster
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:LLeg_PVGrp/butters:LLeg_PV
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:RHand_PVGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:RHand_PVGrp/butters:RHand_PV
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:RLeg_PVGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:RLeg_PVGrp/butters:RightHipIkAdjusterGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:RLeg_PVGrp/butters:RightHipIkAdjusterGrp/butters:RightHipIkAdjuster
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:PoleVectors/butters:RLeg_PVGrp/butters:RLeg_PV
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:RFootIKVisGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:RFootIKVisGrp/butters:RFoot_IKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:RFootIKVisGrp/butters:RFoot_IKCtrl/butters:ikHandle5
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:RFootIKVisGrp/butters:RFoot_IKCtrl/butters:ikHandle6
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:RHandIKVisGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:RHandIKVisGrp/butters:RHand_IKCtrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:RHandIKVisGrp/butters:RHand_IKCtrl/butters:ikHandle3
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:RHandIKVisGrp/butters:RHand_IKCtrl/butters:ikHandle4
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:RHandIKVisGrp/butters:RightShoulderIkAdjusterGrp
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:IKControls/butters:RHandIKVisGrp/butters:RightShoulderIkAdjusterGrp/butters:RightShoulderIkAdjuster
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:Metacontrols
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:Metacontrols/butters:LHand_Metactrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:Metacontrols/butters:LLeg_Metactrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:Metacontrols/butters:RHand_Metactrl
+    m_Weight: 0
+  - m_Path: butters:ControlsGroup/butters:ButtersPrimaryControl/butters:Metacontrols/butters:RLeg_Metactrl
+    m_Weight: 0
+  - m_Path: butters:corgimesh
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:Corgi_blendshapes
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:Corgi_blendshapes/butters:copyBase_DO_NOT_INCLUDE
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth/butters:btooth
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth/butters:btooth1
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth/butters:btooth2
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth/butters:btooth3
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth/butters:btooth4
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth/butters:btooth5
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth/butters:btooth6
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth/butters:btooth7
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth/butters:btooth8
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth/butters:btooth9
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth/butters:btooth10
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:bottomteeth/butters:btooth11
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:left_eye
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:main_corgi_geo
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:right_eye
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:Cone_O_Shame
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:Cone_O_Shame/butters:AngryBrows
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:Cone_O_Shame/butters:Cone_of_Shame
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:HotDog
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:HotDog/butters:HotDog_Suit
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:Jolly_Ol_Saint_Butters
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:Jolly_Ol_Saint_Butters/butters:Santa_Beard
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:Jolly_Ol_Saint_Butters/butters:Santa_Hat
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:Jolly_Ol_Saint_Butters/butters:Santa_Outfit
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:Such_A_Gouda_Boy
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:Such_A_Gouda_Boy/butters:CheeseHat
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:Such_A_Gouda_Boy/butters:CheeseSuit
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:Thanksgiving_Corgi
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:skins/butters:Thanksgiving_Corgi/butters:Thanksgiving_Corgi
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:tongue
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:topteeth
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:topteeth/butters:utooth
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:topteeth/butters:utooth1
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:topteeth/butters:utooth2
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:topteeth/butters:utooth3
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:topteeth/butters:utooth4
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:topteeth/butters:utooth5
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:topteeth/butters:utooth6
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:topteeth/butters:utooth7
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:topteeth/butters:utooth8
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:topteeth/butters:utooth9
+    m_Weight: 0
+  - m_Path: butters:corgimesh/butters:corgi_Geo_Grp/butters:topteeth/butters:utooth10
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_jaw
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_jaw/butters:corgi_jaw1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_jaw/butters:corgi_jaw1/butters:corgi_jaw_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_jaw/butters:corgi_tongue1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_jaw/butters:corgi_tongue1/butters:corgi_tongue2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_jaw/butters:corgi_tongue1/butters:corgi_tongue2/butters:corgi_tongue3
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_jaw/butters:corgi_tongue1/butters:corgi_tongue2/butters:corgi_tongue3/butters:corgi_tongue_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_snout
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_snout/butters:corgi_nose
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_snout/butters:corgi_nose/butters:corgi_nose_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_TopHead
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_TopHead/butters:corgi_Lear1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_TopHead/butters:corgi_Lear1/butters:corgi_Lear_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_TopHead/butters:corgi_Rear1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:corgi_neck1/butters:corgi_head1/butters:corgi_TopHead/butters:corgi_Rear1/butters:corgi_Rear_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:BND_corgi_Lshoulder
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:BND_corgi_Lshoulder/butters:BND_corgi_Lelbow
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:BND_corgi_Lshoulder/butters:BND_corgi_Lelbow/butters:BND_corgi_Lwrist
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:BND_corgi_Lshoulder/butters:BND_corgi_Lelbow/butters:BND_corgi_Lwrist/butters:BND_corgi_Ltoe_buffer
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:BND_corgi_Lshoulder/butters:BND_corgi_Lelbow/butters:BND_corgi_Lwrist/butters:BND_corgi_Ltoe_buffer/butters:BND_corgi_Ltoe
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:BND_corgi_Lshoulder/butters:BND_corgi_Lelbow/butters:BND_corgi_Lwrist/butters:BND_corgi_Ltoe_buffer/butters:BND_corgi_Ltoe/butters:BND_corgi_Ltoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:BND_corgi_Lshoulder/butters:BND_corgi_Lelbow/butters:BND_corgi_Lwrist/butters:BND_corgi_Ltoe_buffer/butters:BND_corgi_Ltoe1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:BND_corgi_Lshoulder/butters:BND_corgi_Lelbow/butters:BND_corgi_Lwrist/butters:BND_corgi_Ltoe_buffer/butters:BND_corgi_Ltoe1/butters:BND_corgi_Ltoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:BND_corgi_Lshoulder/butters:BND_corgi_Lelbow/butters:BND_corgi_Lwrist/butters:BND_corgi_Ltoe_buffer/butters:BND_corgi_Ltoe2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:BND_corgi_Lshoulder/butters:BND_corgi_Lelbow/butters:BND_corgi_Lwrist/butters:BND_corgi_Ltoe_buffer/butters:BND_corgi_Ltoe2/butters:BND_corgi_Ltoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:FK_corgi_Lshoulder
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:FK_corgi_Lshoulder/butters:FK_corgi_Lelbow
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:FK_corgi_Lshoulder/butters:FK_corgi_Lelbow/butters:FK_corgi_Lwrist
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:FK_corgi_Lshoulder/butters:FK_corgi_Lelbow/butters:FK_corgi_Lwrist/butters:FK_corgi_Ltoe_buffer
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:FK_corgi_Lshoulder/butters:FK_corgi_Lelbow/butters:FK_corgi_Lwrist/butters:FK_corgi_Ltoe_buffer/butters:FK_corgi_Ltoe
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:FK_corgi_Lshoulder/butters:FK_corgi_Lelbow/butters:FK_corgi_Lwrist/butters:FK_corgi_Ltoe_buffer/butters:FK_corgi_Ltoe/butters:FK_corgi_Ltoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:FK_corgi_Lshoulder/butters:FK_corgi_Lelbow/butters:FK_corgi_Lwrist/butters:FK_corgi_Ltoe_buffer/butters:FK_corgi_Ltoe1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:FK_corgi_Lshoulder/butters:FK_corgi_Lelbow/butters:FK_corgi_Lwrist/butters:FK_corgi_Ltoe_buffer/butters:FK_corgi_Ltoe1/butters:FK_corgi_Ltoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:FK_corgi_Lshoulder/butters:FK_corgi_Lelbow/butters:FK_corgi_Lwrist/butters:FK_corgi_Ltoe_buffer/butters:FK_corgi_Ltoe2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:FK_corgi_Lshoulder/butters:FK_corgi_Lelbow/butters:FK_corgi_Lwrist/butters:FK_corgi_Ltoe_buffer/butters:FK_corgi_Ltoe2/butters:FK_corgi_Ltoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:IK_corgi_Lshoulder
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:IK_corgi_Lshoulder/butters:IK_corgi_Lelbow
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:IK_corgi_Lshoulder/butters:IK_corgi_Lelbow/butters:IK_corgi_Lwrist
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:IK_corgi_Lshoulder/butters:IK_corgi_Lelbow/butters:IK_corgi_Lwrist/butters:IK_corgi_Ltoe_buffer
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:IK_corgi_Lshoulder/butters:IK_corgi_Lelbow/butters:IK_corgi_Lwrist/butters:IK_corgi_Ltoe_buffer/butters:IK_corgi_Ltoe
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:IK_corgi_Lshoulder/butters:IK_corgi_Lelbow/butters:IK_corgi_Lwrist/butters:IK_corgi_Ltoe_buffer/butters:IK_corgi_Ltoe/butters:IK_corgi_Ltoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:IK_corgi_Lshoulder/butters:IK_corgi_Lelbow/butters:IK_corgi_Lwrist/butters:IK_corgi_Ltoe_buffer/butters:IK_corgi_Ltoe1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:IK_corgi_Lshoulder/butters:IK_corgi_Lelbow/butters:IK_corgi_Lwrist/butters:IK_corgi_Ltoe_buffer/butters:IK_corgi_Ltoe1/butters:IK_corgi_Ltoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:IK_corgi_Lshoulder/butters:IK_corgi_Lelbow/butters:IK_corgi_Lwrist/butters:IK_corgi_Ltoe_buffer/butters:IK_corgi_Ltoe2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:left_shoulder_group/butters:IK_corgi_Lshoulder/butters:IK_corgi_Lelbow/butters:IK_corgi_Lwrist/butters:IK_corgi_Ltoe_buffer/butters:IK_corgi_Ltoe2/butters:IK_corgi_Ltoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:BND_corgi_Rshoulder
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:BND_corgi_Rshoulder/butters:BND_corgi_Relbow
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:BND_corgi_Rshoulder/butters:BND_corgi_Relbow/butters:BND_corgi_Rwrist
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:BND_corgi_Rshoulder/butters:BND_corgi_Relbow/butters:BND_corgi_Rwrist/butters:BND_corgi_Rtoe_buffer
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:BND_corgi_Rshoulder/butters:BND_corgi_Relbow/butters:BND_corgi_Rwrist/butters:BND_corgi_Rtoe_buffer/butters:BND_corgi_Rtoe
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:BND_corgi_Rshoulder/butters:BND_corgi_Relbow/butters:BND_corgi_Rwrist/butters:BND_corgi_Rtoe_buffer/butters:BND_corgi_Rtoe/butters:BND_corgi_Rtoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:BND_corgi_Rshoulder/butters:BND_corgi_Relbow/butters:BND_corgi_Rwrist/butters:BND_corgi_Rtoe_buffer/butters:BND_corgi_Rtoe1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:BND_corgi_Rshoulder/butters:BND_corgi_Relbow/butters:BND_corgi_Rwrist/butters:BND_corgi_Rtoe_buffer/butters:BND_corgi_Rtoe1/butters:BND_corgi_Rtoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:BND_corgi_Rshoulder/butters:BND_corgi_Relbow/butters:BND_corgi_Rwrist/butters:BND_corgi_Rtoe_buffer/butters:BND_corgi_Rtoe2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:BND_corgi_Rshoulder/butters:BND_corgi_Relbow/butters:BND_corgi_Rwrist/butters:BND_corgi_Rtoe_buffer/butters:BND_corgi_Rtoe2/butters:BND_corgi_Rtoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:FK_corgi_Rshoulder
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:FK_corgi_Rshoulder/butters:FK_corgi_Relbow
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:FK_corgi_Rshoulder/butters:FK_corgi_Relbow/butters:FK_corgi_Rwrist
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:FK_corgi_Rshoulder/butters:FK_corgi_Relbow/butters:FK_corgi_Rwrist/butters:FK_corgi_Rtoe_buffer
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:FK_corgi_Rshoulder/butters:FK_corgi_Relbow/butters:FK_corgi_Rwrist/butters:FK_corgi_Rtoe_buffer/butters:FK_corgi_Rtoe
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:FK_corgi_Rshoulder/butters:FK_corgi_Relbow/butters:FK_corgi_Rwrist/butters:FK_corgi_Rtoe_buffer/butters:FK_corgi_Rtoe/butters:FK_corgi_Rtoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:FK_corgi_Rshoulder/butters:FK_corgi_Relbow/butters:FK_corgi_Rwrist/butters:FK_corgi_Rtoe_buffer/butters:FK_corgi_Rtoe1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:FK_corgi_Rshoulder/butters:FK_corgi_Relbow/butters:FK_corgi_Rwrist/butters:FK_corgi_Rtoe_buffer/butters:FK_corgi_Rtoe1/butters:FK_corgi_Rtoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:FK_corgi_Rshoulder/butters:FK_corgi_Relbow/butters:FK_corgi_Rwrist/butters:FK_corgi_Rtoe_buffer/butters:FK_corgi_Rtoe2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:FK_corgi_Rshoulder/butters:FK_corgi_Relbow/butters:FK_corgi_Rwrist/butters:FK_corgi_Rtoe_buffer/butters:FK_corgi_Rtoe2/butters:FK_corgi_Rtoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:IK_corgi_Rshoulder
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:IK_corgi_Rshoulder/butters:IK_corgi_Relbow
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:IK_corgi_Rshoulder/butters:IK_corgi_Relbow/butters:IK_corgi_Rwrist
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:IK_corgi_Rshoulder/butters:IK_corgi_Relbow/butters:IK_corgi_Rwrist/butters:IK_corgi_Rtoe_buffer
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:IK_corgi_Rshoulder/butters:IK_corgi_Relbow/butters:IK_corgi_Rwrist/butters:IK_corgi_Rtoe_buffer/butters:IK_corgi_Rtoe
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:IK_corgi_Rshoulder/butters:IK_corgi_Relbow/butters:IK_corgi_Rwrist/butters:IK_corgi_Rtoe_buffer/butters:IK_corgi_Rtoe/butters:IK_corgi_Rtoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:IK_corgi_Rshoulder/butters:IK_corgi_Relbow/butters:IK_corgi_Rwrist/butters:IK_corgi_Rtoe_buffer/butters:IK_corgi_Rtoe1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:IK_corgi_Rshoulder/butters:IK_corgi_Relbow/butters:IK_corgi_Rwrist/butters:IK_corgi_Rtoe_buffer/butters:IK_corgi_Rtoe1/butters:IK_corgi_Rtoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:IK_corgi_Rshoulder/butters:IK_corgi_Relbow/butters:IK_corgi_Rwrist/butters:IK_corgi_Rtoe_buffer/butters:IK_corgi_Rtoe2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:corgi_spine1/butters:corgi_spine2/butters:corgi_spine3/butters:right_shoulder_group/butters:IK_corgi_Rshoulder/butters:IK_corgi_Relbow/butters:IK_corgi_Rwrist/butters:IK_corgi_Rtoe_buffer/butters:IK_corgi_Rtoe2/butters:IK_corgi_Rtoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:corgi_Lhip
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:corgi_Lhip/butters:corgi_Lknee
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:corgi_Lhip/butters:corgi_Lknee/butters:corgi_Lankle
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:corgi_Lhip/butters:corgi_Lknee/butters:corgi_Lankle/butters:corgi_Ltoe
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:corgi_Lhip/butters:corgi_Lknee/butters:corgi_Lankle/butters:corgi_Ltoe/butters:corgi_Ltoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:corgi_Lhip/butters:corgi_Lknee/butters:corgi_Lankle/butters:corgi_Ltoe/butters:corgi_Ltoe_end/butters:joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:corgi_Lhip/butters:corgi_Lknee/butters:corgi_Lankle/butters:corgi_Ltoe/butters:corgi_Ltoe_end1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:corgi_Lhip/butters:corgi_Lknee/butters:corgi_Lankle/butters:corgi_Ltoe/butters:corgi_Ltoe_end1/butters:joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:corgi_Lhip/butters:corgi_Lknee/butters:corgi_Lankle/butters:corgi_Ltoe/butters:corgi_Ltoe_end2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:corgi_Lhip/butters:corgi_Lknee/butters:corgi_Lankle/butters:corgi_Ltoe/butters:corgi_Ltoe_end2/butters:joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:FK_corgi_Lhip
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:FK_corgi_Lhip/butters:FK_corgi_Lknee
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:FK_corgi_Lhip/butters:FK_corgi_Lknee/butters:FK_corgi_Lankle
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:FK_corgi_Lhip/butters:FK_corgi_Lknee/butters:FK_corgi_Lankle/butters:FK_corgi_Ltoe
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:FK_corgi_Lhip/butters:FK_corgi_Lknee/butters:FK_corgi_Lankle/butters:FK_corgi_Ltoe/butters:FK_corgi_Ltoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:FK_corgi_Lhip/butters:FK_corgi_Lknee/butters:FK_corgi_Lankle/butters:FK_corgi_Ltoe/butters:FK_corgi_Ltoe_end/butters:FK_joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:FK_corgi_Lhip/butters:FK_corgi_Lknee/butters:FK_corgi_Lankle/butters:FK_corgi_Ltoe/butters:FK_corgi_Ltoe_end1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:FK_corgi_Lhip/butters:FK_corgi_Lknee/butters:FK_corgi_Lankle/butters:FK_corgi_Ltoe/butters:FK_corgi_Ltoe_end1/butters:FK_joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:FK_corgi_Lhip/butters:FK_corgi_Lknee/butters:FK_corgi_Lankle/butters:FK_corgi_Ltoe/butters:FK_corgi_Ltoe_end2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:FK_corgi_Lhip/butters:FK_corgi_Lknee/butters:FK_corgi_Lankle/butters:FK_corgi_Ltoe/butters:FK_corgi_Ltoe_end2/butters:FK_joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:IK_corgi_Lhip
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:IK_corgi_Lhip/butters:IK_corgi_Lknee
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:IK_corgi_Lhip/butters:IK_corgi_Lknee/butters:IK_corgi_Lankle
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:IK_corgi_Lhip/butters:IK_corgi_Lknee/butters:IK_corgi_Lankle/butters:IK_corgi_Ltoe
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:IK_corgi_Lhip/butters:IK_corgi_Lknee/butters:IK_corgi_Lankle/butters:IK_corgi_Ltoe/butters:IK_corgi_Ltoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:IK_corgi_Lhip/butters:IK_corgi_Lknee/butters:IK_corgi_Lankle/butters:IK_corgi_Ltoe/butters:IK_corgi_Ltoe_end/butters:IK_joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:IK_corgi_Lhip/butters:IK_corgi_Lknee/butters:IK_corgi_Lankle/butters:IK_corgi_Ltoe/butters:IK_corgi_Ltoe_end1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:IK_corgi_Lhip/butters:IK_corgi_Lknee/butters:IK_corgi_Lankle/butters:IK_corgi_Ltoe/butters:IK_corgi_Ltoe_end1/butters:IK_joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:IK_corgi_Lhip/butters:IK_corgi_Lknee/butters:IK_corgi_Lankle/butters:IK_corgi_Ltoe/butters:IK_corgi_Ltoe_end2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:left_hip_grp/butters:IK_corgi_Lhip/butters:IK_corgi_Lknee/butters:IK_corgi_Lankle/butters:IK_corgi_Ltoe/butters:IK_corgi_Ltoe_end2/butters:IK_joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:corgi_Rhip
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:corgi_Rhip/butters:corgi_Rknee
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:corgi_Rhip/butters:corgi_Rknee/butters:corgi_Rankle
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:corgi_Rhip/butters:corgi_Rknee/butters:corgi_Rankle/butters:corgi_Rtoe
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:corgi_Rhip/butters:corgi_Rknee/butters:corgi_Rankle/butters:corgi_Rtoe/butters:corgi_Rtoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:corgi_Rhip/butters:corgi_Rknee/butters:corgi_Rankle/butters:corgi_Rtoe/butters:corgi_Rtoe_end/butters:joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:corgi_Rhip/butters:corgi_Rknee/butters:corgi_Rankle/butters:corgi_Rtoe/butters:corgi_Rtoe_end1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:corgi_Rhip/butters:corgi_Rknee/butters:corgi_Rankle/butters:corgi_Rtoe/butters:corgi_Rtoe_end1/butters:joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:corgi_Rhip/butters:corgi_Rknee/butters:corgi_Rankle/butters:corgi_Rtoe/butters:corgi_Rtoe_end2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:corgi_Rhip/butters:corgi_Rknee/butters:corgi_Rankle/butters:corgi_Rtoe/butters:corgi_Rtoe_end2/butters:joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:FK_corgi_Rhip1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:FK_corgi_Rhip1/butters:FK_corgi_Rknee
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:FK_corgi_Rhip1/butters:FK_corgi_Rknee/butters:FK_corgi_Rankle
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:FK_corgi_Rhip1/butters:FK_corgi_Rknee/butters:FK_corgi_Rankle/butters:FK_corgi_Rtoe
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:FK_corgi_Rhip1/butters:FK_corgi_Rknee/butters:FK_corgi_Rankle/butters:FK_corgi_Rtoe/butters:FK_corgi_Rtoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:FK_corgi_Rhip1/butters:FK_corgi_Rknee/butters:FK_corgi_Rankle/butters:FK_corgi_Rtoe/butters:FK_corgi_Rtoe_end/butters:FK_joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:FK_corgi_Rhip1/butters:FK_corgi_Rknee/butters:FK_corgi_Rankle/butters:FK_corgi_Rtoe/butters:FK_corgi_Rtoe_end1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:FK_corgi_Rhip1/butters:FK_corgi_Rknee/butters:FK_corgi_Rankle/butters:FK_corgi_Rtoe/butters:FK_corgi_Rtoe_end1/butters:FK_joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:FK_corgi_Rhip1/butters:FK_corgi_Rknee/butters:FK_corgi_Rankle/butters:FK_corgi_Rtoe/butters:FK_corgi_Rtoe_end2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:FK_corgi_Rhip1/butters:FK_corgi_Rknee/butters:FK_corgi_Rankle/butters:FK_corgi_Rtoe/butters:FK_corgi_Rtoe_end2/butters:FK_joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:IK_corgi_Rhip1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:IK_corgi_Rhip1/butters:IK_corgi_Rknee
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:IK_corgi_Rhip1/butters:IK_corgi_Rknee/butters:IK_corgi_Rankle
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:IK_corgi_Rhip1/butters:IK_corgi_Rknee/butters:IK_corgi_Rankle/butters:IK_corgi_Rtoe
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:IK_corgi_Rhip1/butters:IK_corgi_Rknee/butters:IK_corgi_Rankle/butters:IK_corgi_Rtoe/butters:IK_corgi_Rtoe_end
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:IK_corgi_Rhip1/butters:IK_corgi_Rknee/butters:IK_corgi_Rankle/butters:IK_corgi_Rtoe/butters:IK_corgi_Rtoe_end/butters:IK_joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:IK_corgi_Rhip1/butters:IK_corgi_Rknee/butters:IK_corgi_Rankle/butters:IK_corgi_Rtoe/butters:IK_corgi_Rtoe_end1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:IK_corgi_Rhip1/butters:IK_corgi_Rknee/butters:IK_corgi_Rankle/butters:IK_corgi_Rtoe/butters:IK_corgi_Rtoe_end1/butters:IK_joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:IK_corgi_Rhip1/butters:IK_corgi_Rknee/butters:IK_corgi_Rankle/butters:IK_corgi_Rtoe/butters:IK_corgi_Rtoe_end2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:right_hip_grp/butters:IK_corgi_Rhip1/butters:IK_corgi_Rknee/butters:IK_corgi_Rankle/butters:IK_corgi_Rtoe/butters:IK_corgi_Rtoe_end2/butters:IK_joint27
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:tailJntGrp
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:tailJntGrp/butters:corgi_tail1
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:tailJntGrp/butters:corgi_tail1/butters:corgi_tail2
+    m_Weight: 0
+  - m_Path: butters:corgiRigGrp/butters:corgi_root_joint/butters:tailJntGrp/butters:corgi_tail1/butters:corgi_tail2/butters:corgi_tail_end
+    m_Weight: 0

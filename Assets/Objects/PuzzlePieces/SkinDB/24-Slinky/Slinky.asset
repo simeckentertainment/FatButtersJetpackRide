@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf5be9709625ec4f8a08f070d8ed4b2, type: 3}
+  m_Name: Slinky
+  m_EditorClassIdentifier: 
+  isPremiumSkin: 1
+  isMemorialSkin: 0
+  memorialWingsCoords: {x: 0, y: 0, z: 0}
+  is2DSkin: 0
+  memorialHaloModel: {fileID: 0}
+  CharacterOverride: {fileID: 8532595816948150078, guid: eb0d84ad67db9cd498229b0f237d9bfa, type: 3}
+  JetpackHolsterMesh: {fileID: 9206075082996029557, guid: 94350be83e6338741bca317dcea13ff2, type: 3}
+  combinedJetpack: 0
+  LeftJetpackMesh: {fileID: 1215794880761440671, guid: 4169e8cfb61ba7141a90995f45bbf8e4, type: 3}
+  RightJetpackMesh: {fileID: 1215794880761440671, guid: 4169e8cfb61ba7141a90995f45bbf8e4, type: 3}
+  CombinedJetpackMeshOverride: {fileID: 0}
+  MainThrusterParticles:
+  - {fileID: 6225300368921524471, guid: 95f907825f4cd19479b25460b01adfb6, type: 3}
+  - {fileID: 6225300368921524471, guid: 95f907825f4cd19479b25460b01adfb6, type: 3}
+  PlusThrusterParticles:
+  - {fileID: 7317356174364936071, guid: c1aabd94e3252e9488b99a4f0e36566a, type: 3}
+  - {fileID: 7317356174364936071, guid: c1aabd94e3252e9488b99a4f0e36566a, type: 3}
+  MinusThrusterParticles:
+  - {fileID: 1007121116553316898, guid: 79780e9039e7a3f4bb505b019fa7735c, type: 3}
+  - {fileID: 1007121116553316898, guid: 79780e9039e7a3f4bb505b019fa7735c, type: 3}
+  ThrusterLights:
+  - {fileID: 7627293119914354711, guid: 3f9cb34ae603030428d3b42f59f147f1, type: 3}
+  - {fileID: 7627293119914354711, guid: 3f9cb34ae603030428d3b42f59f147f1, type: 3}
+  ThrusterSounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  AnimOverride: {fileID: 9100000, guid: 0c6facd756eb49e44a256c7607f8bd7c, type: 2}
+  explosionSound: {fileID: 0}
+  successSound: {fileID: 0}
+  successParticles: {fileID: 0}
+  explosionParticles: {fileID: 0}
+  explosionLight: {fileID: 0}
+  barkSounds: []
+  PremiumSkinColliderCoords:
+  - {x: 0, y: 0, z: -0.22}
+  - {x: 0, y: 0, z: 0.16}
+  - {x: 0, y: 0, z: 0.08}
+  - {x: 0.06, y: 0, z: 0}
+  - {x: 0.06, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0.08}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: -0.16}
+  - {x: 0, y: 0, z: 0.17}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  PremiumSkinColliderRadii:
+  - 0.26
+  - 0.18
+  - 0.13
+  - 0.08
+  - 0.08
+  - 0.13
+  - 0.04
+  - 0.04
+  - 0.04
+  - 0.04
+  - 0.13
+  - 0.39
+  - 0.34
+  - 0.12
+  - 0.12
+  - 0.3
+  PremiumSkinColliderHeights:
+  - 0.27
+  - 0.68
+  - 0.49
+  - 0.4
+  - 0.4
+  - 0.49
+  - 0.3
+  - 0.3
+  - 0.3
+  - 0.3
+  - 0.44
+  - 0
+  - 0.77
+  - 0.47
+  - 0.47
+  - 0

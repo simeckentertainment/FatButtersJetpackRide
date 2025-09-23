@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0043228a2b86034429e61f0a64637999, type: 3}
+  m_Name: FenceSimple_3_Desert_Village A
+  m_EditorClassIdentifier: 
+  Name: 
+  ID: FenceSimple_3_Desert_Village A
+  position: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 1}
+  scale: {x: 0, y: 0, z: 0}
+  model: {fileID: 2028321263815763839, guid: a7c96f4da85c1944c85c38f5c141aafe, type: 3}

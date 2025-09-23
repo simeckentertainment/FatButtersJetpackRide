@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dfb839aad6a3b90499cca26bb9d1b568
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mainMenuCameraMover: {instanceID: 0}
+  - saveManager: {instanceID: 0}
+  - collectibleData: {fileID: 11400000, guid: 3eb2fab313466eb4a97abd14dd86d00c, type: 2}
+  - sceneLoadData: {fileID: 11400000, guid: b7d7ce1dfb670e242b5c66d76118f18a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

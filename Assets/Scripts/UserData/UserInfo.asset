@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ac53158553d904e884e3ca7f1b7802, type: 3}
+  m_Name: UserInfo
+  m_EditorClassIdentifier: 
+  AgeGateQuestionAnswered: 0
+  analyticsConsentAnswered: 0
+  isOldEnoughForAds: 0
+  dataCollectionConsent: 0
+  monthBorn: 0
+  dayBorn: 0
+  yearBorn: 0
+  HapticsEnabled: 1
+  LastMoTDVersion: 1
+  LastMoTDRead: 0
+  LevelSelectBanners: 0
+  PauseMenuBanners: 0
+  InterstitialToggle: 0
+  InterstitialFrequency: 3
+  BoneDoublerToggle: 1

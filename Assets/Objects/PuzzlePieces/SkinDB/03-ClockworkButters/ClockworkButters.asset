@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf5be9709625ec4f8a08f070d8ed4b2, type: 3}
+  m_Name: ClockworkButters
+  m_EditorClassIdentifier: 
+  isMemorialSkin: 0
+  PrimaryMeshOverride: []
+  JetpackHolsterMesh: {fileID: 323595963000505181, guid: 3f9f13679c4be3444bc698ae12f10667, type: 3}
+  combinedJetpack: 0
+  LeftJetpackMesh: {fileID: 8567334220617040236, guid: e50dee78a5318e2468015aa83f934c1a, type: 3}
+  RightJetpackMesh: {fileID: 797032955261263220, guid: d31ef34d1115720429345f49299259a3, type: 3}
+  CombinedJetpackMeshOverride: {fileID: 0}
+  MainThrusterParticles:
+  - {fileID: 1664836844622050, guid: 3a04f4c938944d44db6d65174849bc36, type: 3}
+  - {fileID: 1664836844622050, guid: 3a04f4c938944d44db6d65174849bc36, type: 3}
+  PlusThrusterParticles:
+  - {fileID: 1664836844622050, guid: 368e8fcf917607447a4dd30946f50d7e, type: 3}
+  - {fileID: 1664836844622050, guid: 368e8fcf917607447a4dd30946f50d7e, type: 3}
+  MinusThrusterParticles:
+  - {fileID: 1664836844622050, guid: a6d13f7d527818d4da8f9ed6c7551f6a, type: 3}
+  - {fileID: 1664836844622050, guid: a6d13f7d527818d4da8f9ed6c7551f6a, type: 3}
+  ThrusterLights:
+  - {fileID: -976075210381401797, guid: 5d545c44473b39c479cb2256eed2df32, type: 3}
+  - {fileID: -976075210381401797, guid: 5d545c44473b39c479cb2256eed2df32, type: 3}
+  ThrusterSounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  AnimOverride: {fileID: 0}
+  explosionSound: {fileID: 8300000, guid: 730bab7386c262d4badb72f6ee921068, type: 3}
+  successSound: {fileID: 8300000, guid: 967cd37b529dd2f4691bb1ef3a7c0fcb, type: 3}
+  successParticles: {fileID: 198631066050499358, guid: 4689f0b98fddb1048963b27944731651, type: 3}
+  explosionParticles: {fileID: 198204746014789312, guid: 6cc6e0b45236bc3418fa7d0cae7f66c7, type: 3}
+  explosionLight: {fileID: 0}
+  barkSounds:
+  - {fileID: 8300000, guid: 81ee8f5d5c2e073468ea6636f378b535, type: 3}
+  - {fileID: 8300000, guid: 4957f18372acb7742b89a7b1284ff35c, type: 3}
+  - {fileID: 8300000, guid: 3ce08f6abc1a8fb4dbbaead6249c0271, type: 3}
+  - {fileID: 8300000, guid: 72ca451d40dd05c4b8657e63f674ef9a, type: 3}
