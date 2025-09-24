@@ -5,12 +5,12 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mp3 filter=lfs diff=lfs merge=lfs -text
 *.ogg filter=lfs diff=lfs merge=lfs -text
-*.CellData.bytes filter=lfs diff=lfs merge=lfs -text
-*.CellOptionalData.bytes filter=lfs diff=lfs merge=lfs -text
-*.CellSupportData.bytes filter=lfs diff=lfs merge=lfs -text
 *.unity filter=lfs diff=lfs merge=lfs -text
 *.prefab filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
+*.CellData.bytes filter=lfs diff=lfs merge=lfs -text
+*.CellOptionalData.bytes filter=lfs diff=lfs merge=lfs -text
+*.CellSupportData.bytes filter=lfs diff=lfs merge=lfs -text
 **/*.bytes filter=lfs diff=lfs merge=lfs -text
 **/*.unity filter=lfs diff=lfs merge=lfs -text
 **/*.prefab filter=lfs diff=lfs merge=lfs -text
