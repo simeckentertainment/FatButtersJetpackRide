@@ -4,20 +4,13 @@ using UnityEngine;
 
 public class WhirlyDirly : MonoBehaviour
 {
-    [SerializeField] bool primary;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float rotationSpeed = 5f;
+    [SerializeField] private bool primary;
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        if(primary){
-        transform.Rotate(Vector3.back*0.2f);
-        } else {
-            transform.Rotate(Vector3.forward*0.2f);
-        }
+        var angularVeclocity = (primary ? Vector3.back : Vector3.forward) * rotationSpeed * Time.deltaTime;
+
+        transform.Rotate(angularVeclocity);
     }
 }
