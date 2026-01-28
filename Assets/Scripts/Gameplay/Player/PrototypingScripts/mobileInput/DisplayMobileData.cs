@@ -24,7 +24,7 @@ public class DisplayMobileData : MonoBehaviour
     void OnEnable() {
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         touchCounter.text = Input.touchCount.ToString();
         string touchPhaseText = "";

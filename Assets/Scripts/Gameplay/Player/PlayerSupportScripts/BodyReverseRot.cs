@@ -9,7 +9,7 @@ public class BodyReverseRot : MonoBehaviour
     public AffectAxis affectAxis;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (affectAxis == AffectAxis.Z){
             transform.rotation = Quaternion.Euler(0, 0, (OGButtersTrans.rotation.z * -1) + offset);

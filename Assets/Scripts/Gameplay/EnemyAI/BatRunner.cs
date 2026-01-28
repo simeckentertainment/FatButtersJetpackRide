@@ -55,7 +55,7 @@ public class BatRunner : MonoBehaviour
         // Reset state
         pathIndex = 0;
         state = BatState.FlyPath;
-        wobbleOffset = Random.Range(0f, 10f);
+        wobbleOffset = Random.Range(0f, 7f);
         cooldownTimer = 0f;
 
         // Validate path
