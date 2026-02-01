@@ -18,7 +18,6 @@ MonoBehaviour:
     Hash: 544494d107e25f472a5bdc0b77b06719
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
-  m_BundleLocalCatalog: 0
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
   m_InternalIdNamingMode: 0

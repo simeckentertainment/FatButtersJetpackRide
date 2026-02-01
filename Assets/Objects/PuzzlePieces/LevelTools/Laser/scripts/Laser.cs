@@ -11,7 +11,7 @@ public class Laser : MonoBehaviour
     [SerializeField] private UnityEvent onPlayerHit;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private bool debugHitGizmos;
-    private bool playerCurrentlyHit;
+    [SerializeField] private bool connectStartToEndOnly = true; // draw only one beam from first to last
     private void Awake()
     {
         if (lineRenderer == null)
@@ -54,12 +54,25 @@ public class Laser : MonoBehaviour
         }
 
         lineRenderer.enabled = true;
-        lineRenderer.positionCount = laserPoints.Count;
-        for (int i = 0; i < laserPoints.Count; i++)
+        lineRenderer.useWorldSpace = true;
+
+        if (connectStartToEndOnly)
         {
-            if (laserPoints[i] != null)
+            // Single straight beam from first point to last point
+            lineRenderer.positionCount = 2;
+            lineRenderer.SetPosition(0, laserPoints[0].transform.position);
+            lineRenderer.SetPosition(1, laserPoints[laserPoints.Count - 1].transform.position);
+        }
+        else
+        {
+            // Multi-point path following all points
+            lineRenderer.positionCount = laserPoints.Count;
+            for (int i = 0; i < laserPoints.Count; i++)
             {
-                lineRenderer.SetPosition(i, laserPoints[i].transform.position);
+                if (laserPoints[i] != null)
+                {
+                    lineRenderer.SetPosition(i, laserPoints[i].transform.position);
+                }
             }
         }
     }
@@ -70,8 +83,6 @@ public class Laser : MonoBehaviour
         {
             return;
         }
-
-        bool hitThisFrame = false;
 
         for (int i = 0; i < laserPoints.Count - 1; i++)
         {
@@ -91,25 +102,14 @@ public class Laser : MonoBehaviour
 
             if (Physics.Raycast(start, dir.normalized, out RaycastHit hit, distance, playerLayer, QueryTriggerInteraction.Ignore))
             {
-                hitThisFrame = true;
-
-                if (!playerCurrentlyHit)
-                {
-                    onPlayerHit?.Invoke();
-                    playerCurrentlyHit = true;
-                }
+                onPlayerHit?.Invoke();
 
                 if (debugHitGizmos)
                 {
                     Debug.DrawLine(start, hit.point, Color.red, 0.05f);
                 }
-                return; // stop at first hit this frame
+                return; // already hit player this frame
             }
-        }
-
-        if (!hitThisFrame)
-        {
-            playerCurrentlyHit = false; // reset so next entry fires once
         }
     }
 
