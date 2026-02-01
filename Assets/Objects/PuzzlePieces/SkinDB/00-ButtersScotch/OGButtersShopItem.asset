@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   itemName: Butters Scotch
-  itemImg: {fileID: 21300000, guid: 84504af2bdd135a49a2b3a774b385467, type: 3}
+  itemImg: {fileID: 21300000, guid: 1bc8295df40e17d49955120775fb72bc, type: 3}
   JetpackImg: {fileID: 21300000, guid: 72f5141b86768f642ac0b3a2d4a5a6d0, type: 3}
   dogHouseButtersImg: {fileID: 21300000, guid: ae8b4a13eb42ed641b8297dca8fc2a84, type: 3}
   itemPrice: 10

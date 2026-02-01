@@ -18,7 +18,7 @@ public class PlayerWinState : PlayerLevelWinState
         FixRollTimer = 0;
         PlayOneTimeAudio(player.vfx.successSound);
         player.vfx.StopPrimaryThrusters();
-        rollStartingValue = player.input.roll;
+        rollStartingValue = player.input.aimAngle;
         KeyboardOffsetStartingValue = player.KeyboardRollOffset;
         player.UI.SetEndLevelStats(player.tempBones);
         SaveManager.Instance.Save();
@@ -37,7 +37,7 @@ public class PlayerWinState : PlayerLevelWinState
         if (FixRollTimer < FixRollTimerMax)
         {
             FixRollTimer++;
-            player.input.roll = Mathf.Lerp(rollStartingValue, 0.0f, FixRollTimer / FixRollTimerMax);
+            player.input.aimAngle = Mathf.Lerp(rollStartingValue, 0.0f, FixRollTimer / FixRollTimerMax);
             player.KeyboardRollOffset = Mathf.Lerp(KeyboardOffsetStartingValue, 0.0f, FixRollTimer / FixRollTimerMax);
         }
         base.FixedUpdate();

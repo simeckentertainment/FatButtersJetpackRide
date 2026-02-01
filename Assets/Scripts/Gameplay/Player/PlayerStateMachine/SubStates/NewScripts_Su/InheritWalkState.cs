@@ -1,18 +1,20 @@
 using Unity.VisualScripting;
+using UnityEditor.Media;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 public class InheritWalkState : PlayerAliveState
 {
-    int stateAge;
-    bool animationSet;
     float animNormalizedTime; //since we're switching between different animations dynamically, we should handle normalized time tracking here.
-    
+    float absoluteZ;
+    bool switchThisFrame;
+
     string[] forwardMove = { "ForeWalkSlow", "ForeWalkMid", "ForeWalkFast" };
     string[] backwardMove = { "BackWalkSlow", "BackWalkFast" };
     string[] idleAnnoyedAnims = { "idleAnnoyed1", "idleAnnoyed2" };
 
     WalkSpeed walkSpeedEnum;
+    WalkSpeed previousWalkSpeedEnum;
     public InheritWalkState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
 
@@ -20,11 +22,10 @@ public class InheritWalkState : PlayerAliveState
 
     public override void enter()
     {
-        stateAge = 0;
-        animationSet = true;
-        // Initialize walk speed tracking
-        player.walkCurrentSpeed = 0f;
-        player.walkTargetSpeed = 0f;
+        switchThisFrame = true;
+        previousWalkSpeedEnum = WalkSpeed.Stop; //set this now to avoid errors on frame 1.
+        walkSpeedEnum = GetSpeedEnum();
+        // Initialize walk speed trackin
         if (player.animationPercentage == 0.0f)
         { //It should only ever be 0.0 on start.
           //   PlayAnim(forwardMove[Random.Range(0, 2)]);
@@ -40,91 +41,111 @@ public class InheritWalkState : PlayerAliveState
     
     public override void FixedUpdate()
     {
-        if(stateAge > 0)
+
+        walkSpeedEnum = GetSpeedEnum();
+        SetSpeed();
+        if (walkSpeedEnum == WalkSpeed.Stop)
         {
-            animNormalizedTime = GetNormalizedTime(0);
+            player.stateMachine.changeState(player.playerIdleState);
         }
-        stateAge++;
-        base.FixedUpdate();
-        
-        // Handle walk mechanics within the FSM
-        CalculateWalkMovement();
-        
         if (player.input.GoThrust)
         {
             player.stateMachine.changeState(player.playerThrustState);
         }
+
+
+
+
+
+
+        if(durationOfState > 0)
+        {
+            animNormalizedTime = GetNormalizedTime(0); //for driving mid-animation changes
+        } else
+        {
+            animNormalizedTime = 0.0f;
+        }
+
         
-        PlayerWalkAnimation();
+
+        if(previousWalkSpeedEnum != walkSpeedEnum){
+            SetWalkAnimation();
+            previousWalkSpeedEnum = walkSpeedEnum; //reset for "remembering" for next frame.
+        }
+
+        
+        base.FixedUpdate();
     }
-    
+
     public override void exit()
     {
         base.exit();
     }
-    
-    private void CalculateWalkMovement()
+
+    WalkSpeed GetSpeedEnum()
     {
-        if (!player.GroundTouch) 
+        // Get signed Z rotation (-180 to 180)
+        absoluteZ = Mathf.Abs(player.input.aimAngle);
+        if (absoluteZ < 15f)
         {
-            // Reset walk values when not on ground
-            player.walkTargetSpeed = 0f;
-            player.walkCurrentSpeed = 0f;
-            return;
+            return WalkSpeed.Stop;
+        }
+        else if (absoluteZ >= 15f & absoluteZ < 25f)
+        { //Slow walk
+            return WalkSpeed.Slow;
+        }
+        else if (absoluteZ > 25f & absoluteZ < 35f)
+        { //Medium walk
+            return WalkSpeed.Medium;
+        }
+        else
+        {
+            return WalkSpeed.Fast;
         }
 
-        // Get signed Z rotation (-180 to 180)
-        float rotationZ = player.transform.eulerAngles.z;
-        if (rotationZ > 180f)
-            rotationZ -= 360f;
+    }
 
-        player.walkAbsZ = Mathf.Abs(rotationZ);
+
+
+    private void SetSpeed()
+    {
+        //Determine target direction. -1 = right, 1 = left
+        player.walkDirection = player.input.aimAngle < 0.0f ? 1.0f : -1.0f;
 
         // Determine target speed based on rotation
-        if (player.walkAbsZ < 15f){
-            //If rotation is under 15 degrees, we should be sent to the idle state.
-            player.walkTargetSpeed = 0f;
-        }else if (player.walkAbsZ < 25f){ //Slow walk
-            player.walkTargetSpeed = 0.5f * player.walkSpeed;
-            walkSpeedEnum = WalkSpeed.Slow;
-        }else if (player.walkAbsZ < 35f){ //Medium walk
-            player.walkTargetSpeed = 0.8f * player.walkSpeed;
-            walkSpeedEnum = WalkSpeed.Medium;
-        }else{ //fast walk
-            player.walkTargetSpeed = 1.2f * player.walkSpeed;
-            walkSpeedEnum = WalkSpeed.Fast;
+        switch (walkSpeedEnum)
+        {
+            case WalkSpeed.Stop:
+                player.walkCurrentSpeed = 0.0f;
+                break;
+            case WalkSpeed.Slow:
+                player.walkCurrentSpeed = Helper.RemapArbitraryValues(15.0f, 25.0f, player.slowWalkSpeed, player.mediumWalkSpeed, absoluteZ); //Remap makes the actual speed smooth between different speed thresholds.
+                break;
+            case WalkSpeed.Medium:
+                player.walkCurrentSpeed = Helper.RemapArbitraryValues(25.0f, 35.0f, player.mediumWalkSpeed, player.fastWalkSpeed, absoluteZ);
+                break;
+            case WalkSpeed.Fast:
+                player.walkCurrentSpeed = player.fastWalkSpeed;
+                break;
         }
-
-        // Smoothly approach the target speed
-        player.walkCurrentSpeed = Mathf.Lerp(player.walkCurrentSpeed, player.walkTargetSpeed, Time.fixedDeltaTime * player.walkAcceleration);
-
-        // Determine direction (tilt left/right)
-        player.walkDirection = rotationZ > 0 ? -1f : 1f;
-
-        // Apply velocity smoothly
+        //Backwards walk speed is half of forward walk speed.
+        if(player.walkDirection == -1.0f)
+        {
+            player.walkCurrentSpeed *= 0.5f;
+        }
         player.rb.linearVelocity = new Vector3(player.walkDirection * player.walkCurrentSpeed, player.rb.linearVelocity.y, 0f);
     }
 
-    private void PlayerWalkAnimation()
+    void SetWalkAnimation()
     {
-        if (player.walkAbsZ > 15 && animationSet)
-        {
-            if (player.walkDirection == 1)
+       if (player.walkDirection > 0.0f)
             {
                 SetForwardWalkAnimWithTime();
             }
             else
             {
                 SetBackwardWalkAnimWithTime();
-            }
-
-            animationSet = false;
-        }
-        else if (player.walkAbsZ < 15)
-        {
-            animationSet = true;
-            player.stateMachine.changeState(player.playerIdleState);
-        }
+            } 
     }
 
     private void SetForwardWalkAnimWithTime()
@@ -132,12 +153,15 @@ public class InheritWalkState : PlayerAliveState
         switch (walkSpeedEnum)
         {
             case WalkSpeed.Slow:
+                Debug.Log("Set Slow!");
                 PlayAnim(forwardMove[0], animNormalizedTime);
                 break;
             case WalkSpeed.Medium:
+            Debug.Log("Set Medium!");
                 PlayAnim(forwardMove[1], animNormalizedTime);
                 break;
             case WalkSpeed.Fast:
+                    Debug.Log("Set Fast!");
                 PlayAnim(forwardMove[2], animNormalizedTime);
                 break;
             default: //no need to do anything because we're going to idle state.
@@ -164,5 +188,6 @@ public class InheritWalkState : PlayerAliveState
     } 
 
 
-    private enum WalkSpeed {Slow, Medium, Fast}
+
+    private enum WalkSpeed {Stop, Slow, Medium, Fast}
 }

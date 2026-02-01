@@ -50,6 +50,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 465c1b973f156de4ea8a6e38baf8ee3e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/JewelMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4ac87a33335e0394abde2eb0350f83c3
     m_Address: Assets/Objects/PuzzlePieces/prefabs/MenuEnvs/ENV3.prefab
     m_ReadOnly: 0

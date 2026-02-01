@@ -57,6 +57,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 08bb4471fffe3504faa01f653f5d924b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/GreyMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 09014e39046d9634c89e35747d1c6d38
     m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/actionGameAssets/SkythianCat/Hand_Painted_Nature_Kit_LITE/Meshes/Cedar03.fbx
     m_ReadOnly: 0
@@ -141,9 +146,24 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d7876710a01b2340baecc6c6951d0f6
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/BaseInteriorMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1f4f37dfb5dbd68448ba17bb5308b913
     m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
       Kit/Source/Shader/URP/Water.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1fea64f7ac13bd947b131a5cabace28f
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/Episode1/Level1Mesh.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 207cd46b5ad1d884088f0fb8b259b893
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/Episode1/PirateFlag.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -159,6 +179,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 23dd5c90e64c47743b7affe9ed19c5ca
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/bone/BONE.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24d72d3692f73a04ca5ce00f1fca518a
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/Blackfog.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -180,6 +205,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2cdb86016e9263a40b0206bf61b740fe
     m_Address: Assets/Objects/PuzzlePieces/SkinDB/09-JollyOldSaintButters/JollyOldSaintButters.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2cf09f855dca0864badf15200c39d80e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/Episode1/E1HouseWall.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -215,6 +245,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 38f80ba8da35f4345bc7d5d69b9b7d6f
     m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodGoggles_base.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3a12313e2c662cd4c92ed8f9f3adc607
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/PathCubeMat.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -258,6 +293,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43bfa92267d39dd41bc5d28cef0595e0
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/powerups/bone/glow_materials.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 455e1383e51f5114ab63cc25ee6ea23b
     m_Address: Assets/Objects/PuzzlePieces/SkinDB/Fat Butters Skins 3.png
     m_ReadOnly: 0
@@ -288,6 +328,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 509c4c783b63df84698035d743a519f0
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/PreAlphaAssets/Materials/Ground.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 534c1f9f1a45c4f429d1b70046850c81
     m_Address: Assets/Objects/PuzzlePieces/prefabs/powerups/foods/P18_DrumstickRaw_UPFB_V001_RSS.prefab
     m_ReadOnly: 0
@@ -295,6 +340,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 55648a8e4967de349a22c7fe2d26666e
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/LavaMonster/Lava_002_NRM.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 57ec9b2899461bf47a896b9695539f65
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/PreAlphaAssets/Materials/moonray.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -438,6 +488,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b18c723eaa9f984f8813819cb6dbbf8
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/NewLevelsComingSoonMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8162517b6ec2309499f99e303b29f146
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/Skyboxes/Sky_Anime_11_morning_a
       1.mat
@@ -485,8 +540,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90bac56c55fc4b74bbdc155a168ee4d4
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/enemyBaseInterior.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 916a88b3d1937c14fb16cc9e92588cc3
     m_Address: Assets/Objects/CharacterSkins/rocketCorgi/rocketCorgi.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94507a5dde644bc4f9f6ea0e77e329e8
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/PreAlphaAssets/Materials/Snow.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -501,8 +566,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9892959d4a225014d85afc2f8c85eb2c
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/Episode1/E1HouseDoor.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 995ead0947d473a4b8b0d2210c5340cc
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/Environment1/house1/floors/wood_0062_normal_opengl_2k.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a0631ee9636b2443974c287547550af
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/TNT/uploads_files_3660746_ied.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9accd40c22198f749ab41a4653197fc2
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/Episode1/E1HouseRoof.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -591,6 +671,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b38bab50eb72a6546a79a58c6d74c981
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/poofclouds-01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b523e3a0e4cfc184ba31a6b131a897b8
     m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/corgiv3_normal.png
     m_ReadOnly: 0
@@ -623,6 +708,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bbd1281df0cd3e2449bfb9eaf9ccbd2f
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/fb-cs-sign.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: be0901e1b8a46694897fdc586b7c67d2
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/flag/Materials/ground.mat
     m_ReadOnly: 0
@@ -636,6 +726,11 @@ MonoBehaviour:
   - m_GUID: c0808e3837765cb46a2422e2e99045c6
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Materials/PaletteA_Desert
       Village.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c365a269f6f4f0549b35bd50f5adc51c
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/PoofCloudMat.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -685,6 +780,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d37271de0d873d048806b59db37f107e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/Episode1/E1HouseWindows.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d38fedd9373c31145996b0f8231f18ba
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/IsLevelBeatenMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d47e95b0a681a8046b9ae47334846b53
     m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
       Kit/Source/Material/URP/Leaves 2.mat
@@ -703,6 +808,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d7f9c668cb950724e9f5e2ff48ecb01f
     m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodHarnessLeather_occ.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7fd1a3f99845664bb3dbbc6ec5d2963
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/crashed-spaceship/ShellMat.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -767,6 +877,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eeefa26506c8b804a96f935c1faca3eb
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/Episode1/E1Road.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f08b794cf97ac5e4cb8c7938e4c641f0
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/BaseExteriorMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f11a345bca007f94f8ec65458dac4d0d
     m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodHarnessLeather_nor.png
     m_ReadOnly: 0
@@ -774,6 +894,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f4e8801ec5d2ca54ba2140561eb21b83
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/LavaMonster/ground_0027_color_2k.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f761a8eca357e664aac0ad5dc44ba586
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Clouds/CloudMat.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -795,6 +920,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fcbb2e27d3770e040b595735bb25c71f
     m_Address: Assets/Objects/CharacterSkins/rocketCorgi/Textures/chmodRocketBalls_occ.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fd2fea3c5c04b3044a0e0925974148da
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/PreAlphaAssets/Materials/Stump_tip.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

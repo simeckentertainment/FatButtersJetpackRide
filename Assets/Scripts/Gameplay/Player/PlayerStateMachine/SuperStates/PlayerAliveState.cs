@@ -42,7 +42,7 @@ public class PlayerAliveState : PlayerState
     #region CollisionRunners
     void DidThePlayerTurnChecker()
     {
-        if (player.input.roll != 0.0f)
+        if (player.input.aimAngle != 0.0f)
         {
             player.corgiTurned = true;
             return;
@@ -144,7 +144,7 @@ public class PlayerAliveState : PlayerState
     #endregion
 
     #region CoreMechanicStuff
-    private void AdjustRotationAngle()
+    private void AdjustRotationAngle()  //Moving into input driver
     {
         if (player.input.GoCw & player.input.GoCcw) { return; }
         player.vfx.StopAllRotParticles();
@@ -158,7 +158,7 @@ public class PlayerAliveState : PlayerState
             player.KeyboardRollOffset -= 0.25f * player.KeyboardSensitivity;
             player.vfx.StartPlusRotParticles();
         }
-        player.GravityRoll = player.input.roll; //todo: re-implement plus/minus thrusters for gyro controls.
+        player.GravityRoll = player.input.aimAngle;
         player.transform.rotation = Quaternion.Euler(Vector3.forward * (player.GravityRoll + player.KeyboardRollOffset));
     }
 

@@ -311,6 +311,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6042eaad9823b6f488f160b2bce47ac7
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Lava_Flowing_Shader/Materials/mtl_lava_simple.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 63d248e67db58c04aa37512e19848568
     m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/CatWalk
       Stairs Wide.prefab
@@ -604,6 +609,12 @@ MonoBehaviour:
   - m_GUID: bf62c885bb245c54cb05018ff48afa98
     m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
       Rocks Prefabs/Cliffs_2_Desert_Village Brown.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bff827b7fe5a47f47a387bccf74e8604
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Materials/Cliffs_Dark_2_Desert
+      Village.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
