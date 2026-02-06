@@ -115,6 +115,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1afbfbf466b3df4b9cf20fde3885d28
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/dynamics/PhysicsPulley.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ff9cf1ea8cb7a65498c27176c6462ab6
     m_Address: Assets/Objects/PuzzlePieces/prefabs/dynamics/Lights/Level15/YellowLight.prefab
     m_ReadOnly: 0

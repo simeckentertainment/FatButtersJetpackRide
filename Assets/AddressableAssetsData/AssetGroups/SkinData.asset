@@ -95,8 +95,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 816120fa650b1c04f91caba83212e1c7
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/Player.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8ae48a058fa1cbd4092744600efaa663
     m_Address: Assets/Objects/PuzzlePieces/SkinDB/Cutepid.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9411cacd0d64df942bb967dd1f4ade9e
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/PlayerGameplayPrefab.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
