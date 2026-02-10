@@ -18,6 +18,9 @@ public class SeBChargeLaserState : SeBProvokedState
     int chargeSegmentLength;
     int currentChargeSegment;
 
+    private float minimumDistance = 5f; 
+    private bool tooClose = false;
+
     public override void enter(){
         PlayNewSound();
         RotList = new List<Quaternion>();
@@ -34,11 +37,69 @@ public class SeBChargeLaserState : SeBProvokedState
     }
     public override void Update()
     {
+        // Check distance to player
+        float distanceToPlayer = Vector3.Distance(
+            segwayBear.transform.position, 
+            segwayBear.target.position
+        );
+        
+        // If player too close, retreat while still charging
+        if (distanceToPlayer < minimumDistance)
+        {
+            RetreatFromPlayer();
+        }
+        else
+        {
+            // Stop movement when at safe distance
+            segwayBear.axel.rotateAdditive = 0f;
+        }
+
+        // Always run charging logic (rings, aiming, audio)
         RunRings();
-        //RunLaserWobble();
+        
+        // Look at target
         segwayBear.PitchCubes[1].LookAt(segwayBear.target);
+        ClampConeRotation();
+        
+        // Audio controls state transition to fire
         RunAudio();
         base.Update();
+    }
+
+    private void RetreatFromPlayer()
+    {
+        // Determine retreat direction (away from player)
+        float playerX = segwayBear.target.position.x;
+        float bearX = segwayBear.transform.position.x;
+        
+        if (playerX < bearX)
+        {
+            // Player is to the left, move right
+            segwayBear.SetDestination(bearX + 10f, BearSpeed.fast);
+        }
+        else
+        {
+            // Player is to the right, move left
+            segwayBear.SetDestination(bearX - 10f, BearSpeed.fast);
+        }
+    }
+
+    private void ClampConeRotation(){
+        // Clamp rotation to prevent cone clipping into bear body
+        Vector3 currentRotation = segwayBear.PitchCubes[1].localEulerAngles;
+        float minPitch = -45f;  // Maximum upward angle
+        float maxPitch = 30f;   // Maximum downward angle (adjust as needed)
+
+        // Convert to -180 to 180 range for easier clamping
+        float pitch = currentRotation.x;
+        if (pitch > 180f) pitch -= 360f;
+
+        // Clamp the pitch
+        pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
+
+        // Apply clamped rotation
+        segwayBear.PitchCubes[1].localEulerAngles = new Vector3(pitch, currentRotation.y, currentRotation.z);
+
     }
 
     void FigureRotList(){ //kindly provided by chatGPT
