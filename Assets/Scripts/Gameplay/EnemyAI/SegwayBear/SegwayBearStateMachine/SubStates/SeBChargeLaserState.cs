@@ -37,6 +37,13 @@ public class SeBChargeLaserState : SeBProvokedState
     }
     public override void Update()
     {
+        // Safety check - if target is null, reset to idle
+        if (segwayBear.target == null)
+        {
+            ResetToIdle();
+            return;
+        }
+        
         // Check if player is behind the bear - reset to idle if so
         if (IsPlayerBehindBear())
         {
@@ -108,19 +115,19 @@ public class SeBChargeLaserState : SeBProvokedState
 
     private void RetreatFromPlayer()
     {
-        // Determine retreat direction (away from player)
-        float playerX = segwayBear.target.position.x;
+        // Retreat in the opposite direction the bear is facing (move backward)
         float bearX = segwayBear.transform.position.x;
+        float forwardX = segwayBear.transform.forward.x;
         
-        if (playerX < bearX)
+        if (forwardX < 0)
         {
-            // Player is to the left, move right
+            // Bear faces left, retreat right (backward from bear's perspective)
             segwayBear.SetDestination(bearX + 10f, BearSpeed.fast);
         }
         else
         {
-            // Player is to the right, move left
-            segwayBear.SetDestination(bearX - 10f, BearSpeed.fast);
+            // Bear faces right, retreat left (backward from bear's perspective)
+            segwayBear.SetDestination(bearX - 50f, BearSpeed.fast);
         }
     }
 
