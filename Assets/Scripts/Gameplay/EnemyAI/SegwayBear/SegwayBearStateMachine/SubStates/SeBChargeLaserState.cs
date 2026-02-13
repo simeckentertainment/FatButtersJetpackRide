@@ -37,6 +37,13 @@ public class SeBChargeLaserState : SeBProvokedState
     }
     public override void Update()
     {
+        // Check if player is behind the bear - reset to idle if so
+        if (IsPlayerBehindBear())
+        {
+            ResetToIdle();
+            return;
+        }
+        
         // Check distance to player
         float distanceToPlayer = Vector3.Distance(
             segwayBear.transform.position, 
@@ -64,6 +71,39 @@ public class SeBChargeLaserState : SeBProvokedState
         // Audio controls state transition to fire
         RunAudio();
         base.Update();
+    }
+    
+    private bool IsPlayerBehindBear()
+    {
+        float playerX = segwayBear.target.position.x;
+        float bearX = segwayBear.transform.position.x;
+        float forwardX = segwayBear.transform.forward.x;
+        
+        // If bear faces left (forward.x < 0), player is behind if playerX > bearX
+        // If bear faces right (forward.x > 0), player is behind if playerX < bearX
+        if (forwardX < 0)
+        {
+            return playerX > bearX;
+        }
+        else
+        {
+            return playerX < bearX;
+        }
+    }
+    
+    private void ResetToIdle()
+    {
+        // Stop particles and audio
+        intakeParticles.Stop();
+        excessParticleRunoff.Stop();
+        segwayBear.bearAudio.Stop();
+        
+        // Clear detection so bear can re-detect player
+        segwayBear.detectedPlayer = false;
+        segwayBear.target = null;
+        
+        // Return to idle state
+        segwayBear.stateMachine.changeState(segwayBear.seBIdleState);
     }
 
     private void RetreatFromPlayer()
