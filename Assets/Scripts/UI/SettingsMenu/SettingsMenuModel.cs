@@ -196,5 +196,6 @@ public class SettingsMenuModel : Model
 public enum SettingsPage
 {
     Base,
-    Ads
+    Ads,
+    ConfirmLeave
 }

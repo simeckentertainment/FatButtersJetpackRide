@@ -58,11 +58,11 @@ public abstract class SlideableViewModel<T> : ViewModel<T> where T : Model
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (timeSinceMoveStart < duration)
         {
-            timeSinceMoveStart += Time.deltaTime;
+            timeSinceMoveStart += Time.unscaledDeltaTime;
             if (timeSinceMoveStart > duration)
             {
                 timeSinceMoveStart = duration;

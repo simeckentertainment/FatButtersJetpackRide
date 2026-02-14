@@ -9,14 +9,11 @@ public class LevelSelectAssetVisibilityManager : MonoBehaviour
     [SerializeField] Vector3 InitCamPos;
     [SerializeField] Vector3 FinalCamPos;
     [SerializeField] bool CameraInPosition;
-    [SerializeField] int BoneTimerThreshold;
-    [SerializeField] int BoneTimerCounter;
-    [SerializeField] float BoneTimerPercent;
-    [SerializeField] float NextBoneMilestonePercentage;
-    [SerializeField] float IndividualBonePercentage;
-    [SerializeField] float BonesPercentDone;
+    [SerializeField, Tooltip("Measured in seconds")] float BoneTimerThreshold;
     [SerializeField] int firstUnbeatenLevel;
     [SerializeField] MeshRenderer[] PopInBones;
+
+    private float boneTimer = 0;
 
     [SerializeField] LevelSelectUIModel levelSelectUI;
 
@@ -40,12 +37,12 @@ public class LevelSelectAssetVisibilityManager : MonoBehaviour
             cam = FindFirstObjectByType<Camera>().gameObject;
         }
         CameraInPosition = false;
-        BoneTimerCounter = 0;
+        boneTimer = 0;
         camMoveCounter = 0;
         PlayerCanMoveCamera = false;
         firstUnbeatenLevel = GetIndexForFirstUnbeatenLevel();
         
-        if(firstUnbeatenLevel > 3)
+        if (firstUnbeatenLevel > 3)
         {
             InitCamPos = GetCamPosForLastBeatenLevel();
             FinalCamPos = GetCamPosForFirstUnbeatenLevel();
@@ -65,7 +62,7 @@ public class LevelSelectAssetVisibilityManager : MonoBehaviour
         keys[0].inTangent = -1f;
         animCurve = new AnimationCurve(keys);
         cam.transform.position = InitCamPos;
-        if(firstUnbeatenLevel > 1)
+        if (firstUnbeatenLevel > 1)
         {
             PopInBones = LevelPathHolders[firstUnbeatenLevel-1].GetComponentsInChildren<MeshRenderer>();
             SetRegularPathBoneVisibility();
@@ -80,10 +77,10 @@ public class LevelSelectAssetVisibilityManager : MonoBehaviour
         SetLevelButtonAesthetics();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if(firstUnbeatenLevel < 1) { return; }
-        if(camMoveCounter < InitialCameraMoveFrameThreshold)
+        if (firstUnbeatenLevel < 1) { return; }
+        if (camMoveCounter < InitialCameraMoveFrameThreshold)
         {
             camMoveCounter++;
             float CurrentTimeIndex = (float)camMoveCounter / (float)InitialCameraMoveFrameThreshold;
@@ -100,9 +97,9 @@ public class LevelSelectAssetVisibilityManager : MonoBehaviour
             }
         }
 
-        if (CameraInPosition && BoneTimerCounter < BoneTimerThreshold)
+        if (CameraInPosition && boneTimer < BoneTimerThreshold)
         {
-            RunBonePopin();
+            RunBonePopin(Time.deltaTime);
         }
     }
 
@@ -173,7 +170,7 @@ public class LevelSelectAssetVisibilityManager : MonoBehaviour
     {
         for (int i = 0; i< collectibleData.LevelBeaten.Length; i++)
         {
-            if(!collectibleData.LevelBeaten[i])
+            if (!collectibleData.LevelBeaten[i])
             {
                 return i;
             }
@@ -181,19 +178,18 @@ public class LevelSelectAssetVisibilityManager : MonoBehaviour
         return collectibleData.LevelBeaten.Length-1;
     }
 
-    void RunBonePopin()
+    void RunBonePopin(float deltaTime)
     {
-        BoneTimerCounter++;
-        if(NumberOfBonesVisible() == PopInBones.Length){return;} //If we're done, don't worry about it.
+        boneTimer += deltaTime;
+
+        if (NumberOfBonesVisible() == PopInBones.Length) { return; } //If we're done, don't worry about it.
         //Bones pop in at fractional intervals between 0 and BoneTimerThreshold frames, starting from when the camera finishes moving.
-        BoneTimerPercent = ((float)BoneTimerCounter) / ((float)BoneTimerThreshold);
-        BonesPercentDone = ((float)NumberOfBonesVisible()) / ((float)PopInBones.Length); //may not need this.
-        IndividualBonePercentage = 1f/((float)PopInBones.Length);
-        NextBoneMilestonePercentage = ((float)NumberOfBonesVisible()+1f) / ((float)PopInBones.Length);
-        if(BoneTimerPercent >= NextBoneMilestonePercentage)
+        var boneTimerPercent = boneTimer / BoneTimerThreshold;
+        var nextBoneMilestonePercentage = ((float)NumberOfBonesVisible()+1f) / ((float)PopInBones.Length);
+        
+        if (boneTimerPercent >= nextBoneMilestonePercentage)
         {
             EnableGameObjectAndAllChildren(PopInBones[NumberOfBonesVisible()].transform.parent.gameObject);
-            NextBoneMilestonePercentage += IndividualBonePercentage;
         }
     }
 

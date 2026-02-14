@@ -7,8 +7,8 @@ public class BoatSailOut : MonoBehaviour
     [SerializeField] CollectibleData data;
     [SerializeField] Vector3 OgPos;
     [SerializeField] Vector3 SailedPos;
-    int sailTimeCounter;
-    [SerializeField] int sailTimeThreshold;
+    float sailTimeCounter;
+    [SerializeField, Tooltip("Measured in seconds")] float sailTimeThreshold;
     bool doISail;
     // Start is called before the first frame update
     void Start()
@@ -26,10 +26,10 @@ public class BoatSailOut : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(doISail & sailTimeCounter < sailTimeThreshold){
-            sailTimeCounter++;
+            sailTimeCounter += Time.deltaTime;
             transform.position = Vector3.Lerp(OgPos,SailedPos,Helper.RemapToBetweenZeroAndOne(0,sailTimeThreshold,sailTimeCounter));
         }
     }
