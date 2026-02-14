@@ -45,7 +45,7 @@ public class FuelGaugeViewModel : ImageViewModel<GameplayUIModel>
         //     Image.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, colorPingPongLength)); // color PingPong the inner bar
         //     barImage.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, colorPingPongLength)); // color PingPong the outer bar 
              /* Comment out both line of code to ping pong both inner and outer bar. */
-        // }
+        // }  
        
         }
     }
