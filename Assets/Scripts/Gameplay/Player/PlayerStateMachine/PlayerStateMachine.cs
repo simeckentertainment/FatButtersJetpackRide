@@ -19,6 +19,7 @@ public class PlayerStateMachine : MonoBehaviour
     }
     public void FixedUpdate()
     {
+        
         currentState.FixedUpdate();
     }
     public void changeState(PlayerState nextState)

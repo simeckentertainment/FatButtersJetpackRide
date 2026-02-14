@@ -18,6 +18,9 @@ public class SeBChargeLaserState : SeBProvokedState
     int chargeSegmentLength;
     int currentChargeSegment;
 
+    private float minimumDistance = 5f; 
+    private bool tooClose = false;
+
     public override void enter(){
         PlayNewSound();
         RotList = new List<Quaternion>();
@@ -34,11 +37,116 @@ public class SeBChargeLaserState : SeBProvokedState
     }
     public override void Update()
     {
+        // Safety check - if target is null, reset to idle
+        if (segwayBear.target == null)
+        {
+            ResetToIdle();
+            return;
+        }
+        
+        // Check if player is behind the bear - reset to idle if so
+        if (IsPlayerBehindBear())
+        {
+            ResetToIdle();
+            return;
+        }
+        
+        // Check distance to player
+        float distanceToPlayer = Vector3.Distance(
+            segwayBear.transform.position, 
+            segwayBear.target.position
+        );
+        
+        // If player too close, retreat while still charging
+        if (distanceToPlayer < minimumDistance)
+        {
+            RetreatFromPlayer();
+        }
+        else
+        {
+            // Stop movement when at safe distance
+            segwayBear.axel.rotateAdditive = 0f;
+        }
+
+        // Always run charging logic (rings, aiming, audio)
         RunRings();
-        //RunLaserWobble();
+        
+        // Look at target
         segwayBear.PitchCubes[1].LookAt(segwayBear.target);
+        ClampConeRotation();
+        
+        // Audio controls state transition to fire
         RunAudio();
         base.Update();
+    }
+    
+    private bool IsPlayerBehindBear()
+    {
+        float playerX = segwayBear.target.position.x;
+        float bearX = segwayBear.transform.position.x;
+        float forwardX = segwayBear.transform.forward.x;
+        
+        // If bear faces left (forward.x < 0), player is behind if playerX > bearX
+        // If bear faces right (forward.x > 0), player is behind if playerX < bearX
+        if (forwardX < 0)
+        {
+            return playerX > bearX;
+        }
+        else
+        {
+            return playerX < bearX;
+        }
+    }
+    
+    private void ResetToIdle()
+    {
+        // Stop particles and audio
+        intakeParticles.Stop();
+        excessParticleRunoff.Stop();
+        segwayBear.bearAudio.Stop();
+        
+        // Clear detection so bear can re-detect player
+        segwayBear.detectedPlayer = false;
+        segwayBear.target = null;
+        
+        // Return to idle state
+        segwayBear.stateMachine.changeState(segwayBear.seBIdleState);
+    }
+
+    private void RetreatFromPlayer()
+    {
+        // Retreat in the opposite direction the bear is facing (move backward)
+        float bearX = segwayBear.transform.position.x;
+        float forwardX = segwayBear.transform.forward.x;
+        
+        if (forwardX < 0)
+        {
+            // Bear faces left, retreat right (backward from bear's perspective)
+            segwayBear.SetDestination(bearX + 10f, BearSpeed.fast);
+        }
+        else
+        {
+            // Bear faces right, retreat left (backward from bear's perspective)
+            segwayBear.SetDestination(bearX - 50f, BearSpeed.fast);
+        }
+    }
+
+    private void ClampConeRotation(){
+        // Clamp rotation to prevent cone clipping into bear body
+        Vector3 currentRotation = segwayBear.PitchCubes[1].localEulerAngles;
+        float minPitch = -45f;  // Maximum upward angle
+        float maxPitch = 30f;   // Maximum downward angle (adjust as needed)
+
+        // Convert to -180 to 180 range for easier clamping
+        float pitch = currentRotation.x;
+        if (pitch > 180f) pitch -= 360f;
+
+        // Clamp the pitch
+        pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
+
+        // Apply clamped rotation
+        segwayBear.PitchCubes[1].localEulerAngles = new Vector3(pitch, currentRotation.y, currentRotation.z);
+
     }
 
     void FigureRotList(){ //kindly provided by chatGPT

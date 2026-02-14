@@ -23,7 +23,7 @@ public class GyroSandboxTestingScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!gyroInitialized) {
              InitGyro();
