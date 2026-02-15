@@ -17,12 +17,6 @@ public class BallRandomizer : MonoBehaviour
         BallData = Instantiate(objectList[rng],transform.position, Quaternion.identity);
         BallData.transform.parent = gameObject.transform;
         BallData.tag = "Ball";
-
-        //meshFilter = GetComponent<MeshFilter>();
-        //meshRenderer = GetComponent<MeshRenderer>();
-
-        //meshFilter.mesh = objectList[rng].gameObject.GetComponent<MeshFilter>().mesh;
-        //meshRenderer.material = objectList[rng].gameObject.GetComponent<MeshRenderer>().material;
     }
 
     // Update is called once per frame
