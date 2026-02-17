@@ -38,7 +38,7 @@ public class GasMeter : MonoBehaviour
             // Player is moving
             if (!isMoving)
             {
-                Debug.Log("Movement happening");
+                //Debug.Log("Movement happening");
                 isMoving = true;
             }
 
@@ -51,7 +51,7 @@ public class GasMeter : MonoBehaviour
 
             if (idleTimer >= idleTimeLimit)// && isMoving)
             {
-                Debug.Log("No movement");
+                //Debug.Log("No movement");
                 playerRigidbody.GetComponent<Player>().Fuel += 0.5f;
                 if (isMoving)
                 {
