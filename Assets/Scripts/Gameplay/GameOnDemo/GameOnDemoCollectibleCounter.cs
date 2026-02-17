@@ -28,10 +28,10 @@ public class GameOnDemoCollectibleCounter : MonoBehaviour
             bonesRemaining = CountObj("Bone");
         }
         if (player.BallTouch){
-            ballsRemaining = CountObj("Food");
+            ballsRemaining = CountObj("Ball");
         }
         if (player.FoodTouch){
-            foodsRemaining = CountObj("Ball");
+            foodsRemaining = CountObj("Food");
         }
         if (player.HarmfulTouch){
             enemiesRemaining = CountObj("Harmful");
