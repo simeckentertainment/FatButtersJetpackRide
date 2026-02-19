@@ -39,7 +39,7 @@ public class FuelGaugeViewModel : ImageViewModel<GameplayUIModel>
             Image.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, colorPingPongLength)); // color PingPong
         }
         // visual indicator on the fuel gauge when player trigger ball
-        // just comment out the below code if you want to see the magic.
+        
         
         
          if (player.hasTemporaryBall || player.hasPermaBall)
