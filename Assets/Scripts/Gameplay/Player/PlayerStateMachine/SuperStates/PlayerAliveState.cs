@@ -159,7 +159,7 @@ public class PlayerAliveState : PlayerState
             player.vfx.StartPlusRotParticles();
         }
         player.GravityRoll = player.input.aimAngle;
-        player.transform.rotation = Quaternion.Euler(Vector3.forward * (player.GravityRoll + player.KeyboardRollOffset));
+        player.rb.MoveRotation(Quaternion.Euler(Vector3.forward * (player.GravityRoll + player.KeyboardRollOffset)));
     }
 
     public void thrust()
