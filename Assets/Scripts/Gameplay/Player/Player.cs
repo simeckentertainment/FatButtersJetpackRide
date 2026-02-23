@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -43,6 +45,8 @@ public class Player : MonoBehaviour
     public float tummy;
     public float maxTummy;
     public int tempBones;
+    public List<Collider> CollidersInJetpackKillZone;
+    [SerializeField] public bool JetpackActivationPossible;
     [System.NonSerialized] public float animationPercentage;
     [Header("Rotation stuff")]
     [System.NonSerialized] public float GravityRoll;
@@ -74,6 +78,7 @@ public class Player : MonoBehaviour
     public bool hasTemporaryBall;
     public bool hasPermaBall;
     public int ballTimerMax = 600;
+    public bool killThrustTriggerTouch;
     public bool OtherObjectTouch;
     public enum PlayerDirection{Left,Right};
     public PlayerDirection playerDirection;
@@ -109,7 +114,7 @@ public class Player : MonoBehaviour
         corgiTurned = false;
         skindex = collectibleData.CurrentSkin;
         vfx.ApplySkin(skindex);
-        
+        JetpackActivationPossible = true;
         ApplyStoreUpgrades();
         playerIdleState = new PlayerIdleState(this, stateMachine);
         playerWalkState = new InheritWalkState(this,stateMachine);

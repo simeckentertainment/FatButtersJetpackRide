@@ -29,7 +29,7 @@ public class PlayerIdleState : PlayerAliveState
     {
         stateAge++;
         base.FixedUpdate();
-        if (player.input.GoThrust)
+        if (player.input.GoThrust & player.JetpackActivationPossible)
         {
             player.stateMachine.changeState(player.playerThrustState);
         }

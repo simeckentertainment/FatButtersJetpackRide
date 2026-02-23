@@ -12,7 +12,7 @@ public class PlayerThrustState : PlayerAliveState
     int stateAge;
     public override void enter()
     {
-        if (!player.input.GoThrust)
+        if (!player.input.GoThrust | !player.JetpackActivationPossible)
         {
             player.stateMachine.changeState(player.playerFallState);
         }
@@ -68,7 +68,7 @@ public class PlayerThrustState : PlayerAliveState
                 UseFuel(isBoosting);
             }
         }
-        if (!player.input.GoThrust)
+        if (!player.input.GoThrust | !player.JetpackActivationPossible)
         {
             player.stateMachine.changeState(player.playerFallState);
         }

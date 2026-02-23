@@ -30,7 +30,7 @@ public class PlayerDangleState : PlayerAliveState
             PlayAnim("Land");
             player.stateMachine.changeState(player.playerIdleState);
         }
-        if(player.input.GoThrust){
+        if(player.input.GoThrust & player.JetpackActivationPossible){
             player.stateMachine.changeState(player.playerThrustState);
         }
         base.FixedUpdate();
