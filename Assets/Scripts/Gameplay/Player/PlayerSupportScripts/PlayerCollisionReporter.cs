@@ -5,12 +5,14 @@ public class PlayerCollisionReporter : MonoBehaviour
     [SerializeField] public Player player;
     [SerializeField] bool didITriggerSomethingThisTime;
     [SerializeField] bool didICollideSomethingThisTime;
+    Collider thisCollider;
     [Header("Sanity Checkers")]
     [SerializeField] GameObject CollisionObject;
     [SerializeField] GameObject TriggerObject;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        thisCollider = gameObject.GetComponent<Collider>();
         didITriggerSomethingThisTime = false;
         didICollideSomethingThisTime = false;
     }
@@ -95,6 +97,11 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "LowGravArea":
                 player.LowGravMode = true;
                 break;
+            case "KillThrust":
+                if(!player.CollidersInJetpackKillZone.Contains(thisCollider)){
+                    player.CollidersInJetpackKillZone.Add(thisCollider);
+                }
+                break;
             default:
                 player.OtherObjectTouch = true;
                 break;
@@ -136,6 +143,12 @@ public class PlayerCollisionReporter : MonoBehaviour
                 break;
             case "LowGravArea":
                 player.LowGravMode = false;
+                break;
+            case "KillThrust":
+                if (player.CollidersInJetpackKillZone.Contains(thisCollider))
+                {
+                    player.CollidersInJetpackKillZone.Remove(thisCollider);
+                }
                 break;
             default:
                 player.OtherObjectTouch = false;
