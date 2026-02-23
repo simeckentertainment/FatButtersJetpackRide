@@ -103,6 +103,6 @@ public class MainMenuButtonManager : MainMenuCommonData
     }
 
     public void GoToLevelSelectScene(){
-        Levels.Load(Levels.LevelSelect);
+        Levels.Load(Levels.LevelSelect); // load the selected level
     }
 }

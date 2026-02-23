@@ -14,6 +14,7 @@ public class SaveManager : Singleton<SaveManager>
     {
         base.Awake();
 
+
         if (!markedToDestroy && !collectibleData.ignoreSaveData)
         {
             EnsureSaveFileExists();
@@ -97,6 +98,7 @@ public class SaveManager : Singleton<SaveManager>
             }
             FileStream saveFile = File.Create(Application.persistentDataPath + saveFilename);
             SaveData data = new SaveData();
+
             data.bones = collectibleData.BONES;
             data.fuelUpgrade = collectibleData.fuelUpgradeLevel;
             data.thrustUpgrade = collectibleData.thrustUpgradeLevel;
@@ -119,8 +121,8 @@ public class SaveManager : Singleton<SaveManager>
             data.monthBorn = userInfo.monthBorn;
             data.dayBorn = userInfo.dayBorn;
             data.yearBorn = userInfo.yearBorn;
-            data.SceneToLoad = sceneLoadData.SceneToLoad;
             data.LastLoadedLevel = sceneLoadData.LastLoadedLevel;
+            data.SceneToLoad = sceneLoadData.SceneToLoad;// load the saved scene.
             data.LastLoadedLevelInt = sceneLoadData.LastLoadedLevelInt;
             data.AdHistoryCounter = sceneLoadData.adHistoryCounter;
             data.LastMotdRead = userInfo.LastMoTDRead;
@@ -169,8 +171,8 @@ public class SaveManager : Singleton<SaveManager>
             collectibleData.HapticsEnabled = data.hapticsEnabled;
             collectibleData.OnScreenControlsEnabled = data.OnScreenControlsEnabled;
             collectibleData.CorgiSenseEnabled = data.CorgiSenseEnabled;
-            sceneLoadData.SceneToLoad = data.SceneToLoad;
             sceneLoadData.LastLoadedLevel = data.LastLoadedLevel;
+            sceneLoadData.SceneToLoad = data.SceneToLoad;
             sceneLoadData.LastLoadedLevelInt = data.LastLoadedLevelInt;
             sceneLoadData.adHistoryCounter = data.AdHistoryCounter;
             userInfo.LevelSelectBanners = data.LevelSelectBanners;
