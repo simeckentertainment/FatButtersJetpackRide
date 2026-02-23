@@ -31,8 +31,8 @@ public class SaveData{
     public bool LastMotdRead;
     public bool OnScreenControlsEnabled;
     public bool CorgiSenseEnabled;
-    public string SceneToLoad;
     public string LastLoadedLevel;
+    public string SceneToLoad;
     public int LastLoadedLevelInt;
     public int AdHistoryCounter;
     public bool LevelSelectBanners;
@@ -40,5 +40,5 @@ public class SaveData{
     public bool InterstitialToggle;
     public int InterstitialFrequency;
     public bool BoneDoublerToggle;
-    public int GraphicsQualityLevel;
+    public int GraphicsQualityLevel;  
 }
