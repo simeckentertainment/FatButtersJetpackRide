@@ -137,7 +137,7 @@ public static class DateTimeExtensions
 
         // the two dates are ints in the form yyyyMMdd (ie: 3/14/1995 would be 19950314, 2/6/2026 would be 20260206)
         // subtracting these ints gets us their age * 100,000 (20260206 - 19950314 = 309892)
-        // dividing an int by 100,000 does the floor value and gets us 30
+        // dividing an int by 100,000 rounds down the value and gets us 30
         return (todayAsInt - birthdayAsInt) / 10000;
     }
 }

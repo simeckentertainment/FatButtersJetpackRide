@@ -21,6 +21,11 @@ public class YearDropdownViewModel : DropdownViewModel<AgeGateMenuModel>
 
     protected override void OnDropdownChanged(int index)
     {
-        Model.Year = int.Parse(Dropdown.options[index].text);
+        if (!int.TryParse(Dropdown.options[index].text, out var yearValue))
+        {
+            yearValue = 0;
+        }
+
+        Model.Year = yearValue;
     }
 }
