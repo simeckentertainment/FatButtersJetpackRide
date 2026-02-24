@@ -54,6 +54,8 @@ public class GameplayUIModel : Model
         }
     }
 
+    public bool PlayerHasBall => player.hasPermaBall || player.hasTemporaryBall;
+
     private void Awake()
     {
         player.OnFuelUpdated.AddListener(Refresh);

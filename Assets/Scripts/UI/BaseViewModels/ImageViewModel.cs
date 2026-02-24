@@ -23,5 +23,8 @@ public abstract class ImageViewModel<T> : ViewModel<T> where T : Model
         Image.sprite = GetSprite();
     }
 
-    protected abstract Sprite GetSprite();
+    protected virtual Sprite GetSprite()
+    {
+        return Image.sprite;
+    }
 }
