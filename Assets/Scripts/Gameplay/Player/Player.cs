@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
     public PlayerDirection playerDirection;
     public bool LowGravMode;
 
-    public UnityEvent OnBonesCollected { get; set; } = new UnityEvent();
+    public UnityEvent OnPickupCollected { get; set; } = new UnityEvent();
     public UnityEvent OnFuelUpdated { get; set; } = new UnityEvent();
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
@@ -154,7 +154,7 @@ public class Player : MonoBehaviour
     public void AddBones(int newBones)
     {
         tempBones += newBones;
-        OnBonesCollected.Invoke();
+        OnPickupCollected.Invoke();
     }
 
     #region DataStuff

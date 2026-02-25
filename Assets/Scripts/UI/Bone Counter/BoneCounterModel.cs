@@ -25,7 +25,7 @@ public class BoneCounterModel : Model
     {
         if (player != null)
         {
-            player.OnBonesCollected.AddListener(OnBonesChanged);
+            player.OnPickupCollected.AddListener(OnBonesChanged);
         }
 
         collectibleData.OnBonesChanged.AddListener(OnBonesChanged);
