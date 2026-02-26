@@ -44,7 +44,6 @@ public class Player : MonoBehaviour
     [System.NonSerialized] public float tummyPercent;
     public float tummy;
     public float maxTummy;
-    public int tempBones;
     public List<Collider> CollidersInJetpackKillZone;
     [SerializeField] public bool JetpackActivationPossible;
     [System.NonSerialized] public float animationPercentage;
@@ -67,8 +66,8 @@ public class Player : MonoBehaviour
     public bool HarmfulTouch;
     public float HarmfulDamageAmount;
     public Vector3 HarmfulTouchObjectPosition;
-    public bool BoneTouch;
-    public bool FoodTouch;
+    public bool BoneTouch; // TODO: Delete
+    public bool FoodTouch; // TODO: Delete
     public float FoodAdditionAmount;
     public bool JerryCanTouch;
     public float FuelAdditionAmount;
@@ -83,6 +82,11 @@ public class Player : MonoBehaviour
     public enum PlayerDirection{Left,Right};
     public PlayerDirection playerDirection;
     public bool LowGravMode;
+
+    public int tempBones { get; set; }
+    public int FoodsCollected { get; private set; }
+    public int BallsCollected { get; private set; }
+    public int EnemiesDefeated { get; private set; }
 
     public UnityEvent OnPickupCollected { get; set; } = new UnityEvent();
     public UnityEvent OnFuelUpdated { get; set; } = new UnityEvent();
@@ -151,10 +155,57 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void AddBones(int newBones)
+    public void AddBones(int count = 1)
     {
-        tempBones += newBones;
-        OnPickupCollected.Invoke();
+        if (stateMachine.currentState is PlayerAliveState) // TODO Drake: Check if this is antithetic to our state machine
+        {
+            tempBones += count;
+            OnPickupCollected.Invoke();
+        }
+    }
+
+    public void AddFoods(float treats, int count = 1)
+    {
+        if (stateMachine.currentState is PlayerAliveState)
+        {
+            FoodsCollected += count;
+
+            tummy += treats;
+            if (tummy > maxTummy)
+            {
+                tummy = maxTummy;
+            }
+
+            OnPickupCollected.Invoke();
+        }
+    }
+
+    public void AddFuel(float fuelAmount)
+    {
+        if (stateMachine.currentState is PlayerAliveState)
+        {
+            Fuel += fuelAmount;
+        }
+    }
+
+    public void AddBalls(int count = 1)
+    {
+        if (stateMachine.currentState is PlayerAliveState)
+        {
+            BallsCollected += count;
+            BallTouch = true;
+
+            OnPickupCollected.Invoke();
+        }
+    }
+
+    public void AddEnemiesDefeated(int count = 1)
+    {
+        if (stateMachine.currentState is PlayerAliveState)
+        {
+            EnemiesDefeated += count;
+            OnPickupCollected.Invoke();
+        }
     }
 
     #region DataStuff

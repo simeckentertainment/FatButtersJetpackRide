@@ -18,7 +18,7 @@ public class CollectibleCounterModel : Model
         }
     }
 
-    public int CurrentBones => player.tempBones;
+    public int BonesCollected => player.tempBones;
 
     private int _totalFoods;
     public int TotalFoods
@@ -34,7 +34,7 @@ public class CollectibleCounterModel : Model
         }
     }
 
-    //public int CurrentFoods => player.FoodsCollected;
+    public int FoodsCollected => player.FoodsCollected;
 
     private int _totalBalls;
     public int TotalBalls
@@ -50,7 +50,7 @@ public class CollectibleCounterModel : Model
         }
     }
 
-    //public int CurrentBalls => player.BallsCollected;
+    public int BallsCollected => player.BallsCollected;
 
     private int _totalEnemies;
     public int TotalEnemies
