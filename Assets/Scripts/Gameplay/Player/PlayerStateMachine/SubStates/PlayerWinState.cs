@@ -13,6 +13,7 @@ public class PlayerWinState : PlayerLevelWinState
 
     public override void enter()
     {
+        PauseUtility.Pause();
         collectibleData.LevelBeaten[SaveManager.Instance.sceneLoadData.LastLoadedLevelInt] = true;
         collectibleData.HASBALL = false;
         FixRollTimer = 0;
