@@ -20,6 +20,7 @@ TagManager:
   - Friendly
   - PlayerDamageTrigger
   - Shelf
+  - KillThrust
   layers:
   - Default
   - TransparentFX

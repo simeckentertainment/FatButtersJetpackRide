@@ -28,6 +28,7 @@ public class PlayerAliveState : PlayerState
         {
             DidThePlayerTurnChecker();
         }
+        player.JetpackActivationPossible = player.CollidersInJetpackKillZone.Count == 0 ? true : false; //we can use the jetpack as long as we're not touching a jetpack kill zone.
         //These are the collision runners.
         AdjustRotationAngle();
         HarmfulInteractionRunner();
@@ -159,7 +160,7 @@ public class PlayerAliveState : PlayerState
             player.vfx.StartPlusRotParticles();
         }
         player.GravityRoll = player.input.aimAngle;
-        player.transform.rotation = Quaternion.Euler(Vector3.forward * (player.GravityRoll + player.KeyboardRollOffset));
+        player.rb.MoveRotation(Quaternion.Euler(Vector3.forward * (player.GravityRoll + player.KeyboardRollOffset)));
     }
 
     public void thrust()
@@ -194,7 +195,7 @@ public class PlayerAliveState : PlayerState
 
     void thrusterVolumeRunner()
     {
-        if (player.input.GoThrust)
+        if (player.input.GoThrust & player.JetpackActivationPossible)
         {
             thrusterVolumeCounter++;
             if (thrusterVolumeCounter > 30f) { thrusterVolumeCounter = 30f; }

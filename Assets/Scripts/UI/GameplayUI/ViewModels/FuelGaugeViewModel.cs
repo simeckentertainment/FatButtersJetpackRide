@@ -5,8 +5,6 @@ public class FuelGaugeViewModel : ImageViewModel<GameplayUIModel>
 {
     [SerializeField] private Sprite[] FuelGaugeColors;
     [SerializeField] private float colorPingPongLength = 0.3f;
-   [SerializeField] Image barImage;
-   [SerializeField] Player player;
 
     protected override void OnModelChanged()
     {
@@ -38,17 +36,5 @@ public class FuelGaugeViewModel : ImageViewModel<GameplayUIModel>
         {
             Image.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, colorPingPongLength)); // color PingPong
         }
-        // visual indicator on the fuel gauge when player trigger ball
-        
-        
-        
-         if (player.hasTemporaryBall || player.hasPermaBall)
-         {
-             Image.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, colorPingPongLength)); // color PingPong the inner bar
-             barImage.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, colorPingPongLength)); // color PingPong the outer bar 
-             
-         }  
-       
-        
     }
 }
