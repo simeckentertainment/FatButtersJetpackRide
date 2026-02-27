@@ -9,6 +9,7 @@ public class Levels
     public const string LevelSelect = "Scenes/P18_LevelSelect_SCN_V002_RSS";
     public const string SaveDataInitializer = "Scenes/P18_SaveDataInitializer_SCN_V001_RSS";
     public const string LevelPrefix = "Scenes/puzzleLevels/";
+    public const string GameOnDemoLevel = "Scenes/puzzleLevels/GameOnExpoDemoLevel";
 
     private static SceneLoadData sceneLoadData => SaveManager.Instance.sceneLoadData;
 

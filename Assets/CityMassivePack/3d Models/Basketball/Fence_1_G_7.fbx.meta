@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 292b40a0d40447d41bb3310682b619db
+AssetOrigin:
+  serializedVersion: 1
+  productId: 288607
+  packageName: Mega Bundle - RG Poly
+  packageVersion: 1.0
+  assetPath: Assets/All in One/CityMassivePack/3d Models/Basketball/Fence_1_G_7.fbx
+  uploadId: 753250
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -135,10 +142,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 288607
-  packageName: Mega Bundle - RG Poly
-  packageVersion: 1.0
-  assetPath: Assets/All in One/CityMassivePack/3d Models/Basketball/Fence_1_G_7.fbx
-  uploadId: 753250

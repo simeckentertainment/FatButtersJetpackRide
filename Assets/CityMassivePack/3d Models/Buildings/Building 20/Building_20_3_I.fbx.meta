@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 6ea9ca5bc6f444f4c82eb8e40cf32d17
+AssetOrigin:
+  serializedVersion: 1
+  productId: 288607
+  packageName: Mega Bundle - RG Poly
+  packageVersion: 1.0
+  assetPath: Assets/All in One/CityMassivePack/3d Models/Buildings/Building 20/Building_20_3_I.fbx
+  uploadId: 753250
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -125,10 +132,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 288607
-  packageName: Mega Bundle - RG Poly
-  packageVersion: 1.0
-  assetPath: Assets/All in One/CityMassivePack/3d Models/Buildings/Building 20/Building_20_3_I.fbx
-  uploadId: 753250

@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 3499dbe825cbb884493ad49c99e8280f
+AssetOrigin:
+  serializedVersion: 1
+  productId: 288607
+  packageName: Mega Bundle - RG Poly
+  packageVersion: 1.0
+  assetPath: Assets/All in One/CityMassivePack/3d Models/Tiles/Outdoor/StreetTile_1_C_2.fbx
+  uploadId: 753250
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -145,10 +152,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 288607
-  packageName: Mega Bundle - RG Poly
-  packageVersion: 1.0
-  assetPath: Assets/All in One/CityMassivePack/3d Models/Tiles/Outdoor/StreetTile_1_C_2.fbx
-  uploadId: 753250

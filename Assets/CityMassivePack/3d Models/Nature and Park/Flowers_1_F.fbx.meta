@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 127331840aef6244b83325a5f116e6d8
+AssetOrigin:
+  serializedVersion: 1
+  productId: 288607
+  packageName: Mega Bundle - RG Poly
+  packageVersion: 1.0
+  assetPath: Assets/All in One/CityMassivePack/3d Models/Nature and Park/Flowers_1_F.fbx
+  uploadId: 753250
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -135,10 +142,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 288607
-  packageName: Mega Bundle - RG Poly
-  packageVersion: 1.0
-  assetPath: Assets/All in One/CityMassivePack/3d Models/Nature and Park/Flowers_1_F.fbx
-  uploadId: 753250

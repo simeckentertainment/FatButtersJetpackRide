@@ -20,11 +20,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1befcb54278689d47a09695c2c0e7e3c
-    m_Address: Assets/Objects/PuzzlePieces/AssetModels/CorgiModels/DefaultGameplayCorgiAnims.fbx
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 274e72d1bfbcaec4db9733caee68a1f0
     m_Address: Assets/Objects/PuzzlePieces/SkinDB/ClockworkButters.asset
     m_ReadOnly: 0

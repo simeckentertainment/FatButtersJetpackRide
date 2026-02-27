@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: b372dbba9fe3a334c96b0dd414b5d95d
+AssetOrigin:
+  serializedVersion: 1
+  productId: 288607
+  packageName: Mega Bundle - RG Poly
+  packageVersion: 1.0
+  assetPath: Assets/All in One/CityMassivePack/3d Models/Roof Props/SignalTower_1_D.fbx
+  uploadId: 753250
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -135,10 +142,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 288607
-  packageName: Mega Bundle - RG Poly
-  packageVersion: 1.0
-  assetPath: Assets/All in One/CityMassivePack/3d Models/Roof Props/SignalTower_1_D.fbx
-  uploadId: 753250

@@ -105,4 +105,8 @@ public class MainMenuButtonManager : MainMenuCommonData
     public void GoToLevelSelectScene(){
         Levels.Load(Levels.LevelSelect);
     }
+    public void GoToDemoLevel()
+    {
+        Levels.Load(Levels.GameOnDemoLevel);
+    }
 }
