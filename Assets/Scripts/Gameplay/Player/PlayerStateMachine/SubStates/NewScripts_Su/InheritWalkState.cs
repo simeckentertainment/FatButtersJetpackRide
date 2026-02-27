@@ -1,7 +1,5 @@
-using Unity.VisualScripting;
-using UnityEditor.Media;
 using UnityEngine;
-using UnityEngine.Rendering;
+
 
 public class InheritWalkState : PlayerAliveState
 {

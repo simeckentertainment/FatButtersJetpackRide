@@ -1421,6 +1421,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07cce150cad27224ca55db67e8197b99
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/NullObjects/nullAudio.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 07d85a0cff3f1254dbe19eab55760bd6
     m_Address: Assets/CityMassivePack/3d Models/Food Props/Chair_2_A.fbx
     m_ReadOnly: 0
@@ -11845,6 +11850,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ce08f6abc1a8fb4dbbaead6249c0271
+    m_Address: Assets/Objects/UI/barkaudio/bark3.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3ce12f0960e6dcd4fbe61205075c8199
     m_Address: Assets/LowPolyInterior/Prefabs/Walls/Corner_12.prefab
     m_ReadOnly: 0
@@ -14532,6 +14542,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 494f9f90e81c7324bb9c7a433a234cdf
     m_Address: Assets/CityMassivePack/Prefabs/Buildings/Building 11/Building_11_5_A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4957f18372acb7742b89a7b1284ff35c
+    m_Address: Assets/Objects/UI/barkaudio/bark2.ogg
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -22549,6 +22564,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72ca451d40dd05c4b8657e63f674ef9a
+    m_Address: Assets/Objects/UI/barkaudio/bark4.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 72cfe474cd5549a4d853c21ff2e58077
     m_Address: Assets/CityMassivePack/3d Models/Vehicles/Air/Plane_3_A.fbx
     m_ReadOnly: 0
@@ -25407,6 +25427,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 81e9ccc8bf6ca7942a5bd9ef06cfa256
     m_Address: Assets/CityMassivePack/3d Models/Nature and Park/BrickWall_3_2.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81ee8f5d5c2e073468ea6636f378b535
+    m_Address: Assets/Objects/UI/barkaudio/bark1.ogg
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -30190,6 +30215,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9a6324f5b40a88d43bd960bc1db4139d
     m_Address: Assets/CityMassivePack/3d Models/Buildings/Building 5/Building_5_1_B.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a6477e0c6363334494528d8661fd52b
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/318688__limitsnap-creations__rocket-thrust-effect.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -34992,6 +35022,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b105c656f4a3f8e4dac0bf8f1727e035
     m_Address: Assets/CityMassivePack/3d Models/Buildings/Building 18/Building_18_2_I.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b11850e07e81b04499b7c87f2006abf1
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/08-PrincessButters/chimes-7035.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -42208,6 +42243,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d599d6d2608e4e94e8fc8afdbc74bf29
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Textures/Cliff_2_normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d5a309c344bffef47aa378c33cd2435e
     m_Address: Assets/LowPolyInterior/Models/InteractiveFurniture/InteractiveFurniture5_01.fbx
     m_ReadOnly: 0
@@ -45614,6 +45654,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e6e751ccb70cdfa4698487f67eb22d01
     m_Address: Assets/CityMassivePack/3d Models/Construction/Other/Scaffolding_Plank_A.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6e9a19c3678ded42a3bc431ebef7dbd
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackError.shader
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
