@@ -2,6 +2,6 @@
 {
     protected override string GetText()
     {
-        return $"0 / { Model.TotalEnemies }";
+        return $"{ Model.EnemiesDefeated } / { Model.TotalEnemies }";
     }
 }

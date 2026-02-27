@@ -66,7 +66,7 @@ public class CollectibleCounterModel : Model
         }
     }
 
-    //public int CurrentEnemies => player.CurrentEnemyCount;
+    public int EnemiesDefeated => player.EnemiesDefeated;
 
     private void Awake()
     {
