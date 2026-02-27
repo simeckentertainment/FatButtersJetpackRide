@@ -59,27 +59,9 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "Untagged":
                 player.GroundTouch = true;
                 break;
-            //case "Fuel": // TODO: Delete
-            //    player.JerryCanTouch = true;
-            //    player.FuelAdditionAmount = other.gameObject.GetComponent<PowerupRotator>().increaseFuel;
-            //    Destroy(other.gameObject);
-            //    break;
-            //case "Food":
-            //    player.FoodTouch = true; // TODO: Delete
-            //    player.FoodAdditionAmount = other.gameObject.GetComponent<PowerupRotator>().increaseTreats;
-            //    Destroy(other.gameObject);
-            //    break;
-            //case "Bone":
-            //    player.BoneTouch = true; // TODO: Delete
-            //    Destroy(other.gameObject);
-            //    break;
             case "EnemyWeakspot":
 
                 break;
-            //case "Ball":
-            //    player.BallTouch = true; // TODO: Delete
-            //    Destroy(other.gameObject);
-            //    break;
             case "Water":
 
                 break;
@@ -116,12 +98,6 @@ public class PlayerCollisionReporter : MonoBehaviour
                 break;
             case "Fuel":
                 player.JerryCanTouch = false;
-                break;
-            case "Food":
-                player.FoodTouch = false;
-                break;
-            case "Bone":
-                player.BoneTouch = false;
                 break;
             case "EnemyWeakspot":
 

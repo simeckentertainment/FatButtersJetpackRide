@@ -35,6 +35,6 @@ public class BoneCounterModel : Model
 
     private void OnBonesChanged()
     {
-        BoneCount = collectibleData.BONES + (player?.tempBones ?? 0);
+        BoneCount = collectibleData.BONES + (player?.BonesCollected ?? 0);
     }
 }

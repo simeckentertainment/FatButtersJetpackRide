@@ -18,7 +18,7 @@ public class CollectibleCounterModel : Model
         }
     }
 
-    public int BonesCollected => player.tempBones;
+    public int BonesCollected => player.BonesCollected;
 
     private int _totalFoods;
     public int TotalFoods

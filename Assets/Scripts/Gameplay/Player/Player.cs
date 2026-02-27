@@ -66,8 +66,6 @@ public class Player : MonoBehaviour
     public bool HarmfulTouch;
     public float HarmfulDamageAmount;
     public Vector3 HarmfulTouchObjectPosition;
-    public bool BoneTouch; // TODO: Delete
-    public bool FoodTouch; // TODO: Delete
     public float FoodAdditionAmount;
     public bool JerryCanTouch;
     public float FuelAdditionAmount;
@@ -83,7 +81,7 @@ public class Player : MonoBehaviour
     public PlayerDirection playerDirection;
     public bool LowGravMode;
 
-    public int tempBones { get; set; }
+    public int BonesCollected { get; private set; }
     public int FoodsCollected { get; private set; }
     public int BallsCollected { get; private set; }
     public int EnemiesDefeated { get; private set; }
@@ -157,9 +155,9 @@ public class Player : MonoBehaviour
 
     public void AddBones(int count = 1)
     {
-        if (stateMachine.currentState is PlayerAliveState) // TODO Drake: Check if this is antithetic to our state machine
+        if (stateMachine.currentState is PlayerAliveState)
         {
-            tempBones += count;
+            BonesCollected += count;
             OnPickupCollected.Invoke();
         }
     }

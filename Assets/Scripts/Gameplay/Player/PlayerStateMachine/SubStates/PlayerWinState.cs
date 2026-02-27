@@ -20,7 +20,7 @@ public class PlayerWinState : PlayerLevelWinState
         player.vfx.StopPrimaryThrusters();
         rollStartingValue = player.input.aimAngle;
         KeyboardOffsetStartingValue = player.KeyboardRollOffset;
-        player.UI.SetEndLevelStats(player.tempBones);
+        player.UI.SetEndLevelStats(player.BonesCollected);
         SaveManager.Instance.Save();
         player.input.DisableInput();
         player.UI.ActivateWinMenu();

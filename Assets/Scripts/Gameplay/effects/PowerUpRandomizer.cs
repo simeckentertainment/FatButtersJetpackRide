@@ -10,7 +10,7 @@ public class PowerUpRandomizer : MonoBehaviour
     {
         Destroy(standInModel);
         var rng = Random.Range(0,objectList.Count);
-        var replacementModel = Instantiate(objectList[rng],transform.position, Quaternion.identity);
+        var replacementModel = Instantiate(objectList[rng], transform.position, Quaternion.identity);
         replacementModel.transform.parent = gameObject.transform;
     }
 }
