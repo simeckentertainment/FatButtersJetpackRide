@@ -14,7 +14,9 @@ public class TitleScreenDecorationManager : MonoBehaviour
     [System.NonSerialized] GameObject platform;
     [SerializeField] RuntimeAnimatorController[] ANIMS;
     [System.NonSerialized] RuntimeAnimatorController anim;
-
+    [SerializeField] GameObject toy;
+    private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
+    [SerializeField] GameObject[] skinObjs;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,11 +26,17 @@ public class TitleScreenDecorationManager : MonoBehaviour
         platform = Helper.getRandomItemFromArray(PLATFORMS);
         anim = Helper.getRandomItemFromArray(ANIMS);
 
-        //TODO: actually enable the correct items.
+        //Ensure that the toy is only visible for the play with toy animation.
+        if (anim == ANIMS[3]) { toy.SetActive(true); } else { toy.SetActive(false); }
+
+        //Assign the correct skin.
+        skinObjs[collectibleData.CurrentSkin].SetActive(true);
 
         //Randomize the puppy
         Bubba.GetComponent<Animator>().runtimeAnimatorController = anim;
         Bubba.GetComponent<Animator>().Play("Base Layer.Entry", 0);
+
+
 
         //Randomize the ENV
         ShowRandomENV();
