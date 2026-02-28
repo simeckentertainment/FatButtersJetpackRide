@@ -21,7 +21,7 @@ MonoBehaviour:
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
-    m_path: Assets/Scenes/P18_TitleScreen_SCN_V001_RSS.unity
+    m_path: Assets/Scenes/P18-GameOnDemoTitleScreen.unity
   - m_enabled: 1
     m_path: Assets/Scenes/P18_SceneLoader_SCN_V001_RSS.unity
   - m_enabled: 1
@@ -74,7 +74,8 @@ MonoBehaviour:
     - line: '|   - logo: {fileID: 10404, guid: 0000000000000000f000000000000000,
         type: 0}'
     - line: '|     duration: 2'
-    - line: '|   m_VirtualRealitySplashScreen: {instanceID: 0}'
+    - line: '|   m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 5b013056df8b14f448b12da9990a30f2,
+        type: 3}'
     - line: '|   m_HolographicTrackingLossScreen: {instanceID: 0}'
     - line: '|   defaultScreenWidth: 1280'
     - line: '|   defaultScreenHeight: 720'
@@ -90,7 +91,7 @@ MonoBehaviour:
     - line: '|   numberOfMipsStripped: 0'
     - line: '|   numberOfMipsStrippedPerMipmapLimitGroup: {}'
     - line: '|   m_StackTraceTypes: 000000000000000000000000000000000000000001000000'
-    - line: '|   iosShowActivityIndicatorOnLoading: -1'
+    - line: '|   iosShowActivityIndicatorOnLoading: 100'
     - line: '|   androidShowActivityIndicatorOnLoading: 2'
     - line: '|   iosUseCustomAppBackgroundBehavior: 0'
     - line: '|   allowedAutorotateToPortrait: 1'
@@ -194,7 +195,7 @@ MonoBehaviour:
     - line: '|   hdrBitDepth: 0'
     - line: '|   m_ColorGamuts: 00000000'
     - line: '|   targetPixelDensity: 30'
-    - line: '|   resolutionScalingMode: 1'
+    - line: '|   resolutionScalingMode: 0'
     - line: '|   resetResolutionOnWindowResize: 0'
     - line: '|   androidSupportedAspectRatio: 2'
     - line: '|   androidMaxAspectRatio: 1.98'
@@ -626,8 +627,14 @@ MonoBehaviour:
     - line: '|     Android: 1'
     - line: '|     iPhone: 1'
     - line: '|     tvOS: 1'
-    - line: '|   m_BuildTargetGroupLightmapEncodingQuality: []'
-    - line: '|   m_BuildTargetGroupHDRCubemapEncodingQuality: []'
+    - line: '|   m_BuildTargetGroupLightmapEncodingQuality:'
+    - line: '|   - serializedVersion: 2'
+    - line: '|     m_BuildTarget: iOS'
+    - line: '|     m_EncodingQuality: 2'
+    - line: '|   m_BuildTargetGroupHDRCubemapEncodingQuality:'
+    - line: '|   - serializedVersion: 2'
+    - line: '|     m_BuildTarget: iOS'
+    - line: '|     m_EncodingQuality: 2'
     - line: '|   m_BuildTargetGroupLightmapSettings: []'
     - line: '|   m_BuildTargetGroupLoadStoreDebugModeSettings: []'
     - line: '|   m_BuildTargetNormalMapEncoding: []'
