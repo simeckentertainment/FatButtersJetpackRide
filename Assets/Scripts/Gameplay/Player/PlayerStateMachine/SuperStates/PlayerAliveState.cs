@@ -5,6 +5,8 @@ public class PlayerAliveState : PlayerState
     AudioSource[] thrusterSoundHolders;
     public float thrusterVolumeCounter = 0f;
 
+    public override bool IsAliveState => true;
+
     public PlayerAliveState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
 
@@ -32,8 +34,6 @@ public class PlayerAliveState : PlayerState
         //These are the collision runners.
         AdjustRotationAngle();
         HarmfulInteractionRunner();
-        BoneRunner();
-        PowerupRunner();
         BallRunner();
         LowGravModeRunner();
         thrusterVolumeRunner();
@@ -77,34 +77,6 @@ public class PlayerAliveState : PlayerState
             {
                 player.stateMachine.changeState(player.playerOHKState);
             }
-        }
-    }
-    private void BoneRunner()
-    {
-        if (player.BoneTouch)
-        {
-            player.AddBones(1);
-            player.BoneTouch = false;
-        }
-    }
-    private void PowerupRunner()
-    {
-        if (player.JerryCanTouch)
-        {
-            player.Fuel += player.FuelAdditionAmount;
-            player.JerryCanTouch = false;
-        }
-        if (player.FoodTouch)
-        {
-            if (player.tummy + player.FoodAdditionAmount > player.maxTummy)
-            {
-                player.tummy = player.maxTummy;
-            }
-            else
-            {
-                player.tummy += player.FoodAdditionAmount;
-            }
-            player.FoodTouch = false;
         }
     }
     private void BallRunner()
