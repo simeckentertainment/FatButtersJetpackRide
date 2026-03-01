@@ -6,8 +6,11 @@ public abstract class Pickup : MonoBehaviour
     {
         if (other.TryGetComponent<Player>(out var player))
         {
-            OnPlayerTriggerEnter(player);
-            Destroy(this.gameObject);
+            if (player.IsAlive)
+            {
+                OnPlayerTriggerEnter(player);
+                Destroy(this.gameObject);
+            }
         }
     }
 

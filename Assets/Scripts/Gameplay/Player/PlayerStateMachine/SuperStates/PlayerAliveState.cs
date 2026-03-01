@@ -5,6 +5,8 @@ public class PlayerAliveState : PlayerState
     AudioSource[] thrusterSoundHolders;
     public float thrusterVolumeCounter = 0f;
 
+    public override bool IsAliveState => true;
+
     public PlayerAliveState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
 

@@ -105,6 +105,8 @@ public class Player : MonoBehaviour
         }
     }
 
+    public bool IsAlive => stateMachine.currentState.IsAliveState;
+
     void Awake()
     {
         vfx.StopRocketSounds();
@@ -155,55 +157,40 @@ public class Player : MonoBehaviour
 
     public void AddBones(int count = 1)
     {
-        if (stateMachine.currentState is PlayerAliveState)
-        {
-            BonesCollected += count;
-            OnPickupCollected.Invoke();
-        }
+        BonesCollected += count;
+        OnPickupCollected.Invoke();
     }
 
     public void AddFoods(float treats, int count = 1)
     {
-        if (stateMachine.currentState is PlayerAliveState)
+        FoodsCollected += count;
+
+        tummy += treats;
+        if (tummy > maxTummy)
         {
-            FoodsCollected += count;
-
-            tummy += treats;
-            if (tummy > maxTummy)
-            {
-                tummy = maxTummy;
-            }
-
-            OnPickupCollected.Invoke();
+            tummy = maxTummy;
         }
+
+        OnPickupCollected.Invoke();
     }
 
     public void AddFuel(float fuelAmount)
     {
-        if (stateMachine.currentState is PlayerAliveState)
-        {
-            Fuel += fuelAmount;
-        }
+        Fuel += fuelAmount;
     }
 
     public void AddBalls(int count = 1)
     {
-        if (stateMachine.currentState is PlayerAliveState)
-        {
-            BallsCollected += count;
-            BallTouch = true;
+        BallsCollected += count;
+        BallTouch = true;
 
-            OnPickupCollected.Invoke();
-        }
+        OnPickupCollected.Invoke();
     }
 
     public void AddEnemiesDefeated(int count = 1)
     {
-        if (stateMachine.currentState is PlayerAliveState)
-        {
-            EnemiesDefeated += count;
-            OnPickupCollected.Invoke();
-        }
+        EnemiesDefeated += count;
+        OnPickupCollected.Invoke();
     }
 
     #region DataStuff
