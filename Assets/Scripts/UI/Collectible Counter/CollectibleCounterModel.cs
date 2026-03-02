@@ -68,6 +68,12 @@ public class CollectibleCounterModel : Model
 
     public int EnemiesDefeated => player.EnemiesDefeated;
 
+    public bool AllCollectiblesCollected =>
+        BonesCollected == TotalBones &&
+        FoodsCollected == TotalFoods &&
+        BallsCollected == TotalBalls &&
+        EnemiesDefeated == TotalEnemies;
+
     private void Awake()
     {
         player.OnPickupCollected.AddListener(Refresh);
