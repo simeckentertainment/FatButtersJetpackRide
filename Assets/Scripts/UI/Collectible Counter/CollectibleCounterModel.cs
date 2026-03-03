@@ -3,6 +3,7 @@ using UnityEngine;
 public class CollectibleCounterModel : Model
 {
     [SerializeField] private Player player;
+    [SerializeField] private bool showCollectionInfoMessages;
 
     private int _totalBones;
     public int TotalBones
@@ -74,6 +75,14 @@ public class CollectibleCounterModel : Model
         BallsCollected == TotalBalls &&
         EnemiesDefeated == TotalEnemies;
 
+    protected override void RefreshInternal()
+    {
+        if (showCollectionInfoMessages && AllCollectiblesCollected)
+        {
+            player.UI.ShowInfoText("Sucess!", "You collected everything! Go to the finish to complete the level!");
+        }
+    }
+
     private void Awake()
     {
         player.OnPickupCollected.AddListener(Refresh);
@@ -90,6 +99,11 @@ public class CollectibleCounterModel : Model
         TotalFoods = CountObj("Food");
         TotalBalls = CountObj("Ball");
         TotalEnemies = CountObj("Harmful");
+
+        if (showCollectionInfoMessages)
+        {
+            player.UI.ShowInfoText("Collect!", "Find all the collectibles and defeat the enemies to win!");
+        }
     }
 
     private int CountObj(string tag)

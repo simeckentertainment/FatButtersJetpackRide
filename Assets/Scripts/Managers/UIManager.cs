@@ -5,6 +5,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameplayUIModel gameplayUI;
     [SerializeField] private FailMenuModel failMenu;
     [SerializeField] private SuccessMenuModel successMenu;
+    [SerializeField] private InfoModel infoMenu;
 
     public FailReason FailReason { get; set; }
 
@@ -39,5 +40,18 @@ public class UIManager : MonoBehaviour
     {
         failMenu.FailReason = FailReason;
         CurrentState = GameplayUIState.Fail;
+    }
+
+    public void ShowInfoText(string title, string text)
+    {
+        CurrentState = GameplayUIState.Info;
+        infoMenu.SetText(title, text);
+        PauseUtility.Pause();
+    }
+
+    public void DismissInfoText()
+    {
+        CurrentState = GameplayUIState.Base;
+        PauseUtility.Resume();
     }
 }
