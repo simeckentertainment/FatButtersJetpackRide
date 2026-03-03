@@ -1,9 +1,11 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class CollectibleCounterModel : Model
 {
     [SerializeField] private Player player;
     [SerializeField] private bool showCollectionInfoMessages;
+    [SerializeField] private List<GameObject> objectsEnabledWhenCompleted;
 
     private int _totalBones;
     public int TotalBones
@@ -79,7 +81,7 @@ public class CollectibleCounterModel : Model
     {
         if (showCollectionInfoMessages && AllCollectiblesCollected)
         {
-            player.UI.ShowInfoText("Sucess!", "You collected everything! Go to the finish to complete the level!");
+            CollectiblesCompleted();
         }
     }
 
@@ -100,9 +102,23 @@ public class CollectibleCounterModel : Model
         TotalBalls = CountObj("Ball");
         TotalEnemies = CountObj("Harmful");
 
+        foreach (var obj in objectsEnabledWhenCompleted)
+        {
+            obj.SetActive(false);
+        }
+
         if (showCollectionInfoMessages)
         {
             player.UI.ShowInfoText("Collect!", "Find all the collectibles and defeat the enemies to win!");
+        }
+    }
+
+    private void CollectiblesCompleted()
+    {
+        player.UI.ShowInfoText("Sucess!", "You collected everything! Go to the finish to complete the level!");
+        foreach (var obj in objectsEnabledWhenCompleted)
+        {
+            obj.SetActive(true);
         }
     }
 
