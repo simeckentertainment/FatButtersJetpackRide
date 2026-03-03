@@ -115,7 +115,7 @@ public class CollectibleCounterModel : Model
 
     private void CollectiblesCompleted()
     {
-        player.UI.ShowInfoText("Sucess!", "You collected everything! Go to the finish to complete the level!");
+        player.UI.ShowInfoText("Success!", "You collected everything! Go to the finish to complete the level!");
         foreach (var obj in objectsEnabledWhenCompleted)
         {
             obj.SetActive(true);
