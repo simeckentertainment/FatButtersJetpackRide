@@ -1,8 +1,9 @@
+using System.Collections;
 using UnityEngine;
 
 public class InfoModel : Model
 {
-    [SerializeField] public UIManager uiManager;
+    [SerializeField] private float messageDuration = 3;
 
     private string _infoTitle;
     public string InfoTitle 
@@ -32,15 +33,47 @@ public class InfoModel : Model
         }
     }
 
-    public void SetText(string title, string text)
+    private bool _showingInfo;
+    public bool ShowingInfo
+    {
+        get
+        {
+            return _showingInfo;
+        }
+        set
+        {
+            _showingInfo = value;
+            Refresh();
+        }
+    }
+
+    private EditorLocalTransform _arrowTransform;
+    public EditorLocalTransform ArrowTransform
+    {
+        get
+        {
+            return _arrowTransform;
+        }
+        set
+        {
+            _arrowTransform = value;
+            Refresh();
+        }
+    }
+
+    public void ShowMessage(string title, string text, EditorLocalTransform arrowTransform)
     {
         _infoTitle = title;
         _infoText = text;
-        Refresh();
+        _arrowTransform = arrowTransform;
+
+        StartCoroutine(ToggleInfoMessageVisibility(messageDuration));
     }
 
-    public void DismissInfoText()
+    private IEnumerator ToggleInfoMessageVisibility(float duration)
     {
-        uiManager.DismissInfoText();
+        ShowingInfo = true;
+        yield return new WaitForSeconds(duration);
+        ShowingInfo = false;
     }
 }

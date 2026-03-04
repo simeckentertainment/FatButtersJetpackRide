@@ -7,6 +7,9 @@ public class CollectibleCounterModel : Model
     [SerializeField] private bool showCollectionInfoMessages;
     [SerializeField] private List<GameObject> objectsEnabledWhenCompleted;
 
+    [SerializeField] private EditorLocalTransform collectibleArrowTransform;
+    [SerializeField] private EditorLocalTransform corgiSenseArrowTransform;
+
     private int _totalBones;
     public int TotalBones
     {
@@ -109,13 +112,13 @@ public class CollectibleCounterModel : Model
 
         if (showCollectionInfoMessages)
         {
-            player.UI.ShowInfoText("Collect!", "Find all the collectibles and defeat the enemies to win!");
+            player.UI.ShowInfoText("Collect!", "Collect everything!", collectibleArrowTransform);
         }
     }
 
     private void CollectiblesCompleted()
     {
-        player.UI.ShowInfoText("Success!", "You collected everything! Go to the finish to complete the level!");
+        player.UI.ShowInfoText("Success!", "Get to the finish!", corgiSenseArrowTransform);
         foreach (var obj in objectsEnabledWhenCompleted)
         {
             obj.SetActive(true);

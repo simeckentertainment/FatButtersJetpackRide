@@ -34,20 +34,6 @@ public class GameplayUIModel : Model
         }
     }
 
-    private string _infoMessage;
-    public string InfoMessage
-    {
-        get 
-        {
-            return _infoMessage;
-        }
-        private set
-        {
-            _infoMessage = value;
-            Refresh();
-        }
-    }
-
     public float FuelPercent => player.Fuel / player.maxFuel;
 
     public bool OnScreenControlsEnabled

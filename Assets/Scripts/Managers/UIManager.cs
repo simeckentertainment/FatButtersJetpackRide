@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -42,16 +43,8 @@ public class UIManager : MonoBehaviour
         CurrentState = GameplayUIState.Fail;
     }
 
-    public void ShowInfoText(string title, string text)
+    public void ShowInfoText(string title, string text, EditorLocalTransform arrowTransform)
     {
-        CurrentState = GameplayUIState.Info;
-        infoMenu.SetText(title, text);
-        PauseUtility.Pause();
-    }
-
-    public void DismissInfoText()
-    {
-        CurrentState = GameplayUIState.Base;
-        PauseUtility.Resume();
+        infoMenu.ShowMessage(title, text, arrowTransform);
     }
 }
