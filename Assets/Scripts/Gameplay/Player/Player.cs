@@ -45,7 +45,6 @@ public class Player : MonoBehaviour
     public float tummy;
     public float maxTummy;
     public List<Collider> CollidersInJetpackKillZone;
-    [SerializeField] public bool JetpackActivationPossible;
     [System.NonSerialized] public float animationPercentage;
     [Header("Rotation stuff")]
     [System.NonSerialized] public float GravityRoll;
@@ -88,8 +87,26 @@ public class Player : MonoBehaviour
 
     public UnityEvent OnPickupCollected { get; set; } = new UnityEvent();
     public UnityEvent OnFuelUpdated { get; set; } = new UnityEvent();
+    public UnityEvent OnJetpackStatusUpdated { get; set; } = new UnityEvent();
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
+
+    private bool _jetpackActivationPossible;
+    public bool JetpackActivationPossible
+    {
+        get
+        {
+            return _jetpackActivationPossible;
+        }
+        set
+        {
+            if (value != _jetpackActivationPossible)
+            {
+                _jetpackActivationPossible = value;
+                OnJetpackStatusUpdated.Invoke();
+            }
+        }
+    }
 
     private float _fuel;
     public float Fuel

@@ -14,7 +14,7 @@ public class SaveManager : Singleton<SaveManager>
     {
         base.Awake();
 
-        if (!markedToDestroy && !collectibleData.ignoreSaveData)
+        if (!markedToDestroy && !collectibleData.IgnoreSaveData)
         {
             EnsureSaveFileExists();
         }
@@ -88,7 +88,7 @@ public class SaveManager : Singleton<SaveManager>
 
     public void Save()
     {
-        if(!collectibleData.ignoreSaveData)
+        if(!collectibleData.IgnoreSaveData)
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             if(File.Exists(Application.persistentDataPath + saveFilename))
@@ -139,7 +139,7 @@ public class SaveManager : Singleton<SaveManager>
 
     public void Load()
     {
-        if(!collectibleData.ignoreSaveData)
+        if(!collectibleData.IgnoreSaveData)
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + saveFilename, FileMode.Open, FileAccess.Read);
@@ -184,7 +184,7 @@ public class SaveManager : Singleton<SaveManager>
 
     public void ResetSave()
     {
-        if(!collectibleData.ignoreSaveData)
+        if(!collectibleData.IgnoreSaveData)
         {
             File.Delete(Application.persistentDataPath + saveFilename);
             CreateNewSave();
@@ -193,7 +193,7 @@ public class SaveManager : Singleton<SaveManager>
 
     public void DeleteSave()
     {
-        if(!collectibleData.ignoreSaveData)
+        if(!collectibleData.IgnoreSaveData)
         {
             File.Delete(Application.persistentDataPath + saveFilename);
         }
@@ -250,7 +250,7 @@ public class SaveManager : Singleton<SaveManager>
         data.GraphicsQualityLevel = 1;
         binaryFormatter.Serialize(saveFile,data);
         saveFile.Close();
-        collectibleData.ignoreSaveData = false;
+        collectibleData.IgnoreSaveData = false;
         Debug.Log("new Dev save file created.");
         Load();
     }

@@ -1,8 +1,14 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class CollectibleCounterModel : Model
 {
     [SerializeField] private Player player;
+    [SerializeField] private bool showCollectionInfoMessages;
+    [SerializeField] private List<GameObject> objectsEnabledWhenCompleted;
+
+    [SerializeField] private EditorLocalTransform collectibleArrowTransform;
+    [SerializeField] private EditorLocalTransform corgiSenseArrowTransform;
 
     private int _totalBones;
     public int TotalBones
@@ -68,6 +74,20 @@ public class CollectibleCounterModel : Model
 
     public int EnemiesDefeated => player.EnemiesDefeated;
 
+    public bool AllCollectiblesCollected =>
+        BonesCollected == TotalBones &&
+        FoodsCollected == TotalFoods &&
+        BallsCollected == TotalBalls &&
+        EnemiesDefeated == TotalEnemies;
+
+    protected override void RefreshInternal()
+    {
+        if (showCollectionInfoMessages && AllCollectiblesCollected)
+        {
+            CollectiblesCompleted();
+        }
+    }
+
     private void Awake()
     {
         player.OnPickupCollected.AddListener(Refresh);
@@ -84,6 +104,25 @@ public class CollectibleCounterModel : Model
         TotalFoods = CountObj("Food");
         TotalBalls = CountObj("Ball");
         TotalEnemies = CountObj("Harmful");
+
+        foreach (var obj in objectsEnabledWhenCompleted)
+        {
+            obj.SetActive(false);
+        }
+
+        if (showCollectionInfoMessages)
+        {
+            player.UI.ShowInfoText("Collect!", "Collect everything!", collectibleArrowTransform);
+        }
+    }
+
+    private void CollectiblesCompleted()
+    {
+        player.UI.ShowInfoText("Success!", "Get to the finish!", corgiSenseArrowTransform);
+        foreach (var obj in objectsEnabledWhenCompleted)
+        {
+            obj.SetActive(true);
+        }
     }
 
     private int CountObj(string tag)

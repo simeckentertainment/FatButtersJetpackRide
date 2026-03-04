@@ -61,6 +61,8 @@ public class ScreamBubble : MonoBehaviour
                 }
                 break;
             case "OneHitKill":
+                // TODO Drake: When popped by another hazard in the level, it is not tracked
+                // Not important for demo, but we should look into that
                 popped = true;
                 break;
             default:

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class TitleScreenDecorationManager : MonoBehaviour
 {
@@ -13,13 +14,13 @@ public class TitleScreenDecorationManager : MonoBehaviour
     [SerializeField] GameObject[] PLATFORMS;
     [System.NonSerialized] GameObject platform;
     [SerializeField] RuntimeAnimatorController[] ANIMS;
+    [SerializeField] List<RuntimeAnimatorController> ToyEnabledAnims;
     [System.NonSerialized] RuntimeAnimatorController anim;
     [SerializeField] GameObject toy;
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
     [SerializeField] GameObject[] skinObjs;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         env = Helper.getRandomItemFromArray(ENVS);
         skybox = Helper.getRandomItemFromArray(SKYBOXES);
@@ -27,7 +28,10 @@ public class TitleScreenDecorationManager : MonoBehaviour
         anim = Helper.getRandomItemFromArray(ANIMS);
 
         //Ensure that the toy is only visible for the play with toy animation.
-        if (anim == ANIMS[3]) { toy.SetActive(true); } else { toy.SetActive(false); }
+        if (toy != null)
+        {
+            toy.SetActive(ToyEnabledAnims.Contains(anim));
+        }
 
         //Assign the correct skin.
         skinObjs[collectibleData.CurrentSkin].SetActive(true);
@@ -35,8 +39,6 @@ public class TitleScreenDecorationManager : MonoBehaviour
         //Randomize the puppy
         Bubba.GetComponent<Animator>().runtimeAnimatorController = anim;
         Bubba.GetComponent<Animator>().Play("Base Layer.Entry", 0);
-
-
 
         //Randomize the ENV
         ShowRandomENV();
@@ -46,13 +48,7 @@ public class TitleScreenDecorationManager : MonoBehaviour
         RenderSettings.skybox = skybox;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    void ShowRandomENV()
+    private void ShowRandomENV()
     {
         foreach (GameObject e in ENVS)
         {
@@ -60,7 +56,8 @@ public class TitleScreenDecorationManager : MonoBehaviour
         }
         env.SetActive(true);
     }
-    void ShowRandomPlatform()
+
+    private void ShowRandomPlatform()
     {
         foreach (GameObject p in PLATFORMS)
         {
