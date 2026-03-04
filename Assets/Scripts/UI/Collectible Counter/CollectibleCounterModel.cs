@@ -118,7 +118,11 @@ public class CollectibleCounterModel : Model
 
     private void CollectiblesCompleted()
     {
-        player.UI.ShowInfoText("Success!", "Get to the finish!", corgiSenseArrowTransform);
+        if (showCollectionInfoMessages)
+        {
+            player.UI.ShowInfoText("Success!", "Get to the finish!", corgiSenseArrowTransform);
+        }
+
         foreach (var obj in objectsEnabledWhenCompleted)
         {
             obj.SetActive(true);

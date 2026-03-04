@@ -3,6 +3,5 @@
     Base,
     Settings,
     Fail,
-    Success,
-    Info
+    Success
 }
