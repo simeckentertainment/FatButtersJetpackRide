@@ -67,7 +67,14 @@ public class PlayerAliveState : PlayerState
             return;
         }
 #endif
-        if (!BallCheck())
+
+        if (BallCheck())
+        {
+            // ignore the harmful touch during the powerup
+            player.HarmfulTouch = false;
+            player.OHKTouch = false;
+        }
+        else
         {
             if (player.HarmfulTouch)
             {
