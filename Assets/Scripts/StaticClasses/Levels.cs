@@ -11,6 +11,7 @@ public class Levels
     public const string LevelPrefix = "Scenes/puzzleLevels/";
     public const string GameOnDemoTitleScreen = "Scenes/P18-GameOnDemoTitleScreen";
     public const string GameOnDemoLevel = "Scenes/puzzleLevels/GameOnExpoDemoLevel";
+    public const string GameOnTrailerLevel = "Scenes/P18_TrailerPlayer";
 
     private static SceneLoadData sceneLoadData => SaveManager.Instance.sceneLoadData;
 

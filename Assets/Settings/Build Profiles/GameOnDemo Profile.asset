@@ -21,6 +21,8 @@ MonoBehaviour:
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
+    m_path: Assets/Scenes/P18_TrailerPlayer.unity
+  - m_enabled: 1
     m_path: Assets/Scenes/P18-GameOnDemoTitleScreen.unity
   - m_enabled: 1
     m_path: Assets/Scenes/P18_SceneLoader_SCN_V001_RSS.unity

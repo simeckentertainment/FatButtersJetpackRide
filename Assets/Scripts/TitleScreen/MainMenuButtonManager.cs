@@ -109,4 +109,8 @@ public class MainMenuButtonManager : MainMenuCommonData
     {
         Levels.Load(Levels.GameOnDemoLevel);
     }
+    public void GoToTrailer()
+    {
+        Levels.Load(Levels.GameOnTrailerLevel);
+    }
 }
