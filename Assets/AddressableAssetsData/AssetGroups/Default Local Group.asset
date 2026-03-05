@@ -27415,6 +27415,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c0459dfe4af76d4cb180b3fc90c6c94
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/WaterBottle/WaterBottle.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8c0568c457f38824d8649f26f2363927
     m_Address: Assets/Objects/EffectExamples/WeaponEffects/Prefabs/BulletImpactWaterContainerExtinguisherEffect.prefab
     m_ReadOnly: 0
