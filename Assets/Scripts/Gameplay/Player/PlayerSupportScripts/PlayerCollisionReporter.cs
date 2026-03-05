@@ -97,7 +97,7 @@ public class PlayerCollisionReporter : MonoBehaviour
                 player.GroundTouch = false;
                 break;
             case "Fuel":
-                player.JerryCanTouch = false;
+                player.FuelTouch = false;
                 break;
             case "EnemyWeakspot":
 

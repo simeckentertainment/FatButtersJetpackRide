@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.Services.CloudSave.Models.Data.Player;
 
 public class CollectibleCounterModel : Model
 {
@@ -74,10 +75,28 @@ public class CollectibleCounterModel : Model
 
     public int EnemiesDefeated => player.EnemiesDefeated;
 
+    public int FuelsCollected => player.FuelsCollected;
+
+    private int _totalFuels;
+
+    public int TotalFuels
+    {
+        get
+        {
+            return _totalFuels;
+        }
+        set
+        {
+            _totalFuels = value;
+            Refresh();
+        }
+    }
+
     public bool AllCollectiblesCollected =>
         BonesCollected == TotalBones &&
         FoodsCollected == TotalFoods &&
         BallsCollected == TotalBalls &&
+        FuelsCollected == TotalFuels &&
         EnemiesDefeated == TotalEnemies;
 
     protected override void RefreshInternal()
@@ -103,6 +122,7 @@ public class CollectibleCounterModel : Model
         TotalBones = CountObj("Bone");
         TotalFoods = CountObj("Food");
         TotalBalls = CountObj("Ball");
+        TotalFuels = CountObj("Fuel");
         TotalEnemies = CountObj("Harmful");
 
         foreach (var obj in objectsEnabledWhenCompleted)

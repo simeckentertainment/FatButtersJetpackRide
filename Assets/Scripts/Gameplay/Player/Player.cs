@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
     public float HarmfulDamageAmount;
     public Vector3 HarmfulTouchObjectPosition;
     public float FoodAdditionAmount;
-    public bool JerryCanTouch;
+    public bool FuelTouch;
     public float FuelAdditionAmount;
     public bool FinishTouch;
     public bool OHKTouch;
@@ -83,6 +83,7 @@ public class Player : MonoBehaviour
     public int BonesCollected { get; private set; }
     public int FoodsCollected { get; private set; }
     public int BallsCollected { get; private set; }
+    public int FuelsCollected { get; private set; }
     public int EnemiesDefeated { get; private set; }
 
     public UnityEvent OnPickupCollected { get; set; } = new UnityEvent();
