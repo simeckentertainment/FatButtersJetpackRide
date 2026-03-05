@@ -40,6 +40,7 @@ public class CorgiEffectHolder : MonoBehaviour
     [SerializeField] public PlayerSkin chosenSkin;
     [SerializeField] public SkinnedMeshRenderer[] butterySkinnedMeshRenderers;
     [SerializeField] public AudioClip[] borks;
+    [SerializeField] public AudioClip[] Grrs;
 
     [SerializeField] ParticleSystem leftPlus;
     [SerializeField] ParticleSystem rightPlus;

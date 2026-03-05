@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     [SerializeField] public Rigidbody rb;
     [SerializeField] public InputDriver input;
     [SerializeField] public AudioSource sfx;
+    [SerializeField] public AudioSource grrSfx;
     [SerializeField] public CorgiEffectHolder vfx;
     [SerializeField] public UIManager UI;
 
