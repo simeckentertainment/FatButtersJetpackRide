@@ -1,5 +1,6 @@
 using System;
 using Unity.VisualScripting;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class CameraRotationManager : MonoBehaviour
@@ -29,15 +30,18 @@ public class CameraRotationManager : MonoBehaviour
         
         if(deviceType == DeviceType.Stationary){ return;} //Don't need to handle rotation for stationary devices!
         //We're manually taking over camera rotations because letting Cinemachine do it was leading to unpredictable results.
-        if(!runningWobble){
+        
+        
+        
+        //Temporary: I'm moving on to a different problem so we're disabling collision wobble for now.
+        //if(!runningWobble){
         virtualCam.localRotation = Quaternion.Euler(0.0f,0.0f,player.input.aimAngle*2); 
-        }
-
+        //}
+        return;
         //always be watching for the max speed a player can achieve. //TODO: Refactor this based on physics calculations times thrust stat.
         
         if(!runningWobble && (player.OtherObjectTouch || player.GroundTouch))
         {
-            Debug.Log(player.rb.linearVelocity.magnitude);
             InitiateWobble();
         }
 
@@ -49,6 +53,7 @@ public class CameraRotationManager : MonoBehaviour
 
     void InitiateWobble()
     {
+        wobbleCounter = 0;
         float TerminalVelocityPercentage = Mathf.Clamp01(player.rb.angularVelocity.magnitude / PlayerMaxSpeed); //For our purposes, we don't need values beyond 100%.
         if(TerminalVelocityPercentage < 0.05f){return;} //Don't wobble for light impacts.
 
@@ -76,6 +81,10 @@ public class CameraRotationManager : MonoBehaviour
                 DeviceRotationAtImpact
             };
         }
+        foreach (float point in wobblePoints)
+        {
+            Debug.Log(point);
+        }
         runningWobble = true;
     }
     
@@ -90,7 +99,7 @@ public class CameraRotationManager : MonoBehaviour
             wobblePoints = new float[1]; //clear that puppy out.
             return; //kicks us out of wobble madness if we're done.
         }
-        Debug.Log("Running Wobble!");
+
         if(wobblePoints.Length == 5){virtualCam.localRotation = Quaternion.Euler(run5Wobble());}
         if(wobblePoints.Length == 7){virtualCam.localRotation = Quaternion.Euler(run7Wobble());}
         //I'm sure there's a better way to do this than writing 2 methods that do the same thing slightly differently, but I just wanna get it done. Maybe I can come back to this and rethink it later.
