@@ -31,6 +31,8 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "Untagged":
                 player.GroundTouch = true;
                 break;
+            case "PlayerDamageTrigger":
+                break;
             default:
                 player.OtherObjectTouch = true;
                 break;
@@ -43,6 +45,8 @@ public class PlayerCollisionReporter : MonoBehaviour
         {
             case "Untagged":
                 player.GroundTouch = false;
+                break;
+            case "PlayerDamageTrigger":
                 break;
             default:
                 player.OtherObjectTouch = false;
@@ -83,6 +87,10 @@ public class PlayerCollisionReporter : MonoBehaviour
                 if(!player.CollidersInJetpackKillZone.Contains(thisCollider)){
                     player.CollidersInJetpackKillZone.Add(thisCollider);
                 }
+                break;
+            case "Player":
+                break;
+            case "PlayerDamageTrigger":
                 break;
             default:
                 player.OtherObjectTouch = true;
@@ -125,6 +133,10 @@ public class PlayerCollisionReporter : MonoBehaviour
                 {
                     player.CollidersInJetpackKillZone.Remove(thisCollider);
                 }
+                break;
+            case "Player":
+                break;
+            case "PlayerDamageTrigger":
                 break;
             default:
                 player.OtherObjectTouch = false;
