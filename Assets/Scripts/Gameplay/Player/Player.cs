@@ -68,7 +68,6 @@ public class Player : MonoBehaviour
     public Vector3 HarmfulTouchObjectPosition;
     public float FoodAdditionAmount;
     public bool FuelTouch;
-    public float FuelAdditionAmount;
     public bool FinishTouch;
     public bool OHKTouch;
     public bool BallTouch;
@@ -195,7 +194,13 @@ public class Player : MonoBehaviour
 
     public void AddFuel(float fuelAmount)
     {
-        Fuel += fuelAmount;
+        if(Fuel+fuelAmount > maxFuel) {
+            Fuel = maxFuel;
+        } else {
+           Fuel += fuelAmount; 
+        }
+
+        
     }
 
     public void AddBalls(int count = 1)

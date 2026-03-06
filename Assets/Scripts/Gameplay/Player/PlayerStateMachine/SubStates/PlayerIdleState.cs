@@ -28,6 +28,7 @@ public class PlayerIdleState : PlayerAliveState
     public override void FixedUpdate()
     {
         stateAge++;
+        player.rb.linearVelocity = Vector3.zero;
         base.FixedUpdate();
         if (player.input.GoThrust & player.JetpackActivationPossible)
         {
@@ -42,15 +43,15 @@ public class PlayerIdleState : PlayerAliveState
             PlayAnim(idleAnnoyedAnims[Random.Range(0, 2)]);
         }
         
+        if(stateAge > 120)
+        {
+            player.AddFuel(1);
+        }
+
         // Calculate walk detection (absZ) for transition check
         if (player.GroundTouch)
         {
-            float rotationZ = player.transform.eulerAngles.z;
-            if (rotationZ > 180f)
-                rotationZ -= 360f;
-            float absZ = Mathf.Abs(rotationZ);
-            
-            if (absZ > 15)
+            if (Mathf.Abs(player.input.aimAngle) > 15)
             {
                 player.stateMachine.changeState(player.playerWalkState);
             }
