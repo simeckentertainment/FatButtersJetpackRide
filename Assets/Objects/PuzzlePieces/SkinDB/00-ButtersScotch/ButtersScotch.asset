@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf5be9709625ec4f8a08f070d8ed4b2, type: 3}
   m_Name: ButtersScotch
   m_EditorClassIdentifier: 
-  PrimaryMeshOverride:
-  - {fileID: 0}
+  isPremiumSkin: 0
+  isMemorialSkin: 0
+  memorialWingsCoords: {x: 0, y: 0, z: 0}
+  is2DSkin: 0
+  memorialHaloModel: {fileID: 0}
+  CharacterOverride: {fileID: 0}
   JetpackHolsterMesh: {fileID: 6134615409324240125, guid: 54edd7f2f38471043bbe0f0cf777ee26, type: 3}
-  LeftJetpackMesh: {fileID: 8954352814837937593, guid: f4fe4b868216e1247bbfa3d95ea111de, type: 3}
-  RightJetpackMesh: {fileID: 8954352814837937593, guid: f4fe4b868216e1247bbfa3d95ea111de, type: 3}
+  combinedJetpack: 0
+  LeftJetpackMesh: {fileID: 5414113648770423324, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+  RightJetpackMesh: {fileID: 5414113648770423324, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+  CombinedJetpackMeshOverride: {fileID: 0}
   MainThrusterParticles:
   - {fileID: 1113205305641416, guid: 3187c061693a2bb4b80a28143a4738ea, type: 3}
   - {fileID: 1113205305641416, guid: 3187c061693a2bb4b80a28143a4738ea, type: 3}
@@ -43,3 +49,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4957f18372acb7742b89a7b1284ff35c, type: 3}
   - {fileID: 8300000, guid: 3ce08f6abc1a8fb4dbbaead6249c0271, type: 3}
   - {fileID: 8300000, guid: 72ca451d40dd05c4b8657e63f674ef9a, type: 3}
+  PremiumSkinColliderCoords: []
+  PremiumSkinColliderRadii: []
+  PremiumSkinColliderHeights: []

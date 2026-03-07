@@ -3610,6 +3610,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13228dc416f80074f921089806dbd017
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/00-RocketYellowMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 132ed930e4ca54b46983985008b8245a
     m_Address: Assets/Objects/UI/Prefabs/Base Settings.prefab
     m_ReadOnly: 0
@@ -4039,6 +4044,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 14e81a752b6d1024aa4b9ddac0c58903
     m_Address: Assets/CityMassivePack/Prefabs/Signs/SignProp_2_A_3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14edb9a56f372674a90abafd80aac937
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/00-RocketGreyMat.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -6564,6 +6574,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 21b6256de769aa44da3b3f0ee76757c0
     m_Address: Assets/LowPolyInterior/Models/InteractiveFurniture/Oven_02_Door.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 21bc956b47d953042b2b50318dc3ee1d
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/00-jetpack-hull.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -40486,6 +40501,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc71af7e31ff8394bb761093636d0515
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/00-RocketRedMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cc74979f4fb722b4c90d52eb8ff3b129
     m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/DesertPack/Cliffs and
       Rocks Prefabs/Cliffs_1_Desert_Village Brown.prefab
@@ -44234,6 +44254,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dfd9e27467a133b44b848f06fd84278d
     m_Address: Assets/LowPolyInterior/Models/Walls/Corner_10.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dfdd423157d15c244bf4dade210a1fdc
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/00-jetpack-hull.fbx
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
