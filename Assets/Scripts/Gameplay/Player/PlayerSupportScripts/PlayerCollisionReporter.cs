@@ -31,6 +31,8 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "Untagged":
                 player.GroundTouch = true;
                 break;
+            case "Player":
+                break;
             case "PlayerDamageTrigger":
                 break;
             default:
@@ -47,6 +49,8 @@ public class PlayerCollisionReporter : MonoBehaviour
                 player.GroundTouch = false;
                 break;
             case "PlayerDamageTrigger":
+                break;
+            case "Player":
                 break;
             default:
                 player.OtherObjectTouch = false;
