@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/P18_SaveDataInitializer_SCN_V001_RSS.unity
-    guid: cde48d3e9bd461c42a761f891994273c
-  - enabled: 1
     path: Assets/Scenes/P18_AgeGate_SCN_V002_RSS.unity
     guid: c5ee877061e527745b8055b469781904
   - enabled: 1
