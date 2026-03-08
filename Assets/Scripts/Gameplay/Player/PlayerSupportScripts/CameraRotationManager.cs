@@ -1,7 +1,3 @@
-using System;
-using NUnit.Framework.Internal;
-using Unity.VisualScripting;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class CameraRotationManager : MonoBehaviour
