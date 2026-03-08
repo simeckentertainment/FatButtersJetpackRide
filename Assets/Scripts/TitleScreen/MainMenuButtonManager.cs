@@ -12,7 +12,6 @@ using GooglePlayGames.BasicApi;
 */
 public class MainMenuButtonManager : MainMenuCommonData
 {
-    [SerializeField] GameObject[] environments;
     [Header("Stuff for the credits menu")]
     [SerializeField] creditsScroller CreditsScroller;
     [Header("Stuff for MoTD")]
