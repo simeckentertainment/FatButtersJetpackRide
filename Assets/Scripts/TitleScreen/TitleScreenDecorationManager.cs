@@ -22,6 +22,10 @@ public class TitleScreenDecorationManager : MonoBehaviour
 
     private void Start()
     {
+
+        //Help RNJesus along a little bit.
+        Random.InitState(System.DateTime.Now.Millisecond);
+
         env = Helper.getRandomItemFromArray(ENVS);
         skybox = Helper.getRandomItemFromArray(SKYBOXES);
         platform = Helper.getRandomItemFromArray(PLATFORMS);

@@ -24,7 +24,7 @@ public class MainMenuButtonManager : MainMenuCommonData
     void Start()
     {
         //environments[UnityEngine.Random.Range(0, environments.Length)].SetActive(true);
-        StartCoroutine(CoroutineHome());
+        //StartCoroutine(CoroutineHome()); //Let's nix the MOTD for right now. ~Randy.
     }
 
     // Update is called once per frame
