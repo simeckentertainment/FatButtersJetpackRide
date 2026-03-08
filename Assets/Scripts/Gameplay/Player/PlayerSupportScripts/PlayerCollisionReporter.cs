@@ -35,6 +35,8 @@ public class PlayerCollisionReporter : MonoBehaviour
                 break;
             case "PlayerDamageTrigger":
                 break;
+            case "EnemySightBox":
+                break;
             default:
                 player.OtherObjectTouch = true;
                 break;
@@ -51,6 +53,8 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "PlayerDamageTrigger":
                 break;
             case "Player":
+                break;
+            case "EnemySightBox":
                 break;
             default:
                 player.OtherObjectTouch = false;
@@ -95,6 +99,8 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "Player":
                 break;
             case "PlayerDamageTrigger":
+                break;
+            case "EnemySightBox":
                 break;
             default:
                 player.OtherObjectTouch = true;
@@ -141,6 +147,8 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "Player":
                 break;
             case "PlayerDamageTrigger":
+                break;
+            case "EnemySightBox":
                 break;
             default:
                 player.OtherObjectTouch = false;
