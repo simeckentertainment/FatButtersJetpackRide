@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -26,10 +24,27 @@ public class CollectibleData : ScriptableObject
 
     [Header("In-level collectible Counters")]
     public int Keys;
-    
+
     [Header("Dev Options")]
     public bool GameplayTestingMode;
-    public bool ignoreSaveData;
+
+    [SerializeField] private bool ignoreSaveData;
+    public bool IgnoreSaveData
+    {
+        get
+        {
+            if (Application.isEditor)
+            {
+                return ignoreSaveData;
+            }
+
+            return false;
+        }
+        set
+        {
+            ignoreSaveData = value;
+        }
+    }
 
     public int BONES
     {

@@ -5,7 +5,7 @@ public class PlayerLevelLoseState : PlayerState
     }
     public string UIText;
     public override void enter(){
-        //player.UI.PauseGame();
+        PauseUtility.Pause();
         player.input.DisableInput();
         collectibleData.HASBALL = false;
         PlayOneTimeAudio(player.vfx.deathSound);

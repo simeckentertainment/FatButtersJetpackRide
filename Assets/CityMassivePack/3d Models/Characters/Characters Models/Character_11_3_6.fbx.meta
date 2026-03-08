@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: cb2c34c304a3bf5448a43d3685222c63
+AssetOrigin:
+  serializedVersion: 1
+  productId: 288607
+  packageName: Mega Bundle - RG Poly
+  packageVersion: 1.0
+  assetPath: Assets/All in One/CityMassivePack/3d Models/Characters/Characters Models/Character_11_3_6.fbx
+  uploadId: 753250
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -370,8 +377,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 8507d8d60d544874b83186fc2d3bc188,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 8507d8d60d544874b83186fc2d3bc188, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
@@ -383,10 +389,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 288607
-  packageName: Mega Bundle - RG Poly
-  packageVersion: 1.0
-  assetPath: Assets/All in One/CityMassivePack/3d Models/Characters/Characters Models/Character_11_3_6.fbx
-  uploadId: 753250

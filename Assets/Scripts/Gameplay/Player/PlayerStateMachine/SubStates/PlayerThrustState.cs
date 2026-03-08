@@ -26,6 +26,7 @@ public class PlayerThrustState : PlayerAliveState
         {
             PlayAnim("midAirLaunch");
         }
+        StartNewGrr();
         ActivateGravyBoat();
         base.enter();
     }
@@ -80,6 +81,11 @@ public class PlayerThrustState : PlayerAliveState
         {
             PlayAnim("AirIdle");
         }
+        if(GetGrrProgress() == 0.0f | GetGrrProgress() >= 1.0f)
+        {
+            StartNewGrr();
+        }
+
         base.FixedUpdate();
     }
     public override void exit()

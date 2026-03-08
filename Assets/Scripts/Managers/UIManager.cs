@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -5,6 +6,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameplayUIModel gameplayUI;
     [SerializeField] private FailMenuModel failMenu;
     [SerializeField] private SuccessMenuModel successMenu;
+    [SerializeField] private InfoModel infoMenu;
 
     public FailReason FailReason { get; set; }
 
@@ -39,5 +41,10 @@ public class UIManager : MonoBehaviour
     {
         failMenu.FailReason = FailReason;
         CurrentState = GameplayUIState.Fail;
+    }
+
+    public void ShowInfoText(string title, string text, EditorLocalTransform arrowTransform)
+    {
+        infoMenu.ShowMessage(title, text, arrowTransform);
     }
 }

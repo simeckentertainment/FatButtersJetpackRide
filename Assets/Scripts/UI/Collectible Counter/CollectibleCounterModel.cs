@@ -1,8 +1,15 @@
 using UnityEngine;
+using System.Collections.Generic;
+using Unity.Services.CloudSave.Models.Data.Player;
 
 public class CollectibleCounterModel : Model
 {
     [SerializeField] private Player player;
+    [SerializeField] private bool showCollectionInfoMessages;
+    [SerializeField] private List<GameObject> objectsEnabledWhenCompleted;
+
+    [SerializeField] private EditorLocalTransform collectibleArrowTransform;
+    [SerializeField] private EditorLocalTransform corgiSenseArrowTransform;
 
     private int _totalBones;
     public int TotalBones
@@ -68,6 +75,38 @@ public class CollectibleCounterModel : Model
 
     public int EnemiesDefeated => player.EnemiesDefeated;
 
+    public int FuelsCollected => player.FuelsCollected;
+
+    private int _totalFuels;
+
+    public int TotalFuels
+    {
+        get
+        {
+            return _totalFuels;
+        }
+        set
+        {
+            _totalFuels = value;
+            Refresh();
+        }
+    }
+
+    public bool AllCollectiblesCollected =>
+        BonesCollected == TotalBones &&
+        FoodsCollected == TotalFoods &&
+        BallsCollected == TotalBalls &&
+        FuelsCollected == TotalFuels &&
+        EnemiesDefeated == TotalEnemies;
+
+    protected override void RefreshInternal()
+    {
+        if (showCollectionInfoMessages && AllCollectiblesCollected)
+        {
+            CollectiblesCompleted();
+        }
+    }
+
     private void Awake()
     {
         player.OnPickupCollected.AddListener(Refresh);
@@ -83,7 +122,31 @@ public class CollectibleCounterModel : Model
         TotalBones = CountObj("Bone");
         TotalFoods = CountObj("Food");
         TotalBalls = CountObj("Ball");
+        TotalFuels = CountObj("Fuel");
         TotalEnemies = CountObj("Harmful");
+
+        foreach (var obj in objectsEnabledWhenCompleted)
+        {
+            obj.SetActive(false);
+        }
+
+        if (showCollectionInfoMessages)
+        {
+            player.UI.ShowInfoText("Collect!", "Collect everything!", collectibleArrowTransform);
+        }
+    }
+
+    private void CollectiblesCompleted()
+    {
+        if (showCollectionInfoMessages)
+        {
+            player.UI.ShowInfoText("Success!", "Get to the finish!", corgiSenseArrowTransform);
+        }
+
+        foreach (var obj in objectsEnabledWhenCompleted)
+        {
+            obj.SetActive(true);
+        }
     }
 
     private int CountObj(string tag)

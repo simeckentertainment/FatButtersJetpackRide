@@ -67,7 +67,14 @@ public class PlayerAliveState : PlayerState
             return;
         }
 #endif
-        if (!BallCheck())
+
+        if (BallCheck())
+        {
+            // ignore the harmful touch during the powerup
+            player.HarmfulTouch = false;
+            player.OHKTouch = false;
+        }
+        else
         {
             if (player.HarmfulTouch)
             {
@@ -213,5 +220,15 @@ public class PlayerAliveState : PlayerState
         player.gbr1.DeactivateBoat();
         player.gbr2.DeactivateBoat();
     }
+    public void StartNewGrr()
+    {
+        player.grrSfx.clip = player.vfx.Grrs[Random.Range(0,player.vfx.Grrs.Length)];
+        player.grrSfx.Play();
+    }
 
+    public float GetGrrProgress()
+    {
+        if(player.grrSfx.clip == null){ return 0.0f;}
+        return player.grrSfx.time / player.grrSfx.clip.length;
+    }
 }

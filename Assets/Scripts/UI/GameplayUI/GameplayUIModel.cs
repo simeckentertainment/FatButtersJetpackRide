@@ -56,14 +56,20 @@ public class GameplayUIModel : Model
 
     public bool PlayerHasBall => player.hasPermaBall || player.hasTemporaryBall;
 
+    public bool PlayerCanUseJetpack => player.JetpackActivationPossible;
+
+    public bool PlayerIsUsingJetpack => player.input.GoThrust;
+
     private void Awake()
     {
         player.OnFuelUpdated.AddListener(Refresh);
+        player.OnJetpackStatusUpdated.AddListener(Refresh);
     }
 
     private void OnDestroy()
     {
         player.OnFuelUpdated.RemoveListener(Refresh);
+        player.OnJetpackStatusUpdated.RemoveListener(Refresh);
     }
 
     public void SetPaused(bool paused)

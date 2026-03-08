@@ -1,7 +1,5 @@
-using Unity.VisualScripting;
-using UnityEditor.Media;
 using UnityEngine;
-using UnityEngine.Rendering;
+
 
 public class InheritWalkState : PlayerAliveState
 {
@@ -11,7 +9,6 @@ public class InheritWalkState : PlayerAliveState
 
     string[] forwardMove = { "ForeWalkSlow", "ForeWalkMid", "ForeWalkFast" };
     string[] backwardMove = { "BackWalkSlow", "BackWalkFast" };
-    string[] idleAnnoyedAnims = { "idleAnnoyed1", "idleAnnoyed2" };
 
     WalkSpeed walkSpeedEnum;
     WalkSpeed previousWalkSpeedEnum;
@@ -153,15 +150,15 @@ public class InheritWalkState : PlayerAliveState
         switch (walkSpeedEnum)
         {
             case WalkSpeed.Slow:
-                Debug.Log("Set Slow!");
+                //Debug.Log("Set Slow!");
                 PlayAnim(forwardMove[0], animNormalizedTime);
                 break;
             case WalkSpeed.Medium:
-            Debug.Log("Set Medium!");
+            //Debug.Log("Set Medium!");
                 PlayAnim(forwardMove[1], animNormalizedTime);
                 break;
             case WalkSpeed.Fast:
-                    Debug.Log("Set Fast!");
+                    //Debug.Log("Set Fast!");
                 PlayAnim(forwardMove[2], animNormalizedTime);
                 break;
             default: //no need to do anything because we're going to idle state.

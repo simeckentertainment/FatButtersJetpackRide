@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     [SerializeField] public Rigidbody rb;
     [SerializeField] public InputDriver input;
     [SerializeField] public AudioSource sfx;
+    [SerializeField] public AudioSource grrSfx;
     [SerializeField] public CorgiEffectHolder vfx;
     [SerializeField] public UIManager UI;
 
@@ -45,7 +46,6 @@ public class Player : MonoBehaviour
     public float tummy;
     public float maxTummy;
     public List<Collider> CollidersInJetpackKillZone;
-    [SerializeField] public bool JetpackActivationPossible;
     [System.NonSerialized] public float animationPercentage;
     [Header("Rotation stuff")]
     [System.NonSerialized] public float GravityRoll;
@@ -67,8 +67,7 @@ public class Player : MonoBehaviour
     public float HarmfulDamageAmount;
     public Vector3 HarmfulTouchObjectPosition;
     public float FoodAdditionAmount;
-    public bool JerryCanTouch;
-    public float FuelAdditionAmount;
+    public bool FuelTouch;
     public bool FinishTouch;
     public bool OHKTouch;
     public bool BallTouch;
@@ -84,12 +83,31 @@ public class Player : MonoBehaviour
     public int BonesCollected { get; private set; }
     public int FoodsCollected { get; private set; }
     public int BallsCollected { get; private set; }
+    public int FuelsCollected { get; private set; }
     public int EnemiesDefeated { get; private set; }
 
     public UnityEvent OnPickupCollected { get; set; } = new UnityEvent();
     public UnityEvent OnFuelUpdated { get; set; } = new UnityEvent();
+    public UnityEvent OnJetpackStatusUpdated { get; set; } = new UnityEvent();
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
+
+    private bool _jetpackActivationPossible;
+    public bool JetpackActivationPossible
+    {
+        get
+        {
+            return _jetpackActivationPossible;
+        }
+        set
+        {
+            if (value != _jetpackActivationPossible)
+            {
+                _jetpackActivationPossible = value;
+                OnJetpackStatusUpdated.Invoke();
+            }
+        }
+    }
 
     private float _fuel;
     public float Fuel
@@ -176,7 +194,13 @@ public class Player : MonoBehaviour
 
     public void AddFuel(float fuelAmount)
     {
-        Fuel += fuelAmount;
+        if(Fuel+fuelAmount > maxFuel) {
+            Fuel = maxFuel;
+        } else {
+           Fuel += fuelAmount; 
+        }
+
+        
     }
 
     public void AddBalls(int count = 1)
