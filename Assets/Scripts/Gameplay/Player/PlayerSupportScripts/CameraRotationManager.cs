@@ -20,7 +20,9 @@ public class CameraRotationManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        PlayerMaxSpeed = calculatePlayerTerminalVelocity(); //We're calculating all wobble intensities based on terminal velocity. It's more consistent that way.
+
+        float effectiveDrag = player.rb.linearDamping / ( 1.0f + player.rb.linearDamping * Time.fixedDeltaTime);//We're calculating all wobble intensities based on terminal velocity. It's more consistent that way.
+        PlayerMaxSpeed = (player.thrust - player.rb.mass * Mathf.Abs(Physics.gravity.y)) / (player.rb.mass * effectiveDrag);
     }
 
     // Update is called once per frame
@@ -136,11 +138,5 @@ public class CameraRotationManager : MonoBehaviour
         return outRot;         
     }
 
-
-    float calculatePlayerTerminalVelocity()
-    { //Leave this here so that this thing automatically fixes itself in case we decide to change the physics.
-        float effectiveDrag = player.rb.linearDamping / ( 1.0f + player.rb.linearDamping * Time.fixedDeltaTime);
-        return (player.thrust - player.rb.mass * Mathf.Abs(Physics.gravity.y)) / (player.rb.mass * effectiveDrag);
-    }
 
 }
