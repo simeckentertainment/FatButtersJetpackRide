@@ -119,6 +119,11 @@ public class Player : MonoBehaviour
         set
         {
             _fuel = value;
+            if (_fuel > maxFuel)
+            {
+                _fuel = maxFuel;
+            }
+
             OnFuelUpdated.Invoke();
         }
     }
@@ -173,13 +178,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void AddBones(int count = 1)
+    public void PickUpBones(int count = 1)
     {
         BonesCollected += count;
         OnPickupCollected.Invoke();
     }
 
-    public void AddFoods(float treats, int count = 1)
+    public void PickUpFoods(float treats, int count = 1)
     {
         FoodsCollected += count;
 
@@ -192,18 +197,15 @@ public class Player : MonoBehaviour
         OnPickupCollected.Invoke();
     }
 
-    public void AddFuel(float fuelAmount)
+    public void PickUpFuel(float fuelAmount, int count = 1)
     {
-        if(Fuel+fuelAmount > maxFuel) {
-            Fuel = maxFuel;
-        } else {
-           Fuel += fuelAmount; 
-        }
+        FuelsCollected += count;
+        Fuel += fuelAmount;
 
-        
+        OnPickupCollected.Invoke();
     }
 
-    public void AddBalls(int count = 1)
+    public void PickUpBalls(int count = 1)
     {
         BallsCollected += count;
         BallTouch = true;

@@ -2,6 +2,6 @@
 {
     protected override bool IsVisible()
     {
-        return Model.TotalEnemies > 0;
+        return Model.TotalFuels > 0;
     }
 }
