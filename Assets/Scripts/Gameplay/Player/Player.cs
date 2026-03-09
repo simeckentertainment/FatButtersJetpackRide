@@ -123,6 +123,10 @@ public class Player : MonoBehaviour
             {
                 _fuel = maxFuel;
             }
+            if(_fuel < 0.0f)
+            {
+                Fuel = 0.0f;
+            }
 
             OnFuelUpdated.Invoke();
         }

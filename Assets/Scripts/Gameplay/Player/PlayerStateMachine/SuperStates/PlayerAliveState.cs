@@ -30,7 +30,7 @@ public class PlayerAliveState : PlayerState
         {
             DidThePlayerTurnChecker();
         }
-        player.JetpackActivationPossible = player.CollidersInJetpackKillZone.Count == 0 ? true : false; //we can use the jetpack as long as we're not touching a jetpack kill zone.
+        player.JetpackActivationPossible = jetpackActivationCriteriaMet();
         //These are the collision runners.
         AdjustRotationAngle();
         HarmfulInteractionRunner();
@@ -39,6 +39,19 @@ public class PlayerAliveState : PlayerState
         thrusterVolumeRunner();
         if (player.FinishTouch) { player.stateMachine.changeState(player.playerWinState); }
         base.FixedUpdate();
+    }
+
+    private bool jetpackActivationCriteriaMet()
+    {
+        if (player.CollidersInJetpackKillZone.Count != 0) //we can use the jetpack as long as we're not touching a jetpack kill zone.
+        {
+            return false;
+        }
+        if(player.Fuel <= 0.0f) //we can use the jetpack as long as we have fuel.
+        {
+            return false;
+        }
+        return true;
     }
     #region CollisionRunners
     void DidThePlayerTurnChecker()

@@ -69,13 +69,9 @@ public class PlayerThrustState : PlayerAliveState
                 UseFuel(isBoosting);
             }
         }
-        if (!player.input.GoThrust | !player.JetpackActivationPossible)
+        if (!player.input.GoThrust | !player.JetpackActivationPossible | player.Fuel < 0.0f)
         {
             player.stateMachine.changeState(player.playerFallState);
-        }
-        if (player.Fuel <= 0.0f)
-        {
-            player.stateMachine.changeState(player.playerNoFuelState);
         }
         if (stateAge == 60)
         {
