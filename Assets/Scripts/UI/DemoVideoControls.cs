@@ -20,6 +20,10 @@ public class DemoVideoControls : MonoBehaviour
         {
             LoadNextScene();
         }
+        if (Input.anyKeyDown)
+        {
+            LoadNextScene();
+        }
     }
 
     private void OnVideoFinished(VideoPlayer vp)
