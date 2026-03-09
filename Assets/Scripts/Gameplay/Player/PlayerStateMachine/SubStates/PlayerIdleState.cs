@@ -43,9 +43,9 @@ public class PlayerIdleState : PlayerAliveState
             PlayAnim(idleAnnoyedAnims[Random.Range(0, 2)]);
         }
         
-        if(stateAge > 120)
+        if (stateAge > 120)
         {
-            player.AddFuel(1);
+            player.Fuel += 1;
         }
 
         // Calculate walk detection (absZ) for transition check

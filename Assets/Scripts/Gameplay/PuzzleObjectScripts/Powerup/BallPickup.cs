@@ -2,6 +2,6 @@
 {
     protected override void OnPlayerTriggerEnter(Player player)
     {
-        player.AddBalls();
+        player.PickUpBalls();
     }
 }
