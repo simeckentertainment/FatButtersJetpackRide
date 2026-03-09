@@ -16,11 +16,7 @@ public class DemoVideoControls : MonoBehaviour
     void Update()
     {
         // Check for any touch beginning (avoids firing repeatedly while held)
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            LoadNextScene();
-        }
-        if (Input.anyKeyDown)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began || Input.anyKeyDown)
         {
             LoadNextScene();
         }
@@ -35,12 +31,7 @@ public class DemoVideoControls : MonoBehaviour
     {
         // Unsubscribe before we leave to be safe
         videoPlayer.loopPointReached -= OnVideoFinished;
-        if("Scenes/" + sld.LastLoadedLevel == Levels.GameOnDemoTitleScreen)
-        {
-            Levels.Load(Levels.GameOnDemoLevel);
-        } else {
-            Levels.Load(Levels.GameOnDemoTitleScreen);
-        }
+        Levels.Load(Levels.GameOnDemoTitleScreen);
     }
 
     void OnDestroy()
