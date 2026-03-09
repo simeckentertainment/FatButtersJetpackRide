@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Z-GameOnDemo Profile
+  m_Name: Z-WinDemo Profile
   m_EditorClassIdentifier: 
   m_AssetVersion: 1
-  m_BuildTarget: 9
-  m_Subtarget: 0
-  m_PlatformId: ad48d16a66894befa4d8181998c3cb09
+  m_BuildTarget: 19
+  m_Subtarget: 2
+  m_PlatformId: 4e3c793746204150860bf175a9a41a05
   m_PlatformBuildProfile:
-    rid: 3513121696296206336
+    rid: 90920954138984448
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
@@ -76,8 +76,7 @@ MonoBehaviour:
     - line: '|   - logo: {fileID: 10404, guid: 0000000000000000f000000000000000,
         type: 0}'
     - line: '|     duration: 2'
-    - line: '|   m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 5b013056df8b14f448b12da9990a30f2,
-        type: 3}'
+    - line: '|   m_VirtualRealitySplashScreen: {instanceID: 0}'
     - line: '|   m_HolographicTrackingLossScreen: {instanceID: 0}'
     - line: '|   defaultScreenWidth: 1280'
     - line: '|   defaultScreenHeight: 720'
@@ -93,7 +92,7 @@ MonoBehaviour:
     - line: '|   numberOfMipsStripped: 0'
     - line: '|   numberOfMipsStrippedPerMipmapLimitGroup: {}'
     - line: '|   m_StackTraceTypes: 000000000000000000000000000000000000000001000000'
-    - line: '|   iosShowActivityIndicatorOnLoading: 100'
+    - line: '|   iosShowActivityIndicatorOnLoading: -1'
     - line: '|   androidShowActivityIndicatorOnLoading: 2'
     - line: '|   iosUseCustomAppBackgroundBehavior: 0'
     - line: '|   allowedAutorotateToPortrait: 1'
@@ -144,7 +143,7 @@ MonoBehaviour:
     - line: '|   xboxEnableFitness: 0'
     - line: '|   visibleInBackground: 1'
     - line: '|   allowFullscreenSwitch: 1'
-    - line: '|   fullscreenMode: 3'
+    - line: '|   fullscreenMode: 1'
     - line: '|   xboxSpeechDB: 0'
     - line: '|   xboxEnableHeadOrientation: 0'
     - line: '|   xboxEnableGuest: 0'
@@ -197,7 +196,7 @@ MonoBehaviour:
     - line: '|   hdrBitDepth: 0'
     - line: '|   m_ColorGamuts: 00000000'
     - line: '|   targetPixelDensity: 30'
-    - line: '|   resolutionScalingMode: 0'
+    - line: '|   resolutionScalingMode: 2'
     - line: '|   resetResolutionOnWindowResize: 0'
     - line: '|   androidSupportedAspectRatio: 2'
     - line: '|   androidMaxAspectRatio: 1.98'
@@ -629,14 +628,8 @@ MonoBehaviour:
     - line: '|     Android: 1'
     - line: '|     iPhone: 1'
     - line: '|     tvOS: 1'
-    - line: '|   m_BuildTargetGroupLightmapEncodingQuality:'
-    - line: '|   - serializedVersion: 2'
-    - line: '|     m_BuildTarget: iOS'
-    - line: '|     m_EncodingQuality: 2'
-    - line: '|   m_BuildTargetGroupHDRCubemapEncodingQuality:'
-    - line: '|   - serializedVersion: 2'
-    - line: '|     m_BuildTarget: iOS'
-    - line: '|     m_EncodingQuality: 2'
+    - line: '|   m_BuildTargetGroupLightmapEncodingQuality: []'
+    - line: '|   m_BuildTargetGroupHDRCubemapEncodingQuality: []'
     - line: '|   m_BuildTargetGroupLightmapSettings: []'
     - line: '|   m_BuildTargetGroupLoadStoreDebugModeSettings: []'
     - line: '|   m_BuildTargetNormalMapEncoding: []'
@@ -941,6 +934,7 @@ MonoBehaviour:
     - line: '|   platformArchitecture: {}'
     - line: '|   scriptingBackend:'
     - line: '|     Android: 1'
+    - line: '|     Standalone: 0'
     - line: '|   il2cppCompilerConfiguration:'
     - line: '|     Android: 1'
     - line: '|   il2cppCodeGeneration:'
@@ -1078,8 +1072,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 3513121696296206336
-      type: {class: iOSPlatformSettings, ns: UnityEditor.iOS, asm: UnityEditor.iOS.Extensions}
+    - rid: 90920954138984448
+      type: {class: WindowsPlatformSettings, ns: UnityEditor.WindowsStandalone, asm: UnityEditor.WindowsStandalone.Extensions}
       data:
         m_Development: 0
         m_ConnectProfiler: 0
@@ -1092,7 +1086,9 @@ MonoBehaviour:
         m_ExplicitArrayBoundsChecks: 0
         m_CompressionType: 3
         m_InstallInBuildFolder: 0
-        m_iOSXcodeBuildConfig: 1
-        m_SymlinkSources: 0
-        m_PreferredXcode: 
-        m_SymlinkTrampoline: 0
+        m_WindowsBuildAndRunDeployTarget: 0
+        m_Architecture: 0
+        m_CreateSolution: 0
+        m_CopyPDBFiles: 0
+        m_WindowsDevicePortalAddress: 
+        m_WindowsDevicePortalUsername: 
