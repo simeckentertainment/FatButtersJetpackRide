@@ -51,7 +51,7 @@ public void CreateDemoSave()
         data.bones = 0;
         data.fuelUpgrade = 100;
         data.thrustUpgrade = 5;
-        data.treatsUpgrade = 3;
+        data.treatsUpgrade = 12;
         data.StartWithBall = false;
         data.LevelBeaten = new bool[21];
         data.LevelBeaten[0] = true;
@@ -105,9 +105,9 @@ public void CreateDemoSave()
         FileStream saveFile = File.Create(Application.persistentDataPath + saveFilename);
         SaveData data = new SaveData();
         data.bones = 0;
-        data.fuelUpgrade = 1;
+        data.fuelUpgrade = 25;
         data.thrustUpgrade = 1;
-        data.treatsUpgrade = 1;
+        data.treatsUpgrade = 12;
         data.StartWithBall = false;
         data.LevelBeaten = new bool[21];
         data.LevelBeaten[0] = true;
