@@ -130,6 +130,7 @@ public class InheritWalkState : PlayerAliveState
                 break;
             case WalkSpeed.Fast:
                 player.walkCurrentSpeed = player.fastWalkSpeed;
+                player.ResetRechargeCounter();
                 break;
         }
         //Backwards walk speed is half of forward walk speed.

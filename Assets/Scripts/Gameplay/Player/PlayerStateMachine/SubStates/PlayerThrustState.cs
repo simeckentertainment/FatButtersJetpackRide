@@ -38,7 +38,7 @@ public class PlayerThrustState : PlayerAliveState
     public override void FixedUpdate()
     {
         stateAge++;
-        
+        player.ResetRechargeCounter();
         // Handle boost logic within the state machine
         bool isBoosting = player.input.GoBoost && player.Fuel > 0f;
         

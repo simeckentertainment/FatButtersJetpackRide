@@ -49,7 +49,7 @@ public void CreateDemoSave()
         FileStream saveFile = File.Create(Application.persistentDataPath + saveFilename);
         SaveData data = new SaveData();
         data.bones = 0;
-        data.fuelUpgrade = 100;
+        data.fuelUpgrade = 25;
         data.thrustUpgrade = 5;
         data.treatsUpgrade = 12;
         data.StartWithBall = false;

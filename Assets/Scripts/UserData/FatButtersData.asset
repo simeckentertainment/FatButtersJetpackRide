@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FatButtersData
   m_EditorClassIdentifier: 
   bones: 0
-  fuelUpgradeLevel: 100
+  fuelUpgradeLevel: 25
   thrustUpgradeLevel: 1
   treatsUpgradeLevel: 12
   HASBALL: 0

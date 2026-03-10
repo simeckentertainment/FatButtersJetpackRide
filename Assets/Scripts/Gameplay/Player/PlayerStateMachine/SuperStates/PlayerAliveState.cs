@@ -3,8 +3,7 @@ using UnityEngine;
 public class PlayerAliveState : PlayerState
 {
     AudioSource[] thrusterSoundHolders;
-    public float thrusterVolumeCounter = 0f;
-
+    public float thrusterVolumeCounter;
     public override bool IsAliveState => true;
 
     public PlayerAliveState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
@@ -47,7 +46,7 @@ public class PlayerAliveState : PlayerState
         {
             return false;
         }
-        if(player.Fuel <= 0.0f) //we can use the jetpack as long as we have fuel.
+        if (player.Fuel <= 0.0f) //we can use the jetpack as long as we have fuel.
         {
             return false;
         }
@@ -163,7 +162,7 @@ public class PlayerAliveState : PlayerState
     {
         UseFuel(false);
     }
-    
+
     public void UseFuel(bool isBoosting)
     {
 
@@ -235,13 +234,14 @@ public class PlayerAliveState : PlayerState
     }
     public void StartNewGrr()
     {
-        player.grrSfx.clip = player.vfx.Grrs[Random.Range(0,player.vfx.Grrs.Length)];
+        player.grrSfx.clip = player.vfx.Grrs[Random.Range(0, player.vfx.Grrs.Length)];
         player.grrSfx.Play();
     }
 
     public float GetGrrProgress()
     {
-        if(player.grrSfx.clip == null){ return 0.0f;}
+        if (player.grrSfx.clip == null) { return 0.0f; }
         return player.grrSfx.time / player.grrSfx.clip.length;
     }
 }
+
