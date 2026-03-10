@@ -75,7 +75,7 @@ public class PlayerThrustState : PlayerAliveState
         }
         if (player.Fuel <= 0.0f)
         {
-            player.stateMachine.changeState(player.playerNoFuelState);
+            player.stateMachine.changeState(player.playerFallState);
         }
         if (stateAge == 60)
         {

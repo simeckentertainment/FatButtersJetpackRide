@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     public PlayerEnterDangleState playerEnterDangleState { get; set; }
     public PlayerDangleState playerDangleState { get; set; }
     public PlayerHurtState playerHurtState { get; set; }
-    public PlayerNoFuelState playerNoFuelState { get; set; }
     public PlayerOHKState playerOHKState { get; set; }
     public PlayerThrustState playerThrustState { get; set; }
     public PlayerTummyDeathState playerTummyDeathState { get; set; }
@@ -97,7 +96,7 @@ public class Player : MonoBehaviour
     {
         get
         {
-            return _jetpackActivationPossible;
+            return _jetpackActivationPossible && Fuel > 0;
         }
         set
         {
@@ -149,7 +148,6 @@ public class Player : MonoBehaviour
         playerEnterDangleState = new PlayerEnterDangleState(this, stateMachine);
         playerDangleState = new PlayerDangleState(this, stateMachine);
         playerHurtState = new PlayerHurtState(this, stateMachine);
-        playerNoFuelState = new PlayerNoFuelState(this, stateMachine);
         playerOHKState = new PlayerOHKState(this, stateMachine);
         playerThrustState = new PlayerThrustState(this, stateMachine);
         playerTummyDeathState = new PlayerTummyDeathState(this, stateMachine);
