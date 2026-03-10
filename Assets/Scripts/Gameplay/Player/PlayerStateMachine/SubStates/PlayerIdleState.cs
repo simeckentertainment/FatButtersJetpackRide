@@ -28,7 +28,6 @@ public class PlayerIdleState : PlayerAliveState
     public override void FixedUpdate()
     {
         stateAge++;
-        player.rb.linearVelocity = Vector3.zero;
         base.FixedUpdate();
         if (player.input.GoThrust & player.JetpackActivationPossible)
         {
