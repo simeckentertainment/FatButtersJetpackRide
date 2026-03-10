@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
     [SerializeField] public float fastWalkSpeed;
 
     [Header("Collision bools")]
-    public bool GroundTouch;
+    public bool GroundTouch => currentGroundColliders.Count > 0;
     public bool HarmfulTouch;
     public float HarmfulDamageAmount;
     public Vector3 HarmfulTouchObjectPosition;
@@ -92,6 +92,8 @@ public class Player : MonoBehaviour
     public UnityEvent OnJetpackStatusUpdated { get; set; } = new UnityEvent();
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
+
+    private HashSet<(int, int)> currentGroundColliders = new HashSet<(int, int)>();
 
     private bool _jetpackActivationPossible;
     public bool JetpackActivationPossible
@@ -174,7 +176,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Shelf"))
         {
-            Debug.Log("Ground touch true");
+            Debug.Log("Shelf touch true");
 
             transform.SetParent(collision.transform, true);
         }
@@ -185,10 +187,38 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Shelf"))
         {
-            Debug.Log("Ground touch false");
+            Debug.Log("Shelf touch false");
 
             transform.SetParent(null, true);
         }
+    }
+
+    public void AddGroundCollider(Collider sourceObject, Collider other)
+    {
+        var tuple = GetCollisionId(sourceObject, other);
+
+        if (!currentGroundColliders.Contains(tuple))
+        {
+            currentGroundColliders.Add(tuple);
+        }
+    }
+
+    public void RemoveGroundCollider(Collider sourceObject, Collider other)
+    {
+        var tuple = GetCollisionId(sourceObject, other);
+
+        if (currentGroundColliders.Contains(tuple))
+        {
+            currentGroundColliders.Remove(tuple);
+        }
+    }
+
+    private (int, int) GetCollisionId(Collider sourceObject, Collider other)
+    {
+        var sourceId = sourceObject.GetInstanceID();
+        var otherId = other.GetInstanceID();
+
+        return (sourceId, otherId);
     }
 
     public void PickUpBones(int count = 1)
