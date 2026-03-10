@@ -13,7 +13,7 @@ public class InheritWalkState : PlayerAliveState
     WalkSpeed walkSpeedEnum;
     WalkSpeed previousWalkSpeedEnum;
 
-    int fallDelayThreshold = 15; //number of frames to wait before switching to fall state
+    int fallDelayThreshold = 20; //number of frames to wait before switching to fall state
     int fallDelayCounter;
     public InheritWalkState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {

@@ -10,7 +10,10 @@ public class PlayerIdleState : PlayerAliveState
 
     }
     string[] idleAnims = {"idle1","idle2"};
-    string[] idleAnnoyedAnims = {"idleAnnoyed1","idleAnnoyed2"};
+    string[] idleAnnoyedAnims = { "idleAnnoyed1", "idleAnnoyed2" };
+    
+    int fallDelayThreshold = 20; //number of frames to wait before switching to fall state
+    int fallDelayCounter;
     public override void enter()
     {
         stateAge = 0;
@@ -42,7 +45,7 @@ public class PlayerIdleState : PlayerAliveState
         {
             PlayAnim(idleAnnoyedAnims[Random.Range(0, 2)]);
         }
-        
+
         if (stateAge > 120)
         {
             player.Fuel += 1;
@@ -56,11 +59,33 @@ public class PlayerIdleState : PlayerAliveState
                 player.stateMachine.changeState(player.playerWalkState);
             }
         }
-        if (GetCurrentAnimName() == "idleAnnoyed1" & Helper.isWithinMarginOfError(GetNormalizedTime(), 0.5f, 0.025f)){
-            PlayOneTimeAudio(player.borks[Random.Range(0,3)]); //play the bork
+        if (GetCurrentAnimName() == "idleAnnoyed1" & Helper.isWithinMarginOfError(GetNormalizedTime(), 0.5f, 0.025f))
+        {
+            PlayOneTimeAudio(player.borks[Random.Range(0, 3)]); //play the bork
         }
-        if (GetCurrentAnimName() == "idleAnnoyed1" & Helper.isWithinMarginOfError(GetNormalizedTime(), 0.75f, 0.025f)){
-            PlayOneTimeAudio(player.borks[Random.Range(0,3)]); //play the bork
+        if (GetCurrentAnimName() == "idleAnnoyed1" & Helper.isWithinMarginOfError(GetNormalizedTime(), 0.75f, 0.025f))
+        {
+            PlayOneTimeAudio(player.borks[Random.Range(0, 3)]); //play the bork
+        }
+
+        //If the ground gets pulled out from under our feet, we need to fall.
+        //This reproduces the code in the walk state, but eh.
+        if (!player.GroundTouch & !player.OtherObjectTouch)
+        {
+            fallDelayCounter++;
+            TrackStandToFallTransition();
+        }
+        else
+        {
+            fallDelayCounter = 0;
+        }
+    }
+    
+    private void TrackStandToFallTransition()
+    {
+        if(fallDelayCounter >= fallDelayThreshold)
+        {
+            player.stateMachine.changeState(player.playerFallState);
         }
     }
     public override void exit()

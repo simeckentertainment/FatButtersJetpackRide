@@ -28,6 +28,7 @@ public class PlayerCollisionReporter : MonoBehaviour
         {
             case "Untagged":
                 player.GroundTouch = true;
+                player.OtherObjectTouch = true;
                 SetColliderObject(other);
                 break;
             case "Player":
@@ -71,7 +72,7 @@ public class PlayerCollisionReporter : MonoBehaviour
         {
             case "Untagged":
                 player.GroundTouch = true;
-                player.OtherObjectTouch = false;
+                player.OtherObjectTouch = true;
                 SetTriggerObject(other);
                 break;
             case "EnemyWeakspot":
@@ -125,6 +126,7 @@ public class PlayerCollisionReporter : MonoBehaviour
         {
             case "Untagged":
                 player.GroundTouch = false;
+                player.OtherObjectTouch = false;
                 break;
             case "Fuel":
                 player.FuelTouch = false;
