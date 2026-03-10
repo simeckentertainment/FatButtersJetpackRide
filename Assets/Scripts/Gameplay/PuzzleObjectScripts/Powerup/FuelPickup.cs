@@ -11,6 +11,6 @@ public class FuelPickup : Pickup
 
     protected override void OnPlayerTriggerEnter(Player player)
     {
-        player.AddFuel(fuelAmount);
+        player.PickUpFuel(fuelAmount);
     }
 }

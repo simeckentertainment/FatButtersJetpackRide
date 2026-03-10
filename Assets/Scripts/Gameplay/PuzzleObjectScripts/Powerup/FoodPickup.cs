@@ -11,6 +11,6 @@ public class FoodPickup : Pickup
 
     protected override void OnPlayerTriggerEnter(Player player)
     {
-        player.AddFoods(foodAmount);
+        player.PickUpFoods(foodAmount);
     }
 }

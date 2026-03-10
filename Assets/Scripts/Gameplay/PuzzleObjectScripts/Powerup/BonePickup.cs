@@ -2,6 +2,6 @@
 {
     protected override void OnPlayerTriggerEnter(Player player)
     {
-        player.AddBones();
+        player.PickUpBones();
     }
 }
