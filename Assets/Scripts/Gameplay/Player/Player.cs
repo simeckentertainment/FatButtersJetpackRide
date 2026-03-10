@@ -7,13 +7,12 @@ public class Player : MonoBehaviour
 {
     public PlayerStateMachine stateMachine;
     public PlayerIdleState playerIdleState { get; set; }
-    public InheritWalkState playerWalkState{get;set;}
+    public PlayerWalkState playerWalkState{get;set;}
 
     public PlayerFallState playerFallState { get; set; }
     public PlayerEnterDangleState playerEnterDangleState { get; set; }
     public PlayerDangleState playerDangleState { get; set; }
     public PlayerHurtState playerHurtState { get; set; }
-    public PlayerNoFuelState playerNoFuelState { get; set; }
     public PlayerOHKState playerOHKState { get; set; }
     public PlayerThrustState playerThrustState { get; set; }
     public PlayerTummyDeathState playerTummyDeathState { get; set; }
@@ -110,6 +109,22 @@ public class Player : MonoBehaviour
         }
     }
 
+    [System.NonSerialized] int fallDelayCounter = 0;
+    [SerializeField]int fallDelayThreshold;
+    public bool IsFalling()
+    {
+        if (!GroundTouch && !OtherObjectTouch)
+        {
+            fallDelayCounter++;
+        }
+        else
+        {
+            fallDelayCounter = 0;
+        }
+
+        return fallDelayCounter >= fallDelayThreshold;
+    }
+
     private float _fuel;
     public float Fuel
     {
@@ -149,12 +164,11 @@ public class Player : MonoBehaviour
         JetpackActivationPossible = true;
         ApplyStoreUpgrades();
         playerIdleState = new PlayerIdleState(this, stateMachine);
-        playerWalkState = new InheritWalkState(this, stateMachine);
+        playerWalkState = new PlayerWalkState(this, stateMachine);
         playerFallState = new PlayerFallState(this, stateMachine);
         playerEnterDangleState = new PlayerEnterDangleState(this, stateMachine);
         playerDangleState = new PlayerDangleState(this, stateMachine);
         playerHurtState = new PlayerHurtState(this, stateMachine);
-        playerNoFuelState = new PlayerNoFuelState(this, stateMachine);
         playerOHKState = new PlayerOHKState(this, stateMachine);
         playerThrustState = new PlayerThrustState(this, stateMachine);
         playerTummyDeathState = new PlayerTummyDeathState(this, stateMachine);

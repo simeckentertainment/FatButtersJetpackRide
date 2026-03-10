@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class InheritWalkState : PlayerAliveState
+public class PlayerWalkState : PlayerAliveState
 {
     float animNormalizedTime; //since we're switching between different animations dynamically, we should handle normalized time tracking here.
     float absoluteZ;
@@ -15,7 +15,7 @@ public class InheritWalkState : PlayerAliveState
 
     int fallDelayThreshold = 20; //number of frames to wait before switching to fall state
     int fallDelayCounter;
-    public InheritWalkState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
+    public PlayerWalkState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
 
     }

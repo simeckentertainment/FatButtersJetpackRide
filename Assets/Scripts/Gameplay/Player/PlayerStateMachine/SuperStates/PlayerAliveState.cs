@@ -29,7 +29,7 @@ public class PlayerAliveState : PlayerState
         {
             DidThePlayerTurnChecker();
         }
-        player.JetpackActivationPossible = jetpackActivationCriteriaMet();
+        player.JetpackActivationPossible = CanActivateJetpack();
         //These are the collision runners.
         AdjustRotationAngle();
         HarmfulInteractionRunner();
@@ -40,7 +40,7 @@ public class PlayerAliveState : PlayerState
         base.FixedUpdate();
     }
 
-    private bool jetpackActivationCriteriaMet()
+    private bool CanActivateJetpack()
     {
         if (player.CollidersInJetpackKillZone.Count != 0) //we can use the jetpack as long as we're not touching a jetpack kill zone.
         {
