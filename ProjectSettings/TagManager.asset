@@ -21,6 +21,7 @@ TagManager:
   - PlayerDamageTrigger
   - Shelf
   - KillThrust
+  - EnemySightBox
   layers:
   - Default
   - TransparentFX

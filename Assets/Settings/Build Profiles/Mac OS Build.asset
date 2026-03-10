@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Mac OS Build
+  m_EditorClassIdentifier: 
+  m_AssetVersion: 1
+  m_BuildTarget: 2
+  m_Subtarget: 2
+  m_PlatformId: 0d2129357eac403d8b359c2dcbf82502
+  m_PlatformBuildProfile:
+    rid: 90920994926493696
+  m_OverrideGlobalSceneList: 0
+  m_Scenes:
+  - m_enabled: 1
+    m_path: Assets/Scenes/P18_AgeGate_SCN_V002_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/P18_AnalyticsChecker_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/P18_TitleScreen_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/P18-GameOnDemoTitleScreen.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/P18_SceneLoader_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/P18_LevelSelect_SCN_V002_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level1_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level2_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level3_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level4_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level5_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level6_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level7_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level8_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level9_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level10_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level11_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level12_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level13_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level14_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level15_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level16_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level17_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level18_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level19_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/P18_Level20_SCN_V001_RSS.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/puzzleLevels/GameOnExpoDemoLevel.unity
+  m_ScriptingDefines: []
+  m_PlayerSettingsYaml:
+    m_Settings: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 90920994926493696
+      type: {class: OSXStandaloneBuildProfile, ns: UnityEditor.OSXStandalone, asm: UnityEditor.OSXStandalone.Extensions}
+      data:
+        m_Development: 0
+        m_ConnectProfiler: 0
+        m_BuildWithDeepProfilingSupport: 0
+        m_AllowDebugging: 0
+        m_WaitForManagedDebugger: 0
+        m_ManagedDebuggerFixedPort: 0
+        m_ExplicitNullChecks: 0
+        m_ExplicitDivideByZeroChecks: 0
+        m_ExplicitArrayBoundsChecks: 0
+        m_CompressionType: 0
+        m_InstallInBuildFolder: 0
+        m_MacOSXcodeBuildConfig: 1
+        m_Architecture: 2
+        m_CreateXcodeProject: 0

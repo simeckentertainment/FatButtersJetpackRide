@@ -11,4 +11,8 @@ public class SceneLoaderModel : Model
     {
         LoadScene(Levels.GameOnDemoTitleScreen);
     }
+    public void LoadDemoTrailerScene()
+    {
+        LoadScene(Levels.GameOnTrailerLevel);
+    }
 }

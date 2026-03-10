@@ -38,7 +38,7 @@ public class PlayerThrustState : PlayerAliveState
     public override void FixedUpdate()
     {
         stateAge++;
-        
+        player.ResetRechargeCounter();
         // Handle boost logic within the state machine
         bool isBoosting = player.input.GoBoost && player.Fuel > 0f;
         
@@ -69,13 +69,9 @@ public class PlayerThrustState : PlayerAliveState
                 UseFuel(isBoosting);
             }
         }
-        if (!player.input.GoThrust | !player.JetpackActivationPossible)
+        if (!player.input.GoThrust || !player.JetpackActivationPossible || player.Fuel < 0.0f)
         {
             player.stateMachine.changeState(player.playerFallState);
-        }
-        if (player.Fuel <= 0.0f)
-        {
-            player.stateMachine.changeState(player.playerNoFuelState);
         }
         if (stateAge == 60)
         {

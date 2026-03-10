@@ -7,6 +7,7 @@ public class SaveManager : Singleton<SaveManager>
     [SerializeField] public CollectibleData collectibleData;
     [SerializeField] public UserInfo userInfo;
     [SerializeField] public SceneLoadData sceneLoadData;
+    [SerializeField] public bool demoMode;
 
     private string saveFilename = "/ButtersSaveData.dat";
 
@@ -28,11 +29,17 @@ public class SaveManager : Singleton<SaveManager>
         }
         else
         {
-            CreateNewSave();
+            if (demoMode)
+            {
+                CreateDemoSave();
+            } else {
+                CreateNewSave();
+            }
         }
     }
 
-    public void CreateNewSave()
+
+public void CreateDemoSave()
     {
         if(File.Exists(Application.persistentDataPath + saveFilename))
         {
@@ -42,9 +49,9 @@ public class SaveManager : Singleton<SaveManager>
         FileStream saveFile = File.Create(Application.persistentDataPath + saveFilename);
         SaveData data = new SaveData();
         data.bones = 0;
-        data.fuelUpgrade = 1;
-        data.thrustUpgrade = 1;
-        data.treatsUpgrade = 1;
+        data.fuelUpgrade = 25;
+        data.thrustUpgrade = 5;
+        data.treatsUpgrade = 12;
         data.StartWithBall = false;
         data.LevelBeaten = new bool[21];
         data.LevelBeaten[0] = true;
@@ -81,6 +88,62 @@ public class SaveManager : Singleton<SaveManager>
         data.haveSkins[0] = true;
 
         binaryFormatter.Serialize(saveFile,data);
+        saveFile.Close();
+        //Debug.Log("new save file created.");
+        Load();
+    }
+
+
+
+    public void CreateNewSave()
+    {
+        if (File.Exists(Application.persistentDataPath + saveFilename))
+        {
+            File.Delete(Application.persistentDataPath + saveFilename);
+        }
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        FileStream saveFile = File.Create(Application.persistentDataPath + saveFilename);
+        SaveData data = new SaveData();
+        data.bones = 0;
+        data.fuelUpgrade = 25;
+        data.thrustUpgrade = 1;
+        data.treatsUpgrade = 12;
+        data.StartWithBall = false;
+        data.LevelBeaten = new bool[21];
+        data.LevelBeaten[0] = true;
+        data.currentSkin = 0;
+        data.analyticsConsentAnswered = false;
+        data.ageGateQuestionAnswered = false;
+        data.dataCollectionConsent = false;
+        data.isOldEnoughForAds = false;
+        data.MasterVolumeLevel = 1.0f;
+        data.MusicVolumeLevel = 1.0f;
+        data.SFXVolumeLevel = 1.0f;
+        data.yearBorn = 0;
+        data.monthBorn = 0;
+        data.dayBorn = 0;
+        data.hapticsEnabled = true;
+        data.SceneToLoad = "";
+        data.LastLoadedLevel = "";
+        data.OnScreenControlsEnabled = false;
+        data.CorgiSenseEnabled = true;
+        data.SceneToLoad = "";
+        data.LastLoadedLevel = "";
+        data.LastLoadedLevelInt = 0;
+        data.AdHistoryCounter = 0;
+        data.LevelSelectBanners = false;
+        data.PauseMenuBanners = true;
+        data.InterstitialToggle = false;
+        data.InterstitialFrequency = 3;
+        data.BoneDoublerToggle = true;
+        data.GraphicsQualityLevel = 1;
+
+        //These are permanent IAP purchases and should be treated with care.
+        data.killAds = false;
+        data.haveSkins = new bool[collectibleData.HaveSkins.Length];
+        data.haveSkins[0] = true;
+
+        binaryFormatter.Serialize(saveFile, data);
         saveFile.Close();
         //Debug.Log("new save file created.");
         Load();

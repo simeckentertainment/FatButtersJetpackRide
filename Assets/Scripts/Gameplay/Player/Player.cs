@@ -7,13 +7,12 @@ public class Player : MonoBehaviour
 {
     public PlayerStateMachine stateMachine;
     public PlayerIdleState playerIdleState { get; set; }
-    public InheritWalkState playerWalkState{get;set;}
+    public PlayerWalkState playerWalkState{get;set;}
 
     public PlayerFallState playerFallState { get; set; }
     public PlayerEnterDangleState playerEnterDangleState { get; set; }
     public PlayerDangleState playerDangleState { get; set; }
     public PlayerHurtState playerHurtState { get; set; }
-    public PlayerNoFuelState playerNoFuelState { get; set; }
     public PlayerOHKState playerOHKState { get; set; }
     public PlayerThrustState playerThrustState { get; set; }
     public PlayerTummyDeathState playerTummyDeathState { get; set; }
@@ -46,6 +45,7 @@ public class Player : MonoBehaviour
     public float tummy;
     public float maxTummy;
     public List<Collider> CollidersInJetpackKillZone;
+    [System.NonSerialized] public int thrusterRechargeCounter = 0;
     [System.NonSerialized] public float animationPercentage;
     [Header("Rotation stuff")]
     [System.NonSerialized] public float GravityRoll;
@@ -109,6 +109,22 @@ public class Player : MonoBehaviour
         }
     }
 
+    [System.NonSerialized] int fallDelayCounter = 0;
+    [SerializeField]int fallDelayThreshold;
+    public bool IsFalling()
+    {
+        if (!GroundTouch && !OtherObjectTouch)
+        {
+            fallDelayCounter++;
+        }
+        else
+        {
+            fallDelayCounter = 0;
+        }
+
+        return fallDelayCounter >= fallDelayThreshold;
+    }
+
     private float _fuel;
     public float Fuel
     {
@@ -122,6 +138,10 @@ public class Player : MonoBehaviour
             if (_fuel > maxFuel)
             {
                 _fuel = maxFuel;
+            }
+            if(_fuel < 0.0f)
+            {
+                Fuel = 0.0f;
             }
 
             OnFuelUpdated.Invoke();
@@ -144,17 +164,24 @@ public class Player : MonoBehaviour
         JetpackActivationPossible = true;
         ApplyStoreUpgrades();
         playerIdleState = new PlayerIdleState(this, stateMachine);
-        playerWalkState = new InheritWalkState(this,stateMachine);
+        playerWalkState = new PlayerWalkState(this, stateMachine);
         playerFallState = new PlayerFallState(this, stateMachine);
         playerEnterDangleState = new PlayerEnterDangleState(this, stateMachine);
         playerDangleState = new PlayerDangleState(this, stateMachine);
         playerHurtState = new PlayerHurtState(this, stateMachine);
-        playerNoFuelState = new PlayerNoFuelState(this, stateMachine);
         playerOHKState = new PlayerOHKState(this, stateMachine);
         playerThrustState = new PlayerThrustState(this, stateMachine);
         playerTummyDeathState = new PlayerTummyDeathState(this, stateMachine);
         playerWinState = new PlayerWinState(this, stateMachine);
         stateMachine.Initialize(playerIdleState);
+    }
+    void FixedUpdate()
+    {
+        thrusterRechargeCounter++;
+        if (thrusterRechargeCounter > 120)
+        {
+            Fuel += 1;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -226,16 +253,20 @@ public class Player : MonoBehaviour
         // So we subtract 1 from the upgrade level since level 1 is the starting level
         baseThrustWithUpgrades = baseThrust + (collectibleData.thrustUpgradeLevel - 1);
         thrust = baseThrustWithUpgrades; // Initialize thrust to base upgraded value
-        maxFuel = collectibleData.fuelUpgradeLevel*20.0f;
+        maxFuel = collectibleData.fuelUpgradeLevel * 20.0f;
         Fuel = maxFuel;
-        fuelPercent = Fuel/maxFuel;
+        fuelPercent = Fuel / maxFuel;
         maxTummy = collectibleData.treatsUpgradeLevel;
         tummy = maxTummy;
-        tummyPercent = tummy/maxTummy;
-        if(collectibleData.HASBALL)
+        tummyPercent = tummy / maxTummy;
+        if (collectibleData.HASBALL)
         {
             hasPermaBall = true;
         }
+    }
+    public void ResetRechargeCounter()
+    {
+        thrusterRechargeCounter = 0;
     }
     #endregion
     

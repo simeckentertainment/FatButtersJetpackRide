@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class InheritWalkState : PlayerAliveState
+public class PlayerWalkState : PlayerAliveState
 {
     float animNormalizedTime; //since we're switching between different animations dynamically, we should handle normalized time tracking here.
     float absoluteZ;
@@ -12,7 +12,7 @@ public class InheritWalkState : PlayerAliveState
 
     WalkSpeed walkSpeedEnum;
     WalkSpeed previousWalkSpeedEnum;
-    public InheritWalkState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
+    public PlayerWalkState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
 
     }
@@ -50,11 +50,6 @@ public class InheritWalkState : PlayerAliveState
             player.stateMachine.changeState(player.playerThrustState);
         }
 
-
-
-
-
-
         if(durationOfState > 0)
         {
             animNormalizedTime = GetNormalizedTime(0); //for driving mid-animation changes
@@ -63,14 +58,17 @@ public class InheritWalkState : PlayerAliveState
             animNormalizedTime = 0.0f;
         }
 
-        
-
-        if(previousWalkSpeedEnum != walkSpeedEnum){
+        if (previousWalkSpeedEnum != walkSpeedEnum)
+        {
             SetWalkAnimation();
             previousWalkSpeedEnum = walkSpeedEnum; //reset for "remembering" for next frame.
         }
-
         
+        if (player.IsFalling())
+        {
+            player.stateMachine.changeState(player.playerFallState);
+        }
+
         base.FixedUpdate();
     }
 
@@ -123,6 +121,7 @@ public class InheritWalkState : PlayerAliveState
                 break;
             case WalkSpeed.Fast:
                 player.walkCurrentSpeed = player.fastWalkSpeed;
+                player.ResetRechargeCounter();
                 break;
         }
         //Backwards walk speed is half of forward walk speed.
@@ -182,9 +181,8 @@ public class InheritWalkState : PlayerAliveState
             default: //no need to do anything because we're going to idle state.
                 break;
         }
-    } 
+    }
 
 
-
-    private enum WalkSpeed {Stop, Slow, Medium, Fast}
+    private enum WalkSpeed { Stop, Slow, Medium, Fast }
 }

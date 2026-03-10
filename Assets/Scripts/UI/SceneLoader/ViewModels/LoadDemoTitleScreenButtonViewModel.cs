@@ -2,6 +2,6 @@
 {
     protected override void OnClick()
     {
-        Model.LoadDemoTitleScene();
+        Model.LoadDemoTrailerScene();
     }
 }
