@@ -69,7 +69,7 @@ public class PlayerThrustState : PlayerAliveState
                 UseFuel(isBoosting);
             }
         }
-        if (!player.input.GoThrust | !player.JetpackActivationPossible | player.Fuel < 0.0f)
+        if (!player.input.GoThrust || !player.JetpackActivationPossible || player.Fuel < 0.0f)
         {
             player.stateMachine.changeState(player.playerFallState);
         }

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class InheritWalkState : PlayerAliveState
+public class PlayerWalkState : PlayerAliveState
 {
     float animNormalizedTime; //since we're switching between different animations dynamically, we should handle normalized time tracking here.
     float absoluteZ;
@@ -12,10 +12,7 @@ public class InheritWalkState : PlayerAliveState
 
     WalkSpeed walkSpeedEnum;
     WalkSpeed previousWalkSpeedEnum;
-
-    int fallDelayThreshold = 20; //number of frames to wait before switching to fall state
-    int fallDelayCounter;
-    public InheritWalkState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
+    public PlayerWalkState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
 
     }
@@ -25,7 +22,6 @@ public class InheritWalkState : PlayerAliveState
         switchThisFrame = true;
         previousWalkSpeedEnum = WalkSpeed.Stop; //set this now to avoid errors on frame 1.
         walkSpeedEnum = GetSpeedEnum();
-        fallDelayCounter = 0;
         // Initialize walk speed trackin
         if (player.animationPercentage == 0.0f)
         { //It should only ever be 0.0 on start.
@@ -43,17 +39,6 @@ public class InheritWalkState : PlayerAliveState
     public override void FixedUpdate()
     {
 
-        //The player will leave the ground for a few frames while running so we need to build in a short delay before
-        //switching to the fall state.
-        if(!player.GroundTouch & !player.OtherObjectTouch)
-        {
-            fallDelayCounter++;
-            TrackWalkToFallTransition();
-        } else
-        {
-            fallDelayCounter = 0;
-        }
-        
         walkSpeedEnum = GetSpeedEnum();
         SetSpeed();
         if (walkSpeedEnum == WalkSpeed.Stop)
@@ -73,9 +58,15 @@ public class InheritWalkState : PlayerAliveState
             animNormalizedTime = 0.0f;
         }
 
-        if(previousWalkSpeedEnum != walkSpeedEnum){
+        if (previousWalkSpeedEnum != walkSpeedEnum)
+        {
             SetWalkAnimation();
             previousWalkSpeedEnum = walkSpeedEnum; //reset for "remembering" for next frame.
+        }
+        
+        if (player.IsFalling())
+        {
+            player.stateMachine.changeState(player.playerFallState);
         }
 
         base.FixedUpdate();
@@ -192,14 +183,6 @@ public class InheritWalkState : PlayerAliveState
         }
     }
 
-
-        private void TrackWalkToFallTransition()
-    {
-        if(fallDelayCounter >= fallDelayThreshold)
-        {
-            player.stateMachine.changeState(player.playerFallState);
-        }
-    }
 
     private enum WalkSpeed { Stop, Slow, Medium, Fast }
 }

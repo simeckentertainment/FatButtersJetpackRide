@@ -91,8 +91,6 @@ public class SBIdleState : SBUnprovokedState
         {
             return true;
         }
-
-        
     }
 
     void PlayNewSound(){
