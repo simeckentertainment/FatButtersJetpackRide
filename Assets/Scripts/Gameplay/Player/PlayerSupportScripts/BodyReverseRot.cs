@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BodyReverseRot : MonoBehaviour
@@ -8,8 +6,7 @@ public class BodyReverseRot : MonoBehaviour
     [SerializeField] public float offset;
     public AffectAxis affectAxis;
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         // float zAngle = OGButtersTrans.localEulerAngles.z;
         // float invertedAngle = (-zAngle + offset);
@@ -24,12 +21,12 @@ public class BodyReverseRot : MonoBehaviour
         }
         else
         {
-            transform.rotation = Quaternion.Euler(0f, (OGButtersTrans.rotation.z * -1) + offset, 0f);
+            transform.rotation = Quaternion.Euler((OGButtersTrans.rotation.z * -1) + offset, 0f, 0f);
         }
-            //This shouldn't work. It works but it shouldn't. The connections I thought made it work
-            //are broken now, much like my spirit. ~Randy
+        // This shouldn't work. It works but it shouldn't. The connections I thought made it work
+        // are broken now, much like my spirit. ~Randy
     }
 
-        public enum AffectAxis {X,Y,Z};
+    public enum AffectAxis {X,Y,Z};
 
-    }
+}
