@@ -18,7 +18,7 @@ public class PlayerThrustState : PlayerAliveState
         }
         stateAge = 0;
         thrusterVolumeCounter = 0f;
-        if (player.GroundTouch)
+        if (player.IsGrounded)
         {
             PlayAnim("launch");
         }
@@ -70,7 +70,7 @@ public class PlayerThrustState : PlayerAliveState
             }
         }
 
-        player.SetFootCollisionEnabled(!player.GroundTouch);
+        player.SetFootCollisionEnabled(!player.IsGrounded);
 
         if (!player.input.GoThrust || !player.JetpackActivationPossible || player.Fuel < 0.0f)
         {

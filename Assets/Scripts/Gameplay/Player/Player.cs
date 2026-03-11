@@ -66,7 +66,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float disableFootCollisionDuration = 0.5f;
 
     [Header("Collision bools")]
-    public bool GroundTouch => currentGroundColliders.Count > 0;
     public bool HarmfulTouch;
     public float HarmfulDamageAmount;
     public Vector3 HarmfulTouchObjectPosition;
@@ -83,6 +82,10 @@ public class Player : MonoBehaviour
     public enum PlayerDirection{Left,Right};
     public PlayerDirection playerDirection;
     public bool LowGravMode;
+
+    public bool TouchingGround => currentGroundColliders.Count > 0;
+    public bool IsGrounded => GroundNear || TouchingGround;
+    public bool GroundNear { get; set; }
 
     public int BonesCollected { get; private set; }
     public int FoodsCollected { get; private set; }
@@ -121,7 +124,7 @@ public class Player : MonoBehaviour
     [SerializeField]int fallDelayThreshold;
     public bool IsFalling()
     {
-        if (!GroundTouch && !OtherObjectTouch)
+        if (!IsGrounded && !OtherObjectTouch)
         {
             fallDelayCounter++;
         }

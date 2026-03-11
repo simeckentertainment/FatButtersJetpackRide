@@ -29,7 +29,11 @@ public class PlayerIdleState : PlayerAliveState
     public override void FixedUpdate()
     {
         stateAge++;
-        player.rb.linearVelocity = Vector3.zero;
+        if (player.TouchingGround)
+        {
+            player.rb.linearVelocity = Vector3.zero;
+        }
+
         base.FixedUpdate();
         if (player.input.GoThrust & player.JetpackActivationPossible)
         {
@@ -45,7 +49,7 @@ public class PlayerIdleState : PlayerAliveState
         }
 
         // Calculate walk detection (absZ) for transition check
-        if (player.GroundTouch)
+        if (player.IsGrounded)
         {
             if (Mathf.Abs(player.input.aimAngle) > 15)
             {
