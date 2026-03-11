@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using UnityEngine;
@@ -61,6 +62,9 @@ public class Player : MonoBehaviour
     [SerializeField] public float mediumWalkSpeed;
     [SerializeField] public float fastWalkSpeed;
 
+    [SerializeField] private Collider[] footColliders;
+    [SerializeField] private float disableFootCollisionDuration = 0.5f;
+
     [Header("Collision bools")]
     public bool GroundTouch => currentGroundColliders.Count > 0;
     public bool HarmfulTouch;
@@ -93,6 +97,8 @@ public class Player : MonoBehaviour
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
     private HashSet<(int, int)> currentGroundColliders = new HashSet<(int, int)>();
+
+    private float remainingDisabledFootCollisionDuration = 0;
 
     private bool _jetpackActivationPossible;
     public bool JetpackActivationPossible
@@ -184,6 +190,15 @@ public class Player : MonoBehaviour
         {
             Fuel += 1;
         }
+
+        if (remainingDisabledFootCollisionDuration > 0)
+        {
+            remainingDisabledFootCollisionDuration -= Time.deltaTime;
+            if (remainingDisabledFootCollisionDuration <= 0)
+            {
+                SetFootCollisionEnabled(true);
+            }
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -224,6 +239,14 @@ public class Player : MonoBehaviour
         if (currentGroundColliders.Contains(tuple))
         {
             currentGroundColliders.Remove(tuple);
+        }
+    }
+
+    public void SetFootCollisionEnabled(bool collidable)
+    {
+        foreach (var collider in footColliders)
+        {
+            collider.isTrigger = !collidable;
         }
     }
 
