@@ -33,6 +33,10 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "PlayerDamageTrigger":
                 ClearColliderObject();
                 break;
+            case "Harmful":
+                SetTriggerObject(other.collider);
+                DamagePlayer(other.collider);
+                break;
             case "EnemySightBox":
                 ClearColliderObject();
                 break;
@@ -55,6 +59,9 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "PlayerDamageTrigger":
                 break;
             case "Player":
+                break;
+            case "Harmful":
+                player.HarmfulTouch = false;
                 break;
             case "EnemySightBox":
                 break;
@@ -81,9 +88,7 @@ public class PlayerCollisionReporter : MonoBehaviour
                 break;
             case "Harmful":
                 SetTriggerObject(other);
-                player.HarmfulTouch = true;
-                player.HarmfulDamageAmount = other.GetComponent<DamagePlayer>().damageAmount;
-                player.HarmfulTouchObjectPosition = other.transform.position;
+                DamagePlayer(other);
                 break;
             case "OneHitKill":
                 SetTriggerObject(other);
@@ -166,6 +171,13 @@ public class PlayerCollisionReporter : MonoBehaviour
                 break;
         }
         ClearTriggerObject();
+    }
+
+    public void DamagePlayer(Collider other)
+    {
+        player.HarmfulTouch = true;
+        player.HarmfulDamageAmount = other.GetComponent<DamagePlayer>().damageAmount;
+        player.HarmfulTouchObjectPosition = other.transform.position;
     }
 
     void OnParticleCollision(GameObject other)
