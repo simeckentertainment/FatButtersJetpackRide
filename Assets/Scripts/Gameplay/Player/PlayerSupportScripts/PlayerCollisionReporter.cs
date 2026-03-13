@@ -24,7 +24,6 @@ public class PlayerCollisionReporter : MonoBehaviour
         {
             case "Untagged":
                 player.AddGroundCollider(thisCollider, other.collider);
-                player.OtherObjectTouch = true;
                 SetColliderObject(other);
                 break;
             case "Player":
@@ -41,7 +40,6 @@ public class PlayerCollisionReporter : MonoBehaviour
                 ClearColliderObject();
                 break;
             default:
-                player.OtherObjectTouch = true;
                 SetColliderObject(other);
                 break;
         }
@@ -54,7 +52,6 @@ public class PlayerCollisionReporter : MonoBehaviour
         {
             case "Untagged":
                 player.RemoveGroundCollider(thisCollider, other.collider);
-                player.OtherObjectTouch = false;
                 break;
             case "PlayerDamageTrigger":
                 break;
@@ -66,7 +63,6 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "EnemySightBox":
                 break;
             default:
-                player.OtherObjectTouch = false;
                 break;
         }
         ClearColliderObject();
@@ -75,11 +71,6 @@ public class PlayerCollisionReporter : MonoBehaviour
     private void OnTriggerEnter(Collider other){
         switch (other.gameObject.tag)
         {
-            case "Untagged":
-                player.AddGroundCollider(thisCollider, other);
-                player.OtherObjectTouch = true;
-                SetTriggerObject(other);
-                break;
             case "EnemyWeakspot":
                 SetTriggerObject(other);
                 break;
@@ -118,7 +109,6 @@ public class PlayerCollisionReporter : MonoBehaviour
                 ClearTriggerObject();
                 break;
             default:
-                player.OtherObjectTouch = true;
                 SetTriggerObject(other);
                 break;
         }
@@ -130,7 +120,6 @@ public class PlayerCollisionReporter : MonoBehaviour
         {
             case "Untagged":
                 player.RemoveGroundCollider(thisCollider, other);
-                player.OtherObjectTouch = false;
                 break;
             case "Fuel":
                 player.FuelTouch = false;
@@ -167,7 +156,6 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "EnemySightBox":
                 break;
             default:
-                player.OtherObjectTouch = false;
                 break;
         }
         ClearTriggerObject();
