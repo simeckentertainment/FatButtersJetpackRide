@@ -33,7 +33,6 @@ public class PlayerCollisionReporter : MonoBehaviour
                 ClearColliderObject();
                 break;
             case "Harmful":
-                Debug.Log("player collision");
                 SetTriggerObject(other.collider);
                 DamagePlayer(other.collider);
                 break;

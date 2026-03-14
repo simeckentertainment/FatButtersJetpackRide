@@ -42,7 +42,6 @@ public class PlayerThrustState : PlayerAliveState
         // Handle boost logic within the state machine
         bool isBoosting = player.input.GoBoost && player.Fuel > 0f;
         
-        // Apply boost thrust modifier (preserves upgrades)
         if (isBoosting)
         {
             player.thrust = player.baseThrustWithUpgrades + 12.5f;
@@ -69,8 +68,6 @@ public class PlayerThrustState : PlayerAliveState
                 UseFuel(isBoosting);
             }
         }
-
-        //player.SetFootCollisionEnabled(!player.IsGrounded);
 
         if (!player.input.GoThrust || !player.JetpackActivationPossible || player.Fuel < 0.0f)
         {
