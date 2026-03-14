@@ -33,6 +33,7 @@ public class PlayerCollisionReporter : MonoBehaviour
                 ClearColliderObject();
                 break;
             case "Harmful":
+                Debug.Log("player collision");
                 SetTriggerObject(other.collider);
                 DamagePlayer(other.collider);
                 break;
@@ -76,10 +77,6 @@ public class PlayerCollisionReporter : MonoBehaviour
                 break;
             case "Water":
                 SetTriggerObject(other);
-                break;
-            case "Harmful":
-                SetTriggerObject(other);
-                DamagePlayer(other);
                 break;
             case "OneHitKill":
                 SetTriggerObject(other);
@@ -130,9 +127,6 @@ public class PlayerCollisionReporter : MonoBehaviour
                 player.BallTouch = false;
                 break;
             case "Water":
-                break;
-            case "Harmful":
-                player.HarmfulTouch = false;
                 break;
             case "OneHitKill":
                 player.OHKTouch = false;
