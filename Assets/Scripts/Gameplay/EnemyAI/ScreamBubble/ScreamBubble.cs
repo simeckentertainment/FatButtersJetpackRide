@@ -54,7 +54,6 @@ public class ScreamBubble : MonoBehaviour
             case "Player":
                 if (!popped)
                 {
-                    Debug.Log("bubble collision");
                     popped = true;
                     var player = other.gameObject.GetComponent<Player>();
                     player.AddEnemiesDefeated();
