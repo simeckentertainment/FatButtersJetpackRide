@@ -49,10 +49,10 @@ public class ScreamBubble : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-
         switch(other.gameObject.tag)
         {
             case "Player":
+            case "PlayerDamageTrigger":
                 if (!popped)
                 {
                     popped = true;

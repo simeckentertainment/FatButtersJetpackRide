@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using UnityEngine;
@@ -61,8 +62,10 @@ public class Player : MonoBehaviour
     [SerializeField] public float mediumWalkSpeed;
     [SerializeField] public float fastWalkSpeed;
 
+    [SerializeField] private Collider[] footColliders;
+    [SerializeField] private float disableFootCollisionDuration = 0.5f;
+
     [Header("Collision bools")]
-    public bool GroundTouch;
     public bool HarmfulTouch;
     public float HarmfulDamageAmount;
     public Vector3 HarmfulTouchObjectPosition;
@@ -80,6 +83,10 @@ public class Player : MonoBehaviour
     public PlayerDirection playerDirection;
     public bool LowGravMode;
 
+    public bool TouchingGround => currentGroundColliders.Count > 0;
+    public bool IsGrounded => GroundNear || TouchingGround;
+    public bool GroundNear { get; set; }
+
     public int BonesCollected { get; private set; }
     public int FoodsCollected { get; private set; }
     public int BallsCollected { get; private set; }
@@ -91,6 +98,10 @@ public class Player : MonoBehaviour
     public UnityEvent OnJetpackStatusUpdated { get; set; } = new UnityEvent();
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
+
+    private HashSet<(int, int)> currentGroundColliders = new HashSet<(int, int)>();
+
+    private float remainingDisabledFootCollisionDuration = 0;
 
     private bool _jetpackActivationPossible;
     public bool JetpackActivationPossible
@@ -113,7 +124,7 @@ public class Player : MonoBehaviour
     [SerializeField]int fallDelayThreshold;
     public bool IsFalling()
     {
-        if (!GroundTouch && !OtherObjectTouch)
+        if (!IsGrounded && !OtherObjectTouch)
         {
             fallDelayCounter++;
         }
@@ -182,13 +193,22 @@ public class Player : MonoBehaviour
         {
             Fuel += 1;
         }
+
+        if (remainingDisabledFootCollisionDuration > 0)
+        {
+            remainingDisabledFootCollisionDuration -= Time.deltaTime;
+            if (remainingDisabledFootCollisionDuration <= 0)
+            {
+                SetFootCollisionEnabled(true);
+            }
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Shelf"))
         {
-            Debug.Log("Ground touch true");
+            Debug.Log("Shelf touch true");
 
             transform.SetParent(collision.transform, true);
         }
@@ -199,10 +219,46 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Shelf"))
         {
-            Debug.Log("Ground touch false");
+            Debug.Log("Shelf touch false");
 
             transform.SetParent(null, true);
         }
+    }
+
+    public void AddGroundCollider(Collider sourceObject, Collider other)
+    {
+        var tuple = GetCollisionId(sourceObject, other);
+
+        if (!currentGroundColliders.Contains(tuple))
+        {
+            currentGroundColliders.Add(tuple);
+        }
+    }
+
+    public void RemoveGroundCollider(Collider sourceObject, Collider other)
+    {
+        var tuple = GetCollisionId(sourceObject, other);
+
+        if (currentGroundColliders.Contains(tuple))
+        {
+            currentGroundColliders.Remove(tuple);
+        }
+    }
+
+    public void SetFootCollisionEnabled(bool collidable)
+    {
+        foreach (var collider in footColliders)
+        {
+            collider.isTrigger = !collidable;
+        }
+    }
+
+    private (int, int) GetCollisionId(Collider sourceObject, Collider other)
+    {
+        var sourceId = sourceObject.GetInstanceID();
+        var otherId = other.GetInstanceID();
+
+        return (sourceId, otherId);
     }
 
     public void PickUpBones(int count = 1)
