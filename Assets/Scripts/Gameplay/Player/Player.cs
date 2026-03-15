@@ -189,9 +189,9 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         thrusterRechargeCounter++;
-        if (thrusterRechargeCounter > 120)
+        if (thrusterRechargeCounter > 60)
         {
-            Fuel += 1;
+            Fuel += 3;
         }
 
         if (remainingDisabledFootCollisionDuration > 0)
