@@ -41,7 +41,6 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "Untagged":
                 player.RemoveGroundCollider(thisCollider, other.collider);
                 break;
-
             case "Harmful":
                 player.HarmfulTouch = false;
                 break;
