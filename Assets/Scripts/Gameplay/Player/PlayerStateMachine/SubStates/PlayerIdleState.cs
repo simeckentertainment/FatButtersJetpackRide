@@ -29,8 +29,9 @@ public class PlayerIdleState : PlayerAliveState
     public override void FixedUpdate()
     {
         stateAge++;
-        if (player.TouchingGround)
+        if (player.TouchingGround && player.GroundNear)
         {
+            // Adding the GroundNear condition makes sure we're on a floor, not a wall or ceiling
             player.rb.linearVelocity = Vector3.zero;
         }
 
