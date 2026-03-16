@@ -26,7 +26,7 @@ public class PlayerCollisionReporter : MonoBehaviour
                 player.AddGroundCollider(thisCollider, other.collider);
                 break;
             case "Harmful":
-                DamagePlayer(other.collider);
+                DamagePlayer(other.collider.gameObject);
                 break;
             default:
                 break;
@@ -115,7 +115,7 @@ public class PlayerCollisionReporter : MonoBehaviour
         ClearTriggerObject();
     }
 
-    public void DamagePlayer(Collider other)
+    public void DamagePlayer(GameObject other)
     {
         player.HarmfulTouch = true;
         player.HarmfulDamageAmount = other.GetComponent<DamagePlayer>().damageAmount;
@@ -126,9 +126,7 @@ public class PlayerCollisionReporter : MonoBehaviour
     {
         if (other.tag == "Harmful")
         {
-            player.HarmfulTouch = true;
-            player.HarmfulDamageAmount = other.GetComponent<DamagePlayer>().damageAmount;
-            player.HarmfulTouchObjectPosition = other.transform.position;
+            DamagePlayer(other);
         }
     }
 
