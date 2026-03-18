@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerHurtState : PlayerAliveState
 {
-    public PlayerHurtState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine){
-
+    public PlayerHurtState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
+    {
     }
 
     string[] hurtAnims = { "hurt1","hurt2" };
     int stateAge;
+
     public override void enter(){
         stateAge = 0;
         player.tummy -= player.HarmfulDamageAmount;
@@ -22,24 +23,7 @@ public class PlayerHurtState : PlayerAliveState
         player.ResetRechargeCounter();
         base.enter();
     }
-    public void PlayerHurtKissyFish()
-    {
-        stateAge = 0;
-        player.tummy -= player.HarmfulDamageAmount;
-        if (player.tummy <= 0.0f)
-        {
-            player.stateMachine.changeState(player.playerTummyDeathState);
-        }
-        player.UI.ActivateHurt();
 
-        PlayAnim(hurtAnims[Random.Range(0, 2)]);
-           base.enter();
-    }
-
-    public override void Update(){
-        base.Update();
-
-    }
     public override void FixedUpdate()
     {
         player.rb.AddExplosionForce(100.0f,player.HarmfulTouchObjectPosition,10.0f,10.0f,ForceMode.Force);
@@ -50,6 +34,7 @@ public class PlayerHurtState : PlayerAliveState
         
         base.FixedUpdate();
     }
+
     public override void exit(){
         player.HarmfulTouch = false;
     }

@@ -41,7 +41,6 @@ public class KissyFish : HarmfulObject
     protected override void OnPlayerTouched(Player player)
     {
         base.OnPlayerTouched(player);
-        stateMachine.changeState(kissyFishFlopState);
         Destroy(this.gameObject);
     }
 
