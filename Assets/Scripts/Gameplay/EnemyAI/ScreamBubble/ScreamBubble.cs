@@ -25,8 +25,7 @@ public class ScreamBubble : HarmfulObject
     public SBChasePlayerState sBChasePlayerState { get; private set;}
     public SBPopState sBPopState { get; private set;}
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         PlayerInSightDistance = false;
         sBIdleState = new SBIdleState(this, stateMachine);
@@ -37,8 +36,7 @@ public class ScreamBubble : HarmfulObject
         targetAcquired = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         bubbleAudio.volume = SaveManager.Instance.collectibleData.SFXVolumeLevel;
         if (popped)

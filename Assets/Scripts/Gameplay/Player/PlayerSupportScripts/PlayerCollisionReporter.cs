@@ -20,28 +20,20 @@ public class PlayerCollisionReporter : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        switch (other.gameObject.tag)
+        if (other.gameObject.tag == "Untagged")
         {
-            case "Untagged":
-                player.AddGroundCollider(thisCollider, other.collider);
-                break;
-            default:
-                break;
+            player.AddGroundCollider(thisCollider, other.collider);
+            SetColliderObject(other);
         }
-        SetColliderObject(other);
     }
 
     private void OnCollisionExit(Collision other)
     {
-        switch (other.gameObject.tag)
+        if (other.gameObject.tag == "Untagged")
         {
-            case "Untagged":
-                player.RemoveGroundCollider(thisCollider, other.collider);
-                break;
-            default:
-                break;
+            player.RemoveGroundCollider(thisCollider, other.collider);
+            ClearColliderObject();
         }
-        ClearColliderObject();
     }
 
     private void OnTriggerEnter(Collider other){
@@ -119,6 +111,7 @@ public class PlayerCollisionReporter : MonoBehaviour
     {
         if (other.tag == "Harmful")
         {
+            Debug.LogError("Why are we doing this?");
             DamagePlayer(other);
         }
     }

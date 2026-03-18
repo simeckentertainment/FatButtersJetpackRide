@@ -7,36 +7,34 @@ public class HarmfulObject : MonoBehaviour
     [SerializeField] private bool damageOnCollision = true;
     [SerializeField] private bool damageOnTrigger = true;
 
-    private void OnCollisionEnter(Collision collision)
+    protected virtual void OnCollisionEnter(Collision collision)
     {
         if (damageOnCollision)
         {
-            HandleDamage(collision.collider.GetComponentInParent<Player>());
+            HandleCollision(collision.collider.GetComponentInParent<Player>());
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (damageOnTrigger)
         {
-            HandleDamage(other.GetComponentInParent<Player>());
+            HandleCollision(other.GetComponentInParent<Player>());
         }
     }
 
-    private void HandleDamage(Player player)
+    private void HandleCollision(Player player)
     {
         if (player != null && player.IsAlive)
         {
-            player.HarmfulTouch = true;
-            player.HarmfulDamageAmount = damage;
-            player.HarmfulTouchObjectPosition = this.transform.position;
-
             OnPlayerTouched(player);
         }
     }
 
     protected virtual void OnPlayerTouched(Player player)
     {
-        // no-op
+        player.HarmfulTouch = true;
+        player.HarmfulDamageAmount = damage;
+        player.HarmfulTouchObjectPosition = this.transform.position;
     }
 }

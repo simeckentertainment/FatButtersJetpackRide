@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class KissyFish : MonoBehaviour
+public class KissyFish : HarmfulObject
 {
     public Vector3 ApexTargetCoords;
     [SerializeField] public KissyFishStateMachine stateMachine;
@@ -10,7 +8,6 @@ public class KissyFish : MonoBehaviour
     public KissyFishFlyState kissyFishFlyState { get; private set; }
     public KissyFishCollideWIthPlayerState kissyFishCollideWIthPlayerState {get; private set;}
     public KissyFishFlopState kissyFishFlopState  {get; private set;}
-    //public Collider waterCollider;
 
     [SerializeField] public AudioSource fishAudio;
     [SerializeField] public AudioClip[] JumpSounds;
@@ -22,9 +19,7 @@ public class KissyFish : MonoBehaviour
     public int lifeTime;
     int lifeTimeCounter;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         lifeTimeCounter = 0;
         touchedWater = false;
@@ -34,33 +29,26 @@ public class KissyFish : MonoBehaviour
         stateMachine.Initialize(kissyFishFlyState);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         lifeTimeCounter++;
-        if(lifeTimeCounter>lifeTime){
+        if (lifeTimeCounter>lifeTime)
+        {
             Destroy(gameObject);
         }
     }
 
-    private void OnCollisionEnter(Collision other) {
-        switch(other.gameObject.tag){
-            case "Water":
-                stateMachine.changeState(kissyFishFlopState);
-                //touchedWater = true;
-                break;
-            case "Player":
-                stateMachine.changeState(kissyFishFlopState);
-                other.gameObject.GetComponent<Player>().playerHurtState.PlayerHurtKissyFish();
-                Destroy(this.gameObject);
-                break;
-            default:
-                stateMachine.changeState(kissyFishFlopState);
-                break;
-        }
-
+    protected override void OnPlayerTouched(Player player)
+    {
+        base.OnPlayerTouched(player);
+        stateMachine.changeState(kissyFishFlopState);
+        Destroy(this.gameObject);
     }
 
-
+    protected override void OnCollisionEnter(Collision other)
+    {
+        base.OnCollisionEnter(other);
+        stateMachine.changeState(kissyFishFlopState);
+    }
 }
 
