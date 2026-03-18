@@ -25,9 +25,6 @@ public class PlayerCollisionReporter : MonoBehaviour
             case "Untagged":
                 player.AddGroundCollider(thisCollider, other.collider);
                 break;
-            case "Harmful":
-                DamagePlayer(other.collider.gameObject);
-                break;
             default:
                 break;
         }
@@ -40,9 +37,6 @@ public class PlayerCollisionReporter : MonoBehaviour
         {
             case "Untagged":
                 player.RemoveGroundCollider(thisCollider, other.collider);
-                break;
-            case "Harmful":
-                player.HarmfulTouch = false;
                 break;
             default:
                 break;
