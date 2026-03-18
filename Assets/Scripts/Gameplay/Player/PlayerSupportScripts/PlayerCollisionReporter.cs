@@ -100,22 +100,6 @@ public class PlayerCollisionReporter : MonoBehaviour
         ClearTriggerObject();
     }
 
-    public void DamagePlayer(GameObject other)
-    {
-        player.HarmfulTouch = true;
-        player.HarmfulDamageAmount = other.GetComponent<DamagePlayer>().damageAmount;
-        player.HarmfulTouchObjectPosition = other.transform.position;
-    }
-
-    void OnParticleCollision(GameObject other)
-    {
-        if (other.tag == "Harmful")
-        {
-            Debug.LogError("Why are we doing this?");
-            DamagePlayer(other);
-        }
-    }
-
     void SetColliderObject(Collision other)
     {
         didICollideSomethingThisTime = true;
