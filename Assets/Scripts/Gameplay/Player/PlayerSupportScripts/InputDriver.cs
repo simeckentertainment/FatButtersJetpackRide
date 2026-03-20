@@ -127,7 +127,7 @@ public class InputDriver : MonoBehaviour
         SetGPControlValues();
 
         //Amalgam variable checkers.
-        GoCw = OSCWPressed || KBCWPressed || GPAimVal > 0.2f ? true : false;
+        GoCw = OSCWPressed || KBCWPressed || GPAimVal > JoystickActivationMinimum
         GoCcw = OSCCWPressed || KBCCWPressed || GPAimVal < -0.2f ? true : false;
         GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed  ? true : false;
 
