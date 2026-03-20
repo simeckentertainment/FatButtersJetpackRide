@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
-using UnityEngine.InputSystem.OnScreen;
-using Unity.VisualScripting;
 /*
 #if !UNITY_EDITOR && UNITY_ANDROID
 using GooglePlayGames;
@@ -17,11 +12,6 @@ using UnityEngine.SocialPlatforms;
 /// All potential inputs must have input-dependent variants.
 /// Amalgam variables only check for whether one of the possiblities is being used.
 /// </summary>
-
-
-
-
-
 
 [System.Serializable]
 public class InputDriver : MonoBehaviour
@@ -57,6 +47,7 @@ public class InputDriver : MonoBehaviour
 
     [Header("Gamepad input vars")]
     [SerializeField] float TriggerActivationMinimum;
+    [SerializeField] float JoystickActivationMinimum;
     [SerializeField] private float GPAimVal;
     [SerializeField] private bool GPThrustPressed;
     [SerializeField] private bool GPBoostPressed;
@@ -127,8 +118,8 @@ public class InputDriver : MonoBehaviour
         SetGPControlValues();
 
         //Amalgam variable checkers.
-        GoCw = OSCWPressed || KBCWPressed || GPAimVal > JoystickActivationMinimum
-        GoCcw = OSCCWPressed || KBCCWPressed || GPAimVal < -0.2f ? true : false;
+        GoCw = OSCWPressed || KBCWPressed || GPAimVal > JoystickActivationMinimum;
+        GoCcw = OSCCWPressed || KBCCWPressed || GPAimVal < (JoystickActivationMinimum *-1.0f);
         GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed  ? true : false;
 
         //Final Aim Angle
@@ -199,13 +190,11 @@ public class InputDriver : MonoBehaviour
     void SetGPControlValues()
     {
         GPAimVal = GPAimAction.ReadValue<float>();
-        GPThrustPressed = GPThrustAction.ReadValue<float>() > TriggerActivationMinimum ? true : false;
-        GPBoostPressed = GPBoostAction.ReadValue<float>() > TriggerActivationMinimum ? true : false;
+        GPThrustPressed = GPThrustAction.ReadValue<float>() > TriggerActivationMinimum;
+        GPBoostPressed = GPBoostAction.ReadValue<float>() > TriggerActivationMinimum;
     }
 
 #endregion
-
-
 
     private void TrackRollData(){
         if (!HasGyroscope){
@@ -230,7 +219,6 @@ public class InputDriver : MonoBehaviour
         }
     }
 
-
     private float GetRollDataFallback(){
         Quaternion eliminationOfXY = Quaternion.Inverse(Quaternion.FromToRotation(referenceRotation * Vector3.forward, deviceRotation * Vector3.forward));
         Quaternion rotationZ = eliminationOfXY * deviceRotation;
@@ -238,7 +226,6 @@ public class InputDriver : MonoBehaviour
     }
     private float GetRollDataFromGravity(Vector3 gravData){
         return gravData.x * -45.0f;
-
     }
 
 }
