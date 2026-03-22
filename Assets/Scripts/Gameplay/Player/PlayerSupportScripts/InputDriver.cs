@@ -118,12 +118,12 @@ public class InputDriver : MonoBehaviour
         SetGPControlValues();
 
         //Amalgam variable checkers.
-        GoCw = OSCWPressed || KBCWPressed || GPAimVal > JoystickActivationMinimum;
-        GoCcw = OSCCWPressed || KBCCWPressed || GPAimVal < (JoystickActivationMinimum *-1.0f);
-        GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed  ? true : false;
+        GoCw = OSCWPressed || KBCWPressed;
+        GoCcw = OSCCWPressed || KBCCWPressed;
+        GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed;
 
         //Final Aim Angle
-        aimAngle = deviceRoll + OSRollOffset + KeyboardRollOffset + (GPAimVal * 90);
+        aimAngle = deviceRoll + OSRollOffset + KeyboardRollOffset + (GPAimVal * -45);
         // Boost detection: Multi-touch (mobile) or Thrust + L Shift key (Pc/Gamepad)
 
         GoBoost = touchBoostTriggered || OSBoostPressed || KBBoostPressed || GPBoostPressed;
@@ -150,10 +150,10 @@ public class InputDriver : MonoBehaviour
         return true;
     }
     private void SetOSControlValues(){
-        OSThrustPressed = OSthrustAction.ReadValue<float>() == 1.0f ? true : false;
-        OSCWPressed = OSCWAction.ReadValue<float>() == 1.0f ? true : false;
-        OSCCWPressed = OSCCWAction.ReadValue<float>() == 1.0f ? true : false;
-        OSBoostPressed = OSBoostAction.ReadValue<float>() == 1.0f ? true : false;
+        OSThrustPressed = OSthrustAction.ReadValue<float>() == 1.0f;
+        OSCWPressed = OSCWAction.ReadValue<float>() == 1.0f;
+        OSCCWPressed = OSCCWAction.ReadValue<float>() == 1.0f;
+        OSBoostPressed = OSBoostAction.ReadValue<float>() == 1.0f;
         if (OSCWPressed & OSCCWPressed) { return; }
         if (OSCWPressed)
         {
