@@ -52,7 +52,6 @@ public class ScreamBubble : MonoBehaviour
         switch(other.gameObject.tag)
         {
             case "Player":
-            case "PlayerDamageTrigger":
                 if (!popped)
                 {
                     popped = true;

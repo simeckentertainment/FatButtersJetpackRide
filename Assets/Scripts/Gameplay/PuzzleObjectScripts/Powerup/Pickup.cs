@@ -6,10 +6,10 @@ public abstract class Pickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!isPickedUp && other.TryGetComponent<PlayerCollisionReporter>(out var playerCollision))
+        var player = other.GetComponentInParent<Player>();
+        if (!isPickedUp && player != null)
         {
             isPickedUp = true;
-            var player = playerCollision.player;
             if (player.IsAlive)
             {
                 OnPlayerTriggerEnter(player);
