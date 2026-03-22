@@ -70,8 +70,6 @@ public class PlayerThrustState : PlayerAliveState
             }
         }
 
-        player.SetFootCollisionEnabled(!player.IsGrounded);
-
         if (!player.input.GoThrust || !player.JetpackActivationPossible || player.Fuel < 0.0f)
         {
             player.stateMachine.changeState(player.playerFallState);
@@ -96,7 +94,6 @@ public class PlayerThrustState : PlayerAliveState
         player.animationPercentage = GetNormalizedTime();
         }
         player.vfx.StopPrimaryThrusters();
-        player.SetFootCollisionEnabled(true);
         base.exit();
     }
     
