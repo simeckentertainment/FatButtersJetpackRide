@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
-using UnityEngine.InputSystem.OnScreen;
-using Unity.VisualScripting;
 /*
 #if !UNITY_EDITOR && UNITY_ANDROID
 using GooglePlayGames;
@@ -17,11 +12,6 @@ using UnityEngine.SocialPlatforms;
 /// All potential inputs must have input-dependent variants.
 /// Amalgam variables only check for whether one of the possiblities is being used.
 /// </summary>
-
-
-
-
-
 
 [System.Serializable]
 public class InputDriver : MonoBehaviour
@@ -41,7 +31,7 @@ public class InputDriver : MonoBehaviour
     [System.NonSerialized] private int touchCount;
     [System.NonSerialized] private bool touchBoostTriggered;
 
-    [Header("Gamepad/Keyboard input variables")]
+    [Header("Keyboard input variables")]
     //Keyboard variables
     [SerializeField] private float KeyboardRollOffset;
     [SerializeField] private float KeyboardSensitivity;
@@ -54,18 +44,30 @@ public class InputDriver : MonoBehaviour
     [SerializeField] private InputAction KBCWAction;
     [SerializeField] private InputAction KBCCWAction;
     [SerializeField] private InputAction KBBoostAction;
-    [Header("On Screen Control stuff")]
+
+    [Header("Gamepad input vars")]
+    [SerializeField] float TriggerActivationMinimum;
+    [SerializeField] float JoystickActivationMinimum;
+    [SerializeField] private float GPAimVal;
+    [SerializeField] private bool GPThrustPressed;
+    [SerializeField] private bool GPBoostPressed;
+    [SerializeField] private InputAction GPThrustAction;
+    [SerializeField] private InputAction GPAimAction;
+    [SerializeField] private InputAction GPBoostAction;
+
+    [Header("OnScreen Control Vars")]
     [SerializeField] private float OSRollOffset;
     [SerializeField] private float OSRollSensitivity;
+    [SerializeField] private bool OSCWPressed;
+    [SerializeField] private bool OSCCWPressed;
+    [SerializeField] private bool OSThrustPressed;
+    [SerializeField] private bool OSBoostPressed;
 
-    [System.NonSerialized] private bool OSCWPressed;
-    [System.NonSerialized] private bool OSCCWPressed;
-    [System.NonSerialized] private bool OSThrustPressed;
-    [System.NonSerialized] private bool OSBoostPressed;
     [SerializeField] private InputAction OSthrustAction;
     [SerializeField] private InputAction OSCWAction;
     [SerializeField] private InputAction OSCCWAction;
     [SerializeField] private InputAction OSBoostAction;
+
     [Header("Amalgam variables")]
     public bool GoThrust;
     public bool GoCw;
@@ -94,6 +96,9 @@ public class InputDriver : MonoBehaviour
         KBCWAction.Enable();
         KBCCWAction.Enable();
         KBBoostAction.Enable();
+        GPAimAction.Enable();
+        GPBoostAction.Enable();
+        GPThrustAction.Enable();
     }
 
     void FixedUpdate()
@@ -107,21 +112,21 @@ public class InputDriver : MonoBehaviour
         //OSC control checkers
         SetOSControlValues();
 
-        //Keyboard/Gamepad control checkers
+        //Keyboard control checkers
         SetKBControlValues();
-        //keyboard values are set by events.
-
+        //Gamepad Control checkers
+        SetGPControlValues();
 
         //Amalgam variable checkers.
-        GoCw = OSCWPressed | KBCWPressed ? true : false;
-        GoCcw = OSCCWPressed | KBCCWPressed ? true : false;
-        GoThrust = OSThrustPressed | KBThrustPressed | touchThrust ? true : false;
+        GoCw = OSCWPressed || KBCWPressed || GPAimVal > JoystickActivationMinimum;
+        GoCcw = OSCCWPressed || KBCCWPressed || GPAimVal < (JoystickActivationMinimum *-1.0f);
+        GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed  ? true : false;
 
         //Final Aim Angle
-        aimAngle = deviceRoll + OSRollOffset + KeyboardRollOffset;
+        aimAngle = deviceRoll + OSRollOffset + KeyboardRollOffset + (GPAimVal * 90);
         // Boost detection: Multi-touch (mobile) or Thrust + L Shift key (Pc/Gamepad)
 
-        GoBoost = touchBoostTriggered | OSBoostPressed | KBBoostPressed;
+        GoBoost = touchBoostTriggered || OSBoostPressed || KBBoostPressed || GPBoostPressed;
     }
 
     public void EnableInput(){
@@ -181,6 +186,16 @@ public class InputDriver : MonoBehaviour
     }
 #endregion
 
+#region GamePadValues
+    void SetGPControlValues()
+    {
+        GPAimVal = GPAimAction.ReadValue<float>();
+        GPThrustPressed = GPThrustAction.ReadValue<float>() > TriggerActivationMinimum;
+        GPBoostPressed = GPBoostAction.ReadValue<float>() > TriggerActivationMinimum;
+    }
+
+#endregion
+
     private void TrackRollData(){
         if (!HasGyroscope){
             deviceRoll = 0.0f;
@@ -204,7 +219,6 @@ public class InputDriver : MonoBehaviour
         }
     }
 
-
     private float GetRollDataFallback(){
         Quaternion eliminationOfXY = Quaternion.Inverse(Quaternion.FromToRotation(referenceRotation * Vector3.forward, deviceRotation * Vector3.forward));
         Quaternion rotationZ = eliminationOfXY * deviceRotation;
@@ -212,7 +226,6 @@ public class InputDriver : MonoBehaviour
     }
     private float GetRollDataFromGravity(Vector3 gravData){
         return gravData.x * -45.0f;
-
     }
 
 }

@@ -48,6 +48,9 @@ public class Player : MonoBehaviour
     public List<Collider> CollidersInJetpackKillZone;
     [System.NonSerialized] public int thrusterRechargeCounter = 0;
     [System.NonSerialized] public float animationPercentage;
+    [SerializeField] private float thrusterRechargeDelay;
+    [SerializeField] private float thrusterRechargeRate;
+
     [Header("Rotation stuff")]
     [System.NonSerialized] public float GravityRoll;
     [SerializeField] public float KeyboardRollOffset;
@@ -185,9 +188,9 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         thrusterRechargeCounter++;
-        if (thrusterRechargeCounter > 120)
+        if (thrusterRechargeCounter > thrusterRechargeDelay)
         {
-            Fuel += 1;
+            Fuel += thrusterRechargeRate;
         }
     }
 
