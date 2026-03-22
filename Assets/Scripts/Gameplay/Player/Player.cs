@@ -65,9 +65,6 @@ public class Player : MonoBehaviour
     [SerializeField] public float mediumWalkSpeed;
     [SerializeField] public float fastWalkSpeed;
 
-    [SerializeField] private Collider[] footColliders;
-    [SerializeField] private float disableFootCollisionDuration = 0.5f;
-
     [Header("Collision bools")]
     public bool HarmfulTouch;
     public float HarmfulDamageAmount;
@@ -81,7 +78,6 @@ public class Player : MonoBehaviour
     public bool hasPermaBall;
     public int ballTimerMax = 600;
     public bool killThrustTriggerTouch;
-    public bool OtherObjectTouch;
     public enum PlayerDirection{Left,Right};
     public PlayerDirection playerDirection;
     public bool LowGravMode;
@@ -127,7 +123,7 @@ public class Player : MonoBehaviour
     [SerializeField]int fallDelayThreshold;
     public bool IsFalling()
     {
-        if (!IsGrounded && !OtherObjectTouch)
+        if (!IsGrounded)
         {
             fallDelayCounter++;
         }
@@ -196,15 +192,6 @@ public class Player : MonoBehaviour
         {
             Fuel += thrusterRechargeRate;
         }
-
-        if (remainingDisabledFootCollisionDuration > 0)
-        {
-            remainingDisabledFootCollisionDuration -= Time.deltaTime;
-            if (remainingDisabledFootCollisionDuration <= 0)
-            {
-                SetFootCollisionEnabled(true);
-            }
-        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -245,14 +232,6 @@ public class Player : MonoBehaviour
         if (currentGroundColliders.Contains(tuple))
         {
             currentGroundColliders.Remove(tuple);
-        }
-    }
-
-    public void SetFootCollisionEnabled(bool collidable)
-    {
-        foreach (var collider in footColliders)
-        {
-            collider.isTrigger = !collidable;
         }
     }
 
