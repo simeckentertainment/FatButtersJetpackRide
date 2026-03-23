@@ -6,7 +6,10 @@ public class FoodPickup : Pickup
 
     private void Start()
     {
-        foodAmount *= transform.parent.localScale.x;
+        if (transform.parent != null)
+        {
+            foodAmount *= transform.parent.localScale.x;
+        }
     }
 
     protected override void OnPlayerTriggerEnter(Player player)

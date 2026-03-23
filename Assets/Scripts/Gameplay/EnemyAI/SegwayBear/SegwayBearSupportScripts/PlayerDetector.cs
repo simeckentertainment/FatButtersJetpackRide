@@ -44,7 +44,7 @@ public class PlayerDetector : MonoBehaviour
         //    segwayBear.detectedPlayer = true;
         //}
 
-        if (other.tag == "PlayerDamageTrigger")
+        if (other.tag == "Player")
         { //Don't forget to aggro if necessary.
             Debug.Log("PlayerDetector: OnTriggerEnter called.");
             Debug.Log("Tag of other collider: " + other.tag);
@@ -76,7 +76,7 @@ public class PlayerDetector : MonoBehaviour
         //    segwayBear.target = null;
         //}
 
-        if (other.tag == "PlayerDamageTrigger")
+        if (other.tag == "Player")
         {
             Debug.Log("PlayerDetector: OnTriggerExit called.");
             segwayBear.detectedPlayer = false;
