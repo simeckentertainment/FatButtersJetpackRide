@@ -45,16 +45,6 @@ public class ScreamBubble : HarmfulObject
         }
     }
 
-    protected override void OnCollisionEnter(Collision collision)
-    {
-        base.OnCollisionEnter(collision);
-
-        if (collision.collider.GetComponentInParent<HarmfulObject>())
-        {
-            popped = true;
-        }
-    }
-
     protected override void OnPlayerTouched(Player player)
     {
         base.OnPlayerTouched(player);
