@@ -20,34 +20,20 @@ public class PlayerCollisionReporter : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        switch (other.gameObject.tag)
+        if (other.gameObject.tag == "Untagged")
         {
-            case "Untagged":
-                player.AddGroundCollider(thisCollider, other.collider);
-                break;
-            case "Harmful":
-                DamagePlayer(other.collider.gameObject);
-                break;
-            default:
-                break;
+            player.AddGroundCollider(thisCollider, other.collider);
+            SetColliderObject(other);
         }
-        SetColliderObject(other);
     }
 
     private void OnCollisionExit(Collision other)
     {
-        switch (other.gameObject.tag)
+        if (other.gameObject.tag == "Untagged")
         {
-            case "Untagged":
-                player.RemoveGroundCollider(thisCollider, other.collider);
-                break;
-            case "Harmful":
-                player.HarmfulTouch = false;
-                break;
-            default:
-                break;
+            player.RemoveGroundCollider(thisCollider, other.collider);
+            ClearColliderObject();
         }
-        ClearColliderObject();
     }
 
     private void OnTriggerEnter(Collider other){
@@ -112,21 +98,6 @@ public class PlayerCollisionReporter : MonoBehaviour
                 break;
         }
         ClearTriggerObject();
-    }
-
-    public void DamagePlayer(GameObject other)
-    {
-        player.HarmfulTouch = true;
-        player.HarmfulDamageAmount = other.GetComponent<DamagePlayer>().damageAmount;
-        player.HarmfulTouchObjectPosition = other.transform.position;
-    }
-
-    void OnParticleCollision(GameObject other)
-    {
-        if (other.tag == "Harmful")
-        {
-            DamagePlayer(other);
-        }
     }
 
     void SetColliderObject(Collision other)

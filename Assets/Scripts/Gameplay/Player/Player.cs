@@ -6,6 +6,20 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    private static Player _instance;
+    public static Player Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindFirstObjectByType<Player>();
+            }
+
+            return _instance;
+        }
+    }
+
     public PlayerStateMachine stateMachine;
     public PlayerIdleState playerIdleState { get; set; }
     public PlayerWalkState playerWalkState{get;set;}
@@ -184,6 +198,8 @@ public class Player : MonoBehaviour
         playerTummyDeathState = new PlayerTummyDeathState(this, stateMachine);
         playerWinState = new PlayerWinState(this, stateMachine);
         stateMachine.Initialize(playerIdleState);
+
+        _instance = this;
     }
     void FixedUpdate()
     {
@@ -213,6 +229,11 @@ public class Player : MonoBehaviour
 
             transform.SetParent(null, true);
         }
+    }
+
+    private void OnDestroy()
+    {
+        _instance = null;
     }
 
     public void AddGroundCollider(Collider sourceObject, Collider other)
