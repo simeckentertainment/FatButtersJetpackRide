@@ -12,7 +12,6 @@ using GooglePlayGames.BasicApi;
 */
 public class MainMenuButtonManager : MainMenuCommonData
 {
-    [SerializeField] GameObject[] environments;
     [Header("Stuff for the credits menu")]
     [SerializeField] creditsScroller CreditsScroller;
     [Header("Stuff for MoTD")]
@@ -24,7 +23,7 @@ public class MainMenuButtonManager : MainMenuCommonData
     void Start()
     {
         //environments[UnityEngine.Random.Range(0, environments.Length)].SetActive(true);
-        StartCoroutine(CoroutineHome());
+        //StartCoroutine(CoroutineHome()); //Let's nix the MOTD for right now. ~Randy.
     }
 
     // Update is called once per frame
@@ -104,5 +103,13 @@ public class MainMenuButtonManager : MainMenuCommonData
 
     public void GoToLevelSelectScene(){
         Levels.Load(Levels.LevelSelect);
+    }
+    public void GoToDemoLevel()
+    {
+        Levels.Load(Levels.GameOnDemoLevel);
+    }
+    public void GoToTrailer()
+    {
+        Levels.Load(Levels.GameOnTrailerLevel);
     }
 }

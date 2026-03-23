@@ -9,6 +9,8 @@ public class PlayerState
 
     protected CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
+    public virtual bool IsAliveState => false;
+
     public PlayerState(Player player, PlayerStateMachine playerStateMachine)
     {
         this.player = player;

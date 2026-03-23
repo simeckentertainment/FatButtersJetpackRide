@@ -3,7 +3,8 @@ using UnityEngine;
 public class PlayerAliveState : PlayerState
 {
     AudioSource[] thrusterSoundHolders;
-    public float thrusterVolumeCounter = 0f;
+    public float thrusterVolumeCounter;
+    public override bool IsAliveState => true;
 
     public PlayerAliveState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
@@ -28,17 +29,28 @@ public class PlayerAliveState : PlayerState
         {
             DidThePlayerTurnChecker();
         }
-        player.JetpackActivationPossible = player.CollidersInJetpackKillZone.Count == 0 ? true : false; //we can use the jetpack as long as we're not touching a jetpack kill zone.
+        player.JetpackActivationPossible = CanActivateJetpack();
         //These are the collision runners.
         AdjustRotationAngle();
         HarmfulInteractionRunner();
-        BoneRunner();
-        PowerupRunner();
         BallRunner();
         LowGravModeRunner();
         thrusterVolumeRunner();
         if (player.FinishTouch) { player.stateMachine.changeState(player.playerWinState); }
         base.FixedUpdate();
+    }
+
+    private bool CanActivateJetpack()
+    {
+        if (player.CollidersInJetpackKillZone.Count != 0) //we can use the jetpack as long as we're not touching a jetpack kill zone.
+        {
+            return false;
+        }
+        if (player.Fuel <= 0.0f) //we can use the jetpack as long as we have fuel.
+        {
+            return false;
+        }
+        return true;
     }
     #region CollisionRunners
     void DidThePlayerTurnChecker()
@@ -67,7 +79,14 @@ public class PlayerAliveState : PlayerState
             return;
         }
 #endif
-        if (!BallCheck())
+
+        if (BallCheck())
+        {
+            // ignore the harmful touch during the powerup
+            player.HarmfulTouch = false;
+            player.OHKTouch = false;
+        }
+        else
         {
             if (player.HarmfulTouch)
             {
@@ -77,34 +96,6 @@ public class PlayerAliveState : PlayerState
             {
                 player.stateMachine.changeState(player.playerOHKState);
             }
-        }
-    }
-    private void BoneRunner()
-    {
-        if (player.BoneTouch)
-        {
-            player.AddBones(1);
-            player.BoneTouch = false;
-        }
-    }
-    private void PowerupRunner()
-    {
-        if (player.JerryCanTouch)
-        {
-            player.Fuel += player.FuelAdditionAmount;
-            player.JerryCanTouch = false;
-        }
-        if (player.FoodTouch)
-        {
-            if (player.tummy + player.FoodAdditionAmount > player.maxTummy)
-            {
-                player.tummy = player.maxTummy;
-            }
-            else
-            {
-                player.tummy += player.FoodAdditionAmount;
-            }
-            player.FoodTouch = false;
         }
     }
     private void BallRunner()
@@ -171,7 +162,7 @@ public class PlayerAliveState : PlayerState
     {
         UseFuel(false);
     }
-    
+
     public void UseFuel(bool isBoosting)
     {
 
@@ -241,5 +232,16 @@ public class PlayerAliveState : PlayerState
         player.gbr1.DeactivateBoat();
         player.gbr2.DeactivateBoat();
     }
+    public void StartNewGrr()
+    {
+        player.grrSfx.clip = player.vfx.Grrs[Random.Range(0, player.vfx.Grrs.Length)];
+        player.grrSfx.Play();
+    }
 
+    public float GetGrrProgress()
+    {
+        if (player.grrSfx.clip == null) { return 0.0f; }
+        return player.grrSfx.time / player.grrSfx.clip.length;
+    }
 }
+

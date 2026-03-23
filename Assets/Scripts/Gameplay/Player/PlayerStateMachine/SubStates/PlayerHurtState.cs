@@ -19,6 +19,7 @@ public class PlayerHurtState : PlayerAliveState
         player.UI.ActivateHurt();
 
         PlayAnim(hurtAnims[Random.Range(0, 2)]);
+        player.ResetRechargeCounter();
         base.enter();
     }
     public void PlayerHurtKissyFish()

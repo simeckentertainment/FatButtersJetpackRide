@@ -49,13 +49,19 @@ public class ScreamBubble : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-
         switch(other.gameObject.tag)
         {
             case "Player":
-                popped = true;
+                if (!popped)
+                {
+                    popped = true;
+                    var player = other.gameObject.GetComponent<Player>();
+                    player.AddEnemiesDefeated();
+                }
                 break;
             case "OneHitKill":
+                // TODO Drake: When popped by another hazard in the level, it is not tracked
+                // Not important for demo, but we should look into that
                 popped = true;
                 break;
             default:

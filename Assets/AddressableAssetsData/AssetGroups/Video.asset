@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Video
+  m_EditorClassIdentifier: 
+  m_GroupName: Video
+  m_GUID: 3ae41f334a129644abf1bbe9dd84d580
+  m_SerializeEntries:
+  - m_GUID: bbed92322a460864384c0c83e447b483
+    m_Address: Assets/Objects/Video/Fbjrmarch2026teasertrailer.mp4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 688ce2d51185d19489a5c75bf2019ce5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3d293766561dbc6449bdbe999edddc53, type: 2}
+    - {fileID: 11400000, guid: f7f043297923f3b469e1800fb74458a0, type: 2}

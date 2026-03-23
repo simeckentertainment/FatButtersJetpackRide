@@ -14,6 +14,7 @@ public class SBIdleState : SBUnprovokedState
     float wanderMaxRange = 10;
     Vector3 startPos;
     AudioClip currentClip;
+    Vector3 movementTargetPos;
     
 
     public override void enter()
@@ -64,14 +65,32 @@ public class SBIdleState : SBUnprovokedState
     }
 
 
-    void DetermineNextCoords(){
-        ;
-        float x = startPos.x + Random.Range(wanderMaxRange*-1,wanderMaxRange);
-        float y = startPos.y + Random.Range(wanderMaxRange*-1,wanderMaxRange);
-        Vector3 newCoords = new Vector3(x,y,0);
-        movementVector = (newCoords-oldCoords).normalized;
+    void DetermineNextCoords()
+    {
+        bool lineOfSightClear = false;
+        while (!lineOfSightClear)
+        {
+           lineOfSightClear = EnsureClearLineOfSightToNewTarget(); 
+        }
+        
+        Vector3 newCoords = movementTargetPos;
+        movementVector = (newCoords - oldCoords).normalized;
         targetCoords = newCoords;
 
+    }
+
+    private bool EnsureClearLineOfSightToNewTarget()
+    {
+        movementTargetPos = new Vector3(startPos.x + Random.Range(wanderMaxRange * -1, wanderMaxRange), startPos.y + Random.Range(wanderMaxRange * -1, wanderMaxRange), 0.0f);
+        RaycastHit LineOfSightChecker;
+        if (Physics.Raycast(screamBubble.transform.position, ((movementTargetPos - screamBubble.transform.position).normalized), out LineOfSightChecker, Vector3.Distance(movementTargetPos, screamBubble.transform.position)))
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     void PlayNewSound(){

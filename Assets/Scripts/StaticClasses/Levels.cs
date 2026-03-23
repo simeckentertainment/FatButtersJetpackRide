@@ -9,6 +9,9 @@ public class Levels
     public const string LevelSelect = "Scenes/P18_LevelSelect_SCN_V002_RSS";
     public const string SaveDataInitializer = "Scenes/P18_SaveDataInitializer_SCN_V001_RSS";
     public const string LevelPrefix = "Scenes/puzzleLevels/";
+    public const string GameOnDemoTitleScreen = "Scenes/P18-GameOnDemoTitleScreen";
+    public const string GameOnDemoLevel = "Scenes/puzzleLevels/GameOnExpoDemoLevel";
+    public const string GameOnTrailerLevel = "Scenes/P18_TrailerPlayer";
 
     private static SceneLoadData sceneLoadData => SaveManager.Instance.sceneLoadData;
 
@@ -21,7 +24,7 @@ public class Levels
         SceneManager.LoadScene(Levels.SceneLoader);
     }
 
-    public static void Load (int levelNumber)
+    public static void Load(int levelNumber)
     {
         sceneLoadData.SceneToLoad = LevelPrefix + "P18_Level" + levelNumber.ToString() + "_SCN_V001_RSS";
         sceneLoadData.LastLoadedLevelInt = levelNumber;

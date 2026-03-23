@@ -1,0 +1,548 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Audio
+  m_EditorClassIdentifier: 
+  m_GroupName: Audio
+  m_GUID: 8e5bc01b16270cc4b869071a626d3296
+  m_SerializeEntries:
+  - m_GUID: 0329105013e4b7148a91051b797fbed7
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/SegwayBear/Audio/idle1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07cce150cad27224ca55db67e8197b99
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/NullObjects/nullAudio.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 08f86af7eeaa1b9498e3c6f95ba8b6bd
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/batSwarm/Fruit Bat
+      Squawks - QuickSounds.com.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b00b1edf0371a948ba8d13fa48e23bd
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/04-ClownButters/clown butters death.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b0b27089d91a8440930e66c19559cd6
+    m_Address: Assets/Objects/Audio/GrrAudio/grr18.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b1f0c9b53569034d9601eeff86a5d7e
+    m_Address: Assets/Objects/Audio/GrrAudio/grr15.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cf1313b4cb34dc4da6d5fbea1d7cfdd
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/Audio/notice1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e1a302106f77f84ab1b31fd12452a06
+    m_Address: Assets/Music/Slipping Away - Dyalla.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f7f8050264589240ae0434c7c73e171
+    m_Address: Assets/Objects/Audio/GrrAudio/grr13.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1155966fbd4a1f94ead4358fa541aca6
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/21-Discopup/discopup win.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13eda8e07a100b34aacbb11ce6a15ba9
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/21-Discopup/discopup death 2.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28f784388c0657349b09ed800cd54016
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/SegwayBear/Audio/fireLaser.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30f3503c126acbc42b72de2635a05313
+    m_Address: Assets/Music/Dance Of The Gypsies - Hanu Dixit.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32b34899da5a554418ada4fdf3588233
+    m_Address: Assets/Objects/Audio/GrrAudio/grr2.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3406fa2baad9a2d44904d3a9bbc6262b
+    m_Address: Assets/Objects/Audio/GrrAudio/grr17.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 367e93ac7be5fda4389f2b78ceeecd9e
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/11-PartyCorg/partycorg death.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37622b16b2289674a8914fc6e65f8fff
+    m_Address: Assets/Objects/Audio/GrrAudio/grr19.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3967ebc2e45785141b52187ed64f4962
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/10-CorgiInBlack/secret agent butters
+      win.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b40bbcb2dedda946b1af2af0a2ebe2b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/Audio/attack1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c8ebb76515a020448a8b88c567d9d76
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/09-JollyOldSaintButters/santa butters
+      win.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ce08f6abc1a8fb4dbbaead6249c0271
+    m_Address: Assets/Objects/UI/barkaudio/bark3.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44a632bc7abe41f4198413b530a07172
+    m_Address: Assets/Objects/Audio/GrrAudio/grr8.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 473cad15e4de53643b8884576e517424
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/09-JollyOldSaintButters/santa butters
+      death.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4957f18372acb7742b89a7b1284ff35c
+    m_Address: Assets/Objects/UI/barkaudio/bark2.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4bdf959e6e850dd4ca5602aced496a9b
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/05-Cutepid/cutepid death.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c2029dab799a6c4eb92d87acf11ea85
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/03-ClockworkButters/clockwork butters
+      death.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c452e4bda34f8c44870123238d91686
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/SegwayBear/Audio/noticePlayer1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c977b0be0c28034188c307c72d9ce22
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/Audio/bubblePop.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 504682e73266b50448d20ec9711a217a
+    m_Address: Assets/Music/When You're Not Looking - Nathan Moore.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 504a0c7fe18f714449927c867fb494e4
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/02-ButtersOLantern/buttersolantern
+      death 1.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5058e1aae6b03ed4f8e87e917106d890
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/02-ButtersOLantern/buttersolantern
+      win 3.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50615aa6800252f40b5fc47ad5c9aa14
+    m_Address: Assets/Objects/Audio/GrrAudio/grr10.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51ea0197fd9ecdc419c8480e02b19ba0
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/10-CorgiInBlack/secret agent butters
+      death.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5233bc1e6ce7f1a4a85199c2b873bcdc
+    m_Address: Assets/Objects/Audio/GrrAudio/grr9.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54202cf5d314c7f44b684d842b7b6d1a
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/06-GentlemanButters/gentleman butters
+      death.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 55c1553474cfd164cbf1b31d62a393aa
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/Audio/idle1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 55d21c4842244574ca8a3a05b3b5c2d9
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/SegwayBear/Audio/chargeandAttack.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 591e4fecb1d7c9d48ab9dbf7ff90c6af
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/11-PartyCorg/partycorg win.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c8ff819c4e23074b9bd582d44f15d29
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/02-ButtersOLantern/buttersolantern
+      death 3.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 606dcf31184ebab47ab602719ba94303
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/kissyfish/Audio/jumpandmmmmmm.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 626c4818c5b33594c9267ed9b09a9b49
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/05-Cutepid/cutepid win.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63cf22cbf2f96084ab01ffd6cdf09398
+    m_Address: Assets/Objects/Audio/GrrAudio/grr12.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6dfe61724710ae445af3c1f30f407bb4
+    m_Address: Assets/Objects/Audio/GrrAudio/grr6.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e770399dbac20744b032c36c663fd8b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/Audio/notice2.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 709afd4558c58174a852de15d39f2b32
+    m_Address: Assets/Music/Like It Loud - Dyalla.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 71d1d877b6d27544db23b47ce604496f
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/02-ButtersOLantern/buttersolantern
+      death 2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72ca451d40dd05c4b8657e63f674ef9a
+    m_Address: Assets/Objects/UI/barkaudio/bark4.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 730bab7386c262d4badb72f6ee921068
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/03-ClockworkButters/clockwork butters
+      death 2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 789270501048eaf43b674178926f49bd
+    m_Address: Assets/Music/The Urban Groove - Hanu Dixit.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ae32d205e222714a87d538f1a3c086c
+    m_Address: Assets/Objects/Audio/SFX - Death Explosion.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b2286ec1329c80418d357a047896407
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/01-BatCorg/batcorg death.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d199b6b06560b0479159b99cb39e14f
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/SFX
+      - Death Explosion.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81ee8f5d5c2e073468ea6636f378b535
+    m_Address: Assets/Objects/UI/barkaudio/bark1.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 863d84e37bc8f6045aecb72075c91c7c
+    m_Address: Assets/Objects/Audio/GrrAudio/grr14.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86fec12e993a14c43a09d853f8832995
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/06-GentlemanButters/gentleman butters
+      win.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 890871602232fab4f9b870dcdfc3f106
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/15-Unicorngi/unicorngi win.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e7a0ea7699b25e47a18535d4f590078
+    m_Address: Assets/Objects/Audio/GrrAudio/grr1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94ca98c277366724fa8e0e046d704554
+    m_Address: Assets/Objects/Audio/GrrAudio/grr4.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9519ad7a0b094a140ba376b751e1495e
+    m_Address: Assets/Music/GrowlBark.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 967cd37b529dd2f4691bb1ef3a7c0fcb
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/03-ClockworkButters/clockwork butters
+      win.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97029f25772424f4ab4266455a729d3f
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/kissyfish/Audio/fishdeath.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 992629da41b004d4db9340b9031974eb
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/02-ButtersOLantern/buttersolantern
+      win 2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99377aeecae2a2443ad86a214a86e89b
+    m_Address: Assets/Music/Minor Lament for Solo Bass - John Patitucci.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a6477e0c6363334494528d8661fd52b
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/318688__limitsnap-creations__rocket-thrust-effect.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c2cd98e4492ce64ab9881374e013192
+    m_Address: Assets/Music/Little Samba - Quincas Moreira.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e53ed97eebe0d6488c735f5c2d7b910
+    m_Address: Assets/Objects/Audio/partyHorn.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2ec66b705efaac429d21fcce1cdd47c
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/SegwayBear/Audio/beardeathvoice.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a37b3857ccfc1d34d82cd4ef19b7638b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/kissyfish/Audio/jumpandkiss.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a83260e8f5f5e894dbac7d6fadf83523
+    m_Address: Assets/Music/Ringside - Dyalla.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aacc5561716c0b64f9fbd012c6b94e6c
+    m_Address: Assets/Music/Sweet Math - Mini Vandals.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab92585c2fd5e5442a976c3a4fcccd4e
+    m_Address: Assets/Objects/Audio/GrrAudio/grr11.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b11850e07e81b04499b7c87f2006abf1
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/08-PrincessButters/chimes-7035.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b29bd89790e9fad4386b49020e7ac07c
+    m_Address: Assets/Objects/Audio/GrrAudio/grr20.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4427bcb895a55b44be0c4b2052fd097
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/04-ClownButters/clown butters win.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bea37e2f1d9209440aac9a3d03a16787
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/PreAlphaAssets/Misc/Fan_St.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7b4752e66dbba049bc36e6f13fa65a3
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/partyHorn.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7f6f1367d355d14c91b87f470ebef79
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/Audio/idle4.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8615d2f58ff5c44780806fc56bee445
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/02-ButtersOLantern/buttersolantern
+      win 1.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce4c0d16542e203488aa0b2185b0462a
+    m_Address: Assets/Music/Robots a Cometh - Dan Lebowitz.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cea4f0fb4092d5d44be024cf4c9bec9e
+    m_Address: Assets/Objects/Audio/GrrAudio/grr5.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf926d4888d94e144ad412700ea39b7f
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/Audio/raspberry.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d016c0c001b7c3f43897d6ae070aa564
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/Audio/idle3.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2741d999b5bee84bbc5860008881d78
+    m_Address: Assets/Objects/Audio/GrrAudio/grr3.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d3bf2adf6637d1442b06db6590a58789
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/batSwarm/Single Bat
+      Call - QuickSounds.com.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d518a509eb2233b498c49f0090f5f2b4
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/Audio/idle2.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7b634e1536e77f40857b728d002c20d
+    m_Address: Assets/Music/We Ride! - Reed Mathis.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da67184c69f1f7f42861ce1763bbe92e
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/01-BatCorg/batcorg win.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dac011b2377fed4428731ead04a6726f
+    m_Address: Assets/Music/Flying - Track Tribe.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db6e07840448c7a4b92e5495ab881176
+    m_Address: Assets/Objects/Audio/GrrAudio/grr7.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc1a1c3efc1a15a45bd9f0820b98921c
+    m_Address: Assets/Music/Warzone - Anno Domini Beats.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd78e99408da5524ebeb07892603edda
+    m_Address: Assets/Objects/Audio/GrrAudio/grr16.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e618fd85e4d0c04469e3638a09a8bbfa
+    m_Address: Assets/Music/Old World Saga - Hanu Dixit.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6501a1c7ceeae34fa8a461f30f42495
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/SegwayBear/Audio/chargeLaser.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec119a56689401b4aadb492044bffc7b
+    m_Address: Assets/Objects/Audio/SFX - Main engine thrust.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed9a4c60689b099449de186d65ce6321
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/Audio/chargeLaser.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef7254e451ea0f24fbd63f477ab727a8
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/kissyfish/Audio/chaseplayer.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f048e7ba01ccf5541accdb0702f7b78a
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/15-Unicorngi/unicorngi death.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0fbfe74d2a3f894b90840a327fc864a
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/SegwayBear/Audio/idle2.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f23241b879ea57d428087dbe9daecf5d
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/06-GentlemanButters/gentleman butters
+      jetpack.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f80fef5b5fcf4dd44b4519a5720b74ef
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/00-ButtersScotch/SkinAssets/SFX
+      - Main engine thrust.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8b83f00799802841ab5f5de2ae84d12
+    m_Address: Assets/Objects/PuzzlePieces/SkinDB/21-Discopup/discopup death.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 688ce2d51185d19489a5c75bf2019ce5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 64de6b9a01e57ad4e871db921efef4ec, type: 2}
+    - {fileID: 11400000, guid: b141a8f28b7bfeb4b828da3b4bded8e1, type: 2}

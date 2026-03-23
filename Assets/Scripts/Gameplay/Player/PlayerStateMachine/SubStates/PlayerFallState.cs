@@ -29,7 +29,7 @@ public class PlayerFallState : PlayerAliveState
         //Calm the sound the fuck down so we don't blow people's ears out.
         player.sfx.volume = Mathf.Clamp((VolumeReductionThreshold-stateAge)/VolumeReductionThreshold,0f,1f);
         if((stateAge > VolumeReductionThreshold) & player.sfx.isPlaying){player.sfx.Stop();}
-        if(player.GroundTouch){
+        if(player.IsGrounded){
             PlayAnim("Land");
             player.stateMachine.changeState(player.playerIdleState);
         }

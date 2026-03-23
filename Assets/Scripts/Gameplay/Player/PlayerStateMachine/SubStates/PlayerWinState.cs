@@ -13,6 +13,7 @@ public class PlayerWinState : PlayerLevelWinState
 
     public override void enter()
     {
+        PauseUtility.Pause();
         collectibleData.LevelBeaten[SaveManager.Instance.sceneLoadData.LastLoadedLevelInt] = true;
         collectibleData.HASBALL = false;
         FixRollTimer = 0;
@@ -20,7 +21,7 @@ public class PlayerWinState : PlayerLevelWinState
         player.vfx.StopPrimaryThrusters();
         rollStartingValue = player.input.aimAngle;
         KeyboardOffsetStartingValue = player.KeyboardRollOffset;
-        player.UI.SetEndLevelStats(player.tempBones);
+        player.UI.SetEndLevelStats(player.BonesCollected);
         SaveManager.Instance.Save();
         player.input.DisableInput();
         player.UI.ActivateWinMenu();
