@@ -79,6 +79,7 @@ public class InputDriver : MonoBehaviour
 
     [Header("Amalgam variables")]
     public bool GoThrust;
+    //GoCw and GoCcw are strictly to be used for the plus/minus particle rotations.
     public bool GoCw;
     public bool GoCcw;
     public bool GoBoost;  // Boost : Multi-touch (mobile) or Thrust + M key (Pc/Gamepad)
@@ -133,8 +134,6 @@ public class InputDriver : MonoBehaviour
 
 
         //Amalgam variable checkers.
-        GoCw = OSCWPressed;
-        GoCcw = OSCCWPressed;
         GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed;
 
         //Final Aim Angle
@@ -174,11 +173,11 @@ public class InputDriver : MonoBehaviour
         OSCCWPressed = OSCCWAction.ReadValue<float>() == 1.0f;
         OSBoostPressed = OSBoostAction.ReadValue<float>() == 1.0f;
         if (OSCWPressed & OSCCWPressed) { return; }
-        if (OSCWPressed)
+        if (OSCWPressed && aimAngle > -45.0f)
         {
             OSRollOffset -= 0.25f * OSRollSensitivity;
         }
-        if (OSCCWPressed)
+        if (OSCCWPressed && aimAngle < 45.0f)
         {
             OSRollOffset += 0.25f * OSRollSensitivity;
         }

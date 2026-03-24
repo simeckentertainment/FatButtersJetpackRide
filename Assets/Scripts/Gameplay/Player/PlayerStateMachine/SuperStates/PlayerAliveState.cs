@@ -27,7 +27,8 @@ public class PlayerAliveState : PlayerState
     {
         if (!player.corgiTurned)
         {
-            DidThePlayerTurnChecker();
+            //This code will return when we implement facing left.
+            //DidThePlayerTurnChecker();
         }
         player.JetpackActivationPossible = CanActivateJetpack();
         //These are the collision runners.
@@ -55,21 +56,7 @@ public class PlayerAliveState : PlayerState
     #region CollisionRunners
     void DidThePlayerTurnChecker()
     {
-        if (player.input.aimAngle != 0.0f)
-        {
-            player.corgiTurned = true;
-            return;
-        }
-        if (player.input.GoCcw)
-        {
-            player.corgiTurned = true;
-            return;
-        }
-        if (player.input.GoCw)
-        {
-            player.corgiTurned = true;
-            return;
-        }
+        //This code will return when we implement facing left.
     }
     private void HarmfulInteractionRunner()
     {
@@ -142,12 +129,10 @@ public class PlayerAliveState : PlayerState
         player.vfx.StopAllRotParticles();
         if (player.input.GoCcw)
         {
-            player.KeyboardRollOffset += 0.25f * player.KeyboardSensitivity;
             player.vfx.StartMinusRotParticles();
         }
         if (player.input.GoCw)
         {
-            player.KeyboardRollOffset -= 0.25f * player.KeyboardSensitivity;
             player.vfx.StartPlusRotParticles();
         }
         player.GravityRoll = player.input.aimAngle;
