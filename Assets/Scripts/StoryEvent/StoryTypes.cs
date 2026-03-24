@@ -3,7 +3,7 @@ using UnityEngine;
 public enum StoryMode
 {
     Gameplay,
-    GuideGameplay,
+    GuidedGameplay,
     Cutscene,
     PromptMode,
     CorgiSense
@@ -11,7 +11,7 @@ public enum StoryMode
 
 public enum CompletionType
 {
-    instant,
+    Instant,
     AfterDialogueDuration,
     AfterTimer,
     AfterGameplaySignal,
