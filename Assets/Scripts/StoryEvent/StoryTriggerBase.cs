@@ -2,12 +2,12 @@ using UnityEngine;
 
 public abstract class StoryTriggerBase : MonoBehaviour
 {
-    [SerializeField] protected LevelStorySequenceController Controller;
+    [SerializeField] protected LevelStorySequenceController controller;
     [SerializeField] protected int stepIndex;
     
     protected void NotifyController()
     {
-        if (Controller != null)
+        if (controller != null)
             controller.NotifyTriggerFired(stepIndex);
     }
 
