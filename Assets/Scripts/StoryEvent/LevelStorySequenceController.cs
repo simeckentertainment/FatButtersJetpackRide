@@ -12,6 +12,8 @@ public class LevelStorySequenceController : MonoBehaviour
     private StoryStepContext _context;
     private bool _currentStepCompletionStarted;
     private bool _currentStepTriggerFired;
+    private string _subscribedCompletionSignalId;
+
 
     private void Awake()
     {
@@ -67,7 +69,8 @@ public class LevelStorySequenceController : MonoBehaviour
 
 
     private void StartCompletionForCurrentStep()
-        {
+    {
+    
             if (_currentStepCompletionStarted) return;
             if (_currentStepIndex < 0 || _currentStepIndex >= steps.Count) return;
 
@@ -84,13 +87,23 @@ public class LevelStorySequenceController : MonoBehaviour
                 case CompletionType.AfterDialogueDuration:
                     StartCoroutine(CompleteAfterTimer(step.completionTimerDuration));
                     break;
-
-                // Step 8+ (signal/manual) can be added later
-                default:
-                    _currentStepCompletionStarted = false; // optional safety for unhandled types
+                case CompletionType.AfterGameplaySignal:
+                    _subscribedCompletionSignalId = step.completionSignalId;
+                    GameplaySignal.Subscribe(_subscribedCompletionSignalId, OnCompletionSignalRaised);
                     break;
             }
+    
+    }
+
+    private void OnCompletionSignalRaised()
+    {
+        if (!string.IsNullOrEmpty(_subscribedCompletionSignalId))
+        {
+            GameplaySignal.Unsubscribe(_subscribedCompletionSignalId, OnCompletionSignalRaised);
+            _subscribedCompletionSignalId = null;
         }
+        AdvanceStep();
+    }
 
     private void TryEnterCurrentStep()
     {
