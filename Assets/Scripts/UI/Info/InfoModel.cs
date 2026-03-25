@@ -61,7 +61,7 @@ public class InfoModel : Model
         }
     }
 
-    public void ShowMessage(string text, EditorLocalTransform arrowTransform, bool showArrow)
+    public void ShowMessage(string text, EditorLocalTransform arrowTransform = default, bool showArrow = false)
     {
         _infoText = text;
         _arrowTransform = arrowTransform;
