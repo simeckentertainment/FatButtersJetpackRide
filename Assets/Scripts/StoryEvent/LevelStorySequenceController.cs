@@ -41,6 +41,7 @@ public class LevelStorySequenceController : MonoBehaviour
 
         Debug.Log("Trigger accepted for step " + stepIndex);
         RunCurrentStepActions();
+        StartCompletionForCurrentStep();
     }
 
     private void RunCurrentStepActions()
@@ -57,4 +58,19 @@ public class LevelStorySequenceController : MonoBehaviour
     }
 
 
+    private void StartCompletionForCurrentStep()
+    {
+        var step = steps[currentStepIndex];
+
+        if (step.completionType == CompletionType.Instant)
+        {
+            AdvanceStep();
+        }
+    }
+
+    private void AdvanceStep()
+    {
+        currentStepIndex++;
+        Debug.Log("Advanced to step " + currentStepIndex);
+    }
 }
