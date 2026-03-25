@@ -8,6 +8,7 @@ public class LevelStorySequenceController : MonoBehaviour
     [SerializeField] private int _currentStepIndex = 0;
     [SerializeField] private Player player;
     [SerializeField] private UIManager uiManager;
+    [SerializeField] private StoryGameplayBridge gameplayBridge;
 
     private StoryStepContext _context;
     private bool _currentStepCompletionStarted;
@@ -56,15 +57,22 @@ public class LevelStorySequenceController : MonoBehaviour
 
     private void RunCurrentStepActions()
     {
+        if (_currentStepIndex < 0 || _currentStepIndex >= steps.Count) return;
         var step = steps[_currentStepIndex];
-        if (step.actions == null || step.actions.Count == 0)
-            return;
 
-        foreach (var action in step.actions)
+        if (gameplayBridge != null)
+            gameplayBridge.ApplyMode(step.requestedMode);
+
+        if (step.actions != null)
         {
-            if (action != null)
-                action.Execute(_context);
+            foreach (var action in step.actions)
+            {
+                if (action != null)
+                    action.Execute(_context);
+            }
         }
+
+        StartCompletionForCurrentStep();
     }
 
 
@@ -133,4 +141,6 @@ public class LevelStorySequenceController : MonoBehaviour
 
         TryEnterCurrentStep();
     }
+
+    public StoryGameplayBridge GetGameplayBridge() => gameplayBridge;
 }
