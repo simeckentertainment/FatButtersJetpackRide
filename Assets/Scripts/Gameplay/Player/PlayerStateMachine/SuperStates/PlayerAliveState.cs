@@ -27,7 +27,8 @@ public class PlayerAliveState : PlayerState
     {
         if (!player.corgiTurned)
         {
-            DidThePlayerTurnChecker();
+            //This code will return when we implement facing left.
+            //DidThePlayerTurnChecker();
         }
         player.JetpackActivationPossible = CanActivateJetpack();
         //These are the collision runners.
@@ -55,21 +56,7 @@ public class PlayerAliveState : PlayerState
     #region CollisionRunners
     void DidThePlayerTurnChecker()
     {
-        if (player.input.aimAngle != 0.0f)
-        {
-            player.corgiTurned = true;
-            return;
-        }
-        if (player.input.GoCcw)
-        {
-            player.corgiTurned = true;
-            return;
-        }
-        if (player.input.GoCw)
-        {
-            player.corgiTurned = true;
-            return;
-        }
+        //This code will return when we implement facing left.
     }
     private void HarmfulInteractionRunner()
     {
@@ -136,22 +123,19 @@ public class PlayerAliveState : PlayerState
     #endregion
 
     #region CoreMechanicStuff
-    private void AdjustRotationAngle()  //Moving into input driver
+    private void AdjustRotationAngle()
     {
         if (player.input.GoCw & player.input.GoCcw) { return; }
         player.vfx.StopAllRotParticles();
         if (player.input.GoCcw)
         {
-            player.KeyboardRollOffset += 0.25f * player.KeyboardSensitivity;
             player.vfx.StartMinusRotParticles();
         }
         if (player.input.GoCw)
         {
-            player.KeyboardRollOffset -= 0.25f * player.KeyboardSensitivity;
             player.vfx.StartPlusRotParticles();
         }
-        player.GravityRoll = player.input.aimAngle;
-        player.rb.MoveRotation(Quaternion.Euler(Vector3.forward * (player.GravityRoll + player.KeyboardRollOffset)));
+        player.transform.rotation = Quaternion.Euler(Vector3.forward * player.input.aimAngle);//This line seems to be what's making the body rotation what it is.
     }
 
     public void thrust()

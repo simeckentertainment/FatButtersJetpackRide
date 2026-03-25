@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 using UnityEngine.InputSystem;
 /*
 #if !UNITY_EDITOR && UNITY_ANDROID
@@ -18,10 +20,9 @@ public class InputDriver : MonoBehaviour
 {
     [Header("Global settings")]
     [SerializeField] public bool inputEnabled;
-
     [Header("Mobile input variables")]
     [SerializeField] private float deviceRoll;
-    public static bool HasGyroscope {get {return SystemInfo.supportsGyroscope;}}
+    public static bool HasGyroscope { get { return SystemInfo.supportsGyroscope; } }
     [System.NonSerialized] private static bool gyroInitialized = false;
     [System.NonSerialized] public bool hasGyro;
     [System.NonSerialized] private Quaternion deviceRotation;
@@ -33,13 +34,15 @@ public class InputDriver : MonoBehaviour
 
     [Header("Keyboard input variables")]
     //Keyboard variables
-    [SerializeField] private float KeyboardRollOffset;
-    [SerializeField] private float KeyboardSensitivity;
-
-    [System.NonSerialized] private bool KBCWPressed;
-    [System.NonSerialized] private bool KBCCWPressed;
+    [SerializeField] private bool KBCWPressed;
+    [SerializeField] private bool KBCCWPressed;
     [System.NonSerialized] private bool KBThrustPressed;
     [System.NonSerialized] private bool KBBoostPressed;
+    [SerializeField] private float KBMinAngle;
+    [SerializeField] private float KBMaxAngle;
+    [System.NonSerialized] private float KBCurrentAngle;
+    [SerializeField] private float KBAccelerationTimer;
+    [SerializeField] private float KBMaxSpeedFrame;
     [SerializeField] private InputAction KBthrustAction;
     [SerializeField] private InputAction KBCWAction;
     [SerializeField] private InputAction KBCCWAction;
@@ -70,13 +73,15 @@ public class InputDriver : MonoBehaviour
 
     [Header("Amalgam variables")]
     public bool GoThrust;
+    //GoCw and GoCcw are strictly to be used for the plus/minus particle rotations.
     public bool GoCw;
     public bool GoCcw;
     public bool GoBoost;  // Boost : Multi-touch (mobile) or Thrust + M key (Pc/Gamepad)
     public float aimAngle;
 
-    protected void OnEnable(){
-        
+    protected void OnEnable()
+    {
+
     }
     // Start is called before the first frame update
     void Start()
@@ -104,7 +109,7 @@ public class InputDriver : MonoBehaviour
     void FixedUpdate()
     {
         if (!inputEnabled) { return; } //Only accept input when input is enabled.
-        
+
 
         //Motion control checkers
         TrackRollData(); //always be checking the roll data.
@@ -112,81 +117,94 @@ public class InputDriver : MonoBehaviour
         //OSC control checkers
         SetOSControlValues();
 
+
         //Keyboard control checkers
         SetKBControlValues();
         //Gamepad Control checkers
         SetGPControlValues();
 
+
+
         //Amalgam variable checkers.
-        GoCw = OSCWPressed || KBCWPressed || GPAimVal > JoystickActivationMinimum;
-        GoCcw = OSCCWPressed || KBCCWPressed || GPAimVal < (JoystickActivationMinimum *-1.0f);
-        GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed  ? true : false;
+        GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed;
 
         //Final Aim Angle
-        aimAngle = deviceRoll + OSRollOffset + KeyboardRollOffset + (GPAimVal * 90);
+        aimAngle = deviceRoll + OSRollOffset + KBCurrentAngle + (GPAimVal * -45);
         // Boost detection: Multi-touch (mobile) or Thrust + L Shift key (Pc/Gamepad)
 
         GoBoost = touchBoostTriggered || OSBoostPressed || KBBoostPressed || GPBoostPressed;
     }
 
-    public void EnableInput(){
+    public void EnableInput()
+    {
         inputEnabled = true;
     }
-    public void DisableInput(){
+    public void DisableInput()
+    {
         inputEnabled = false;
     }
-    private bool FilterTouchInput(){
+    private bool FilterTouchInput()
+    {
         touchCount = Input.touchCount;
-        if(touchCount == 0){return false;} //Don't run thrust if untouched
-        if(PauseUtility.IsPaused){return false;} //Don't run thrust if paused
+        if (touchCount == 0) { return false; } //Don't run thrust if untouched
+        if (PauseUtility.IsPaused) { return false; } //Don't run thrust if paused
         //if (OSthrustAction.ReadValue<float>() == 1.0f){ return false;} //Don't run Thrust if on screen thrust is touched
-        if (OSCWAction.ReadValue<float>() == 1.0f & Input.touchCount == 1){return false;} //Don't run thrust if only on screen CW is touched
+        if (OSCWAction.ReadValue<float>() == 1.0f & Input.touchCount == 1) { return false; } //Don't run thrust if only on screen CW is touched
         if (OSCCWAction.ReadValue<float>() == 1.0f & Input.touchCount == 1) { return false; } //Don't run thrust if if only on screen CCW is touched
         //If any of the above are true, we're not considering ourselves touched.
-        //If we get here, then we're good to use thrust.
+        //My head will forever be in the gutter. ~Randy
+        //If we get here, then we're good to use thrust. :F
 
         //checking for multitouch AKA boost
         touchBoostTriggered = touchCount > 1;
         return true;
     }
-    private void SetOSControlValues(){
-        OSThrustPressed = OSthrustAction.ReadValue<float>() == 1.0f ? true : false;
-        OSCWPressed = OSCWAction.ReadValue<float>() == 1.0f ? true : false;
-        OSCCWPressed = OSCCWAction.ReadValue<float>() == 1.0f ? true : false;
-        OSBoostPressed = OSBoostAction.ReadValue<float>() == 1.0f ? true : false;
+    private void SetOSControlValues()
+    {
+        OSThrustPressed = OSthrustAction.ReadValue<float>() == 1.0f;
+        OSCWPressed = OSCWAction.ReadValue<float>() == 1.0f;
+        OSCCWPressed = OSCCWAction.ReadValue<float>() == 1.0f;
+        OSBoostPressed = OSBoostAction.ReadValue<float>() == 1.0f;
         if (OSCWPressed & OSCCWPressed) { return; }
-        if (OSCWPressed)
+        if (OSCWPressed && aimAngle > -45.0f)
         {
             OSRollOffset -= 0.25f * OSRollSensitivity;
         }
-        if(OSCCWPressed)
+        if (OSCCWPressed && aimAngle < 45.0f)
         {
             OSRollOffset += 0.25f * OSRollSensitivity;
         }
     }
 
-#region keyboardControlValues
+    #region keyboardControlValues
     //The below methods are for keyboard input
 
-    private void SetKBControlValues(){
-        
-        KBThrustPressed = KBthrustAction.ReadValue<float>() == 1.0f ? true : false;
-        KBCWPressed = KBCWAction.ReadValue<float>() == 1.0f ? true : false;
-        KBCCWPressed = KBCCWAction.ReadValue<float>() == 1.0f ? true : false;
-        KBBoostPressed = KBBoostAction.ReadValue<float>() == 1.0f ? true : false;
-        if (KBCWPressed & KBCCWPressed) { return; }
+    private void SetKBControlValues()
+    {
+        KBThrustPressed = KBthrustAction.ReadValue<float>() == 1.0f;
+        KBCWPressed = KBCWAction.ReadValue<float>() == 1.0f;
+        KBCCWPressed = KBCCWAction.ReadValue<float>() == 1.0f;
+        KBBoostPressed = KBBoostAction.ReadValue<float>() == 1.0f;
+        if((!KBCWPressed && !KBCCWPressed) || (KBCWPressed && KBCCWPressed)) //Only accept a single directional input at a time, or wait patiently for input.
+        {
+            KBCurrentAngle = 0.0f;
+            KBAccelerationTimer = 0;
+            return;
+        }
         if (KBCWPressed)
         {
-            KeyboardRollOffset -= 0.25f * KeyboardSensitivity;
+            KBAccelerationTimer = Mathf.Clamp(++KBAccelerationTimer, 0.0f, KBMaxSpeedFrame); //Found a cool new way to do this! ~Randy
+            KBCurrentAngle = Mathf.Lerp(KBMinAngle * -1.0f, KBMaxAngle * -1.0f, KBAccelerationTimer / KBMaxSpeedFrame);
         }
         if (KBCCWPressed)
         {
-            KeyboardRollOffset += 0.25f * KeyboardSensitivity;
+            KBAccelerationTimer = Mathf.Clamp(++KBAccelerationTimer, 0.0f, KBMaxSpeedFrame);
+            KBCurrentAngle = Mathf.Lerp(KBMinAngle, KBMaxAngle, KBAccelerationTimer / KBMaxSpeedFrame);
         }
     }
-#endregion
+    #endregion
 
-#region GamePadValues
+    #region GamePadValues
     void SetGPControlValues()
     {
         GPAimVal = GPAimAction.ReadValue<float>();
@@ -194,38 +212,58 @@ public class InputDriver : MonoBehaviour
         GPBoostPressed = GPBoostAction.ReadValue<float>() > TriggerActivationMinimum;
     }
 
-#endregion
+    #endregion
 
-    private void TrackRollData(){
-        if (!HasGyroscope){
+    private void TrackRollData()
+    {
+        if (!HasGyroscope)
+        {
             deviceRoll = 0.0f;
             hasGyro = false;
-        }else{
+        }
+        else
+        {
             hasGyro = true;
-            if (!gyroInitialized){
+            if (!gyroInitialized)
+            {
                 Input.gyro.enabled = true;                // enable the gyroscope
                 Input.gyro.updateInterval = 0.0167f;    // set the update interval to it's highest value (60 Hz)
                 gyroInitialized = true;
                 deviceRoll = 0.0f;
-            }else{
-                if (Input.gyro.gravity == Vector3.zero){
+            }
+            else
+            {
+                if (Input.gyro.gravity == Vector3.zero)
+                {
                     deviceRoll = GetRollDataFallback();
-                }else{
+                }
+                else
+                {
                     deviceRoll = GetRollDataFromGravity(Input.gyro.gravity);
-                    if(deviceRoll > 20.0f & deviceRoll < 340.0f){
+                    if (deviceRoll > 20.0f & deviceRoll < 340.0f)
+                    {
                     }
                 }
             }
         }
     }
 
-    private float GetRollDataFallback(){
+    private float GetRollDataFallback()
+    {
         Quaternion eliminationOfXY = Quaternion.Inverse(Quaternion.FromToRotation(referenceRotation * Vector3.forward, deviceRotation * Vector3.forward));
         Quaternion rotationZ = eliminationOfXY * deviceRotation;
         return rotationZ.eulerAngles.z;
     }
-    private float GetRollDataFromGravity(Vector3 gravData){
+    private float GetRollDataFromGravity(Vector3 gravData)
+    {
         return gravData.x * -45.0f;
     }
+
+
+
+    
+
+
+
 
 }
