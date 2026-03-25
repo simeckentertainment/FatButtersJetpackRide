@@ -10,6 +10,7 @@ public class PlayerAliveState : PlayerState
     {
 
     }
+
     int ballTimer;
     public override void enter()
     {
@@ -19,10 +20,16 @@ public class PlayerAliveState : PlayerState
         player.vfx.StartRocketSounds();
         base.enter();
     }
+
     public override void Update()
     {
         base.Update();
+
+        // Set volume in Update rather than FixedUpdate so it can change while the game is paused
+        float volVal = thrusterVolumeCounter / 30f * collectibleData.SFXVolumeLevel;
+        player.vfx.SetThrusterVolume(volVal);
     }
+
     public override void FixedUpdate()
     {
         if (!player.corgiTurned)
@@ -53,11 +60,13 @@ public class PlayerAliveState : PlayerState
         }
         return true;
     }
+
     #region CollisionRunners
     void DidThePlayerTurnChecker()
     {
         //This code will return when we implement facing left.
     }
+
     private void HarmfulInteractionRunner()
     {
 #if UNITY_EDITOR
@@ -85,6 +94,7 @@ public class PlayerAliveState : PlayerState
             }
         }
     }
+
     private void BallRunner()
     {
         if (player.BallTouch)
@@ -113,6 +123,7 @@ public class PlayerAliveState : PlayerState
             player.vfx.BallEffectCanceler();
         }
     }
+
     void LowGravModeRunner()
     {
         if (player.LowGravMode)
@@ -142,6 +153,7 @@ public class PlayerAliveState : PlayerState
     {
         player.rb.AddRelativeForce(0, player.thrust, 0);
     }
+
     public void UseFuel()
     {
         UseFuel(false);
@@ -162,11 +174,11 @@ public class PlayerAliveState : PlayerState
             player.Fuel -= isBoosting ? 1.0f : 0.5f;
         }
     }
+
     bool BallCheck()
     {
         return player.hasPermaBall | player.hasTemporaryBall ? true : false;
     }
-
 
     void thrusterVolumeRunner()
     {
@@ -180,9 +192,6 @@ public class PlayerAliveState : PlayerState
             thrusterVolumeCounter--;
             if (thrusterVolumeCounter < 0f) { thrusterVolumeCounter = 0f; }
         }
-
-        float volVal = thrusterVolumeCounter / 30f * collectibleData.SFXVolumeLevel;
-        player.vfx.SetThrusterVolume(volVal);
     }
     #endregion
 
@@ -203,6 +212,7 @@ public class PlayerAliveState : PlayerState
             player.secondaryAnim.Play("ThrusterLayer." + animName, 0, normalizedTime);
         }
     }
+
     public void ActivateGravyBoat()
     {
         if (player.gbr1 == null) { return; }
@@ -216,6 +226,7 @@ public class PlayerAliveState : PlayerState
         player.gbr1.DeactivateBoat();
         player.gbr2.DeactivateBoat();
     }
+
     public void StartNewGrr()
     {
         player.grrSfx.clip = player.vfx.Grrs[Random.Range(0, player.vfx.Grrs.Length)];

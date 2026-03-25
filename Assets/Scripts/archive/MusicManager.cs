@@ -12,6 +12,7 @@ public class MusicManager : MonoBehaviour
     {
         audioSource.volume = collectibleData.MusicVolumeLevel;
         audioSource.clip = songThisLevel;
+        audioSource.velocityUpdateMode = AudioVelocityUpdateMode.Dynamic;
         audioSource.Play();
     }
 
