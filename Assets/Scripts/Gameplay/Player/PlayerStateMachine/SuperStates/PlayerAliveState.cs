@@ -123,7 +123,7 @@ public class PlayerAliveState : PlayerState
     #endregion
 
     #region CoreMechanicStuff
-    private void AdjustRotationAngle()  //Moving into input driver
+    private void AdjustRotationAngle()
     {
         if (player.input.GoCw & player.input.GoCcw) { return; }
         player.vfx.StopAllRotParticles();
@@ -135,8 +135,7 @@ public class PlayerAliveState : PlayerState
         {
             player.vfx.StartPlusRotParticles();
         }
-        player.GravityRoll = player.input.aimAngle;
-        player.rb.MoveRotation(Quaternion.Euler(Vector3.forward * (player.GravityRoll + player.KeyboardRollOffset)));
+        player.transform.rotation = Quaternion.Euler(Vector3.forward * player.input.aimAngle);//This line seems to be what's making the body rotation what it is.
     }
 
     public void thrust()

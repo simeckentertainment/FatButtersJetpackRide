@@ -20,14 +20,6 @@ public class InputDriver : MonoBehaviour
 {
     [Header("Global settings")]
     [SerializeField] public bool inputEnabled;
-
-    [System.NonSerialized] bool DoubleTapDetected;
-    [System.NonSerialized] int DoubleTapFrameThreshold = 12;
-    [System.NonSerialized] int DoubleTapFrameCounter = 0;
-    [System.NonSerialized] bool DTLInitialTap;
-    [System.NonSerialized] bool DTLInitialRelease;
-    [System.NonSerialized] bool DTLSecondTap;
-
     [Header("Mobile input variables")]
     [SerializeField] private float deviceRoll;
     public static bool HasGyroscope { get { return SystemInfo.supportsGyroscope; } }
@@ -42,13 +34,15 @@ public class InputDriver : MonoBehaviour
 
     [Header("Keyboard input variables")]
     //Keyboard variables
-    [SerializeField] private float KeyboardRollOffset;
-    [System.NonSerialized] private bool KBCWPressed;
-    [System.NonSerialized] private bool KBCWDoublePressed;
-    [System.NonSerialized] private bool KBCCWPressed;
-    [System.NonSerialized] private bool KBCCWDoublePressed;
+    [SerializeField] private bool KBCWPressed;
+    [SerializeField] private bool KBCCWPressed;
     [System.NonSerialized] private bool KBThrustPressed;
     [System.NonSerialized] private bool KBBoostPressed;
+    [SerializeField] private float KBMinAngle;
+    [SerializeField] private float KBMaxAngle;
+    [System.NonSerialized] private float KBCurrentAngle;
+    [SerializeField] private float KBAccelerationTimer;
+    [SerializeField] private float KBMaxSpeedFrame;
     [SerializeField] private InputAction KBthrustAction;
     [SerializeField] private InputAction KBCWAction;
     [SerializeField] private InputAction KBCCWAction;
@@ -123,8 +117,6 @@ public class InputDriver : MonoBehaviour
         //OSC control checkers
         SetOSControlValues();
 
-        //The listener for direction double taps on keyboard and gamepad.
-        DoubleTapDetected = DoubleTapListener();
 
         //Keyboard control checkers
         SetKBControlValues();
@@ -137,7 +129,7 @@ public class InputDriver : MonoBehaviour
         GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed;
 
         //Final Aim Angle
-        aimAngle = deviceRoll + OSRollOffset + KeyboardRollOffset + (GPAimVal * -45);
+        aimAngle = deviceRoll + OSRollOffset + KBCurrentAngle + (GPAimVal * -45);
         // Boost detection: Multi-touch (mobile) or Thrust + L Shift key (Pc/Gamepad)
 
         GoBoost = touchBoostTriggered || OSBoostPressed || KBBoostPressed || GPBoostPressed;
@@ -160,7 +152,8 @@ public class InputDriver : MonoBehaviour
         if (OSCWAction.ReadValue<float>() == 1.0f & Input.touchCount == 1) { return false; } //Don't run thrust if only on screen CW is touched
         if (OSCCWAction.ReadValue<float>() == 1.0f & Input.touchCount == 1) { return false; } //Don't run thrust if if only on screen CCW is touched
         //If any of the above are true, we're not considering ourselves touched.
-        //If we get here, then we're good to use thrust.
+        //My head will forever be in the gutter. ~Randy
+        //If we get here, then we're good to use thrust. :F
 
         //checking for multitouch AKA boost
         touchBoostTriggered = touchCount > 1;
@@ -188,31 +181,25 @@ public class InputDriver : MonoBehaviour
 
     private void SetKBControlValues()
     {
-
         KBThrustPressed = KBthrustAction.ReadValue<float>() == 1.0f;
         KBCWPressed = KBCWAction.ReadValue<float>() == 1.0f;
         KBCCWPressed = KBCCWAction.ReadValue<float>() == 1.0f;
         KBBoostPressed = KBBoostAction.ReadValue<float>() == 1.0f;
-        if (KBCWPressed & KBCCWPressed) {
-            KeyboardRollOffset = 0.0f;
-            return; }
-
-
-        if(!KBCWPressed || !KBCCWPressed)
+        if((!KBCWPressed && !KBCCWPressed) || (KBCWPressed && KBCCWPressed)) //Only accept a single directional input at a time, or wait patiently for input.
         {
-            KeyboardRollOffset = 0.0f;
+            KBCurrentAngle = 0.0f;
+            KBAccelerationTimer = 0;
+            return;
         }
         if (KBCWPressed)
         {
-            KeyboardRollOffset = -22.5f;
+            KBAccelerationTimer = Mathf.Clamp(++KBAccelerationTimer, 0.0f, KBMaxSpeedFrame); //Found a cool new way to do this! ~Randy
+            KBCurrentAngle = Mathf.Lerp(KBMinAngle * -1.0f, KBMaxAngle * -1.0f, KBAccelerationTimer / KBMaxSpeedFrame);
         }
         if (KBCCWPressed)
         {
-            KeyboardRollOffset = 22.5f;
-        }
-        if (DoubleTapDetected)
-        {
-            KeyboardRollOffset *= 2.0f;
+            KBAccelerationTimer = Mathf.Clamp(++KBAccelerationTimer, 0.0f, KBMaxSpeedFrame);
+            KBCurrentAngle = Mathf.Lerp(KBMinAngle, KBMaxAngle, KBAccelerationTimer / KBMaxSpeedFrame);
         }
     }
     #endregion
@@ -274,56 +261,7 @@ public class InputDriver : MonoBehaviour
 
 
 
-    bool DoubleTapListener()
-    {
-        //I was trying to avoid building this into the input driver but Unity doens't provide
-        //a native way to do Doubletap+press. So, here we go! ~Randy
-        if(KBCWPressed && KBCCWPressed) { return false; } //security measure against false presses.
-        if (!DTLInitialTap && !DTLInitialRelease && !DTLSecondTap) {
-            //Listen for initial press
-            DTLInitialTap = KBCWPressed || KBCCWPressed;
-            return false;
-         }
-        if(DTLInitialTap && !DTLInitialRelease && !DTLSecondTap)
-        {
-            //Listen for initial release.
-            DTLInitialRelease = !KBCWPressed && !KBCCWPressed;
-            return false;
-        }
-        if (DTLInitialTap && DTLInitialRelease && !DTLSecondTap)
-        {
-            //Start listening now for that crucial second tap.
-            DoubleTapFrameCounter++;
-            if ((DoubleTapFrameCounter < DoubleTapFrameThreshold) && (KBCWPressed || KBCCWPressed))
-            { //Nesting if statements... Not crazy about it but at least it's only 2 deep.
-                //If we get that second tap, we can initiate a run.
-                //To be clear, with this configuration, pressing CCW and then CW consitutes
-                //a run to the right, and I'm OK with that. ~Randy.
-                DTLSecondTap = true;
-                DoubleTapFrameCounter = 0;
-                return true;
-            }
-            if (DoubleTapFrameCounter >= DoubleTapFrameThreshold)
-            {
-                //If we don't get the second tap we need, we reset.
-                DTLInitialRelease = DTLInitialTap = false;
-                return false;
-            }
-        }
-        if(DTLInitialTap && DTLInitialRelease && DTLSecondTap)
-        {
-            //If we get that second tap, we're good to run.
-            DoubleTapDetected = true;
-
-            //As long as that button is held, we stay running. Otherwise, reset.
-            if(!KBCWPressed || !KBCCWPressed)
-            {
-                DTLInitialRelease = DTLInitialTap = DTLSecondTap = false;
-                return false;
-            }
-        }
-        return false; //I can't think of an edge case, but I'll keep this here just in case.
-    }
+    
 
 
 

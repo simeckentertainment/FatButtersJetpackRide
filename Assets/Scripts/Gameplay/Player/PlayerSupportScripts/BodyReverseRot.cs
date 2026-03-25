@@ -7,7 +7,7 @@ public class BodyReverseRot : MonoBehaviour
     [SerializeField] float aimAngleSensitivity;
     public AffectAxis affectAxis;
     [SerializeField] bool invert;
-    [SerializeField] float invertFloat;
+    [System.NonSerialized] float invertFloat;
     [SerializeField] bool dynamicSensitivity;
 
     private void FixedUpdate()
@@ -17,7 +17,7 @@ public class BodyReverseRot : MonoBehaviour
 
         if (dynamicSensitivity)
         {
-            aimAngleSensitivity = Helper.RemapArbitraryValues(0.0f, 45.0f, 1.0f, 1.55f, Mathf.Abs(input.aimAngle));
+            aimAngleSensitivity = Helper.RemapArbitraryValues(0.0f, 45.0f, 0.5f, 1.5f, Mathf.Abs(input.aimAngle));
         }
         
         if (affectAxis == AffectAxis.Z)
