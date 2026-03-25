@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShowPromptAction : StoryActionBase
+public class ShowPromptAction1 : StoryActionBase
 {
     [SerializeField] private string title = "Tutorial";
     [SerializeField] private string text = "Press thrust or tilt the phone to fly";

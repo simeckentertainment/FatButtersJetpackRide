@@ -1,18 +1,21 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelStorySequenceController : MonoBehaviour
 {
     [SerializeField] private List<StoryStep> steps = new List<StoryStep>();
-    [SerializeField] private int currentStepIndex = 0;
+    [SerializeField] private int _currentStepIndex = 0;
     [SerializeField] private Player player;
     [SerializeField] private UIManager uiManager;
 
-    private StoryStepContext context;
+    private StoryStepContext _context;
+    private bool _currentStepCompletionStarted;
+    private bool _currentStepTriggerFired;
 
     private void Awake()
     {
-        context = new StoryStepContext
+        _context = new StoryStepContext
         {
             Player = player,
             UIManager = uiManager,
@@ -22,55 +25,99 @@ public class LevelStorySequenceController : MonoBehaviour
 
     private void Start()
     {
-        currentStepIndex = 0;
+        _currentStepIndex = 0;
+        _currentStepTriggerFired = false;
+        _currentStepCompletionStarted = false;
     }
 
     public void NotifyTriggerFired(int stepIndex)
     {
-        if (stepIndex != currentStepIndex)
+        if (stepIndex != _currentStepIndex)
         {
-            Debug.Log("Trigger ignored (current step " + currentStepIndex + ", got " + stepIndex + ")");
+            Debug.Log("Trigger ignored (current step " + _currentStepIndex + ", got " + stepIndex + ")");
             return;
         }
 
-        if (currentStepIndex < 0 || currentStepIndex >= steps.Count)
+        if (_currentStepIndex < 0 || _currentStepIndex >= steps.Count)
         {
-            Debug.LogWarning("NotifyTriggerFired: no StoryStep at index " + currentStepIndex);
+            Debug.LogWarning("NotifyTriggerFired: no StoryStep at index " + _currentStepIndex);
             return;
         }
+
+        if (_currentStepTriggerFired) return;
 
         Debug.Log("Trigger accepted for step " + stepIndex);
+        _currentStepTriggerFired = true;
         RunCurrentStepActions();
         StartCompletionForCurrentStep();
     }
 
     private void RunCurrentStepActions()
     {
-        var step = steps[currentStepIndex];
+        var step = steps[_currentStepIndex];
         if (step.actions == null || step.actions.Count == 0)
             return;
 
         foreach (var action in step.actions)
         {
             if (action != null)
-                action.Execute(context);
+                action.Execute(_context);
         }
     }
 
 
     private void StartCompletionForCurrentStep()
-    {
-        var step = steps[currentStepIndex];
-
-        if (step.completionType == CompletionType.Instant)
         {
-            AdvanceStep();
+            if (_currentStepCompletionStarted) return;
+            if (_currentStepIndex < 0 || _currentStepIndex >= steps.Count) return;
+
+            var step = steps[_currentStepIndex];
+            _currentStepCompletionStarted = true;
+
+            switch (step.completionType)
+            {
+                case CompletionType.Instant:
+                    AdvanceStep();
+                    break;
+
+                case CompletionType.AfterTimer:
+                case CompletionType.AfterDialogueDuration:
+                    StartCoroutine(CompleteAfterTimer(step.completionTimerDuration));
+                    break;
+
+                // Step 8+ (signal/manual) can be added later
+                default:
+                    _currentStepCompletionStarted = false; // optional safety for unhandled types
+                    break;
+            }
         }
+
+    private void TryEnterCurrentStep()
+    {
+        if (_currentStepIndex <0 || _currentStepIndex >= steps.Count) return;
+        
+        var step = steps[_currentStepIndex];
+        if (step.runImmediately)
+        {
+            _currentStepTriggerFired = true;
+            RunCurrentStepActions();
+            StartCompletionForCurrentStep();
+        }
+    }
+
+    private IEnumerator CompleteAfterTimer(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        AdvanceStep();
     }
 
     private void AdvanceStep()
     {
-        currentStepIndex++;
-        Debug.Log("Advanced to step " + currentStepIndex);
+        _currentStepIndex++;
+        _currentStepCompletionStarted = false;
+        _currentStepTriggerFired = false;
+        Debug.Log("Advanced to step " + _currentStepIndex);
+
+        TryEnterCurrentStep();
     }
 }
