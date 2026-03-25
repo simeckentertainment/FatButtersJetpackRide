@@ -8,6 +8,18 @@ public class LevelStorySequenceController : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private UIManager uiManager;
 
+    private StoryStepContext context;
+
+    private void Awake()
+    {
+        context = new StoryStepContext
+        {
+            Player = player,
+            UIManager = uiManager,
+            Controller = this,
+        };
+    }
+
     private void Start()
     {
         currentStepIndex = 0;
@@ -15,13 +27,34 @@ public class LevelStorySequenceController : MonoBehaviour
 
     public void NotifyTriggerFired(int stepIndex)
     {
-        if (stepIndex == currentStepIndex)
-        {
-            Debug.Log("Trigger accepted for step " + stepIndex);
-        }
-        else
+        if (stepIndex != currentStepIndex)
         {
             Debug.Log("Trigger ignored (current step " + currentStepIndex + ", got " + stepIndex + ")");
+            return;
+        }
+
+        if (currentStepIndex < 0 || currentStepIndex >= steps.Count)
+        {
+            Debug.LogWarning("NotifyTriggerFired: no StoryStep at index " + currentStepIndex);
+            return;
+        }
+
+        Debug.Log("Trigger accepted for step " + stepIndex);
+        RunCurrentStepActions();
+    }
+
+    private void RunCurrentStepActions()
+    {
+        var step = steps[currentStepIndex];
+        if (step.actions == null || step.actions.Count == 0)
+            return;
+
+        foreach (var action in step.actions)
+        {
+            if (action != null)
+                action.Execute(context);
         }
     }
+
+
 }
