@@ -73,7 +73,7 @@ public class InfoModel : Model
     private IEnumerator ToggleInfoMessageVisibility(float duration)
     {
         ShowingInfo = true;
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSecondsRealtime(duration);
         ShowingInfo = false;
     }
 }
