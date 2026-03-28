@@ -79,6 +79,10 @@ public class Player : MonoBehaviour
     [SerializeField] public float mediumWalkSpeed;
     [SerializeField] public float fastWalkSpeed;
 
+    [SerializeField] public float SlowWalkMinAngle;
+    [SerializeField] public float MediumWalkMinAngle;
+    [SerializeField] public float FastWalkMinAngle;
+
     [Header("Collision bools")]
     public bool HarmfulTouch;
     public float HarmfulDamageAmount;
