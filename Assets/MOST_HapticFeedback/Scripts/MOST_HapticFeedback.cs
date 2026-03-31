@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Threading;
+using UnityEngine.InputSystem;
 
 namespace Solo.MOST_IN_ONE
 {
@@ -104,7 +105,8 @@ namespace Solo.MOST_IN_ONE
             RigidImpact,  // case 7 // IOS 13+ <<
             SoftImpact,   // case 8 // IOS 13+ <<
         }
-#if UNITY_ANDROID && !UNITY_EDITOR  // This function reverse iOS default haptics enum to android haptic patterns (Android only)
+
+        // This function reverse iOS default haptics enum to android haptic patterns (Android only)
         static void IOSDefaultHapticsToAndroidPatterns( 
             HapticTypes type, out long[] pattern, out int[] amplitudes)
         {
@@ -155,7 +157,6 @@ namespace Solo.MOST_IN_ONE
                     break;
             }
         }
-#endif
 
         static bool _initialized = false;
         static AndroidJavaObject _androidVibrator;
@@ -235,7 +236,14 @@ namespace Solo.MOST_IN_ONE
 #elif UNITY_ANDROID && !UNITY_EDITOR
     return RunAndroidAsync(pattern, token);  // this one is async Task and awaits
 #else
-            return Task.CompletedTask;               // no work on this platform
+            if (Gamepad.current != null)
+            {
+                return RunGamepadAsync(pattern, token);
+            }
+            else
+            {
+                return Task.CompletedTask;               // no work on this platform
+            }
 #endif
         }
 
@@ -260,6 +268,17 @@ namespace Solo.MOST_IN_ONE
             await Task.Delay(total, token);
         }
 
+        private static async Task RunGamepadAsync(CustomHapticPattern pattern, CancellationToken token)
+        {
+            int total = 0;
+            var p = new List<long>();
+            var a = new List<int>();
+            
+            foreach (var h in pattern.Android_HapticPattern) { p.Add(h.Delay); a.Add(0); p.Add(h.PulseTime); a.Add(h.PulseStrength); total += (int)h.Delay; }
+            GenerateGamepad(p.ToArray(), a.ToArray());
+
+            await Task.Delay(total, token);
+        }
 
         public static void Stop()
         {
@@ -277,6 +296,12 @@ namespace Solo.MOST_IN_ONE
             IOSDefaultHapticsToAndroidPatterns(type, out long[] pattern, out int[] amp);
             GenerateAndroid(pattern, amp);
 #endif
+            if (Gamepad.current != null)
+            {
+                // add controller support with legit methods
+                IOSDefaultHapticsToAndroidPatterns(type, out var pattern, out var amp);
+                GenerateGamepad(pattern, amp);
+            }
         }
 
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -345,6 +370,32 @@ namespace Solo.MOST_IN_ONE
         }
 #endif
 
+        private static void GenerateGamepad(long[] pattern, int[] amplitudes)
+        {
+            if (Gamepad.current == null) return;
+
+            try
+            {
+                var _ = RunGamepadVibrationAsync(pattern, amplitudes);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Failed to generate Gamepad haptic : {e.Message}");
+            }
+        }
+
+        private static async Task RunGamepadVibrationAsync(long[] pattern, int[] amplitudes)
+        {
+            for (int i = 0; i < pattern.Length; i++)
+            {
+                var amplitudePercent = amplitudes[i] / 255f;
+                Gamepad.current.SetMotorSpeeds(amplitudePercent, amplitudePercent);
+                await Task.Delay((int)pattern[i]);
+            }
+
+            Gamepad.current.SetMotorSpeeds(0, 0);
+        }
+
         public static bool IsSupported()
         {
 #if UNITY_IOS && !UNITY_EDITOR
@@ -352,7 +403,7 @@ namespace Solo.MOST_IN_ONE
 #elif UNITY_ANDROID && !UNITY_EDITOR
         return _androidVibrator != null && _androidVibrator.Call<bool>("hasVibrator");
 #else
-            return false;
+            return true;
 #endif
         }
 
