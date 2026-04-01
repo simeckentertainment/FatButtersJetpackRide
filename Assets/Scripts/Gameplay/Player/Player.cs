@@ -1,3 +1,4 @@
+using Solo.MOST_IN_ONE;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
@@ -243,6 +244,11 @@ public class Player : MonoBehaviour
     public void AddGroundCollider(Collider sourceObject, Collider other)
     {
         var tuple = GetCollisionId(sourceObject, other);
+
+        if (!TouchingGround)
+        {
+            MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.SoftImpact);
+        }
 
         if (!currentGroundColliders.Contains(tuple))
         {
