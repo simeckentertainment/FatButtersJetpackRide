@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     public PlayerHurtState playerHurtState { get; set; }
     public PlayerOHKState playerOHKState { get; set; }
     public PlayerThrustState playerThrustState { get; set; }
+    public PlayerJumpState playerJumpState {get; set;}
     public PlayerTummyDeathState playerTummyDeathState { get; set; }
     public PlayerWinState playerWinState {get; set;}
     [Header("Utility classes. Should be set in inspector.")]
@@ -199,6 +200,7 @@ public class Player : MonoBehaviour
         playerHurtState = new PlayerHurtState(this, stateMachine);
         playerOHKState = new PlayerOHKState(this, stateMachine);
         playerThrustState = new PlayerThrustState(this, stateMachine);
+        playerJumpState = new PlayerJumpState(this, stateMachine);
         playerTummyDeathState = new PlayerTummyDeathState(this, stateMachine);
         playerWinState = new PlayerWinState(this, stateMachine);
         stateMachine.Initialize(playerIdleState);
