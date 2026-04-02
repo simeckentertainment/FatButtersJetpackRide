@@ -38,7 +38,7 @@ public class PlayerWinState : PlayerLevelWinState
         if (FixRollTimer < FixRollTimerMax)
         {
             FixRollTimer++;
-            player.input.aimAngle = Mathf.Lerp(rollStartingValue, 0.0f, FixRollTimer / FixRollTimerMax);
+            player.input.SetAimAngleOverrideVal(Mathf.Lerp(rollStartingValue, 0.0f, FixRollTimer / FixRollTimerMax));
             player.KeyboardRollOffset = Mathf.Lerp(KeyboardOffsetStartingValue, 0.0f, FixRollTimer / FixRollTimerMax);
         }
         base.FixedUpdate();
