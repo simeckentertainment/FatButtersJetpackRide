@@ -11,11 +11,13 @@ public class PlayerJumpState : PlayerAliveState
     }
     public override void enter()
     {
+        PlayAnim("JumpPrep");
         base.enter();
     }
 
     public override void Update()
     {
+        Debug.Log(GetCurrentAnimName());
         base.Update();
     }
     public override void FixedUpdate()

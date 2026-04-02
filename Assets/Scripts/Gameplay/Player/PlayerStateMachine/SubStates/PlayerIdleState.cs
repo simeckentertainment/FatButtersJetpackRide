@@ -36,9 +36,9 @@ public class PlayerIdleState : PlayerAliveState
         }
 
         base.FixedUpdate();
-        if (player.input.GoThrust & player.JetpackActivationPossible)
+        if ((player.input.GoThrust || player.input.GPJumpPressed) && player.JetpackActivationPossible)
         {
-            player.stateMachine.changeState(player.playerThrustState);
+            player.stateMachine.changeState(player.playerJumpState);
         }
         if (GetNormalizedTime() >= 0.99f)
         {
