@@ -5,20 +5,19 @@ using UnityEngine;
 public class LevelStorySequenceController : MonoBehaviour
 {
     [SerializeField] private List<StoryStep> steps = new List<StoryStep>();
-    [SerializeField] private int _currentStepIndex = 0;
+    [SerializeField] private int currentStepIndex = 0;
     [SerializeField] private Player player;
     [SerializeField] private UIManager uiManager;
     [SerializeField] private StoryGameplayBridge gameplayBridge;
 
-    private StoryStepContext _context;
-    private bool _currentStepCompletionStarted;
-    private bool _currentStepTriggerFired;
-    private string _subscribedCompletionSignalId;
-
+    private StoryStepContext context;
+    private bool currentStepCompletionStarted;
+    private bool currentStepTriggerFired;
+    private string subscribedCompletionSignalId;
 
     private void Awake()
     {
-        _context = new StoryStepContext
+        context = new StoryStepContext
         {
             Player = player,
             UIManager = uiManager,
@@ -28,37 +27,37 @@ public class LevelStorySequenceController : MonoBehaviour
 
     private void Start()
     {
-        _currentStepIndex = 0;
-        _currentStepTriggerFired = false;
-        _currentStepCompletionStarted = false;
+        currentStepIndex = 0;
+        currentStepTriggerFired = false;
+        currentStepCompletionStarted = false;
     }
 
-    public void NotifyTriggerFired(int stepIndex)
+    public void TryFireTrigger(int stepIndex)
     {
-        if (stepIndex != _currentStepIndex)
+        if (stepIndex != currentStepIndex)
         {
-            Debug.Log("Trigger ignored (current step " + _currentStepIndex + ", got " + stepIndex + ")");
+            Debug.Log($"Trigger ignored (current step {currentStepIndex}, got {stepIndex})");
             return;
         }
 
-        if (_currentStepIndex < 0 || _currentStepIndex >= steps.Count)
+        if (currentStepIndex < 0 || currentStepIndex >= steps.Count)
         {
-            Debug.LogWarning("NotifyTriggerFired: no StoryStep at index " + _currentStepIndex);
+            Debug.LogWarning("TryFireTrigger: no StoryStep at index " + currentStepIndex);
             return;
         }
 
-        if (_currentStepTriggerFired) return;
+        if (currentStepTriggerFired) return;
 
         Debug.Log("Trigger accepted for step " + stepIndex);
-        _currentStepTriggerFired = true;
+        currentStepTriggerFired = true;
         RunCurrentStepActions();
         StartCompletionForCurrentStep();
     }
 
     private void RunCurrentStepActions()
     {
-        if (_currentStepIndex < 0 || _currentStepIndex >= steps.Count) return;
-        var step = steps[_currentStepIndex];
+        if (currentStepIndex < 0 || currentStepIndex >= steps.Count) return;
+        var step = steps[currentStepIndex];
 
         if (gameplayBridge != null)
             gameplayBridge.ApplyMode(step.requestedMode);
@@ -68,7 +67,7 @@ public class LevelStorySequenceController : MonoBehaviour
             foreach (var action in step.actions)
             {
                 if (action != null)
-                    action.Execute(_context);
+                    action.Execute(context);
             }
         }
 
@@ -77,50 +76,48 @@ public class LevelStorySequenceController : MonoBehaviour
 
 
     private void StartCompletionForCurrentStep()
-    {
-    
-            if (_currentStepCompletionStarted) return;
-            if (_currentStepIndex < 0 || _currentStepIndex >= steps.Count) return;
+    {    
+        if (currentStepCompletionStarted) return;
+        if (currentStepIndex < 0 || currentStepIndex >= steps.Count) return;
 
-            var step = steps[_currentStepIndex];
-            _currentStepCompletionStarted = true;
+        var step = steps[currentStepIndex];
+        currentStepCompletionStarted = true;
 
-            switch (step.completionType)
-            {
-                case CompletionType.Instant:
-                    AdvanceStep();
-                    break;
+        switch (step.completionType)
+        {
+            case CompletionType.Instant:
+                AdvanceStep();
+                break;
 
-                case CompletionType.AfterTimer:
-                case CompletionType.AfterDialogueDuration:
-                    StartCoroutine(CompleteAfterTimer(step.completionTimerDuration));
-                    break;
-                case CompletionType.AfterGameplaySignal:
-                    _subscribedCompletionSignalId = step.completionSignalId;
-                    GameplaySignal.Subscribe(_subscribedCompletionSignalId, OnCompletionSignalRaised);
-                    break;
-            }
-    
+            case CompletionType.AfterTimer:
+            case CompletionType.AfterDialogueDuration:
+                StartCoroutine(CompleteAfterTimer(step.completionTimerDuration));
+                break;
+            case CompletionType.AfterGameplaySignal:
+                subscribedCompletionSignalId = step.completionSignalId;
+                GameplaySignal.Subscribe(subscribedCompletionSignalId, OnCompletionSignalRaised);
+                break;
+        }    
     }
 
     private void OnCompletionSignalRaised()
     {
-        if (!string.IsNullOrEmpty(_subscribedCompletionSignalId))
+        if (!string.IsNullOrEmpty(subscribedCompletionSignalId))
         {
-            GameplaySignal.Unsubscribe(_subscribedCompletionSignalId, OnCompletionSignalRaised);
-            _subscribedCompletionSignalId = null;
+            GameplaySignal.Unsubscribe(subscribedCompletionSignalId, OnCompletionSignalRaised);
+            subscribedCompletionSignalId = null;
         }
         AdvanceStep();
     }
 
     private void TryEnterCurrentStep()
     {
-        if (_currentStepIndex <0 || _currentStepIndex >= steps.Count) return;
+        if (currentStepIndex <0 || currentStepIndex >= steps.Count) return;
         
-        var step = steps[_currentStepIndex];
+        var step = steps[currentStepIndex];
         if (step.runImmediately)
         {
-            _currentStepTriggerFired = true;
+            currentStepTriggerFired = true;
             RunCurrentStepActions();
             StartCompletionForCurrentStep();
         }
@@ -134,10 +131,10 @@ public class LevelStorySequenceController : MonoBehaviour
 
     private void AdvanceStep()
     {
-        _currentStepIndex++;
-        _currentStepCompletionStarted = false;
-        _currentStepTriggerFired = false;
-        Debug.Log("Advanced to step " + _currentStepIndex);
+        currentStepIndex++;
+        currentStepCompletionStarted = false;
+        currentStepTriggerFired = false;
+        Debug.Log("Advanced to step " + currentStepIndex);
 
         TryEnterCurrentStep();
     }
