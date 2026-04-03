@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ScreamBubble : MonoBehaviour
+public class ScreamBubble : HarmfulObject
 {
     [SerializeField] public ScreamBubbleStateMachine stateMachine;
     [SerializeField] public Rigidbody rb;
@@ -25,8 +25,7 @@ public class ScreamBubble : MonoBehaviour
     public SBChasePlayerState sBChasePlayerState { get; private set;}
     public SBPopState sBPopState { get; private set;}
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         PlayerInSightDistance = false;
         sBIdleState = new SBIdleState(this, stateMachine);
@@ -35,10 +34,11 @@ public class ScreamBubble : MonoBehaviour
         sBPopState = new SBPopState(this,stateMachine);
         stateMachine.Initialize(sBIdleState);
         targetAcquired = false;
+
+        bubbleAudio.velocityUpdateMode = AudioVelocityUpdateMode.Dynamic;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         bubbleAudio.volume = SaveManager.Instance.collectibleData.SFXVolumeLevel;
         if (popped)
@@ -47,28 +47,10 @@ public class ScreamBubble : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    protected override void OnPlayerTouched(Player player)
     {
-
-        switch(other.gameObject.tag)
-        {
-            case "Player":
-                if (!popped)
-                {
-                    popped = true;
-                    var player = other.gameObject.GetComponent<Player>();
-                    player.AddEnemiesDefeated();
-                }
-                break;
-            case "OneHitKill":
-                // TODO Drake: When popped by another hazard in the level, it is not tracked
-                // Not important for demo, but we should look into that
-                popped = true;
-                break;
-            default:
-                hitWall = true;
-            break;
-        }
+        base.OnPlayerTouched(player);
+        popped = true;
     }
 
     public void PlayAudio(AudioClip clip)

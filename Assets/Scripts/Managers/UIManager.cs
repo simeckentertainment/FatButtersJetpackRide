@@ -43,8 +43,8 @@ public class UIManager : MonoBehaviour
         CurrentState = GameplayUIState.Fail;
     }
 
-    public void ShowInfoText(string text, EditorLocalTransform arrowTransform, bool useArrowTransform)
+    public void ShowInfoText(string text, EditorLocalTransform arrowTransform = default, bool showArrow = false)
     {
-        infoMenu.ShowMessage(text, arrowTransform, useArrowTransform);
+        infoMenu.ShowMessage(text, arrowTransform, showArrow);
     }
 }

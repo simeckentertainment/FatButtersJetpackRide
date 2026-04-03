@@ -9,6 +9,7 @@ public class PlayerCollisionReporter : MonoBehaviour
     [Header("Sanity Checkers")]
     [SerializeField] GameObject CollisionObject;
     [SerializeField] GameObject TriggerObject;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,82 +18,35 @@ public class PlayerCollisionReporter : MonoBehaviour
         didICollideSomethingThisTime = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnCollisionEnter(Collision other)
     {
-        switch (other.gameObject.tag)
+        if (other.gameObject.tag == "Untagged")
         {
-            case "Untagged":
-                player.GroundTouch = true;
-                player.OtherObjectTouch = true;
-                SetColliderObject(other);
-                break;
-            case "Player":
-                ClearColliderObject();
-                break;
-            case "PlayerDamageTrigger":
-                ClearColliderObject();
-                break;
-            case "EnemySightBox":
-                ClearColliderObject();
-                break;
-            default:
-                player.OtherObjectTouch = true;
-                SetColliderObject(other);
-                break;
+            player.AddGroundCollider(thisCollider, other.collider);
+            SetColliderObject(other);
         }
-
     }
+
     private void OnCollisionExit(Collision other)
     {
-        switch (other.gameObject.tag)
+        if (other.gameObject.tag == "Untagged")
         {
-            case "Untagged":
-                player.GroundTouch = false;
-                player.OtherObjectTouch = false;
-                break;
-            case "PlayerDamageTrigger":
-                break;
-            case "Player":
-                break;
-            case "EnemySightBox":
-                break;
-            default:
-                player.OtherObjectTouch = false;
-                break;
+            player.RemoveGroundCollider(thisCollider, other.collider);
+            ClearColliderObject();
         }
-        ClearColliderObject();
     }
+
     private void OnTriggerEnter(Collider other){
         switch (other.gameObject.tag)
         {
-            case "Untagged":
-                player.GroundTouch = true;
-                player.OtherObjectTouch = true;
-                SetTriggerObject(other);
-                break;
             case "EnemyWeakspot":
-                SetTriggerObject(other);
                 break;
             case "Water":
-                SetTriggerObject(other);
-                break;
-            case "Harmful":
-                SetTriggerObject(other);
-                player.HarmfulTouch = true;
-                player.HarmfulDamageAmount = other.GetComponent<DamagePlayer>().damageAmount;
-                player.HarmfulTouchObjectPosition = other.transform.position;
                 break;
             case "OneHitKill":
-                SetTriggerObject(other);
                 player.OHKTouch = true;
                 break;
             case "Finish":
-                SetTriggerObject(other);
                 player.FinishTouch = true;
                 break;
             case "LowGravArea":
@@ -105,29 +59,16 @@ public class PlayerCollisionReporter : MonoBehaviour
                     player.CollidersInJetpackKillZone.Add(thisCollider);
                 }
                 break;
-            case "Player":
-                ClearTriggerObject();
-                break;
-            case "PlayerDamageTrigger":
-                ClearTriggerObject();
-                break;
-            case "EnemySightBox":
-                ClearTriggerObject();
-                break;
             default:
-                player.OtherObjectTouch = true;
-                SetTriggerObject(other);
                 break;
         }
+        SetTriggerObject(other);
     }
+
     private void OnTriggerExit(Collider other)
     {
         switch (other.gameObject.tag)
         {
-            case "Untagged":
-                player.GroundTouch = false;
-                player.OtherObjectTouch = false;
-                break;
             case "Fuel":
                 player.FuelTouch = false;
                 break;
@@ -137,9 +78,6 @@ public class PlayerCollisionReporter : MonoBehaviour
                 player.BallTouch = false;
                 break;
             case "Water":
-                break;
-            case "Harmful":
-                player.HarmfulTouch = false;
                 break;
             case "OneHitKill":
                 player.OHKTouch = false;
@@ -156,26 +94,10 @@ public class PlayerCollisionReporter : MonoBehaviour
                     player.CollidersInJetpackKillZone.Remove(thisCollider);
                 }
                 break;
-            case "Player":
-                break;
-            case "PlayerDamageTrigger":
-                break;
-            case "EnemySightBox":
-                break;
             default:
-                player.OtherObjectTouch = false;
                 break;
         }
         ClearTriggerObject();
-    }
-    void OnParticleCollision(GameObject other)
-    {
-        if (other.tag == "Harmful")
-        {
-            player.HarmfulTouch = true;
-            player.HarmfulDamageAmount = other.GetComponent<DamagePlayer>().damageAmount;
-            player.HarmfulTouchObjectPosition = other.transform.position;
-        }
     }
 
     void SetColliderObject(Collision other)
@@ -183,16 +105,19 @@ public class PlayerCollisionReporter : MonoBehaviour
         didICollideSomethingThisTime = true;
         CollisionObject = other.gameObject;
     }
+
     void ClearColliderObject()
     {
         didICollideSomethingThisTime = false;
         CollisionObject = null;
     }
+
     void SetTriggerObject(Collider other)
     {
         didITriggerSomethingThisTime = true;
         TriggerObject = other.gameObject;
     }
+
     void ClearTriggerObject()
     {
         didITriggerSomethingThisTime = false;

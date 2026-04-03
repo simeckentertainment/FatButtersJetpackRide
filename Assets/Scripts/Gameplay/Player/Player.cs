@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using UnityEngine;
@@ -5,6 +6,20 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    private static Player _instance;
+    public static Player Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindFirstObjectByType<Player>();
+            }
+
+            return _instance;
+        }
+    }
+
     public PlayerStateMachine stateMachine;
     public PlayerIdleState playerIdleState { get; set; }
     public PlayerWalkState playerWalkState{get;set;}
@@ -47,6 +62,9 @@ public class Player : MonoBehaviour
     public List<Collider> CollidersInJetpackKillZone;
     [System.NonSerialized] public int thrusterRechargeCounter = 0;
     [System.NonSerialized] public float animationPercentage;
+    [SerializeField] private float thrusterRechargeDelay;
+    [SerializeField] private float thrusterRechargeRate;
+
     [Header("Rotation stuff")]
     [System.NonSerialized] public float GravityRoll;
     [SerializeField] public float KeyboardRollOffset;
@@ -61,8 +79,11 @@ public class Player : MonoBehaviour
     [SerializeField] public float mediumWalkSpeed;
     [SerializeField] public float fastWalkSpeed;
 
+    [SerializeField] public float SlowWalkMinAngle;
+    [SerializeField] public float MediumWalkMinAngle;
+    [SerializeField] public float FastWalkMinAngle;
+
     [Header("Collision bools")]
-    public bool GroundTouch;
     public bool HarmfulTouch;
     public float HarmfulDamageAmount;
     public Vector3 HarmfulTouchObjectPosition;
@@ -75,10 +96,13 @@ public class Player : MonoBehaviour
     public bool hasPermaBall;
     public int ballTimerMax = 600;
     public bool killThrustTriggerTouch;
-    public bool OtherObjectTouch;
     public enum PlayerDirection{Left,Right};
     public PlayerDirection playerDirection;
     public bool LowGravMode;
+
+    public bool TouchingGround => currentGroundColliders.Count > 0;
+    public bool IsGrounded => GroundNear || TouchingGround;
+    public bool GroundNear { get; set; }
 
     public int BonesCollected { get; private set; }
     public int FoodsCollected { get; private set; }
@@ -91,6 +115,10 @@ public class Player : MonoBehaviour
     public UnityEvent OnJetpackStatusUpdated { get; set; } = new UnityEvent();
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
+
+    private HashSet<(int, int)> currentGroundColliders = new HashSet<(int, int)>();
+
+    private float remainingDisabledFootCollisionDuration = 0;
 
     private bool _jetpackActivationPossible;
     public bool JetpackActivationPossible
@@ -113,7 +141,7 @@ public class Player : MonoBehaviour
     [SerializeField]int fallDelayThreshold;
     public bool IsFalling()
     {
-        if (!GroundTouch && !OtherObjectTouch)
+        if (!IsGrounded)
         {
             fallDelayCounter++;
         }
@@ -174,13 +202,15 @@ public class Player : MonoBehaviour
         playerTummyDeathState = new PlayerTummyDeathState(this, stateMachine);
         playerWinState = new PlayerWinState(this, stateMachine);
         stateMachine.Initialize(playerIdleState);
+
+        _instance = this;
     }
     void FixedUpdate()
     {
         thrusterRechargeCounter++;
-        if (thrusterRechargeCounter > 120)
+        if (thrusterRechargeCounter > thrusterRechargeDelay)
         {
-            Fuel += 1;
+            Fuel += thrusterRechargeRate;
         }
     }
 
@@ -188,7 +218,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Shelf"))
         {
-            Debug.Log("Ground touch true");
+            Debug.Log("Shelf touch true");
 
             transform.SetParent(collision.transform, true);
         }
@@ -199,10 +229,43 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Shelf"))
         {
-            Debug.Log("Ground touch false");
+            Debug.Log("Shelf touch false");
 
             transform.SetParent(null, true);
         }
+    }
+
+    private void OnDestroy()
+    {
+        _instance = null;
+    }
+
+    public void AddGroundCollider(Collider sourceObject, Collider other)
+    {
+        var tuple = GetCollisionId(sourceObject, other);
+
+        if (!currentGroundColliders.Contains(tuple))
+        {
+            currentGroundColliders.Add(tuple);
+        }
+    }
+
+    public void RemoveGroundCollider(Collider sourceObject, Collider other)
+    {
+        var tuple = GetCollisionId(sourceObject, other);
+
+        if (currentGroundColliders.Contains(tuple))
+        {
+            currentGroundColliders.Remove(tuple);
+        }
+    }
+
+    private (int, int) GetCollisionId(Collider sourceObject, Collider other)
+    {
+        var sourceId = sourceObject.GetInstanceID();
+        var otherId = other.GetInstanceID();
+
+        return (sourceId, otherId);
     }
 
     public void PickUpBones(int count = 1)

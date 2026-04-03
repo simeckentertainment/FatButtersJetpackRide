@@ -34,7 +34,7 @@ public class FuelGaugeViewModel : ImageViewModel<GameplayUIModel>
     {
         if (Model.FuelPercent < 0.25f)
         {
-            Image.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, colorPingPongLength)); // color PingPong
+            Image.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.unscaledTime, colorPingPongLength)); // color PingPong
         }
     }
 }

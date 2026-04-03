@@ -61,7 +61,7 @@ public class CyborgBunny : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "PlayerDamageTrigger")
+        if (other.gameObject.tag == "Player")
         {
             defeated = true;
         }
