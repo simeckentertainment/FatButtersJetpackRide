@@ -8,7 +8,7 @@ public abstract class StoryTriggerBase : MonoBehaviour
     protected void NotifyController()
     {
         if (controller != null)
-            controller.NotifyTriggerFired(stepIndex);
+            controller.TryFireTrigger(stepIndex);
     }
 
     protected virtual void OnValidate()
