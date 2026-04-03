@@ -5,20 +5,6 @@ public class InfoModel : Model
 {
     [SerializeField] private float messageDuration = 3;
 
-    private string _infoTitle;
-    public string InfoTitle 
-    {
-        get
-        {
-            return _infoTitle;
-        }
-        set
-        {
-            _infoTitle = value;
-            Refresh();
-        }
-    }
-
     private string _infoText;
     public string InfoText
     {
@@ -43,6 +29,20 @@ public class InfoModel : Model
         set
         {
             _showingInfo = value;
+            Refresh();
+        }
+    }
+
+    private bool _showArrow;
+    public bool ShowArrow
+    {
+        get
+        {
+            return _showArrow;
+        }
+        set
+        {
+            _showArrow = value;
             Refresh();
         }
     }
@@ -72,13 +72,12 @@ public class InfoModel : Model
             Refresh();
         }
     }
-
-    public void ShowMessage(string text, EditorLocalTransform arrowTransform, bool useArrowTransform)
+    
+    public void ShowMessage(string text, EditorLocalTransform arrowTransform = default, bool showArrow = false)
     {
-        _infoTitle = string.Empty;
         _infoText = text;
         _arrowTransform = arrowTransform;
-        _useArrowTransform = useArrowTransform;
+        _showArrow = showArrow;
 
         Refresh();
         StartCoroutine(ToggleInfoMessageVisibility(messageDuration));

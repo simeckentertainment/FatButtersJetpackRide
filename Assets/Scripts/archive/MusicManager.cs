@@ -12,11 +12,12 @@ public class MusicManager : MonoBehaviour
     {
         audioSource.volume = collectibleData.MusicVolumeLevel;
         audioSource.clip = songThisLevel;
+        audioSource.velocityUpdateMode = AudioVelocityUpdateMode.Dynamic;
         audioSource.Play();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         audioSource.volume = collectibleData.MusicVolumeLevel;
     }

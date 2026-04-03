@@ -10,6 +10,7 @@ public class PlayerAliveState : PlayerState
     {
 
     }
+
     int ballTimer;
     public override void enter()
     {
@@ -19,15 +20,22 @@ public class PlayerAliveState : PlayerState
         player.vfx.StartRocketSounds();
         base.enter();
     }
+
     public override void Update()
     {
         base.Update();
+
+        // Set volume in Update rather than FixedUpdate so it can change while the game is paused
+        float volVal = thrusterVolumeCounter / 30f * collectibleData.SFXVolumeLevel;
+        player.vfx.SetThrusterVolume(volVal);
     }
+
     public override void FixedUpdate()
     {
         if (!player.corgiTurned)
         {
-            DidThePlayerTurnChecker();
+            //This code will return when we implement facing left.
+            //DidThePlayerTurnChecker();
         }
         player.JetpackActivationPossible = CanActivateJetpack();
         //These are the collision runners.
@@ -52,25 +60,13 @@ public class PlayerAliveState : PlayerState
         }
         return true;
     }
+
     #region CollisionRunners
     void DidThePlayerTurnChecker()
     {
-        if (player.input.aimAngle != 0.0f)
-        {
-            player.corgiTurned = true;
-            return;
-        }
-        if (player.input.GoCcw)
-        {
-            player.corgiTurned = true;
-            return;
-        }
-        if (player.input.GoCw)
-        {
-            player.corgiTurned = true;
-            return;
-        }
+        //This code will return when we implement facing left.
     }
+
     private void HarmfulInteractionRunner()
     {
 #if UNITY_EDITOR
@@ -98,6 +94,7 @@ public class PlayerAliveState : PlayerState
             }
         }
     }
+
     private void BallRunner()
     {
         if (player.BallTouch)
@@ -126,6 +123,7 @@ public class PlayerAliveState : PlayerState
             player.vfx.BallEffectCanceler();
         }
     }
+
     void LowGravModeRunner()
     {
         if (player.LowGravMode)
@@ -136,28 +134,26 @@ public class PlayerAliveState : PlayerState
     #endregion
 
     #region CoreMechanicStuff
-    private void AdjustRotationAngle()  //Moving into input driver
+    private void AdjustRotationAngle()
     {
         if (player.input.GoCw & player.input.GoCcw) { return; }
         player.vfx.StopAllRotParticles();
         if (player.input.GoCcw)
         {
-            player.KeyboardRollOffset += 0.25f * player.KeyboardSensitivity;
             player.vfx.StartMinusRotParticles();
         }
         if (player.input.GoCw)
         {
-            player.KeyboardRollOffset -= 0.25f * player.KeyboardSensitivity;
             player.vfx.StartPlusRotParticles();
         }
-        player.GravityRoll = player.input.aimAngle;
-        player.rb.MoveRotation(Quaternion.Euler(Vector3.forward * (player.GravityRoll + player.KeyboardRollOffset)));
+        player.transform.rotation = Quaternion.Euler(Vector3.forward * player.input.aimAngle);//This line seems to be what's making the body rotation what it is.
     }
 
     public void thrust()
     {
         player.rb.AddRelativeForce(0, player.thrust, 0);
     }
+
     public void UseFuel()
     {
         UseFuel(false);
@@ -178,11 +174,11 @@ public class PlayerAliveState : PlayerState
             player.Fuel -= isBoosting ? 1.0f : 0.5f;
         }
     }
+
     bool BallCheck()
     {
         return player.hasPermaBall | player.hasTemporaryBall ? true : false;
     }
-
 
     void thrusterVolumeRunner()
     {
@@ -196,9 +192,6 @@ public class PlayerAliveState : PlayerState
             thrusterVolumeCounter--;
             if (thrusterVolumeCounter < 0f) { thrusterVolumeCounter = 0f; }
         }
-
-        float volVal = thrusterVolumeCounter / 30f * collectibleData.SFXVolumeLevel;
-        player.vfx.SetThrusterVolume(volVal);
     }
     #endregion
 
@@ -219,6 +212,7 @@ public class PlayerAliveState : PlayerState
             player.secondaryAnim.Play("ThrusterLayer." + animName, 0, normalizedTime);
         }
     }
+
     public void ActivateGravyBoat()
     {
         if (player.gbr1 == null) { return; }
@@ -232,6 +226,7 @@ public class PlayerAliveState : PlayerState
         player.gbr1.DeactivateBoat();
         player.gbr2.DeactivateBoat();
     }
+
     public void StartNewGrr()
     {
         player.grrSfx.clip = player.vfx.Grrs[Random.Range(0, player.vfx.Grrs.Length)];

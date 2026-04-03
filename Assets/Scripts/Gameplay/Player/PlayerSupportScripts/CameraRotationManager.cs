@@ -33,7 +33,7 @@ public class CameraRotationManager : MonoBehaviour
     void Update()
     {
         //We're manually taking over camera rotations because letting Cinemachine do it was leading to unpredictable results.
-        if(!runningWobble && (player.OtherObjectTouch || player.GroundTouch))
+        if(!runningWobble && (player.IsGrounded))
         {
             InitiateWobble();
         }
