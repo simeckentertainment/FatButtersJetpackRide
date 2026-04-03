@@ -9,7 +9,7 @@ public class TimerTrigger : StoryTriggerBase
     private void OnEnable()
     {
         if(startOnEnable)
-            StartCoroutine(RunTimer());
+            StartTimer();
     }
 
     public void StartTimer()
@@ -17,7 +17,8 @@ public class TimerTrigger : StoryTriggerBase
         StartCoroutine(RunTimer());
     }
 
-    private IEnumerator RunTimer(){
+    private IEnumerator RunTimer()
+    {
         yield return new WaitForSeconds(delaySeconds);
         NotifyController();
     }

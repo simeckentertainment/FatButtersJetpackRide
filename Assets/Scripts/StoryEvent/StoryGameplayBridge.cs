@@ -6,21 +6,14 @@ public class StoryGameplayBridge : MonoBehaviour
 
     public void ApplyMode(StoryMode mode)
     {
-        if(player?.input != null) return;
-        switch(mode)
+        if (player?.input == null) return;
+        if (mode == StoryMode.Cutscene || mode == StoryMode.PromptMode)
         {
-            case StoryMode.Gameplay:
-            case StoryMode.GuidedGameplay:
-            case StoryMode.CorgiSense:
-                player.input.EnableInput();
-                break;
-            case StoryMode.Cutscene:
-            case StoryMode.PromptMode:
-                player.input.DisableInput();
-                break;
-            default:
-                player.input.EnableInput();
-                break;
+            player.input.DisableInput();
+        }
+        else
+        {
+            player.input.EnableInput();
         }
     }
 }
