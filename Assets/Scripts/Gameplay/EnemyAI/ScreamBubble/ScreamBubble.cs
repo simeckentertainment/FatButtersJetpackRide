@@ -34,6 +34,8 @@ public class ScreamBubble : HarmfulObject
         sBPopState = new SBPopState(this,stateMachine);
         stateMachine.Initialize(sBIdleState);
         targetAcquired = false;
+
+        bubbleAudio.velocityUpdateMode = AudioVelocityUpdateMode.Dynamic;
     }
 
     private void Update()
