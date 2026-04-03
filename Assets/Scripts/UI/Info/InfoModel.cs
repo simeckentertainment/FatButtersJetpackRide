@@ -61,12 +61,26 @@ public class InfoModel : Model
         }
     }
 
-    public void ShowMessage(string title, string text, EditorLocalTransform arrowTransform)
+    private bool _useArrowTransform;
+
+    public bool UseArrowTransform
     {
-        _infoTitle = title;
+        get => _useArrowTransform;
+        set
+        {
+            _useArrowTransform = value;
+            Refresh();
+        }
+    }
+
+    public void ShowMessage(string text, EditorLocalTransform arrowTransform, bool useArrowTransform)
+    {
+        _infoTitle = string.Empty;
         _infoText = text;
         _arrowTransform = arrowTransform;
+        _useArrowTransform = useArrowTransform;
 
+        Refresh();
         StartCoroutine(ToggleInfoMessageVisibility(messageDuration));
     }
 

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class FlashingArrowImageViewModel : ImageViewModel<InfoModel>
 {
@@ -7,6 +7,13 @@ public class FlashingArrowImageViewModel : ImageViewModel<InfoModel>
     protected override void OnModelChanged()
     {
         base.OnModelChanged();
+        if (!Model.UseArrowTransform)
+        {
+            Image.enabled = false;
+            return;
+        }
+
+        Image.enabled = true;
         this.transform.UpdateFromEditorLocalTransform(Model.ArrowTransform);
     }
 
