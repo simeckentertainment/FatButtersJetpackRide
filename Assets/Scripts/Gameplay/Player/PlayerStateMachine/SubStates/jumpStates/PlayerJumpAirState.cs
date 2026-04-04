@@ -22,12 +22,17 @@ public class PlayerJumpAirState : PlayerJumpCommonState
             player.crm.EnableWobble();
             player.stateMachine.changeState(player.playerJumpLandState);
         }
+        base.Update();
 
-        if (player.input.GoThrust)
+        if (!player.JetpackActivationPossible)
+        {
+            return;
+        }
+        if (player.input.GoThrust || player.input.GoJump) //Double jumping is just the thruster.
         {
             player.stateMachine.changeState(player.playerThrustState);
         }
-        base.Update();
+
     }
     public override void FixedUpdate()
     {

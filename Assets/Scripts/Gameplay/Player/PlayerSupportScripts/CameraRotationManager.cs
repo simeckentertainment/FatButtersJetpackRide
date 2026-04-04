@@ -24,8 +24,6 @@ public class CameraRotationManager : MonoBehaviour
 #else
         deviceType = DeviceType.Stationary;
 #endif
-
-
         float effectiveDrag = player.rb.linearDamping / (1.0f + player.rb.linearDamping * Time.fixedDeltaTime);//We're calculating all wobble intensities based on terminal velocity. It's more consistent that way.
         PlayerMaxSpeed = (player.thrust - player.rb.mass * Mathf.Abs(Physics.gravity.y)) / (player.rb.mass * effectiveDrag);
     }
@@ -38,12 +36,16 @@ public class CameraRotationManager : MonoBehaviour
         {
             InitiateWobble();
         }
-        if(wobbleEnabled){
+        if (wobbleEnabled)
+        {
             camAngleOffset = runningWobble ? GetWobbleOffset() : 0.0f;
         }
-        virtualCam.localRotation = deviceType == DeviceType.HandheldGyro ?
+        
+
+
+        virtualCam.rotation = deviceType == DeviceType.HandheldGyro ?
            Quaternion.Euler(0.0f, 0.0f, player.input.aimAngle * 2 + camAngleOffset) :
-           virtualCam.localRotation = Quaternion.Euler(0.0f, 0.0f, camAngleOffset);
+           Quaternion.Euler(0.0f, 0.0f, camAngleOffset);
     }
 
     void InitiateWobble()

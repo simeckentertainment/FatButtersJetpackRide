@@ -12,7 +12,7 @@ public class PlayerThrustState : PlayerAliveState
     int stateAge;
     public override void enter()
     {
-        if (!player.input.GoThrust | !player.JetpackActivationPossible)
+        if (!player.input.GoThrust && !player.input.GoJump)
         {
             player.stateMachine.changeState(player.playerFallState);
         }
@@ -54,7 +54,7 @@ public class PlayerThrustState : PlayerAliveState
         
         if (stateAge == 3)
         {
-            if (player.input.GoThrust)
+            if (player.input.GoThrust || player.input.GoJump)
             {
                 player.vfx.StartPrimaryThrusters();
                 thrust();
@@ -63,14 +63,14 @@ public class PlayerThrustState : PlayerAliveState
         }
         if (stateAge > 3)
         {
-            if (player.input.GoThrust)
+            if (player.input.GoThrust || player.input.GoJump)
             {
                 thrust();
                 UseFuel(isBoosting);
             }
         }
 
-        if (!player.input.GoThrust || !player.JetpackActivationPossible || player.Fuel < 0.0f)
+        if ((!player.input.GoThrust && !player.input.GoJump) || player.Fuel < 0.0f)
         {
             player.stateMachine.changeState(player.playerFallState);
         }

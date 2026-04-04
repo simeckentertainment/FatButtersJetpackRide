@@ -33,9 +33,11 @@ public class PlayerFallState : PlayerAliveState
             PlayAnim("Land");
             player.stateMachine.changeState(player.playerIdleState);
         }
-        if(player.input.GoThrust & player.JetpackActivationPossible){
+        if ((player.input.GoThrust || player.input.GoJump) & player.JetpackActivationPossible)
+        {
             player.stateMachine.changeState(player.playerThrustState);
         }
+        
         if (stateAge == 120)
         {
             PlayAnim("fallIdle");

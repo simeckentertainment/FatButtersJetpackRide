@@ -13,6 +13,7 @@ public class PlayerJumpStartState : PlayerJumpCommonState
     public override void enter()
     {
         PlayAnim("JumpStart");
+        player.rb.AddExplosionForce(750.0f, player.transform.position + new Vector3(-1.0f, -1.0f, 0.0f), 2.0f);
         base.enter();
     }
 
@@ -22,7 +23,7 @@ public class PlayerJumpStartState : PlayerJumpCommonState
         {
             player.stateMachine.changeState(player.playerJumpAirState);
         }
-        player.rb.AddExplosionForce(100.0f, player.transform.position + new Vector3(-1.0f, -1.0f, 0.0f), 2.0f);
+        
         base.Update();
     }
     public override void FixedUpdate()
@@ -31,7 +32,6 @@ public class PlayerJumpStartState : PlayerJumpCommonState
     }
     public override void exit()
     {
-        player.crm.EnableWobble();
         base.exit();
     }
     
