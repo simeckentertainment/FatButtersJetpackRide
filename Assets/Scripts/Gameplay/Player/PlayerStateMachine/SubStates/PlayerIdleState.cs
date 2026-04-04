@@ -15,6 +15,7 @@ public class PlayerIdleState : PlayerAliveState
     public override void enter()
     {
         stateAge = 0;
+        player.anim.StopPlayback();
         if (player.animationPercentage == 0.0f)
         { //It should only ever be 0.0 on start.
             PlayAnim(idleAnims[Random.Range(0, 2)]);
