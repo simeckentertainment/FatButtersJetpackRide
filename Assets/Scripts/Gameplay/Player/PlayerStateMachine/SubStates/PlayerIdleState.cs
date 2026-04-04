@@ -9,9 +9,9 @@ public class PlayerIdleState : PlayerAliveState
     {
 
     }
-    string[] idleAnims = {"idle1","idle2"};
+    string[] idleAnims = { "idle1", "idle2" };
     string[] idleAnnoyedAnims = { "idleAnnoyed1", "idleAnnoyed2" };
-    
+
     public override void enter()
     {
         stateAge = 0;
@@ -23,7 +23,7 @@ public class PlayerIdleState : PlayerAliveState
         base.enter();
     }
 
-    public override void Update(){
+    public override void Update() {
         base.Update();
     }
     public override void FixedUpdate()
@@ -36,10 +36,8 @@ public class PlayerIdleState : PlayerAliveState
         }
 
         base.FixedUpdate();
-        if ((player.input.GoThrust || player.input.GPJumpPressed) && player.JetpackActivationPossible)
-        {
-            player.stateMachine.changeState(player.playerJumpState);
-        }
+        DetectThrustOrJump();
+
         if (GetNormalizedTime() >= 0.99f)
         {
             PlayAnim(idleAnims[Random.Range(0, 2)]);
@@ -71,7 +69,8 @@ public class PlayerIdleState : PlayerAliveState
             player.stateMachine.changeState(player.playerFallState);
         }
     }
-    
+
+
     public override void exit()
     {
         base.exit();

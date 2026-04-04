@@ -19,7 +19,7 @@ using UnityEngine.SocialPlatforms;
 public class InputDriver : MonoBehaviour
 {
     [Header("Global settings")]
-    [SerializeField] public bool inputEnabled {get; private set;}
+    [field:SerializeField] public bool inputEnabled {get; private set;}
     [Header("Mobile input variables")]
     public float deviceRoll {get; private set;}
     public static bool HasGyroscope { get { return SystemInfo.supportsGyroscope; } }
@@ -37,16 +37,20 @@ public class InputDriver : MonoBehaviour
     [field:SerializeField] public bool KBCWPressed {get; private set;}
     [field:SerializeField] public bool KBCCWPressed {get; private set;}
     [field:SerializeField] public bool KBThrustPressed {get; private set;}
-    [field:SerializeField] public bool KBBoostPressed {get; private set;}
+    [field: SerializeField] public bool KBBoostPressed { get; private set; }
+    [field: SerializeField] public bool KBJumpPressed { get; private set; }
+    [field: SerializeField] public bool KBPausePressed { get; private set; }
     [field:SerializeField] public float KBMinAngle {get; private set;}
     [field:SerializeField] public float KBMaxAngle {get; private set;}
     public float KBCurrentAngle {get; private set;}
     [field:SerializeField] private float KBAccelerationTimer;
-    [field:SerializeField] private float KBMaxSpeedFrame;
+    [field: SerializeField] private float KBMaxSpeedFrame;
+    [field: SerializeField] private InputAction KBJumpAction;
     [SerializeField] private InputAction KBthrustAction;
     [SerializeField] private InputAction KBCWAction;
     [SerializeField] private InputAction KBCCWAction;
     [SerializeField] private InputAction KBBoostAction;
+    [SerializeField] private InputAction KBPauseAction;
 
     [Header("Gamepad input vars")]
     [SerializeField] float TriggerActivationMinimum;
@@ -54,11 +58,13 @@ public class InputDriver : MonoBehaviour
     [field:SerializeField] public float GPAimVal {get; private set;}
     [field:SerializeField] public bool GPThrustPressed {get; private set;}
     [field:SerializeField] public bool GPBoostPressed  {get; private set;}
-    [field:SerializeField] public bool GPJumpPressed {get; private set;}
+    [field: SerializeField] public bool GPJumpPressed { get; private set; }
+    [field:SerializeField] public bool GPPausePressed {get; private set;}
     [SerializeField] private InputAction GPThrustAction;
     [SerializeField] private InputAction GPAimAction;
     [SerializeField] private InputAction GPBoostAction;
     [SerializeField] private InputAction GPJumpAction;
+    [SerializeField] private InputAction GPPauseAction;
 
     [Header("OnScreen Control Vars")]
     public float OSRollOffset {get; private set;}
@@ -78,9 +84,11 @@ public class InputDriver : MonoBehaviour
     //GoCw and GoCcw are strictly to be used for the plus/minus particle rotations.
     [field:SerializeField] public bool GoCw {get; private set;}
     [field:SerializeField] public bool GoCcw {get; private set;}
-    [field:SerializeField] public bool GoBoost {get; private set;}  // Boost : Multi-touch (mobile) or Thrust + M key (Pc/Gamepad)
-    public bool aimAngleOverride {get; private set;}
-    public float aimAngleOverrideVal {get; private set;}
+    [field: SerializeField] public bool GoBoost { get; private set; }  // Boost : Multi-touch (mobile) or Thrust + Jump key (KB) or Jump pressed (gamepad) 
+    [field: SerializeField] public bool GoJump { get; private set; }
+    [field:SerializeField] public bool GoPause {get; private set;}
+    [field: SerializeField] public bool aimAngleOverride {get; private set;}
+    [field: SerializeField] public float aimAngleOverrideVal {get; private set;}
     [field:SerializeField] public float aimAngle {get; private set;}
 
     protected void OnEnable()
@@ -106,10 +114,13 @@ public class InputDriver : MonoBehaviour
         KBCWAction.Enable();
         KBCCWAction.Enable();
         KBBoostAction.Enable();
+        KBJumpAction.Enable();
+        KBPauseAction.Enable();
         GPAimAction.Enable();
         GPBoostAction.Enable();
         GPThrustAction.Enable();
         GPJumpAction.Enable();
+        GPPauseAction.Enable();
     }
 
     void FixedUpdate()
@@ -134,19 +145,27 @@ public class InputDriver : MonoBehaviour
 
 
         //Amalgam variable checkers.
-        GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed;
+        SetAmalgamVars();
+    }
 
+    private void SetAmalgamVars()
+    {
+        GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed;
+        GoJump = KBJumpPressed || GPJumpPressed;
+        GoPause = KBPausePressed || GPPausePressed;
         //Final Aim Angle
         if (aimAngleOverride)
         {
             aimAngle = aimAngleOverrideVal;
-        } 
-        else 
-        {
-            SetAimAngleVal( deviceRoll + OSRollOffset + KBCurrentAngle + (GPAimVal * -45));
         }
-        // Boost detection: Multi-touch (mobile) or Thrust + L Shift key (Pc/Gamepad)
-
+        else
+        {
+            SetAimAngleVal(deviceRoll + OSRollOffset + KBCurrentAngle + (GPAimVal * -45));
+        }
+        // Boost detection: 
+        // Multi-touch (mobile) 
+        // Thrust + Jump key (KB)
+        // Thrust trigger (GP)
         GoBoost = touchBoostTriggered || OSBoostPressed || KBBoostPressed || GPBoostPressed;
     }
 
@@ -199,7 +218,9 @@ public class InputDriver : MonoBehaviour
         KBThrustPressed = KBthrustAction.ReadValue<float>() == 1.0f;
         KBCWPressed = KBCWAction.ReadValue<float>() == 1.0f;
         KBCCWPressed = KBCCWAction.ReadValue<float>() == 1.0f;
-        KBBoostPressed = KBBoostAction.ReadValue<float>() == 1.0f;
+        KBJumpPressed = KBJumpAction.ReadValue<float>() == 1.0f;
+        KBBoostPressed = KBJumpPressed && KBThrustPressed; //Activate boost if both jump and thrust are pressed. KB only.
+        KBPausePressed = KBPauseAction.ReadValue<float>() == 1.0f;
         if((!KBCWPressed && !KBCCWPressed) || (KBCWPressed && KBCCWPressed)) //Only accept a single directional input at a time, or wait patiently for input.
         {
             KBCurrentAngle = 0.0f;
@@ -223,6 +244,7 @@ public class InputDriver : MonoBehaviour
     void SetGPControlValues()
     {
         GPJumpPressed = GPJumpAction.ReadValue<bool>();
+        GPPausePressed = GPPauseAction.ReadValue<bool>();
         GPAimVal = GPAimAction.ReadValue<float>();
         GPThrustPressed = GPThrustAction.ReadValue<float>() > TriggerActivationMinimum;
         GPBoostPressed = GPBoostAction.ReadValue<float>() > TriggerActivationMinimum;

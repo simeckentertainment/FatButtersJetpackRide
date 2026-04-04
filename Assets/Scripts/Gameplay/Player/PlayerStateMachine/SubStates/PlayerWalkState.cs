@@ -69,6 +69,7 @@ public class PlayerWalkState : PlayerAliveState
             player.stateMachine.changeState(player.playerFallState);
         }
 
+        DetectThrustOrJump();
         base.FixedUpdate();
     }
 

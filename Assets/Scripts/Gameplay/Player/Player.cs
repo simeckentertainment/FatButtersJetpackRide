@@ -23,18 +23,21 @@ public class Player : MonoBehaviour
     public PlayerStateMachine stateMachine;
     public PlayerIdleState playerIdleState { get; set; }
     public PlayerWalkState playerWalkState{get;set;}
-
     public PlayerFallState playerFallState { get; set; }
     public PlayerEnterDangleState playerEnterDangleState { get; set; }
     public PlayerDangleState playerDangleState { get; set; }
     public PlayerHurtState playerHurtState { get; set; }
     public PlayerOHKState playerOHKState { get; set; }
     public PlayerThrustState playerThrustState { get; set; }
-    public PlayerJumpState playerJumpState {get; set;}
+    public PlayerJumpPrepState playerJumpPrepState { get; set; }
+    public PlayerJumpStartState playerJumpStartState { get; set; }
+    public PlayerJumpAirState playerJumpAirState { get; set; }
+    public PlayerJumpLandState playerJumpLandState {get; set;}
     public PlayerTummyDeathState playerTummyDeathState { get; set; }
     public PlayerWinState playerWinState {get; set;}
     [Header("Utility classes. Should be set in inspector.")]
     [SerializeField] public Rigidbody rb;
+    [SerializeField] public CameraRotationManager crm;
     [SerializeField] public InputDriver input;
     [SerializeField] public AudioSource sfx;
     [SerializeField] public AudioSource grrSfx;
@@ -200,7 +203,10 @@ public class Player : MonoBehaviour
         playerHurtState = new PlayerHurtState(this, stateMachine);
         playerOHKState = new PlayerOHKState(this, stateMachine);
         playerThrustState = new PlayerThrustState(this, stateMachine);
-        playerJumpState = new PlayerJumpState(this, stateMachine);
+        playerJumpPrepState = new PlayerJumpPrepState(this, stateMachine);
+        playerJumpStartState = new PlayerJumpStartState(this, stateMachine);
+        playerJumpAirState = new PlayerJumpAirState(this, stateMachine);
+        playerJumpLandState = new PlayerJumpLandState(this, stateMachine);
         playerTummyDeathState = new PlayerTummyDeathState(this, stateMachine);
         playerWinState = new PlayerWinState(this, stateMachine);
         stateMachine.Initialize(playerIdleState);
