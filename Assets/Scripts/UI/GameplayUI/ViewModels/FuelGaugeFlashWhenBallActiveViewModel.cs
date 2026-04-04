@@ -9,7 +9,7 @@ public class FuelGaugeFlashWhenBallActiveViewModel : ImageViewModel<GameplayUIMo
     {
         if (Model.PlayerHasBall)
         {
-            Image.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, colorPingPongLength)); // color PingPong
+            Image.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.unscaledTime, colorPingPongLength)); // color PingPong
         }
     }
 }

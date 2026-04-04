@@ -64,6 +64,10 @@ public class CorgiEffectHolder : MonoBehaviour
     void Start()
     {
         ThrusterSources = new AudioSource[2] { ThrusterSoundHolders[0].GetComponent<AudioSource>(), ThrusterSoundHolders[1].GetComponent<AudioSource>() };
+        foreach (var thrusterAudio in ThrusterSources)
+        {
+            thrusterAudio.velocityUpdateMode = AudioVelocityUpdateMode.Dynamic;
+        }
         //We need to set the player's sound to an appropriate volume...
         
     }

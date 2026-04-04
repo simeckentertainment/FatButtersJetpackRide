@@ -32,6 +32,8 @@ public class SettingsMenuModel : Model
         set
         {
             collectibleData.MasterVolumeLevel = value * VolumeMultiplier;
+            FixVolumeSlidersFromMaster();
+
             Save();
         }
     }
@@ -45,6 +47,8 @@ public class SettingsMenuModel : Model
         set
         {
             collectibleData.MusicVolumeLevel = value * VolumeMultiplier;
+            FixVolumeSlidersFromMaster();
+
             Save();
         }
     }
@@ -58,6 +62,8 @@ public class SettingsMenuModel : Model
         set
         {
             collectibleData.SFXVolumeLevel = value * VolumeMultiplier;
+            FixVolumeSlidersFromMaster();
+
             Save();
         }
     }
@@ -190,6 +196,21 @@ public class SettingsMenuModel : Model
     {
         SaveManager.Instance.Save();
         Refresh();
+    }
+
+    private void FixVolumeSlidersFromMaster()
+    {
+        // MasterVolumeLevel is a limiter for the other volume sliders, they should never exceed MasterVolumeLevel.
+
+        if (collectibleData.SFXVolumeLevel > collectibleData.MasterVolumeLevel)
+        {
+            collectibleData.SFXVolumeLevel = collectibleData.MasterVolumeLevel;
+        }
+
+        if (collectibleData.MusicVolumeLevel > collectibleData.MasterVolumeLevel)
+        {
+            collectibleData.MusicVolumeLevel = collectibleData.MasterVolumeLevel;
+        }
     }
 }
 

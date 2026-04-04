@@ -10,8 +10,8 @@ public class FlashingArrowImageViewModel : ImageViewModel<InfoModel>
         this.transform.UpdateFromEditorLocalTransform(Model.ArrowTransform);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        Image.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, colorPingPongLength)); // color PingPong
+        Image.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.unscaledTime, colorPingPongLength)); // color PingPong
     }
 }
