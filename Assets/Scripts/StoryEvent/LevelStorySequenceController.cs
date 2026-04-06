@@ -59,9 +59,6 @@ public class LevelStorySequenceController : MonoBehaviour
         if (currentStepIndex < 0 || currentStepIndex >= steps.Count) return;
         var step = steps[currentStepIndex];
 
-        if (gameplayBridge != null)
-            gameplayBridge.ApplyMode(step.requestedMode);
-
         if (step.actions != null)
         {
             foreach (var action in step.actions)

@@ -17,9 +17,6 @@ public class StoryStep
     [Tooltip("For AfterGameplaySignal: signal ID to wait for.")]
     public string completionSignalId = GameplaySignal.ThrustUsedSignalId;
 
-    [Tooltip("Requested gameplay/story mode when this step runs.")]
-    public StoryMode requestedMode = StoryMode.Gameplay;
-
     [Tooltip("Actions to run when step is entered (in order).")]
     public List<StoryActionBase> actions = new List<StoryActionBase>();
 
