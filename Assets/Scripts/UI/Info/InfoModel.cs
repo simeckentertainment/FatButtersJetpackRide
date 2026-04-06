@@ -67,7 +67,6 @@ public class InfoModel : Model
         _arrowTransform = arrowTransform;
         _showArrow = showArrow;
 
-        Refresh();
         StartCoroutine(ToggleInfoMessageVisibility(messageDuration));
     }
 
