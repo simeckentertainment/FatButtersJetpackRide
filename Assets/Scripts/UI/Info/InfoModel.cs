@@ -61,18 +61,6 @@ public class InfoModel : Model
         }
     }
 
-    private bool _useArrowTransform;
-
-    public bool UseArrowTransform
-    {
-        get => _useArrowTransform;
-        set
-        {
-            _useArrowTransform = value;
-            Refresh();
-        }
-    }
-    
     public void ShowMessage(string text, EditorLocalTransform arrowTransform = default, bool showArrow = false)
     {
         _infoText = text;

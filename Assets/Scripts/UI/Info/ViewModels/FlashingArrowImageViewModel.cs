@@ -7,7 +7,7 @@ public class FlashingArrowImageViewModel : ImageViewModel<InfoModel>
     protected override void OnModelChanged()
     {
         base.OnModelChanged();
-        if (!Model.UseArrowTransform)
+        if (!Model.ShowArrow)
         {
             Image.enabled = false;
             return;
