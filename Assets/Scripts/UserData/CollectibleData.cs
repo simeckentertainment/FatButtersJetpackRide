@@ -51,12 +51,7 @@ public class CollectibleData : ScriptableObject
     {
         get
         {
-            if (Application.isEditor)
-            {
-                return hapticsEnabled;
-            }
-
-            return false;
+            return hapticsEnabled;
         }
         set
         {
