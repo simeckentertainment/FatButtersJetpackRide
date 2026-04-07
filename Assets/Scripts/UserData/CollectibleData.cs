@@ -1,3 +1,4 @@
+using Solo.MOST_IN_ONE;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,7 +18,6 @@ public class CollectibleData : ScriptableObject
     public float MasterVolumeLevel;
     public float MusicVolumeLevel;
     public float SFXVolumeLevel;
-    public bool HapticsEnabled;
     public bool OnScreenControlsEnabled;
     public bool CorgiSenseEnabled;
     public int GraphicsQualityLevel;
@@ -43,6 +43,25 @@ public class CollectibleData : ScriptableObject
         set
         {
             ignoreSaveData = value;
+        }
+    }
+
+    [SerializeField] private bool hapticsEnabled;
+    public bool HapticsEnabled
+    {
+        get
+        {
+            if (Application.isEditor)
+            {
+                return hapticsEnabled;
+            }
+
+            return false;
+        }
+        set
+        {
+            hapticsEnabled = value;
+            MOST_HapticFeedback.HapticsEnabled = value;
         }
     }
 
