@@ -243,7 +243,7 @@ public class Player : MonoBehaviour
 
         if (!TouchingGround)
         {
-            MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.SoftImpact);
+            MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.MediumImpact);
         }
 
         if (!currentGroundColliders.Contains(tuple))
