@@ -260,14 +260,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    private (int, int) GetCollisionId(Collider sourceObject, Collider other)
-    {
-        var sourceId = sourceObject.GetInstanceID();
-        var otherId = other.GetInstanceID();
-
-        return (sourceId, otherId);
-    }
-
     public void PickUpBones(int count = 1)
     {
         BonesCollected += count;
