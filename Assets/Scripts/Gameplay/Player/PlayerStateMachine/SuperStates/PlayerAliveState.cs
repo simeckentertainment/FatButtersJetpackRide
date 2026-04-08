@@ -50,7 +50,7 @@ public class PlayerAliveState : PlayerState
 
     private bool CanActivateJetpack()
     {
-        if (player.CollidersInJetpackKillZone.Count != 0) //we can use the jetpack as long as we're not touching a jetpack kill zone.
+        if (player.InJetpackKillZone) //we can use the jetpack as long as we're not touching a jetpack kill zone.
         {
             return false;
         }
