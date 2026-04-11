@@ -240,25 +240,13 @@ public class PlayerAliveState : PlayerState
     }
 
     
-    public void DetectThrustOrJump()
+    public void ActivateThrustFromGround()
     {
-        if (player.input.GoJump || (player.input.GoThrust && player.input.touchThrust))
-        {//Mobile input forces jump before thrust.Otherwise jump is an independent control.
-            player.stateMachine.changeState(player.playerJumpPrepState);
-        }
-        if(player.input.GoThrust && player.input.OSThrustPressed)
+        if(player.input.GoThrust )
         {
             //On screen controls should be simple like motion controls.
             player.stateMachine.changeState(player.playerJumpPrepState);
-        }
-
-        if (!player.JetpackActivationPossible) { return; } //Jetpack activation needs to be possible for what follows.
-
-        if (player.input.GoThrust && (player.input.KBThrustPressed || player.input.GPThrustPressed)) //independent thrust is possible on GP/KB only. 
-        {
-            player.stateMachine.changeState(player.playerThrustState);
-        }
-        
+        } 
     }
 }
 

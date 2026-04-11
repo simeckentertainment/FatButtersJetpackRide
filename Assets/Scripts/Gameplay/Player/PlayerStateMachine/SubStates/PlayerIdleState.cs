@@ -37,7 +37,7 @@ public class PlayerIdleState : PlayerAliveState
         }
 
         base.FixedUpdate();
-        DetectThrustOrJump();
+        ActivateThrustFromGround();
 
         if (GetNormalizedTime() >= 0.99f)
         {
