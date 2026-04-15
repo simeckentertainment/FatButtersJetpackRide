@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+using UnityEditor.Recorder.Input;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using UnityEngine.InputSystem;
@@ -34,14 +35,14 @@ public class InputDriver : MonoBehaviour
 
     [Header("Keyboard input variables")]
     //Keyboard variables
-    [field:SerializeField] public bool KBCWPressed {get; private set;}
-    [field:SerializeField] public bool KBCCWPressed {get; private set;}
-    [field:SerializeField] public bool KBThrustPressed {get; private set;}
-    [field: SerializeField] public bool KBBoostPressed { get; private set; }
-    [field: SerializeField] public bool KBPausePressed { get; private set; }
-    [field:SerializeField] public float KBMinAngle {get; private set;}
-    [field:SerializeField] public float KBMaxAngle {get; private set;}
-    public float KBCurrentAngle {get; private set;}
+    [field:SerializeField] bool KBCWPressed;
+    [field:SerializeField] bool KBCCWPressed;
+    [field:SerializeField] bool KBThrustPressed;
+    [field: SerializeField] bool KBBoostPressed;
+    [field: SerializeField] bool KBPausePressed;
+    [field:SerializeField] float KBMinAngle;
+    [field:SerializeField] float KBMaxAngle;
+    float KBCurrentAngle;
     [field:SerializeField] private float KBAccelerationTimer;
     [field: SerializeField] private float KBMaxSpeedFrame;
     [SerializeField] private InputAction KBthrustAction;
@@ -53,22 +54,22 @@ public class InputDriver : MonoBehaviour
     [Header("Gamepad input vars")]
     [SerializeField] float TriggerActivationMinimum;
     [SerializeField] float JoystickActivationMinimum;
-    [field:SerializeField] public float GPAimVal {get; private set;}
-    [field:SerializeField] public bool GPThrustPressed {get; private set;}
-    [field:SerializeField] public bool GPBoostPressed  {get; private set;}
-    [field:SerializeField] public bool GPPausePressed {get; private set;}
+    [SerializeField]float GPAimVal;
+    [SerializeField]bool GPThrustPressed;
+    [SerializeField]bool GPBoostPressed;
+    [SerializeField] bool GPPausePressed;
     [SerializeField] private InputAction GPThrustAction;
     [SerializeField] private InputAction GPAimAction;
     [SerializeField] private InputAction GPBoostAction;
     [SerializeField] private InputAction GPPauseAction;
 
     [Header("OnScreen Control Vars")]
-    public float OSRollOffset {get; private set;}
-    public float OSRollSensitivity {get; private set;}
-    [field:SerializeField] public bool OSCWPressed {get; private set;}
-    [field:SerializeField] public bool OSCCWPressed {get; private set;}
-    [field:SerializeField] public bool OSThrustPressed {get; private set;}
-    [field:SerializeField] public bool OSBoostPressed {get; private set;}
+    float OSRollOffset;
+    float OSRollSensitivity;
+    [SerializeField] bool OSCWPressed;
+    [SerializeField] bool OSCCWPressed;
+    [SerializeField] bool OSThrustPressed;
+    [SerializeField] bool OSBoostPressed;
 
     [SerializeField] private InputAction OSthrustAction;
     [SerializeField] private InputAction OSCWAction;
@@ -83,7 +84,7 @@ public class InputDriver : MonoBehaviour
     [field: SerializeField] public bool GoBoost { get; private set; }  // Boost : Multi-touch (mobile) or Thrust + Jump key (KB) or Jump pressed (gamepad) 
     [field: SerializeField] public bool GoJump { get; private set; }
     [field:SerializeField] public bool GoPause {get; private set;}
-    [field: SerializeField] public bool aimAngleOverride {get; private set;}
+    [field: SerializeField] public bool aimAngleOverrideEnabled {get; private set;}
     [field: SerializeField] public float aimAngleOverrideVal {get; private set;}
     [field:SerializeField] public float aimAngle {get; private set;}
 
@@ -101,7 +102,7 @@ public class InputDriver : MonoBehaviour
     {
         gyroInitialized = false;
         touchCount = 0;
-        aimAngleOverride = false;
+        aimAngleOverrideEnabled = false;
         OSthrustAction.Enable();
         OSCWAction.Enable();
         OSCCWAction.Enable();
@@ -119,10 +120,13 @@ public class InputDriver : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!inputEnabled) { return; } //Only accept input when input is enabled.
+        if (!inputEnabled) { 
+            aimAngleOverrideEnabled = true;
+            return; 
+            } else { //Only accept input when input is enabled.
+                aimAngleOverrideEnabled = false;
+            }
 
-        //set the aim angle override to false every frame. The override itself handles undoing this.
-        aimAngleOverride = false;
 
         //Motion control checkers
         TrackRollData(); //always be checking the roll data.
@@ -147,7 +151,7 @@ public class InputDriver : MonoBehaviour
         GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed;
         GoPause = KBPausePressed || GPPausePressed;
         //Final Aim Angle
-        if (aimAngleOverride)
+        if (aimAngleOverrideEnabled)
         {
             aimAngle = aimAngleOverrideVal;
         }
@@ -294,7 +298,6 @@ public class InputDriver : MonoBehaviour
 
     public void SetAimAngleOverrideVal(float overrideVal)
     {
-        aimAngleOverride = true;
         aimAngleOverrideVal = overrideVal;
     }
 
