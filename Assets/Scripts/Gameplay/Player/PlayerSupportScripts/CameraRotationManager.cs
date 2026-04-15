@@ -10,8 +10,8 @@ public class CameraRotationManager : MonoBehaviour
     [SerializeField] float maxDeviation;
     [field: SerializeField] public bool wobbleEnabled { get; private set; }
     [SerializeField] bool runningWobble;
-    [SerializeField] float wobbleCounter;
-    [SerializeField] float wobbleMaxCount;
+    [SerializeField] float wobbleTimerCounter;
+    [SerializeField] float wobbleTimerMaxCount;
     float[] wobblePoints;
     [SerializeField] float camAngleOffset;
 
@@ -26,6 +26,7 @@ public class CameraRotationManager : MonoBehaviour
 #endif
         float effectiveDrag = player.rb.linearDamping / (1.0f + player.rb.linearDamping * Time.fixedDeltaTime);//We're calculating all wobble intensities based on terminal velocity. It's more consistent that way.
         PlayerMaxSpeed = (player.thrust - player.rb.mass * Mathf.Abs(Physics.gravity.y)) / (player.rb.mass * effectiveDrag);
+    wobbleTimerMaxCount = wobbleTimerMaxCount == 0.0f ? 10.0f : wobbleTimerMaxCount; //Just in case someone forgot to set the max timer count.
     }
 
     // Update is called once per frame
@@ -51,11 +52,13 @@ public class CameraRotationManager : MonoBehaviour
     void InitiateWobble()
     {
         if (!wobbleEnabled) { return; }
-        wobbleCounter = 0;
+        wobbleTimerCounter = 0;
         float TerminalVelocityPercentage = Mathf.Clamp01(player.rb.angularVelocity.magnitude / PlayerMaxSpeed); //For our purposes, we don't need values beyond 100%. So, clamp.
         if (TerminalVelocityPercentage < 0.25f) { return; } //Don't wobble for light impacts.
         runningWobble = true;
-        float deviation = maxDeviation * TerminalVelocityPercentage; // force-sensitive.
+
+        //See GetWobbleOffset() for why we base wobble points off of deviation percentage here.
+        float deviation = maxDeviation * TerminalVelocityPercentage; // force-sensitive. 
         if (TerminalVelocityPercentage < 0.5f) // Below 0.5 is medium impact. We get 5-point wobble. Above 0.5 is heavy impact. We use 7 point wobble.
         {
             wobblePoints = new float[5]{
@@ -82,11 +85,14 @@ public class CameraRotationManager : MonoBehaviour
         }
     }
 
-    float GetWobbleOffset()
+    float GetWobbleOffset() 
     {
+        //This method dynamically gets the maximum wobble deviation based on 
+        //current speed compared to terminal velocity. The faster you're going
+        //when you slam into something, the more intense the wobble is.
         float output = 0.0f;
-        wobbleCounter++;
-        if (wobbleCounter > wobbleMaxCount) //if we're done.
+        wobbleTimerCounter++;
+        if (wobbleTimerCounter > wobbleTimerMaxCount) //if we're done.
         {
             runningWobble = false;
             return 0.0f; //kicks us out of wobble madness if we're done.
@@ -100,7 +106,7 @@ public class CameraRotationManager : MonoBehaviour
     float run5Wobble()
     { // threshold points are .25, .5, .75, and 1. These are hardcoded because they're even amounts. My animation experience tells me even amounts are the right way to go.
         float outRot;
-        float percentComplete = wobbleCounter / wobbleMaxCount;
+        float percentComplete = wobbleTimerCounter / wobbleTimerMaxCount;
         if (percentComplete < 0.25f) //Wobble 1. This code is ugly as sin but it works a treat.
         {
             outRot = Mathf.Lerp(wobblePoints[0], wobblePoints[1], Helper.RemapToBetweenZeroAndOne(0.0f, 0.25f, percentComplete));
@@ -122,7 +128,7 @@ public class CameraRotationManager : MonoBehaviour
     float run7Wobble()
     { //threshold points are .16, .33, .45, .65, .82, and 1
         float outRot;
-        float percentComplete = wobbleCounter / wobbleMaxCount;
+        float percentComplete = wobbleTimerCounter / wobbleTimerMaxCount;
         if (percentComplete < 0.16f) // Wobble 1. This code is ugly as sin but it works a treat.
         {
             outRot = Mathf.Lerp(wobblePoints[0], wobblePoints[1], Helper.RemapToBetweenZeroAndOne(0.0f, 0.16f, percentComplete));
