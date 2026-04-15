@@ -20,6 +20,7 @@ public class PlayerThrustState : PlayerAliveState
         thrusterVolumeCounter = 0f;
         if (player.IsGrounded)
         {
+            player.Jump();
             PlayAnim("launch");
         }
         else

@@ -53,7 +53,8 @@ public class Player : MonoBehaviour
     [Header("Important internal data")]
     public float thrust;
     [System.NonSerialized] public float baseThrustWithUpgrades; // Base thrust including upgrades (used for boost calculations)
-    
+    [SerializeField] private float jumpForce = 12;
+
     public float maxFuel;
     [System.NonSerialized] public float fuelPercent;
     [System.NonSerialized] public float tummyPercent;
@@ -258,6 +259,11 @@ public class Player : MonoBehaviour
         {
             currentGroundColliders.Remove(tuple);
         }
+    }
+
+    public void Jump()
+    {
+        rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
     }
 
     private (int, int) GetCollisionId(Collider sourceObject, Collider other)
