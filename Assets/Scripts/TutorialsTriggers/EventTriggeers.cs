@@ -26,7 +26,6 @@ public class EventTriggeers : MonoBehaviour
         {
             player.input.GoThrust = false;
         }
-       
     }
 
     // Play bear timeline
@@ -35,9 +34,7 @@ public class EventTriggeers : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
             timeline.Play();
-
         }
     }
 
@@ -45,23 +42,10 @@ public class EventTriggeers : MonoBehaviour
     //set up camera transition and keyboard input offset 
     public void CameraTransition(bool inputDriverBool)
     {
-        if(!inputDriverBool)
-        {
-            keyboardOffset = player.input.KeyboardRollOffset;
-        }
-    
         lootAtCamera.LookAt = bear;
-
         player.GetComponent<InputDriver>().enabled = inputDriverBool;
-        if(inputDriverBool)
-        {
-          //  player.input.KeyboardRollOffset = keyboardOffset;
-        }
-        #if UNITY_EDITOR
         player.input.aimAngle = 0;
-        player.input.KeyboardRollOffset = 0;
         virtualCameraGO.transform.rotation = quaternion.Euler(0,0,0);
-        #endif
     }
 
  

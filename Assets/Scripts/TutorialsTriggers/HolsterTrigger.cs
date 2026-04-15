@@ -6,16 +6,20 @@ public class HolsterTrigger : MonoBehaviour
     [SerializeField] GameObject holster;
     [SerializeField] GameObject jetpackPanel;
     [SerializeField] EventTriggeers eventTriggeers;
-
+    [SerializeField] Player player;
+    [SerializeField] private EditorLocalTransform jetPackArrowTransform;
 
     void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
             
-           GetComponentInChildren<MeshRenderer>().enabled = false;
+           transform.GetChild(0).gameObject.SetActive(false);
+          
            GetComponent<CapsuleCollider>().enabled = false;
-            StartCoroutine(OffJetPack());
+           
+            //player.UI.ShowInfoText("Jet PackEnabled",jetPackArrowTransform ,true);
+           StartCoroutine(OffJetPack());
         }
     }
     // jetpack on info
@@ -42,7 +46,7 @@ public class HolsterTrigger : MonoBehaviour
         elapsed += Time.deltaTime;
         yield return null;
     }
-
+    holster.SetActive(true);
     jetpackPanel.transform.localScale = endScale;
 }
 }
