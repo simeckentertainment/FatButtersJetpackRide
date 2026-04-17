@@ -21,11 +21,12 @@ public class PlayerThrustState : PlayerAliveState
         if (player.IsGrounded)
         {
             player.Jump();
-            PlayAnim("launch");
+            PlayAnim("JumpStart");
         }
         else
         {
             PlayAnim("midAirLaunch");
+            player.IsJumping = false;
         }
         StartNewGrr();
         ActivateGravyBoat();
@@ -75,9 +76,10 @@ public class PlayerThrustState : PlayerAliveState
         {
             player.stateMachine.changeState(player.playerFallState);
         }
-        if (stateAge == 60)
+        if (stateAge == 20)
         {
             PlayAnim("AirIdle");
+            player.IsJumping = false;
         }
         if(GetGrrProgress() == 0.0f | GetGrrProgress() >= 1.0f)
         {

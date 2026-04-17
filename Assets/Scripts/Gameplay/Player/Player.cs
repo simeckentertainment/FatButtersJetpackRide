@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
 
     private HashSet<(int, int)> currentGroundColliders = new HashSet<(int, int)>();
 
-    private float remainingDisabledFootCollisionDuration = 0;
+    public bool IsJumping { get; set; }
 
     private bool _jetpackActivationPossible;
     public bool JetpackActivationPossible
@@ -264,6 +264,7 @@ public class Player : MonoBehaviour
     public void Jump()
     {
         rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+        IsJumping = true;
     }
 
     private (int, int) GetCollisionId(Collider sourceObject, Collider other)
