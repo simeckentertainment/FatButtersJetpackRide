@@ -132,7 +132,7 @@ public class CollectibleCounterModel : Model
 
         if (showCollectionInfoMessages)
         {
-            player.UI.ShowInfoText("Collect!", "Collect everything!", collectibleArrowTransform);
+            player.UI.ShowInfoText("Collect everything!", collectibleArrowTransform, true);
         }
     }
 
@@ -140,7 +140,7 @@ public class CollectibleCounterModel : Model
     {
         if (showCollectionInfoMessages)
         {
-            player.UI.ShowInfoText("Success!", "Get to the finish!", corgiSenseArrowTransform);
+            player.UI.ShowInfoText("Get to the finish!", corgiSenseArrowTransform, true);
         }
 
         foreach (var obj in objectsEnabledWhenCompleted)
