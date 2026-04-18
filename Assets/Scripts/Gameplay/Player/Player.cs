@@ -1,6 +1,5 @@
-using System.Collections;
+using Solo.MOST_IN_ONE;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -117,8 +116,6 @@ public class Player : MonoBehaviour
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
     private HashSet<(int, int)> currentGroundColliders = new HashSet<(int, int)>();
-
-    private float remainingDisabledFootCollisionDuration = 0;
 
     private bool _jetpackActivationPossible;
     public bool JetpackActivationPossible
@@ -243,6 +240,11 @@ public class Player : MonoBehaviour
     public void AddGroundCollider(Collider sourceObject, Collider other)
     {
         var tuple = GetCollisionId(sourceObject, other);
+
+        if (!TouchingGround)
+        {
+            MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.SoftImpact);
+        }
 
         if (!currentGroundColliders.Contains(tuple))
         {
