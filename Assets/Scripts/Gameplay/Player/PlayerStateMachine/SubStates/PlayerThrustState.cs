@@ -76,10 +76,17 @@ public class PlayerThrustState : PlayerAliveState
         {
             player.stateMachine.changeState(player.playerFallState);
         }
-        if (stateAge == 20)
+        if (stateAge == 19)
+        {
+            // If you hold the thrust input longer than this, it's no longer considered a jump.
+            // NOTE: If this duration is longer than the JumpStart animation,
+            // then we'll automatically transition to the JumpAir animation before we make this check
+            // Currently the duration of this animation is about 20 fixed updates.
+            player.IsJumping = false;
+        }
+        if (stateAge == 60)
         {
             PlayAnim("AirIdle");
-            player.IsJumping = false;
         }
         if(GetGrrProgress() == 0.0f | GetGrrProgress() >= 1.0f)
         {

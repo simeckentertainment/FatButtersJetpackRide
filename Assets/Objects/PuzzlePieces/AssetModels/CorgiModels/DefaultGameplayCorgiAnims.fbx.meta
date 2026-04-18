@@ -611,11 +611,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 636
     - serializedVersion: 16
-      name: jumpStart
-      takeName: jumpStart
+      name: JumpStart
+      takeName: JumpStart
       internalID: 8905059107764236896
-      firstFrame: 721
-      lastFrame: 730
+      firstFrame: 720
+      lastFrame: 735
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -638,7 +638,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 636
+      additiveReferencePoseFrame: 713
     - serializedVersion: 16
       name: jumpAir
       takeName: jumpAir
@@ -697,6 +697,35 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 636
+    - serializedVersion: 16
+      name: jumpStartToAirIdle
+      takeName: jumpStartToAirIdle
+      internalID: 6420103241631491006
+      firstFrame: 761
+      lastFrame: 770
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 761
     isReadable: 1
   meshes:
     lODScreenPercentages: []

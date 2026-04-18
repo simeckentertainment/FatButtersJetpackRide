@@ -12,13 +12,10 @@ public class PlayerFallState : PlayerAliveState
     public override void enter(){
         stateAge = 0;
         VolumeReductionThreshold = 10;
-        if (player.IsJumping)
-        {
-            PlayAnim("JumpAir");
-        }
-        else
+        if (!player.IsJumping)
         {
             PlayAnim("fall");
+            // if jumping, it will automatically transition to the JumpAir animation
         }
         DeActivateGravyBoat();
         base.enter();

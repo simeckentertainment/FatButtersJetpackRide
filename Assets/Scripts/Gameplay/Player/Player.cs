@@ -119,7 +119,17 @@ public class Player : MonoBehaviour
 
     private HashSet<(int, int)> currentGroundColliders = new HashSet<(int, int)>();
 
-    public bool IsJumping { get; set; }
+    public bool IsJumping
+    {
+        get
+        {
+            return anim.GetBool("IsJumping");
+        }
+        set
+        {
+            anim.SetBool("IsJumping", value);
+        }
+    }
 
     private bool _jetpackActivationPossible;
     public bool JetpackActivationPossible
