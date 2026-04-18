@@ -14,8 +14,8 @@ public class StoryStep
     [Tooltip("For AfterTimer: duration in seconds.")]
     public float completionTimerDuration = 3f;
 
-    [Tooltip("For AfterGameplaySignal: signal ID to wait for.")]
-    public string completionSignalId = GameplaySignal.ThrustUsedSignalId;
+    [Tooltip("For AfterGameplaySignal: signal to wait for.")]
+    public SignalId completionSignalId = SignalId.ThrustUsed;
 
     [Tooltip("Actions to run when step is entered (in order).")]
     public List<StoryActionBase> actions = new List<StoryActionBase>();

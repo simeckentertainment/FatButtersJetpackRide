@@ -1,32 +1,35 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
+
+public enum SignalId
+{
+    None = 0,
+    ThrustUsed = 1,
+    ObjectiveComplete = 2,
+    StepComplete = 3,
+}
 
 public static class GameplaySignal
 {
-    public const string ThrustUsedSignalId = "ThrustUsed";
-    public const string ObjectiveCompleteSignalId = "ObjectiveComplete";
-    public const string StepCompleteSignalId = "StepComplete";
+    private static readonly Dictionary<SignalId, Action> Handlers = new Dictionary<SignalId, Action>();
 
-    private static readonly Dictionary<string, Action> Handlers = new Dictionary<string, Action>();
-
-    public static void Subscribe(string signalId, Action callback)
+    public static void Subscribe(SignalId signalId, Action callback)
     {
-        if (string.IsNullOrEmpty(signalId) || callback == null) return;
+        if (signalId == SignalId.None || callback == null) return;
         if (!Handlers.ContainsKey(signalId))
             Handlers[signalId] = null;
         Handlers[signalId] += callback;
     }
 
-    public static void Unsubscribe(string signalId, Action callback)
+    public static void Unsubscribe(SignalId signalId, Action callback)
     {
-        if (string.IsNullOrEmpty(signalId) || !Handlers.ContainsKey(signalId)) return;
+        if (signalId == SignalId.None || !Handlers.ContainsKey(signalId)) return;
         Handlers[signalId] -= callback;
     }
 
-    public static void Raise(string signalId)
+    public static void Raise(SignalId signalId)
     {
-        if (string.IsNullOrEmpty(signalId) || !Handlers.ContainsKey(signalId)) return;
+        if (signalId == SignalId.None || !Handlers.ContainsKey(signalId)) return;
         Handlers[signalId]?.Invoke();
     }
 }

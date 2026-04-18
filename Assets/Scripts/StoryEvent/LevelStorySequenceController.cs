@@ -13,7 +13,7 @@ public class LevelStorySequenceController : MonoBehaviour
     private StoryStepContext context;
     private bool currentStepCompletionStarted;
     private bool currentStepTriggerFired;
-    private string subscribedCompletionSignalId;
+    private SignalId subscribedCompletionSignalId;
 
     private void Awake()
     {
@@ -99,10 +99,10 @@ public class LevelStorySequenceController : MonoBehaviour
 
     private void OnCompletionSignalRaised()
     {
-        if (!string.IsNullOrEmpty(subscribedCompletionSignalId))
+        if (subscribedCompletionSignalId != SignalId.None)
         {
             GameplaySignal.Unsubscribe(subscribedCompletionSignalId, OnCompletionSignalRaised);
-            subscribedCompletionSignalId = null;
+            subscribedCompletionSignalId = SignalId.None;
         }
         AdvanceStep();
     }

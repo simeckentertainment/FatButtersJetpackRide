@@ -4,12 +4,12 @@ public class StoryEventTestRunner : MonoBehaviour
 {
     private void Start()
     {
-        GameplaySignal.Subscribe(GameplaySignal.ThrustUsedSignalId, OnThrustUsed);
+        GameplaySignal.Subscribe(SignalId.ThrustUsed, OnThrustUsed);
     }
 
     private void OnDestroy()
     {
-        GameplaySignal.Unsubscribe(GameplaySignal.ThrustUsedSignalId, OnThrustUsed);
+        GameplaySignal.Unsubscribe(SignalId.ThrustUsed, OnThrustUsed);
     }
 
     private void OnThrustUsed()
@@ -21,7 +21,7 @@ public class StoryEventTestRunner : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            GameplaySignal.Raise(GameplaySignal.ThrustUsedSignalId);
+            GameplaySignal.Raise(SignalId.ThrustUsed);
         }
     }
 }
