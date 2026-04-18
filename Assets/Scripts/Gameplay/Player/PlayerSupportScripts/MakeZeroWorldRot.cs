@@ -2,15 +2,10 @@ using UnityEngine;
 
 public class MakeZeroWorldRot : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Vector3 rotationAngle = Vector3.zero;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        transform.rotation = Quaternion.Euler(Vector3.zero);
+        transform.rotation = Quaternion.Euler(rotationAngle);
     }
 }

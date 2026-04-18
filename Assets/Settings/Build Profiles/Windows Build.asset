@@ -137,7 +137,7 @@ MonoBehaviour:
     - line: '|   mipStripping: 1'
     - line: '|   numberOfMipsStripped: 0'
     - line: '|   numberOfMipsStrippedPerMipmapLimitGroup: {}'
-    - line: '|   m_StackTraceTypes: 000000000000000000000000000000000000000001000000'
+    - line: '|   m_StackTraceTypes: 010000000100000001000000010000000100000001000000'
     - line: '|   iosShowActivityIndicatorOnLoading: -1'
     - line: '|   androidShowActivityIndicatorOnLoading: 2'
     - line: '|   iosUseCustomAppBackgroundBehavior: 0'
