@@ -12,18 +12,20 @@ public class PlayerThrustState : PlayerAliveState
     int stateAge;
     public override void enter()
     {
-        if (!player.input.GoThrust | !player.JetpackActivationPossible)
-        {
-            player.stateMachine.changeState(player.playerFallState);
-        }
-        stateAge = 0;
-        thrusterVolumeCounter = 0f;
         if (player.IsGrounded)
         {
             player.Jump();
             PlayAnim("JumpStart");
         }
-        else
+
+        if (!player.input.GoThrust || !player.JetpackActivationPossible)
+        {
+            player.stateMachine.changeState(player.playerFallState);
+        }
+
+        stateAge = 0;
+        thrusterVolumeCounter = 0f;
+        if (!player.IsGrounded)
         {
             PlayAnim("midAirLaunch");
             player.IsJumping = false;
