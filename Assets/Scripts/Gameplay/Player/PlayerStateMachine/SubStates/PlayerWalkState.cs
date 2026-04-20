@@ -45,7 +45,7 @@ public class PlayerWalkState : PlayerAliveState
         {
             player.stateMachine.changeState(player.playerIdleState);
         }
-        if (player.input.GoThrust & player.JetpackActivationPossible)
+        if (player.input.GoThrust)
         {
             player.stateMachine.changeState(player.playerThrustState);
         }

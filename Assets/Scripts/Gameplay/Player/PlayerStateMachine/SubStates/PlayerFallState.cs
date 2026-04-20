@@ -33,7 +33,7 @@ public class PlayerFallState : PlayerAliveState
         //Calm the sound the fuck down so we don't blow people's ears out.
         player.sfx.volume = Mathf.Clamp((VolumeReductionThreshold-stateAge)/VolumeReductionThreshold,0f,1f);
         if((stateAge > VolumeReductionThreshold) & player.sfx.isPlaying){player.sfx.Stop();}
-        if(player.IsGrounded)
+        if(stateAge > 2 && player.TouchingGround)
         {
             if (player.IsJumping)
             {
@@ -47,7 +47,8 @@ public class PlayerFallState : PlayerAliveState
             
             player.stateMachine.changeState(player.playerIdleState);
         }
-        if(player.input.GoThrust & player.JetpackActivationPossible){
+        if(player.input.GoThrust && player.JetpackActivationPossible)
+        {
             player.stateMachine.changeState(player.playerThrustState);
         }
         if (stateAge == 120)

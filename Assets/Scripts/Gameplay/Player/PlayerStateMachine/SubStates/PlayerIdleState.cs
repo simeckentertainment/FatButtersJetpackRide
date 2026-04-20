@@ -36,7 +36,7 @@ public class PlayerIdleState : PlayerAliveState
         }
 
         base.FixedUpdate();
-        if (player.input.GoThrust & player.JetpackActivationPossible)
+        if (player.input.GoThrust)
         {
             player.stateMachine.changeState(player.playerThrustState);
         }

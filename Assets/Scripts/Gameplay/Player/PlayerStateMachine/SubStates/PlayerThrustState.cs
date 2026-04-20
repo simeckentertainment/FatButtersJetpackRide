@@ -12,7 +12,7 @@ public class PlayerThrustState : PlayerAliveState
     int stateAge;
     public override void enter()
     {
-        if (player.IsGrounded)
+        if (player.CanJump)
         {
             player.Jump();
             PlayAnim("JumpStart");
