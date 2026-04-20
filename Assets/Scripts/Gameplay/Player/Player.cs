@@ -119,10 +119,7 @@ public class Player : MonoBehaviour
 
     private HashSet<(int, int)> currentGroundColliders = new HashSet<(int, int)>();
 
-    private int lastJumpFrameNumber = 0;
-    private const int jumpCooldownFrames = 3;
-
-    public bool CanJump => IsGrounded && !IsJumping && Time.frameCount - lastJumpFrameNumber > jumpCooldownFrames;
+    public bool CanJump => IsGrounded && !IsJumping;
 
     public bool IsJumping
     {
@@ -279,7 +276,6 @@ public class Player : MonoBehaviour
     public void Jump()
     {
         rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
-        lastJumpFrameNumber = Time.frameCount;
         IsJumping = true;
     }
 
