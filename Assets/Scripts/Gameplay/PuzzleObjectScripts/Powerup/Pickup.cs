@@ -1,3 +1,4 @@
+using Solo.MOST_IN_ONE;
 using UnityEngine;
 
 public abstract class Pickup : MonoBehaviour
@@ -13,6 +14,7 @@ public abstract class Pickup : MonoBehaviour
             if (player.IsAlive)
             {
                 OnPlayerTriggerEnter(player);
+                MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.SoftImpact);
                 Destroy(this.gameObject);
             }
         }

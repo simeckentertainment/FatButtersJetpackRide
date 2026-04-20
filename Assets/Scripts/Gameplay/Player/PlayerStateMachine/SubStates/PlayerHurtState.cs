@@ -1,3 +1,4 @@
+using Solo.MOST_IN_ONE;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,10 @@ public class PlayerHurtState : PlayerAliveState
     public override void enter(){
         stateAge = 0;
         player.tummy -= player.HarmfulDamageAmount;
-        if(player.tummy <= 0.0f){
+
+        MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.HeavyImpact);
+
+        if (player.tummy <= 0.0f){
             player.stateMachine.changeState(player.playerTummyDeathState);
         }
         player.UI.ActivateHurt();
