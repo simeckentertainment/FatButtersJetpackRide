@@ -279,7 +279,7 @@ public class Player : MonoBehaviour
 
     public void Jump()
     {
-        rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
         IsJumping = true;
     }
 
