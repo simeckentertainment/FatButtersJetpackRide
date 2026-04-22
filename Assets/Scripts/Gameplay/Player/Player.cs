@@ -1,11 +1,24 @@
-using System.Collections;
+using Solo.MOST_IN_ONE;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    private static Player _instance;
+    public static Player Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindFirstObjectByType<Player>();
+            }
+
+            return _instance;
+        }
+    }
+
     public PlayerStateMachine stateMachine;
     public PlayerIdleState playerIdleState { get; set; }
     public PlayerWalkState playerWalkState{get;set;}
@@ -65,6 +78,10 @@ public class Player : MonoBehaviour
     [SerializeField] public float mediumWalkSpeed;
     [SerializeField] public float fastWalkSpeed;
 
+    [SerializeField] public float SlowWalkMinAngle;
+    [SerializeField] public float MediumWalkMinAngle;
+    [SerializeField] public float FastWalkMinAngle;
+
     [Header("Collision bools")]
     public bool HarmfulTouch;
     public float HarmfulDamageAmount;
@@ -99,8 +116,6 @@ public class Player : MonoBehaviour
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
     private HashSet<(int, int)> currentGroundColliders = new HashSet<(int, int)>();
-
-    private float remainingDisabledFootCollisionDuration = 0;
 
     private bool _jetpackActivationPossible;
     public bool JetpackActivationPossible
@@ -184,6 +199,8 @@ public class Player : MonoBehaviour
         playerTummyDeathState = new PlayerTummyDeathState(this, stateMachine);
         playerWinState = new PlayerWinState(this, stateMachine);
         stateMachine.Initialize(playerIdleState);
+
+        _instance = this;
     }
     void FixedUpdate()
     {
@@ -215,9 +232,19 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        _instance = null;
+    }
+
     public void AddGroundCollider(Collider sourceObject, Collider other)
     {
         var tuple = GetCollisionId(sourceObject, other);
+
+        if (!TouchingGround)
+        {
+            MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.SoftImpact);
+        }
 
         if (!currentGroundColliders.Contains(tuple))
         {

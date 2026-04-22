@@ -11,6 +11,8 @@ public class SBPopState : SBProvokedState
     }
 
     public override void enter(){
+        Player.Instance.AddEnemiesDefeated();
+
         screamBubble.popped = false;
         screamBubble.rb.linearVelocity = Vector3.zero;
         screamBubble.bubbleAudio.loop = false;
@@ -26,7 +28,7 @@ public class SBPopState : SBProvokedState
             obj.GetComponent<Collider>().enabled = true;
             obj.tag = "Friendly";
         }
-
+        
         base.enter();
     }
     public override void Update(){

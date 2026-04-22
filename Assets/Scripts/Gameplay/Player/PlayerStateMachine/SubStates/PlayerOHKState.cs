@@ -1,3 +1,4 @@
+using Solo.MOST_IN_ONE;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -12,6 +13,8 @@ public class PlayerOHKState : PlayerLevelLoseState
     public override void enter()
     {
         MonoBehaviour.Destroy(player.GetComponent<Rigidbody>());
+
+        MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.HeavyImpact);
 
         player.UI.FailReason = FailReason.OneHitKill;
         base.enter();

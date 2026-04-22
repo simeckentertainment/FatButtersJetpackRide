@@ -69,7 +69,7 @@ public class CyborgBunnyMasterState
     public bool CastLineOfSightToPlayer()
     {
         Vector3 directionVector = (GetPlayerCoords() - cyborgBunny.LineOfSightSourceObj.position).normalized;
-        LayerMask layerMask = LayerMask.GetMask("PlayerColliderBone");
+        LayerMask layerMask = LayerMask.GetMask("Player");
         Debug.DrawRay(cyborgBunny.LineOfSightSourceObj.position, directionVector * cyborgBunny.LineOfSightMaxDistance, Color.green);
         RaycastHit outlook;
         if (Physics.Raycast(cyborgBunny.LineOfSightSourceObj.position, directionVector, out outlook, cyborgBunny.LineOfSightMaxDistance, layerMask))

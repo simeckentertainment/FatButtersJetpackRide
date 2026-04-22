@@ -81,15 +81,15 @@ public class PlayerWalkState : PlayerAliveState
     {
         // Get signed Z rotation (-180 to 180)
         absoluteZ = Mathf.Abs(player.input.aimAngle);
-        if (absoluteZ < 15f)
+        if (absoluteZ < player.SlowWalkMinAngle)
         {
             return WalkSpeed.Stop;
         }
-        else if (absoluteZ >= 15f & absoluteZ < 25f)
+        else if (absoluteZ >= player.SlowWalkMinAngle & absoluteZ < player.MediumWalkMinAngle)
         { //Slow walk
             return WalkSpeed.Slow;
         }
-        else if (absoluteZ > 25f & absoluteZ < 35f)
+        else if (absoluteZ > player.MediumWalkMinAngle & absoluteZ < player.FastWalkMinAngle)
         { //Medium walk
             return WalkSpeed.Medium;
         }
