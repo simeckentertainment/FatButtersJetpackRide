@@ -595,6 +595,8 @@ public class CorgiEffectHolder : MonoBehaviour
             mesh.material.SetColor("_EmissionColor", currentFlashingColor);
         }
 
+        player.UI.SetBallGlowActive(true);
+        player.UI.SetBallGlowColor(currentFlashingColor);
         musicManager.PlaybackSpeed = powerupMusicPlaybackSpeeed;
     }
 
@@ -607,6 +609,8 @@ public class CorgiEffectHolder : MonoBehaviour
             mesh.material.SetColor("_EmissionColor", Color.black);
         }
 
+        player.UI.SetBallGlowActive(false);
+        player.UI.SetBallGlowColor(Color.red);
         musicManager.PlaybackSpeed = originalMusicPlaybackSpeed;
     }
 

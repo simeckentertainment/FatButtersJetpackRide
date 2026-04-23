@@ -3,6 +3,10 @@ using UnityEngine;
 public class GameplayUIModel : Model
 {
     [SerializeField] private Player player;
+    [SerializeField] private float showHurtDuration = 0.15f;
+    [SerializeField] private float glowAlpha = 0.5f;
+
+    private float currentHurtDuration = 0;
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
@@ -20,6 +24,8 @@ public class GameplayUIModel : Model
         }
     }
 
+    public bool GlowActive => IsRunningHurt || BallActive;
+
     private bool _isRunningHurt;
     public bool IsRunningHurt
     {
@@ -30,6 +36,40 @@ public class GameplayUIModel : Model
         set
         {
             _isRunningHurt = value;
+            if (_isRunningHurt)
+            {
+                currentHurtDuration = showHurtDuration;
+                GlowColor = Color.red;
+            }
+            Refresh();
+        }
+    }
+
+    private bool _ballActive;
+    public bool BallActive
+    {
+        get
+        {
+            return _ballActive;
+        }
+        set
+        {
+            _ballActive = value;
+            Refresh();
+        }
+    }
+
+    private Color _glowColor;
+    public Color GlowColor
+    {
+        get
+        {
+            return _glowColor;
+        }
+        set
+        {
+            _glowColor = value;
+            _glowColor.a = glowAlpha;
             Refresh();
         }
     }
@@ -64,6 +104,18 @@ public class GameplayUIModel : Model
     {
         player.OnFuelUpdated.AddListener(Refresh);
         player.OnJetpackStatusUpdated.AddListener(Refresh);
+    }
+
+    private void FixedUpdate()
+    {
+        if (IsRunningHurt)
+        {
+            currentHurtDuration -= Time.deltaTime;
+            if (currentHurtDuration <= 0)
+            {
+                IsRunningHurt = false;
+            }
+        }
     }
 
     private void OnDestroy()
