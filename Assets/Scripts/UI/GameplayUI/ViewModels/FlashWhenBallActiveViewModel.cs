@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class FuelGaugeFlashWhenBallActiveViewModel : ImageViewModel<GameplayUIModel>
+public class FlashWhenBallActiveViewModel : ImageViewModel<GameplayUIModel>
 {
     [SerializeField] private float colorPingPongLength = 0.3f;
 

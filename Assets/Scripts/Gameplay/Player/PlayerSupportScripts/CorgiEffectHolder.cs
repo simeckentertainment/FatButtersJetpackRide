@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [System.Serializable]
 public class CorgiEffectHolder : MonoBehaviour
@@ -59,6 +58,13 @@ public class CorgiEffectHolder : MonoBehaviour
     [Header("The default skin object, for non-default skins.")]
     GameObject defaultSkinObj;
     GameObject premiumSkinObj;
+
+    [SerializeField] private float powerupFlashingSpeed = 0.2f;
+
+    private Color currentFlashingColor = new Color(1, 0, 0);
+    private ColorPart increasePart = ColorPart.G;
+    private ColorPart decreasePart = ColorPart.R;
+    private bool increasing = true;
 
     private List<SkinnedMeshRenderer> butterySkinnedMeshRenderers;
 
@@ -582,11 +588,11 @@ public class CorgiEffectHolder : MonoBehaviour
 
     public void BallEffectRunner()
     {
-        Color color = new Color (Random.Range(0f,1f),Random.Range(0f,1f),Random.Range(0f,1f));
+        SetNextColor();
         foreach (var mesh in butterySkinnedMeshRenderers)
         {
             mesh.material.EnableKeyword("_EMISSION");
-            mesh.material.SetColor("_EmissionColor", color);
+            mesh.material.SetColor("_EmissionColor", currentFlashingColor);
         }
 
         musicManager.PlaybackSpeed = powerupMusicPlaybackSpeeed;
@@ -602,5 +608,29 @@ public class CorgiEffectHolder : MonoBehaviour
         }
 
         musicManager.PlaybackSpeed = originalMusicPlaybackSpeed;
+    }
+
+    private void SetNextColor()
+    {
+        if (increasing)
+        {
+            currentFlashingColor = currentFlashingColor.Increase(increasePart, powerupFlashingSpeed);
+            if (currentFlashingColor.GetColorPart(increasePart) == 1)
+            {
+                // switch to decreasing mode
+                increasing = false;
+                increasePart = increasePart.Next();
+            }
+        }
+        else
+        {
+            currentFlashingColor = currentFlashingColor.Increase(decreasePart, -powerupFlashingSpeed);
+            if (currentFlashingColor.GetColorPart(decreasePart) == 0)
+            {
+                // switch to increasing mode
+                increasing = true;
+                decreasePart = decreasePart.Next();
+            }
+        }
     }
 }
