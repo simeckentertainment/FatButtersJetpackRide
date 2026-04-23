@@ -21,4 +21,16 @@ public class MusicManager : MonoBehaviour
     {
         audioSource.volume = collectibleData.MusicVolumeLevel;
     }
+
+    public float PlaybackSpeed
+    {
+        get
+        {
+            return audioSource.pitch;
+        }
+        set
+        {
+            audioSource.pitch = value;
+        }
+    }
 }

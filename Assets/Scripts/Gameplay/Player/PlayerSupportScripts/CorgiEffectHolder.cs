@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [System.Serializable]
 public class CorgiEffectHolder : MonoBehaviour
@@ -43,6 +44,9 @@ public class CorgiEffectHolder : MonoBehaviour
     [SerializeField] public AudioClip[] borks;
     [SerializeField] public AudioClip[] Grrs;
     [SerializeField] private List<SkinnedMeshRenderer> nonColoredMeshes;
+    [SerializeField] private MusicManager musicManager;
+    [SerializeField] private float powerupMusicPlaybackSpeeed = 1.1f;
+    private float originalMusicPlaybackSpeed;
 
     [SerializeField] ParticleSystem leftPlus;
     [SerializeField] ParticleSystem rightPlus;
@@ -57,7 +61,6 @@ public class CorgiEffectHolder : MonoBehaviour
     GameObject premiumSkinObj;
 
     private List<SkinnedMeshRenderer> butterySkinnedMeshRenderers;
-    private List<Color> originalMeshColors;
 
     void Awake()
     {
@@ -574,27 +577,30 @@ public class CorgiEffectHolder : MonoBehaviour
             butterySkinnedMeshRenderers.Remove(excludedMesh);
         }
 
-        originalMeshColors = new List<Color>();
-        foreach (var meshRenderer in butterySkinnedMeshRenderers)
-        {
-            originalMeshColors.Add(meshRenderer.material.GetColor("_BaseColor"));
-        }
+        originalMusicPlaybackSpeed = musicManager.PlaybackSpeed;
     }
 
     public void BallEffectRunner()
     {
         Color color = new Color (Random.Range(0f,1f),Random.Range(0f,1f),Random.Range(0f,1f));
-        foreach (var pm in butterySkinnedMeshRenderers)
+        foreach (var mesh in butterySkinnedMeshRenderers)
         {
-            pm.material.SetColor("_BaseColor", color);
+            mesh.material.EnableKeyword("_EMISSION");
+            mesh.material.SetColor("_EmissionColor", color);
         }
+
+        musicManager.PlaybackSpeed = powerupMusicPlaybackSpeeed;
     }
 
     public void BallEffectCanceler()
     {
         for (int i = 0; i < butterySkinnedMeshRenderers.Count; i++)
         {
-            butterySkinnedMeshRenderers[i].material.SetColor("_BaseColor", originalMeshColors[i]);
+            var mesh = butterySkinnedMeshRenderers[i];
+            mesh.material.DisableKeyword("_EMISSION");
+            mesh.material.SetColor("_EmissionColor", Color.black);
         }
+
+        musicManager.PlaybackSpeed = originalMusicPlaybackSpeed;
     }
 }
