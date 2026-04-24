@@ -4,11 +4,11 @@ public class MusicManager : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip songThisLevel;
+    [SerializeField] AudioClip powerupSong;
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         audioSource.volume = collectibleData.MusicVolumeLevel;
         audioSource.clip = songThisLevel;
@@ -16,12 +16,14 @@ public class MusicManager : MonoBehaviour
         audioSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    private float levelSongPlaybackTime = 0f;
+
+    private void Update()
     {
         audioSource.volume = collectibleData.MusicVolumeLevel;
     }
 
+    // TODO Drake: Unused, delete
     public float PlaybackSpeed
     {
         get
@@ -31,6 +33,26 @@ public class MusicManager : MonoBehaviour
         set
         {
             audioSource.pitch = value;
+        }
+    }
+
+    public void StartPowerupSong()
+    {
+        if (audioSource.clip != powerupSong)
+        {
+            levelSongPlaybackTime = audioSource.time;
+            audioSource.clip = powerupSong;
+            audioSource.Play();
+        }
+    }
+
+    public void StopPowerupSong()
+    {
+        if (audioSource.clip == powerupSong)
+        {
+            audioSource.clip = songThisLevel;
+            audioSource.time = levelSongPlaybackTime;
+            audioSource.Play();
         }
     }
 }

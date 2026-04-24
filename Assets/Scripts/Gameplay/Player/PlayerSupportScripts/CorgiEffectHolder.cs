@@ -583,7 +583,7 @@ public class CorgiEffectHolder : MonoBehaviour
             butterySkinnedMeshRenderers.Remove(excludedMesh);
         }
 
-        originalMusicPlaybackSpeed = musicManager.PlaybackSpeed;
+        //originalMusicPlaybackSpeed = musicManager.PlaybackSpeed;
     }
 
     public void BallEffectRunner()
@@ -597,7 +597,7 @@ public class CorgiEffectHolder : MonoBehaviour
 
         player.UI.SetBallGlowActive(true);
         player.UI.SetBallGlowColor(currentFlashingColor);
-        musicManager.PlaybackSpeed = powerupMusicPlaybackSpeeed;
+        musicManager.StartPowerupSong();
     }
 
     public void BallEffectCanceler()
@@ -611,7 +611,7 @@ public class CorgiEffectHolder : MonoBehaviour
 
         player.UI.SetBallGlowActive(false);
         player.UI.SetBallGlowColor(Color.red);
-        musicManager.PlaybackSpeed = originalMusicPlaybackSpeed;
+        musicManager.StopPowerupSong();
     }
 
     private void SetNextColor()
