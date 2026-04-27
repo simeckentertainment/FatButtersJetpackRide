@@ -3,8 +3,10 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource transitionAudioSource;
     [SerializeField] AudioClip songThisLevel;
     [SerializeField] AudioClip powerupSong;
+    [SerializeField] AudioClip songTransitionSound;
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
@@ -50,9 +52,11 @@ public class MusicManager : MonoBehaviour
     {
         if (audioSource.clip == powerupSong)
         {
+            transitionAudioSource.Play();
+
             audioSource.clip = songThisLevel;
             audioSource.time = levelSongPlaybackTime;
-            audioSource.Play();
+            audioSource.PlayDelayed(transitionAudioSource.clip.length);
         }
     }
 }
