@@ -63,6 +63,7 @@ public class PlayerThrustState : PlayerAliveState
                 player.vfx.StartPrimaryThrusters();
                 thrust();
                 UseFuel(isBoosting);
+                GameplaySignal.Raise(SignalId.ThrustUsed);
             }
         }
         if (stateAge > 3)
@@ -71,6 +72,7 @@ public class PlayerThrustState : PlayerAliveState
             {
                 thrust();
                 UseFuel(isBoosting);
+                GameplaySignal.Raise(SignalId.ThrustUsed);
             }
         }
 
