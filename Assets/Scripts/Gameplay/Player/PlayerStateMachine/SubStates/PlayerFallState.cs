@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerFallState : PlayerAliveState
 {
-    public PlayerFallState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine){
-
+    public PlayerFallState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
+    {
     }
+
     float stateAge;
     float VolumeReductionThreshold;
-    public override void enter(){
+    public override void enter()
+    {
         stateAge = 0;
         VolumeReductionThreshold = 10;
         PlayAnim("fall");
@@ -22,18 +24,21 @@ public class PlayerFallState : PlayerAliveState
     }
     public override void FixedUpdate()
     {
-
-
         stateAge++;
 
         //Calm the sound the fuck down so we don't blow people's ears out.
         player.sfx.volume = Mathf.Clamp((VolumeReductionThreshold-stateAge)/VolumeReductionThreshold,0f,1f);
-        if((stateAge > VolumeReductionThreshold) & player.sfx.isPlaying){player.sfx.Stop();}
-        if(player.IsGrounded){
+        if ((stateAge > VolumeReductionThreshold) & player.sfx.isPlaying)
+        {
+            player.sfx.Stop();
+        }
+        if (player.TouchingGround)
+        {
             PlayAnim("Land");
             player.stateMachine.changeState(player.playerIdleState);
         }
-        if(player.input.GoThrust & player.JetpackActivationPossible){
+        if (player.input.GoThrust & player.JetpackActivationPossible)
+        {
             player.stateMachine.changeState(player.playerThrustState);
         }
         if (stateAge == 120)
@@ -53,5 +58,6 @@ public class PlayerFallState : PlayerAliveState
         //} else {
             //player.animationPercentage = GetNormalizedTime();
         //}
+        base.exit();
     }
 }
