@@ -5,7 +5,6 @@ public class PlayerWalkState : PlayerAliveState
 {
     float animNormalizedTime; //since we're switching between different animations dynamically, we should handle normalized time tracking here.
     float absoluteZ;
-    bool switchThisFrame;
 
     string[] forwardMove = { "ForeWalkSlow", "ForeWalkMid", "ForeWalkFast" };
     string[] backwardMove = { "BackWalkSlow", "BackWalkFast" };
@@ -14,31 +13,18 @@ public class PlayerWalkState : PlayerAliveState
     WalkSpeed previousWalkSpeedEnum;
     public PlayerWalkState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
-
     }
 
     public override void enter()
     {
-        switchThisFrame = true;
         previousWalkSpeedEnum = WalkSpeed.Stop; //set this now to avoid errors on frame 1.
         walkSpeedEnum = GetSpeedEnum();
-        // Initialize walk speed trackin
-        if (player.animationPercentage == 0.0f)
-        { //It should only ever be 0.0 on start.
-          //   PlayAnim(forwardMove[Random.Range(0, 2)]);
-        }
-        //DeActivateGravyBoat();
-        base.enter();
-    }
 
-    public override void Update()
-    {
-        base.Update();
+        base.enter();
     }
     
     public override void FixedUpdate()
     {
-
         walkSpeedEnum = GetSpeedEnum();
         SetSpeed();
         if (walkSpeedEnum == WalkSpeed.Stop)
@@ -72,11 +58,6 @@ public class PlayerWalkState : PlayerAliveState
         base.FixedUpdate();
     }
 
-    public override void exit()
-    {
-        base.exit();
-    }
-
     WalkSpeed GetSpeedEnum()
     {
         // Get signed Z rotation (-180 to 180)
@@ -99,8 +80,6 @@ public class PlayerWalkState : PlayerAliveState
         }
 
     }
-
-
 
     private void SetSpeed()
     {
@@ -134,14 +113,14 @@ public class PlayerWalkState : PlayerAliveState
 
     void SetWalkAnimation()
     {
-       if (player.walkDirection > 0.0f)
-            {
-                SetForwardWalkAnimWithTime();
-            }
-            else
-            {
-                SetBackwardWalkAnimWithTime();
-            } 
+        if (player.walkDirection > 0.0f)
+        {
+            SetForwardWalkAnimWithTime();
+        }
+        else
+        {
+            SetBackwardWalkAnimWithTime();
+        } 
     }
 
     private void SetForwardWalkAnimWithTime()
