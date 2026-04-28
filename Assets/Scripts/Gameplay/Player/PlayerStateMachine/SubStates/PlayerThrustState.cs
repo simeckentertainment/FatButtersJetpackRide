@@ -102,12 +102,9 @@ public class PlayerThrustState : PlayerAliveState
     public override void exit()
     {
         thrusterVolumeCounter = Mathf.Clamp(stateAge,0,30);
-        if(player.anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f){
-        player.animationPercentage = 1.0f;
-        } else {
-        player.animationPercentage = GetNormalizedTime();
-        }
         player.vfx.StopPrimaryThrusters();
+        player.IgnoreIdleAnimationReset = true;
+
         base.exit();
     }
     

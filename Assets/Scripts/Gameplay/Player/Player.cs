@@ -61,7 +61,6 @@ public class Player : MonoBehaviour
     public float maxTummy;
     public bool InJetpackKillZone;
     [System.NonSerialized] public int thrusterRechargeCounter = 0;
-    [System.NonSerialized] public float animationPercentage;
     [SerializeField] private float thrusterRechargeDelay;
     [SerializeField] private float thrusterRechargeRate;
 
@@ -99,6 +98,8 @@ public class Player : MonoBehaviour
     public enum PlayerDirection{Left,Right};
     public PlayerDirection playerDirection;
     public bool LowGravMode;
+
+    public bool IgnoreIdleAnimationReset { get; set; }
 
     public bool TouchingGround => currentGroundColliders.Count > 0;
     public bool IsGrounded => GroundNear || TouchingGround;
