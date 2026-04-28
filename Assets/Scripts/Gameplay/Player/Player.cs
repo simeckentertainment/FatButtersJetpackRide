@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
     [System.NonSerialized] public float tummyPercent;
     public float tummy;
     public float maxTummy;
-    public List<Collider> CollidersInJetpackKillZone;
+    public bool InJetpackKillZone;
     [System.NonSerialized] public int thrusterRechargeCounter = 0;
     [System.NonSerialized] public float animationPercentage;
     [SerializeField] private float thrusterRechargeDelay;
@@ -115,7 +115,7 @@ public class Player : MonoBehaviour
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
-    private HashSet<(int, int)> currentGroundColliders = new HashSet<(int, int)>();
+    private HashSet<int> currentGroundColliders = new HashSet<int>();
 
     private bool _jetpackActivationPossible;
     public bool JetpackActivationPossible
@@ -237,37 +237,29 @@ public class Player : MonoBehaviour
         _instance = null;
     }
 
-    public void AddGroundCollider(Collider sourceObject, Collider other)
+    public void AddGroundCollider(Collider other)
     {
-        var tuple = GetCollisionId(sourceObject, other);
+        var id = other.GetInstanceID();
 
         if (!TouchingGround)
         {
             MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.SoftImpact);
         }
 
-        if (!currentGroundColliders.Contains(tuple))
+        if (!currentGroundColliders.Contains(id))
         {
-            currentGroundColliders.Add(tuple);
+            currentGroundColliders.Add(id);
         }
     }
 
-    public void RemoveGroundCollider(Collider sourceObject, Collider other)
+    public void RemoveGroundCollider(Collider other)
     {
-        var tuple = GetCollisionId(sourceObject, other);
+        var id = other.GetInstanceID();
 
-        if (currentGroundColliders.Contains(tuple))
+        if (currentGroundColliders.Contains(id))
         {
-            currentGroundColliders.Remove(tuple);
+            currentGroundColliders.Remove(id);
         }
-    }
-
-    private (int, int) GetCollisionId(Collider sourceObject, Collider other)
-    {
-        var sourceId = sourceObject.GetInstanceID();
-        var otherId = other.GetInstanceID();
-
-        return (sourceId, otherId);
     }
 
     public void PickUpBones(int count = 1)
