@@ -36,7 +36,7 @@ public class CorgiEffectHolder : MonoBehaviour
     [SerializeField] public AudioClip successSound;
     [SerializeField] public ParticleSystem deathParticles;
     [SerializeField] public AudioClip deathSound;
-
+    [SerializeField] public GameObject PuppySpaceHelmet;
     [SerializeField] public PlayerSkin chosenSkin;
     [SerializeField] public SkinnedMeshRenderer[] butterySkinnedMeshRenderers;
     [SerializeField] public AudioClip[] borks;
