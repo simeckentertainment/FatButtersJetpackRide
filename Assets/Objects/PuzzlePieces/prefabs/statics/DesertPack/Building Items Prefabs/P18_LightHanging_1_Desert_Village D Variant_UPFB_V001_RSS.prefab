@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ae95a9bdcc6ebc4ab38a235a34e2b1e6b49238c44fcaea0e297824cc84a7c94b
-size 2800
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1905926054409934592
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4689067743534005942, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689067743534005942, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689067743534005942, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689067743534005942, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689067743534005942, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689067743534005942, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689067743534005942, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689067743534005942, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689067743534005942, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689067743534005942, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689067743534005942, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5357378001042826252, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_Name
+      value: LightHanging_1_Desert_Village D Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861934748033205721, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7bca86a86fe5c314d8ac70c4377f4049, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f9172d32e2d02344b6e51db8b048315, type: 3}

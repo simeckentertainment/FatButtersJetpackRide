@@ -1,3 +1,105 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:40a16b87a36e2d007aef4f32c6e547b34540e6ac1b3984bcdc6f848cab95d357
-size 3303
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4133735896342019809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5416586161641484399}
+  - component: {fileID: 2075830837454090331}
+  - component: {fileID: 7347830993902634724}
+  - component: {fileID: 4698556385776525625}
+  m_Layer: 0
+  m_Name: Tummy Meter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5416586161641484399
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133735896342019809}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2075830837454090331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133735896342019809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6901f845dfe6af45941df1bfb2257e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  image: {fileID: 4698556385776525625}
+  emptyAmount: 0
+  tum0: {fileID: 21300000, guid: 3993cba0698e99d4ba5c818e9d7fd2f9, type: 3}
+  quarterAmount: 1
+  tum25: {fileID: 21300000, guid: 0a74e2f24a7d8a84fb89d74e027ceaae, type: 3}
+  halfAmount: 2
+  tum50: {fileID: 21300000, guid: 8f3e53985d19cf94fb5b84224564d5eb, type: 3}
+  threeQuarterAmount: 3
+  tum75: {fileID: 21300000, guid: bf9e015cd7fa673449769271c01ad404, type: 3}
+  fullAmount: 4
+  tum100: {fileID: 21300000, guid: 2a4fa672d837bc34c89b1128e83b0d29, type: 3}
+  tumnull: {fileID: 21300000, guid: dba147bef6ef0f0448fce14cfd2954b8, type: 3}
+  maxTummy: 0
+  currentTummy: 0
+--- !u!222 &7347830993902634724
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133735896342019809}
+  m_CullTransparentMesh: 1
+--- !u!114 &4698556385776525625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133735896342019809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2a4fa672d837bc34c89b1128e83b0d29, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
