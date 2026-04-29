@@ -8,3 +8,4 @@
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.bytes filter=lfs diff=lfs merge=lfs -text
 *.prefab !text !filter !merge !diff
+*.unity !text !filter !merge !diff
