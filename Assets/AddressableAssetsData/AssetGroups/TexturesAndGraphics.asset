@@ -5493,6 +5493,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e890aa9c5da63844ab774924b07c6802
+    m_Address: Assets/Objects/UI/tummygraphic-shine.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e8bf0b94d84f79f4d887b9f6cf0c2cf1
     m_Address: Assets/CityMassivePack/Textures/Bilboard 4.png
     m_ReadOnly: 0
