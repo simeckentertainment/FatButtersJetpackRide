@@ -52,15 +52,15 @@ public class Player : MonoBehaviour
     [Header("Important internal data")]
     public float thrust;
     [System.NonSerialized] public float baseThrustWithUpgrades; // Base thrust including upgrades (used for boost calculations)
-    
+    [SerializeField] private float jumpForce = 12;
+
     public float maxFuel;
     [System.NonSerialized] public float fuelPercent;
     [System.NonSerialized] public float tummyPercent;
     public float tummy;
     public float maxTummy;
-    public List<Collider> CollidersInJetpackKillZone;
+    public bool InJetpackKillZone;
     [System.NonSerialized] public int thrusterRechargeCounter = 0;
-    [System.NonSerialized] public float animationPercentage;
     [SerializeField] private float thrusterRechargeDelay;
     [SerializeField] private float thrusterRechargeRate;
 
@@ -99,6 +99,8 @@ public class Player : MonoBehaviour
     public PlayerDirection playerDirection;
     public bool LowGravMode;
 
+    public bool IgnoreIdleAnimationReset { get; set; }
+
     public bool TouchingGround => currentGroundColliders.Count > 0;
     public bool IsGrounded => GroundNear || TouchingGround;
     public bool GroundNear { get; set; }
@@ -115,7 +117,21 @@ public class Player : MonoBehaviour
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
-    private HashSet<(int, int)> currentGroundColliders = new HashSet<(int, int)>();
+    private HashSet<int> currentGroundColliders = new HashSet<int>();
+
+    public bool CanJump => IsGrounded && !IsJumping;
+
+    public bool IsJumping
+    {
+        get
+        {
+            return anim.GetBool("IsJumping");
+        }
+        set
+        {
+            anim.SetBool("IsJumping", value);
+        }
+    }
 
     private bool _jetpackActivationPossible;
     public bool JetpackActivationPossible
@@ -237,37 +253,35 @@ public class Player : MonoBehaviour
         _instance = null;
     }
 
-    public void AddGroundCollider(Collider sourceObject, Collider other)
+    public void AddGroundCollider(Collider other)
     {
-        var tuple = GetCollisionId(sourceObject, other);
+        var id = other.GetInstanceID();
 
         if (!TouchingGround)
         {
             MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.SoftImpact);
         }
 
-        if (!currentGroundColliders.Contains(tuple))
+        if (!currentGroundColliders.Contains(id))
         {
-            currentGroundColliders.Add(tuple);
+            currentGroundColliders.Add(id);
         }
     }
 
-    public void RemoveGroundCollider(Collider sourceObject, Collider other)
+    public void RemoveGroundCollider(Collider other)
     {
-        var tuple = GetCollisionId(sourceObject, other);
+        var id = other.GetInstanceID();
 
-        if (currentGroundColliders.Contains(tuple))
+        if (currentGroundColliders.Contains(id))
         {
-            currentGroundColliders.Remove(tuple);
+            currentGroundColliders.Remove(id);
         }
     }
 
-    private (int, int) GetCollisionId(Collider sourceObject, Collider other)
+    public void Jump()
     {
-        var sourceId = sourceObject.GetInstanceID();
-        var otherId = other.GetInstanceID();
-
-        return (sourceId, otherId);
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
+        IsJumping = true;
     }
 
     public void PickUpBones(int count = 1)

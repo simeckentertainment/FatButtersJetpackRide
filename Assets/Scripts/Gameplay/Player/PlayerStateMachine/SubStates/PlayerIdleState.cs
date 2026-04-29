@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerIdleState : PlayerAliveState
@@ -15,10 +13,15 @@ public class PlayerIdleState : PlayerAliveState
     public override void enter()
     {
         stateAge = 0;
-        if (player.animationPercentage == 0.0f)
-        { //It should only ever be 0.0 on start.
+        if (player.IgnoreIdleAnimationReset)
+        {
+            player.IgnoreIdleAnimationReset = false;
+        }
+        else
+        {
             PlayAnim(idleAnims[Random.Range(0, 2)]);
         }
+
         DeActivateGravyBoat();
         base.enter();
     }
@@ -36,7 +39,7 @@ public class PlayerIdleState : PlayerAliveState
         }
 
         base.FixedUpdate();
-        if (player.input.GoThrust & player.JetpackActivationPossible)
+        if (player.input.GoThrust)
         {
             player.stateMachine.changeState(player.playerThrustState);
         }

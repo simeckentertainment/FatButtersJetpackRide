@@ -5,7 +5,6 @@ public class PlayerCollisionReporter : MonoBehaviour
     [SerializeField] public Player player;
     [SerializeField] bool didITriggerSomethingThisTime;
     [SerializeField] bool didICollideSomethingThisTime;
-    Collider thisCollider;
     [Header("Sanity Checkers")]
     [SerializeField] GameObject CollisionObject;
     [SerializeField] GameObject TriggerObject;
@@ -13,7 +12,6 @@ public class PlayerCollisionReporter : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        thisCollider = gameObject.GetComponent<Collider>();
         didITriggerSomethingThisTime = false;
         didICollideSomethingThisTime = false;
     }
@@ -22,7 +20,7 @@ public class PlayerCollisionReporter : MonoBehaviour
     {
         if (other.gameObject.tag == "Untagged")
         {
-            player.AddGroundCollider(thisCollider, other.collider);
+            player.AddGroundCollider(other.collider);
             SetColliderObject(other);
         }
     }
@@ -31,7 +29,7 @@ public class PlayerCollisionReporter : MonoBehaviour
     {
         if (other.gameObject.tag == "Untagged")
         {
-            player.RemoveGroundCollider(thisCollider, other.collider);
+            player.RemoveGroundCollider(other.collider);
             ClearColliderObject();
         }
     }
@@ -55,9 +53,7 @@ public class PlayerCollisionReporter : MonoBehaviour
                 break;
             case "KillThrust":
                 //We need to be able to detect other collisions during kill thrust mode.
-                if(!player.CollidersInJetpackKillZone.Contains(thisCollider)){
-                    player.CollidersInJetpackKillZone.Add(thisCollider);
-                }
+                player.InJetpackKillZone = true;
                 break;
             default:
                 break;
@@ -89,10 +85,7 @@ public class PlayerCollisionReporter : MonoBehaviour
                 player.LowGravMode = false;
                 break;
             case "KillThrust":
-                if (player.CollidersInJetpackKillZone.Contains(thisCollider))
-                {
-                    player.CollidersInJetpackKillZone.Remove(thisCollider);
-                }
+                player.InJetpackKillZone = false;
                 break;
             default:
                 break;

@@ -12,19 +12,23 @@ public class PlayerThrustState : PlayerAliveState
     int stateAge;
     public override void enter()
     {
-        if (!player.input.GoThrust | !player.JetpackActivationPossible)
+        if (player.CanJump)
+        {
+            player.Jump();
+            PlayAnim("JumpStart");
+        }
+
+        if (!player.input.GoThrust || !player.JetpackActivationPossible)
         {
             player.stateMachine.changeState(player.playerFallState);
         }
+
         stateAge = 0;
         thrusterVolumeCounter = 0f;
-        if (player.IsGrounded)
-        {
-            PlayAnim("launch");
-        }
-        else
+        if (!player.IsGrounded)
         {
             PlayAnim("midAirLaunch");
+            player.IsJumping = false;
         }
         StartNewGrr();
         ActivateGravyBoat();
@@ -76,6 +80,14 @@ public class PlayerThrustState : PlayerAliveState
         {
             player.stateMachine.changeState(player.playerFallState);
         }
+        if (stateAge == 19)
+        {
+            // If you hold the thrust input longer than this, it's no longer considered a jump.
+            // NOTE: If this duration is longer than the JumpStart animation,
+            // then we'll automatically transition to the JumpAir animation before we make this check
+            // Currently the duration of this animation is about 20 fixed updates.
+            player.IsJumping = false;
+        }
         if (stateAge == 60)
         {
             PlayAnim("AirIdle");
@@ -90,12 +102,9 @@ public class PlayerThrustState : PlayerAliveState
     public override void exit()
     {
         thrusterVolumeCounter = Mathf.Clamp(stateAge,0,30);
-        if(player.anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f){
-        player.animationPercentage = 1.0f;
-        } else {
-        player.animationPercentage = GetNormalizedTime();
-        }
         player.vfx.StopPrimaryThrusters();
+        player.IgnoreIdleAnimationReset = true;
+
         base.exit();
     }
     
