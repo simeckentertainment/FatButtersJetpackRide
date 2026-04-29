@@ -8,7 +8,7 @@ public class JetpackWarningFlashingViewModel : ImageViewModel<GameplayUIModel>
 
     private void Update()
     {
-        if (Model.PlayerIsUsingJetpack)
+        if (Model.PlayerHasBeenUsingJetpack)
         {
             Image.color = Color.Lerp(Color.white, clearWhite, Mathf.PingPong(Time.unscaledTime, colorPingPongLength)); // color PingPong
         }

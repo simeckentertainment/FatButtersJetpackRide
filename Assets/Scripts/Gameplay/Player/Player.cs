@@ -52,7 +52,8 @@ public class Player : MonoBehaviour
     [Header("Important internal data")]
     public float thrust;
     [System.NonSerialized] public float baseThrustWithUpgrades; // Base thrust including upgrades (used for boost calculations)
-    
+    [SerializeField] private float jumpForce = 12;
+
     public float maxFuel;
     [System.NonSerialized] public float fuelPercent;
     [System.NonSerialized] public float tummyPercent;
@@ -117,6 +118,20 @@ public class Player : MonoBehaviour
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
     private HashSet<int> currentGroundColliders = new HashSet<int>();
+
+    public bool CanJump => IsGrounded && !IsJumping;
+
+    public bool IsJumping
+    {
+        get
+        {
+            return anim.GetBool("IsJumping");
+        }
+        set
+        {
+            anim.SetBool("IsJumping", value);
+        }
+    }
 
     private bool _jetpackActivationPossible;
     public bool JetpackActivationPossible
@@ -261,6 +276,12 @@ public class Player : MonoBehaviour
         {
             currentGroundColliders.Remove(id);
         }
+    }
+
+    public void Jump()
+    {
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
+        IsJumping = true;
     }
 
     public void PickUpBones(int count = 1)

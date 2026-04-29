@@ -3,6 +3,9 @@ using UnityEngine;
 public class GameplayUIModel : Model
 {
     [SerializeField] private Player player;
+    [SerializeField] private float thrustWarningActivationDelay = 0.3f;
+
+    private float currentThrustDuration;
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
@@ -60,10 +63,24 @@ public class GameplayUIModel : Model
 
     public bool PlayerIsUsingJetpack => player.input.GoThrust;
 
+    public bool PlayerHasBeenUsingJetpack => PlayerIsUsingJetpack && currentThrustDuration > thrustWarningActivationDelay;
+
     private void Awake()
     {
         player.OnFuelUpdated.AddListener(Refresh);
         player.OnJetpackStatusUpdated.AddListener(Refresh);
+    }
+
+    private void FixedUpdate()
+    {
+        if (PlayerIsUsingJetpack)
+        {
+            currentThrustDuration += Time.deltaTime;
+        }
+        else
+        {
+            currentThrustDuration = 0;
+        }
     }
 
     private void OnDestroy()

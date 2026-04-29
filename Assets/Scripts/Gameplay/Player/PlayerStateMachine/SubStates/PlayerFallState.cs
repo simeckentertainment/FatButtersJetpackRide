@@ -14,7 +14,11 @@ public class PlayerFallState : PlayerAliveState
     {
         stateAge = 0;
         VolumeReductionThreshold = 10;
-        PlayAnim("fall");
+        if (!player.IsJumping)
+        {
+            PlayAnim("fall");
+            // if jumping, it will automatically transition to the JumpAir animation
+        }
         DeActivateGravyBoat();
         base.enter();
     }
@@ -32,18 +36,28 @@ public class PlayerFallState : PlayerAliveState
         {
             player.sfx.Stop();
         }
-        if (player.TouchingGround)
+        if (stateAge > 2 && player.TouchingGround)
         {
-            PlayAnim("Land");
+            if (player.IsJumping)
+            {
+                PlayAnim("JumpLand");
+                player.IsJumping = false;
+            }
+            else
+            {
+                PlayAnim("Land");
+            }
+            
             player.stateMachine.changeState(player.playerIdleState);
         }
-        if (player.input.GoThrust & player.JetpackActivationPossible)
+        if(player.input.GoThrust && player.JetpackActivationPossible)
         {
             player.stateMachine.changeState(player.playerThrustState);
         }
         if (stateAge == 120)
         {
             PlayAnim("fallIdle");
+            player.IsJumping = false;
         }
         if (stateAge == 360)
         {
