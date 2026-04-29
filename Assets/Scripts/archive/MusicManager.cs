@@ -25,19 +25,6 @@ public class MusicManager : MonoBehaviour
         audioSource.volume = collectibleData.MusicVolumeLevel;
     }
 
-    // TODO Drake: Unused, delete
-    public float PlaybackSpeed
-    {
-        get
-        {
-            return audioSource.pitch;
-        }
-        set
-        {
-            audioSource.pitch = value;
-        }
-    }
-
     public void StartPowerupSong()
     {
         if (audioSource.clip != powerupSong)

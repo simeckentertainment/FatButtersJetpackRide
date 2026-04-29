@@ -5,14 +5,9 @@ public class GameplayUIModel : Model
     [SerializeField] private Player player;
     [SerializeField] private float thrustWarningActivationDelay = 0.3f;
     [SerializeField] private float showHurtDuration = 0.15f;
-    //[SerializeField] private float powerupGlowAlpha = 0.2f;
-    //[SerializeField] private float hurtGlowAlpha = 0.6f;
 
     private float currentThrustDuration;
-
-    //private float currentAlpha = 1;
-
-    private float currentHurtDuration = 0;
+    private float currentHurtDuration;
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
@@ -45,8 +40,6 @@ public class GameplayUIModel : Model
             if (_isRunningHurt)
             {
                 currentHurtDuration = showHurtDuration;
-                //currentAlpha = hurtGlowAlpha;
-                //GlowColor = Color.red;
             }
             Refresh();
         }
@@ -62,10 +55,6 @@ public class GameplayUIModel : Model
         set
         {
             _ballActive = value;
-            //if (_ballActive)
-            //{
-            //    currentAlpha = powerupGlowAlpha;
-            //}
             Refresh();
         }
     }
@@ -80,7 +69,6 @@ public class GameplayUIModel : Model
         set
         {
             _glowColor = value;
-            //_glowColor.a = currentAlpha;
             Refresh();
         }
     }
@@ -104,9 +92,6 @@ public class GameplayUIModel : Model
             return collectibleData.CorgiSenseEnabled;
         }
     }
-
-    // TODO: Delete?
-    public bool PlayerHasBall => player.hasPermaBall || player.hasTemporaryBall;
 
     public bool PlayerCanUseJetpack => player.JetpackActivationPossible;
 

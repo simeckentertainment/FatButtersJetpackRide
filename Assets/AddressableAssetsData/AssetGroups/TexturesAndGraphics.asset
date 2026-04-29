@@ -1447,6 +1447,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3cc6ef24f80b29d44b6f7168f5c73a4e
+    m_Address: Assets/Objects/UI/fuelGuage.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3cea5651b851cb74c9864b2cd219fb5f
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/crashed-spaceship/textures/Shell_metallic.png
     m_ReadOnly: 0
@@ -4824,6 +4829,11 @@ MonoBehaviour:
   - m_GUID: ce026dfecbc694085a1d87a22f3bb49d
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/AllSkyFree/Cold Sunset/Cold
       Sunset__Cam_2_Left+X.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce356cff49c881c4abd85838b6525482
+    m_Address: Assets/Objects/UI/fuelGuage-shine.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

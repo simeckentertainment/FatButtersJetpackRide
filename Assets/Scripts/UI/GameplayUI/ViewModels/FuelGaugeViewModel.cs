@@ -1,40 +1,40 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FuelGaugeViewModel : ImageViewModel<GameplayUIModel>
+public class FuelGaugeViewModel : GlowColorImageViewModel
 {
-    [SerializeField] private Sprite[] FuelGaugeColors;
+    [SerializeField] private Color fullColor;
+    [SerializeField] private Color halfColor;
+    [SerializeField] private Color quarterColor;
+    [SerializeField] Image shineImage;
     [SerializeField] private float colorPingPongLength = 0.3f;
 
     protected override void OnModelChanged()
     {
         Image.fillAmount =  Model.FuelPercent;
-        base.OnModelChanged();
-    }
+        shineImage.fillAmount =  Model.FuelPercent;
 
-    protected override Sprite GetSprite()
-    {
         if (Model.FuelPercent > 0.5f)
         {
-            Image.color = Color.white;
-            return FuelGaugeColors[0];
+            defaultColor = fullColor;
         }
         else if (Model.FuelPercent <= 0.5f & Model.FuelPercent > 0.25f)
         {
-            Image.color = Color.white;
-            return FuelGaugeColors[1];
+            defaultColor = halfColor;
         }
         else
         {
-            return FuelGaugeColors[2];
+            defaultColor = quarterColor;
         }
+
+        base.OnModelChanged();
     }
 
     private void Update()
     {
-        if (Model.FuelPercent < 0.25f)
+        if (Model.FuelPercent < 0.25f && ! Model.BallActive)
         {
-            Image.color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.unscaledTime, colorPingPongLength)); // color PingPong
+            Image.color = Color.Lerp(defaultColor, Color.black, Mathf.PingPong(Time.unscaledTime, colorPingPongLength)); // color PingPong
         }
     }
 }

@@ -2,7 +2,7 @@
 
 public class GlowColorImageViewModel : ImageViewModel<GameplayUIModel>
 {
-    [SerializeField] private Color defaultColor;
+    [SerializeField] protected Color defaultColor;
     [SerializeField] private float glowColorAlpha = 1;
 
     protected override void OnModelChanged()
