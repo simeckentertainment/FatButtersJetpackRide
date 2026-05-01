@@ -1,3 +1,67 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ba18bd50552558bf54233af5c835182c8e88411330e21a5a5015abe9e421208a
-size 3033
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8925199794321009292
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1579006088676680743, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -7157107391758305536, guid: 6b87362a784ee7042aa0d26b20bb5ea5, type: 3}
+    - target: {fileID: 2469690302266321794, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469690302266321794, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469690302266321794, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469690302266321794, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469690302266321794, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469690302266321794, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469690302266321794, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469690302266321794, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469690302266321794, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469690302266321794, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469690302266321794, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958243259362570552, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_Name
+      value: Rug_Desert_Village  IvyRugB Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606599221417890029, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31ebb0ffe7355f74a8def4d177204ad3, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5da2fb3b5f3cb948bd4218c16c2a272, type: 3}

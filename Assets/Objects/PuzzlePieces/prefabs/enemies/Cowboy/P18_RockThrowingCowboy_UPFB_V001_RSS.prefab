@@ -1,3 +1,249 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b643512739d1f2ea2cb67a7e93c7cd56b0e323adc029ed85afb08092145794b6
-size 8836
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &312973677689504678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1843985785765007753}
+  - component: {fileID: 1912328636829426339}
+  - component: {fileID: 5628588886554634046}
+  m_Layer: 0
+  m_Name: RockSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1843985785765007753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312973677689504678}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.857407, y: -0.45026207, z: 0.15223894, w: 0.19733392}
+  m_LocalPosition: {x: 0.33782306, y: 3.0435443, z: 1.2887046}
+  m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2659786822797356433}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1773428102 &1912328636829426339
+ParentConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312973677689504678}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0.33782306, y: 3.0435443, z: 1.288704}
+  m_RotationAtRest: {x: -11.612752, y: -153.38876, z: 121.83292}
+  m_TranslationOffsets:
+  - {x: 0, y: 0, z: 0}
+  m_RotationOffsets:
+  - {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_Active: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 5014247375259343478}
+    weight: 1
+--- !u!114 &5628588886554634046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312973677689504678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8216df1ae4448114e8bb331698893858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RockModel: {fileID: 3959688467114040040, guid: 881c386f994af7042bbac887fbbac428, type: 3}
+  SpawnedRock: {fileID: 0}
+  TossTime: 80
+  tossTimeElapsed: 0
+  rockSpawned: 0
+  Slerp1: {x: 0, y: 0, z: 0}
+  Slerp2: {x: 0, y: 0, z: 0}
+--- !u!1001 &2550109930768337530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      propertyPath: m_Name
+      value: RockThrowingCowboy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1843985785765007753}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7297050551265014307}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5554666701113115232}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2097887234653917136}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8032940553726468665}
+  m_SourcePrefab: {fileID: 100100000, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+--- !u!4 &2659786822797356433 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+  m_PrefabInstance: {fileID: 2550109930768337530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3432489112763479851 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+  m_PrefabInstance: {fileID: 2550109930768337530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &7297050551265014307
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3432489112763479851}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.49
+  m_Height: 7.24
+  m_Direction: 1
+  m_Center: {x: 0, y: 3.04, z: 0}
+--- !u!95 &-5554666701113115232
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3432489112763479851}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f00b6dccbba7927459265e255accb3af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2097887234653917136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3432489112763479851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6eafd6166f0ce4f9a47c589aed7a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateMachine: {fileID: 8032940553726468665}
+  anim: {fileID: -5554666701113115232}
+  player: {fileID: 0}
+  playerDist: 0
+  runSpeed: 10
+  maxThrowDistance: 80
+  aiTriggerDistance: 100
+  rockSpawner: {fileID: 5628588886554634046}
+  playerDirection: 0
+  moveSpeed: 10
+  hitTop: 0
+  hitBot: 0
+  cowboyCollider: {fileID: 7297050551265014307}
+--- !u!114 &8032940553726468665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3432489112763479851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc6ff65c215ee549a94d07ee398bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &5014247375259343478 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1804289702344257524, guid: bebdc2d0821a3a8498003069a7aa69e4, type: 3}
+  m_PrefabInstance: {fileID: 2550109930768337530}
+  m_PrefabAsset: {fileID: 0}

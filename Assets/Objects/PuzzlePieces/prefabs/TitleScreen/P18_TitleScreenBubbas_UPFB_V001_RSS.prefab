@@ -1,3 +1,168 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:42d3eb9bd3fa5392f37830fcafceb5621fc053ac9e27cd8f8c588fd946eb9e4e
-size 7116
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1772205975907796276
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6070087784696266896}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_Name
+      value: TitleScreenBubbas
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+--- !u!4 &2239021905614103263 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+  m_PrefabInstance: {fileID: 1772205975907796276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6032556103907092347
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 224.382
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.70506144
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.24596141
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.96927965
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -151.523
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_Name
+      value: TitleScreenBubbas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146856025271131507, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968422673505305046, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 2155920959397757409, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2239021905614103263}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 563993150590479952}
+  m_SourcePrefab: {fileID: 100100000, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+--- !u!4 &6070087784696266896 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+  m_PrefabInstance: {fileID: 6032556103907092347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6878852612678097450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c5665f28aade1d47b318a6232c49ffe, type: 3}
+  m_PrefabInstance: {fileID: 6032556103907092347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &563993150590479952
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878852612678097450}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 232e1c1db9b767943bc0bc682c36e69f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

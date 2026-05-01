@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:652b297e6359895c0d3a1afc12d615099b297946e96790a87f7dc65a501430d0
-size 2790
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1256157860962422654
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 469194299178906233, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ac7151512d1f2e45ae1f06684dccf7d, type: 2}
+    - target: {fileID: 1642060581050353942, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642060581050353942, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642060581050353942, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642060581050353942, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642060581050353942, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642060581050353942, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642060581050353942, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642060581050353942, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642060581050353942, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642060581050353942, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642060581050353942, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126285934010684332, guid: 6382944a4fe54204986d894957bce80e, type: 3}
+      propertyPath: m_Name
+      value: Crate_Desert_Village C Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6382944a4fe54204986d894957bce80e, type: 3}

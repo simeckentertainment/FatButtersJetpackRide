@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2f71042772925604214a0af18dbb49226e0d8fc61bbe6dc7e60629b4dcf1ef72
-size 2814
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &912409287552014906
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5157457458602755928, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157457458602755928, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.543743
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157457458602755928, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.097892
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157457458602755928, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.854542
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157457458602755928, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157457458602755928, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157457458602755928, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157457458602755928, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157457458602755928, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157457458602755928, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157457458602755928, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537501846614351330, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_Name
+      value: Ivy_Desert_Village IvyC Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330324840253963319, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5dfd2f814cef6f34b9e026243453146d, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 24987c10dcd3d574c9cf7200568ccd4d, type: 3}

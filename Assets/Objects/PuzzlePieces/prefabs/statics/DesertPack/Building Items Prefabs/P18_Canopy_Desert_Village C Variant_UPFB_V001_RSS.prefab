@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:988a4e44a670a191dd95dd1784d7b057742fd57166873a8effe71fb5b0f51d04
-size 2791
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &301358897420374116
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8048858033376880723, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ac7151512d1f2e45ae1f06684dccf7d, type: 2}
+    - target: {fileID: 8409264819698780550, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_Name
+      value: Canopy_Desert_Village C Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221231701020480316, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221231701020480316, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221231701020480316, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221231701020480316, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221231701020480316, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221231701020480316, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221231701020480316, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221231701020480316, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221231701020480316, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221231701020480316, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221231701020480316, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 41f7ea40c34b5274fa8081e62ceee242, type: 3}

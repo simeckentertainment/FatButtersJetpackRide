@@ -1,3 +1,67 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4a75ee6db22019e6dc7beee1c38776ce7d1a164ce36dbbbd6edf05959ff94350
-size 3029
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2302491869748865348
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 291457330778562171, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 361643588868643820, guid: c00cb411d1e82da42a061ae8b9782f59, type: 3}
+    - target: {fileID: 2589430886599338673, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ac7151512d1f2e45ae1f06684dccf7d, type: 2}
+    - target: {fileID: 3721289891518239198, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721289891518239198, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721289891518239198, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721289891518239198, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721289891518239198, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721289891518239198, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721289891518239198, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721289891518239198, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721289891518239198, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721289891518239198, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721289891518239198, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102636170217917284, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}
+      propertyPath: m_Name
+      value: ClayPot_1_Desert Village C Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e89a81d20ffe9248889065cef1607eb, type: 3}

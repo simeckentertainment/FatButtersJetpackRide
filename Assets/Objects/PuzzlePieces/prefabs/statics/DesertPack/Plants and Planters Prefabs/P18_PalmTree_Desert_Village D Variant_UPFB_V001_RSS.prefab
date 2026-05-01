@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b75cd8617f1a8217ffc26e49ed0acf8c0a828466159dd0768e36ac273494bfa1
-size 2794
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3925160647331690156
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2559139444536871619, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559139444536871619, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559139444536871619, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559139444536871619, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559139444536871619, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559139444536871619, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559139444536871619, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559139444536871619, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559139444536871619, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559139444536871619, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559139444536871619, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938655280927330425, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_Name
+      value: PalmTree_Desert_Village D Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731459996455563692, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7bca86a86fe5c314d8ac70c4377f4049, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6914763af93c9e04a9e911808b85e041, type: 3}
