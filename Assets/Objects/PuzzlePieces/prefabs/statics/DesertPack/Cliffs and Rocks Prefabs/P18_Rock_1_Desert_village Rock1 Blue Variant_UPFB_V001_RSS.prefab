@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b1ceef40b928770d2812435c72012854d8503ba837f6fbbafd466e004fd545c2
-size 2800
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &726064612759194414
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3311095559227751229, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fd84866e19d0ab345a10fea42089a650, type: 2}
+    - target: {fileID: 3959688467114040040, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_Name
+      value: Rock_1_Desert_village Rock1 Blue Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447431088435576914, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447431088435576914, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447431088435576914, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447431088435576914, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447431088435576914, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447431088435576914, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447431088435576914, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447431088435576914, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447431088435576914, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447431088435576914, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447431088435576914, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a8e1a9f675e6c0e48836c684b07c1b27, type: 3}

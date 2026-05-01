@@ -1,3 +1,65 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:be27e8916d93dcedf62767c69ade77a4d8cf5586305f618daf289d3c9cbac143
-size 2899
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3735870069567333280
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5092978901244783842, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092978901244783842, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092978901244783842, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092978901244783842, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092978901244783842, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092978901244783842, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092978901244783842, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092978901244783842, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092978901244783842, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092978901244783842, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092978901244783842, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613233355634079320, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_Name
+      value: FencePicket_1_Desert_Village D Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261913948415514509, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7bca86a86fe5c314d8ac70c4377f4049, type: 2}
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 4964491277581580797, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: c53acb7fddbefed4c9203029c113adb3, type: 3}

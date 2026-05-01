@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1596a557f6d9d1bd599e4f675bf63b79ac69be9518edf3e73288a3ba55b8d8e4
-size 2793
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7523583668703250856
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 178646445650956954, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7bca86a86fe5c314d8ac70c4377f4049, type: 2}
+    - target: {fileID: 1310970950668691957, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310970950668691957, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310970950668691957, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310970950668691957, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310970950668691957, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310970950668691957, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310970950668691957, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310970950668691957, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310970950668691957, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310970950668691957, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310970950668691957, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835869472121353039, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
+      propertyPath: m_Name
+      value: SignPost_Desert_Village D Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 595ee97f09cc13640ac1328dc1b8cff8, type: 3}
