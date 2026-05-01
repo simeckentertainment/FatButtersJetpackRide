@@ -772,6 +772,7 @@ MonoBehaviour:
   successSound: {fileID: 8300000, guid: 9e53ed97eebe0d6488c735f5c2d7b910, type: 3}
   deathParticles: {fileID: 198204746014789312, guid: 60633bd4ae57aaa42b99b23c9b3ecca7, type: 3}
   deathSound: {fileID: 8300000, guid: 7ae32d205e222714a87d538f1a3c086c, type: 3}
+  spaceHelmet: {fileID: 3717188638498106850}
   chosenSkin: {fileID: 0}
   butterySkinnedMeshRenderers: []
   borks:
@@ -1101,8 +1102,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122784116121297188}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000012472053, y: -0.00000016815063, z: -0.17364787, w: 0.9848078}
-  m_LocalPosition: {x: 1.1500007, y: 0.5500001, z: 0.00000035762787}
+  m_LocalRotation: {x: 0.00000012472051, y: -0.00000016815066, z: -0.1736477, w: 0.9848079}
+  m_LocalPosition: {x: 1.1500006, y: 0.55, z: 0.00000019074417}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2518,6 +2519,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: -7225923877696063846, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -7154388459031289883, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
       propertyPath: m_Layer
       value: 13
@@ -3598,6 +3603,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d97b56486dc85074f99b96c624d21b09, type: 2}
+    - target: {fileID: 3952525437034468409, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fa7890b46c75316489ae2509e7ee6166, type: 2}
     - target: {fileID: 4048920098282641493, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
       propertyPath: m_Layer
       value: 13
@@ -4130,6 +4139,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 8602716949763519534, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fcbe812e202854042abde5b59eabc116, type: 2}
     - target: {fileID: 8627556260601275588, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.00020020943
@@ -4371,6 +4384,11 @@ GameObject:
 --- !u!1 &3563317622092796703 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7395696031467403161, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
+  m_PrefabInstance: {fileID: 2895330619710348152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3717188638498106850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7225923877696063846, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
   m_PrefabInstance: {fileID: 2895330619710348152}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4530899948827762018 stripped
