@@ -44,8 +44,6 @@ public class CorgiEffectHolder : MonoBehaviour
     [SerializeField] public AudioClip[] Grrs;
     [SerializeField] private List<SkinnedMeshRenderer> nonColoredMeshes;
     [SerializeField] private MusicManager musicManager;
-    [SerializeField] private float powerupMusicPlaybackSpeeed = 1.1f;
-    private float originalMusicPlaybackSpeed;
 
     [SerializeField] ParticleSystem leftPlus;
     [SerializeField] ParticleSystem rightPlus;

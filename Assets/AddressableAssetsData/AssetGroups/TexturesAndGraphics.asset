@@ -288,11 +288,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0c69f84957af98345838d7bccaf32de2
-    m_Address: Assets/Objects/UI/fuelGuageYellow.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0c6a87eea66bcce4c93d359ebbbfff77
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/PreAlphaAssets/Textures/Pug_texture.png
     m_ReadOnly: 0
@@ -1326,6 +1321,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37a37ce9f28ac4641802bdee7b589bd8
+    m_Address: Assets/Objects/UI/soft border.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 37ccf5e0ade570a47a447e6e21dd0c33
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/simpleLowPolyRock/source/Rock.fbm/Rock_Cav_Tut_1024.png
     m_ReadOnly: 0
@@ -1540,11 +1540,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3f30bb0a9b0742948b4dd1b3471d2347
-    m_Address: Assets/Objects/UI/fuelGuageGreen.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3f30dd7ae36ef7347aa54d4a72f40405
     m_Address: Assets/Icons/iconfull.png
     m_ReadOnly: 0
@@ -1643,11 +1638,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 41e896ba42c24254b834d4f24fccf6ab
     m_Address: Assets/Objects/UI/CorgiSense/cantGetRead.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 42567dc0b86c1c8459b23851475a171b
-    m_Address: Assets/Objects/UI/fuelGuageRed.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

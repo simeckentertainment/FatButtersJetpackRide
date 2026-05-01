@@ -2,6 +2,6 @@
 {
     protected override bool IsVisible()
     {
-        return Model.GlowActive;
+        return Model.BallActive;
     }
 }

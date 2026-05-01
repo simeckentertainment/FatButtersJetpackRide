@@ -25,8 +25,6 @@ public class GameplayUIModel : Model
         }
     }
 
-    public bool GlowActive => IsRunningHurt || BallActive;
-
     private bool _isRunningHurt;
     public bool IsRunningHurt
     {
