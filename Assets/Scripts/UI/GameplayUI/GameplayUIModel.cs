@@ -4,8 +4,10 @@ public class GameplayUIModel : Model
 {
     [SerializeField] private Player player;
     [SerializeField] private float thrustWarningActivationDelay = 0.3f;
+    [SerializeField] private float showHurtDuration = 0.15f;
 
     private float currentThrustDuration;
+    private float currentHurtDuration;
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
@@ -33,6 +35,38 @@ public class GameplayUIModel : Model
         set
         {
             _isRunningHurt = value;
+            if (_isRunningHurt)
+            {
+                currentHurtDuration = showHurtDuration;
+            }
+            Refresh();
+        }
+    }
+
+    private bool _ballActive;
+    public bool BallActive
+    {
+        get
+        {
+            return _ballActive;
+        }
+        set
+        {
+            _ballActive = value;
+            Refresh();
+        }
+    }
+
+    private Color _glowColor;
+    public Color GlowColor
+    {
+        get
+        {
+            return _glowColor;
+        }
+        set
+        {
+            _glowColor = value;
             Refresh();
         }
     }
@@ -57,8 +91,6 @@ public class GameplayUIModel : Model
         }
     }
 
-    public bool PlayerHasBall => player.hasPermaBall || player.hasTemporaryBall;
-
     public bool PlayerCanUseJetpack => player.JetpackActivationPossible;
 
     public bool PlayerIsUsingJetpack => player.input.GoThrust;
@@ -80,6 +112,14 @@ public class GameplayUIModel : Model
         else
         {
             currentThrustDuration = 0;
+        }
+        if (IsRunningHurt)
+        {
+            currentHurtDuration -= Time.deltaTime;
+            if (currentHurtDuration <= 0)
+            {
+                IsRunningHurt = false;
+            }
         }
     }
 

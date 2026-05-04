@@ -5,6 +5,7 @@ public class TummyGuageGraphicHelper : MonoBehaviour
 {
     [SerializeField] Player player;
     [SerializeField] Image image;
+    [SerializeField] Image shineImage;
     public int emptyAmount;
     public Sprite tum0;
     public int quarterAmount;
@@ -63,26 +64,31 @@ public class TummyGuageGraphicHelper : MonoBehaviour
         {
             image.sprite = tumnull;
             image.enabled = false;
+            shineImage.enabled = false;
         }
         if(maxTummy == quarterAmount)
         {
             image.sprite = tum25;
             image.enabled = true;
+            shineImage.enabled = true;
         }
         if(maxTummy == halfAmount)
         {
             image.sprite = tum50;
             image.enabled = true;
+            shineImage.enabled = true;
         }
         if(maxTummy == threeQuarterAmount)
         {
             image.sprite = tum75;
             image.enabled = true;
+            shineImage.enabled = true;
         }
         if(maxTummy >= fullAmount)
         {
             image.sprite = tum100;
             image.enabled = true;
+            shineImage.enabled = true;
         }
     }
 }

@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d2ee9ec671dcc458afe46136f3d8ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 5219921223192195017, guid: 3722999d10e17db4e9f362ce9dbdc79a, type: 3}
 --- !u!1 &7642679541206280875
 GameObject:
   m_ObjectHideFlags: 0

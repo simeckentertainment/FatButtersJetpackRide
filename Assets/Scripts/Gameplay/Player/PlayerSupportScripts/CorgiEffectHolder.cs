@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -38,9 +40,10 @@ public class CorgiEffectHolder : MonoBehaviour
     [SerializeField] public AudioClip deathSound;
 
     [SerializeField] public PlayerSkin chosenSkin;
-    [SerializeField] public SkinnedMeshRenderer[] butterySkinnedMeshRenderers;
     [SerializeField] public AudioClip[] borks;
     [SerializeField] public AudioClip[] Grrs;
+    [SerializeField] private List<SkinnedMeshRenderer> nonColoredMeshes;
+    [SerializeField] private MusicManager musicManager;
 
     [SerializeField] ParticleSystem leftPlus;
     [SerializeField] ParticleSystem rightPlus;
@@ -53,6 +56,15 @@ public class CorgiEffectHolder : MonoBehaviour
     [Header("The default skin object, for non-default skins.")]
     GameObject defaultSkinObj;
     GameObject premiumSkinObj;
+
+    [SerializeField] private float powerupFlashingSpeed = 0.2f;
+
+    private Color currentFlashingColor = new Color(1, 0, 0);
+    private ColorPart increasePart = ColorPart.G;
+    private ColorPart decreasePart = ColorPart.R;
+    private bool increasing = true;
+
+    private List<SkinnedMeshRenderer> butterySkinnedMeshRenderers;
 
     void Awake()
     {
@@ -560,27 +572,66 @@ public class CorgiEffectHolder : MonoBehaviour
         // }
 
     }
+
     void NabAllSkinnedMeshRenderers()
     {
-        butterySkinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
+        butterySkinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>().ToList();
+        foreach (var excludedMesh in nonColoredMeshes)
+        {
+            butterySkinnedMeshRenderers.Remove(excludedMesh);
+        }
+
+        //originalMusicPlaybackSpeed = musicManager.PlaybackSpeed;
     }
+
     public void BallEffectRunner()
     {
-        Color color = new Color (Random.Range(0f,1f),Random.Range(0f,1f),Random.Range(0f,1f));
-        foreach(SkinnedMeshRenderer pm in butterySkinnedMeshRenderers){
-            pm.material.SetColor("_EmissionColor",color);
+        SetNextColor();
+        foreach (var mesh in butterySkinnedMeshRenderers)
+        {
+            mesh.material.EnableKeyword("_EMISSION");
+            mesh.material.SetColor("_EmissionColor", currentFlashingColor);
         }
+
+        player.UI.SetBallGlowActive(true);
+        player.UI.SetBallGlowColor(currentFlashingColor);
+        musicManager.StartPowerupSong();
     }
+
     public void BallEffectCanceler()
     {
-        foreach(SkinnedMeshRenderer pm in butterySkinnedMeshRenderers){
-            try
+        for (int i = 0; i < butterySkinnedMeshRenderers.Count; i++)
+        {
+            var mesh = butterySkinnedMeshRenderers[i];
+            mesh.material.DisableKeyword("_EMISSION");
+            mesh.material.SetColor("_EmissionColor", Color.black);
+        }
+
+        player.UI.SetBallGlowActive(false);
+        player.UI.SetBallGlowColor(Color.red);
+        musicManager.StopPowerupSong();
+    }
+
+    private void SetNextColor()
+    {
+        if (increasing)
+        {
+            currentFlashingColor = currentFlashingColor.Increase(increasePart, powerupFlashingSpeed);
+            if (currentFlashingColor.GetColorPart(increasePart) == 1)
             {
-                pm.material.SetColor("_EmissionColor", Color.black);
+                // switch to decreasing mode
+                increasing = false;
+                increasePart = increasePart.Next();
             }
-            catch
+        }
+        else
+        {
+            currentFlashingColor = currentFlashingColor.Increase(decreasePart, -powerupFlashingSpeed);
+            if (currentFlashingColor.GetColorPart(decreasePart) == 0)
             {
-                
+                // switch to increasing mode
+                increasing = true;
+                decreasePart = decreasePart.Next();
             }
         }
     }

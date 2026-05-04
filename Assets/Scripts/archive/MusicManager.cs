@@ -3,12 +3,14 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource transitionAudioSource;
     [SerializeField] AudioClip songThisLevel;
+    [SerializeField] AudioClip powerupSong;
+    [SerializeField] AudioClip songTransitionSound;
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         audioSource.volume = collectibleData.MusicVolumeLevel;
         audioSource.clip = songThisLevel;
@@ -16,9 +18,32 @@ public class MusicManager : MonoBehaviour
         audioSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    private float levelSongPlaybackTime = 0f;
+
+    private void Update()
     {
         audioSource.volume = collectibleData.MusicVolumeLevel;
+    }
+
+    public void StartPowerupSong()
+    {
+        if (audioSource.clip != powerupSong)
+        {
+            levelSongPlaybackTime = audioSource.time;
+            audioSource.clip = powerupSong;
+            audioSource.Play();
+        }
+    }
+
+    public void StopPowerupSong()
+    {
+        if (audioSource.clip == powerupSong)
+        {
+            transitionAudioSource.Play();
+
+            audioSource.clip = songThisLevel;
+            audioSource.time = levelSongPlaybackTime;
+            audioSource.PlayDelayed(transitionAudioSource.clip.length);
+        }
     }
 }

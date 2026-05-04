@@ -288,11 +288,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0c69f84957af98345838d7bccaf32de2
-    m_Address: Assets/Objects/UI/fuelGuageYellow.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0c6a87eea66bcce4c93d359ebbbfff77
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/PreAlphaAssets/Textures/Pug_texture.png
     m_ReadOnly: 0
@@ -1326,6 +1321,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37a37ce9f28ac4641802bdee7b589bd8
+    m_Address: Assets/Objects/UI/soft border.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 37ccf5e0ade570a47a447e6e21dd0c33
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/simpleLowPolyRock/source/Rock.fbm/Rock_Cav_Tut_1024.png
     m_ReadOnly: 0
@@ -1447,6 +1447,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3cc6ef24f80b29d44b6f7168f5c73a4e
+    m_Address: Assets/Objects/UI/fuelGuage.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3cea5651b851cb74c9864b2cd219fb5f
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/crashed-spaceship/textures/Shell_metallic.png
     m_ReadOnly: 0
@@ -1532,11 +1537,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3f2f0d6b58c35ff4283ab41f2cbd4879
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/TechPortal1/textures/Frame/Portal_Hight_1007.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3f30bb0a9b0742948b4dd1b3471d2347
-    m_Address: Assets/Objects/UI/fuelGuageGreen.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -1638,11 +1638,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 41e896ba42c24254b834d4f24fccf6ab
     m_Address: Assets/Objects/UI/CorgiSense/cantGetRead.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 42567dc0b86c1c8459b23851475a171b
-    m_Address: Assets/Objects/UI/fuelGuageRed.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -4827,6 +4822,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce356cff49c881c4abd85838b6525482
+    m_Address: Assets/Objects/UI/fuelGuage-shine.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ce97ed62c0a56e84ab25e22c8dfd5bca
     m_Address: Assets/Objects/EffectExamples/WeaponEffects/Textures/TinyStonesParticleSheet.png
     m_ReadOnly: 0
@@ -5490,6 +5490,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e88eebbe7f8d74341bb36f125df2c4bf
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/TerrainMods/Lake/quarry_wall_02_nor_gl_2k.exr
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e890aa9c5da63844ab774924b07c6802
+    m_Address: Assets/Objects/UI/tummygraphic-shine.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

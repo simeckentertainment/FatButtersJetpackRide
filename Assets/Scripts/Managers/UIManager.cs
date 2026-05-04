@@ -27,6 +27,16 @@ public class UIManager : MonoBehaviour
         gameplayUI.IsRunningHurt = true;
     }
 
+    public void SetBallGlowActive(bool active)
+    {
+        gameplayUI.BallActive = active;
+    }
+
+    public void SetBallGlowColor(Color color)
+    {
+        gameplayUI.GlowColor = color;
+    }
+
     public void SetEndLevelStats(int newbones)
     {
         successMenu.NewBones = newbones;
