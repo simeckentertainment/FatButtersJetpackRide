@@ -639,7 +639,7 @@ MonoBehaviour:
   maxFuel: 0
   tummy: 0
   maxTummy: 0
-  InJetpackKillZone: 0
+  CollidersInJetpackKillZone: []
   thrusterRechargeDelay: 60
   thrusterRechargeRate: 3
   KeyboardRollOffset: 0
@@ -774,7 +774,6 @@ MonoBehaviour:
   deathSound: {fileID: 8300000, guid: 7ae32d205e222714a87d538f1a3c086c, type: 3}
   spaceHelmet: {fileID: 3717188638498106850}
   chosenSkin: {fileID: 0}
-  butterySkinnedMeshRenderers: []
   borks:
   - {fileID: 8300000, guid: 81ee8f5d5c2e073468ea6636f378b535, type: 3}
   - {fileID: 8300000, guid: 4957f18372acb7742b89a7b1284ff35c, type: 3}
@@ -801,11 +800,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0b0b27089d91a8440930e66c19559cd6, type: 3}
   - {fileID: 8300000, guid: 37622b16b2289674a8914fc6e65f8fff, type: 3}
   - {fileID: 8300000, guid: b29bd89790e9fad4386b49020e7ac07c, type: 3}
+  nonColoredMeshes:
+  - {fileID: 8565377495081107584}
+  - {fileID: 7019858837149643703}
+  musicManager: {fileID: 0}
+  powerupMusicPlaybackSpeeed: 1.1
   leftPlus: {fileID: 0}
   rightPlus: {fileID: 0}
   leftMinus: {fileID: 0}
   rightMinus: {fileID: 0}
   nullParticleSystem: {fileID: 4970322086930322178, guid: d78c6bec91753744794e913f19761d76, type: 3}
+  powerupFlashingSpeed: 0.2
 --- !u!114 &6341322622021333850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5101,6 +5106,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8590517719498254023, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
   m_PrefabInstance: {fileID: 2895330619710348152}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &7019858837149643703 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5279850097865484495, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
+  m_PrefabInstance: {fileID: 2895330619710348152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7151710792593870978 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5409312198248303610, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
@@ -5164,6 +5174,11 @@ Transform:
 --- !u!1 &8557121295105381599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6840765116645527463, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
+  m_PrefabInstance: {fileID: 2895330619710348152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &8565377495081107584 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6840988349261077496, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
   m_PrefabInstance: {fileID: 2895330619710348152}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8829856243636424501 stripped
