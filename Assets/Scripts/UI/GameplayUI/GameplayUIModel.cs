@@ -113,9 +113,13 @@ public class GameplayUIModel : Model
         {
             currentThrustDuration = 0;
         }
+    }
+
+    private void Update()
+    {
         if (IsRunningHurt)
         {
-            currentHurtDuration -= Time.deltaTime;
+            currentHurtDuration -= Time.unscaledDeltaTime; // to make sure we only show this temporarily, even when paused
             if (currentHurtDuration <= 0)
             {
                 IsRunningHurt = false;
