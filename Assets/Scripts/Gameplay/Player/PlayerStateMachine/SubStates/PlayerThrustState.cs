@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerThrustState : PlayerAliveState
@@ -61,16 +58,13 @@ public class PlayerThrustState : PlayerAliveState
             if (player.input.GoThrust)
             {
                 player.vfx.StartPrimaryThrusters();
-                thrust();
-                UseFuel(isBoosting);
-                GameplaySignal.Raise(SignalId.ThrustUsed);
             }
         }
-        if (stateAge > 3)
+        if (stateAge >= 3)
         {
             if (player.input.GoThrust)
             {
-                thrust();
+                player.Thrust();
                 UseFuel(isBoosting);
                 GameplaySignal.Raise(SignalId.ThrustUsed);
             }

@@ -136,7 +136,10 @@ public class PlayerAliveState : PlayerState
     #region CoreMechanicStuff
     private void AdjustRotationAngle()
     {
-        if (player.input.GoCw & player.input.GoCcw) { return; }
+        player.UpdateRotation();
+        player.UpdateJetpackRotation();
+
+        if (player.input.GoCw && player.input.GoCcw) { return; }
         player.vfx.StopAllRotParticles();
         if (player.input.GoCcw)
         {
@@ -146,12 +149,6 @@ public class PlayerAliveState : PlayerState
         {
             player.vfx.StartPlusRotParticles();
         }
-        player.transform.rotation = Quaternion.Euler(Vector3.forward * player.input.aimAngle);//This line seems to be what's making the body rotation what it is.
-    }
-
-    public void thrust()
-    {
-        player.rb.AddRelativeForce(0, player.thrust, 0);
     }
 
     public void UseFuel()

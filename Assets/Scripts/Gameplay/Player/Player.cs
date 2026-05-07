@@ -49,6 +49,8 @@ public class Player : MonoBehaviour
     [SerializeField] public AudioClip[] borks;
     [System.NonSerialized] public int baseThrust = 25;
     [SerializeField] public GameObject[] CollidersAndTriggers;
+    [SerializeField] private Transform jetpackTransform;
+
     [Header("Important internal data")]
     public float thrust;
     [System.NonSerialized] public float baseThrustWithUpgrades; // Base thrust including upgrades (used for boost calculations)
@@ -323,6 +325,21 @@ public class Player : MonoBehaviour
     {
         EnemiesDefeated += count;
         OnPickupCollected.Invoke();
+    }
+
+    public void UpdateRotation()
+    {
+        transform.localRotation = Quaternion.Euler(0, walkDirection > 0 ? 0 : 180, 0);
+    }
+
+    public void UpdateJetpackRotation()
+    {
+        jetpackTransform.localRotation = Quaternion.Euler(walkDirection < 0 ? input.aimAngle : -input.aimAngle, 0, 0);
+    }
+
+    public void Thrust()
+    {
+        rb.AddForce(jetpackTransform.up * thrust);
     }
 
     #region DataStuff
