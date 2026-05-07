@@ -329,12 +329,13 @@ public class Player : MonoBehaviour
 
     public void UpdateRotation()
     {
-        transform.localRotation = Quaternion.Euler(0, walkDirection > 0 ? 0 : 180, 0);
+        transform.localRotation = Quaternion.Euler(0, input.aimAngle < 0 ? 0 : 180, 0);
     }
 
     public void UpdateJetpackRotation()
     {
-        jetpackTransform.localRotation = Quaternion.Euler(walkDirection < 0 ? input.aimAngle : -input.aimAngle, 0, 0);
+        // we use the absolute value of the aim angle because when we rotate backwards, we need the jetpack to rotate the same way it did
+        jetpackTransform.localRotation = Quaternion.Euler(Mathf.Abs(input.aimAngle), 0, 0);
     }
 
     public void Thrust()
