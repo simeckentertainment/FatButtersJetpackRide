@@ -334,8 +334,11 @@ public class Player : MonoBehaviour
 
     public void UpdateJetpackRotation()
     {
-        // we use the absolute value of the aim angle because when we rotate backwards, we need the jetpack to rotate the same way it did
-        jetpackTransform.localRotation = Quaternion.Euler(Mathf.Abs(input.aimAngle), 0, 0);
+        var playerRotationRadians = (transform.rotation.eulerAngles.y + 90) * Mathf.Deg2Rad;
+        var xAngle = Mathf.Sin(playerRotationRadians) * -input.aimAngle;
+        var zAngle = Mathf.Cos(playerRotationRadians) * input.aimAngle;
+        
+        jetpackTransform.rotation = Quaternion.Euler(xAngle, transform.rotation.eulerAngles.y + 90, zAngle);
     }
 
     public void Thrust()
