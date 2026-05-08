@@ -6,9 +6,6 @@ public class PlayerAliveState : PlayerState
     public float thrusterVolumeCounter;
     public override bool IsAliveState => true;
 
-    protected float targetRotation;
-    private float rotationRate;
-
     public PlayerAliveState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
 
@@ -138,12 +135,6 @@ public class PlayerAliveState : PlayerState
 
     #region CoreMechanicStuff
 
-    public void SetTargetRotation(float angle, float degreesPerSecond)
-    {
-        targetRotation = angle;
-        rotationRate = degreesPerSecond;
-    }
-
     private void AdjustRotationAngle()
     {
         SetPlayerRotation();
@@ -165,21 +156,21 @@ public class PlayerAliveState : PlayerState
     private void SetPlayerRotation()
     {
         var currentPlayerRotation = player.transform.rotation.eulerAngles.y;
-        if (currentPlayerRotation == targetRotation)
+        if (Helper.isWithinMarginOfError(currentPlayerRotation, player.TargetRotation, 0.001f))
         {
             return;
         }
 
-        var direction = GetClosestRotationDirection(currentPlayerRotation, targetRotation); // -1 or 1
-        var nextRotationAngle = currentPlayerRotation + (rotationRate * direction * Time.deltaTime);
+        var direction = GetClosestRotationDirection(currentPlayerRotation, player.TargetRotation); // -1 or 1
+        var nextRotationAngle = currentPlayerRotation + (player.RotationRate * direction * Time.deltaTime);
         if (nextRotationAngle < 0)
         {
             nextRotationAngle += 360;
         }
 
-        if (direction * nextRotationAngle > direction * targetRotation)
+        if (direction * nextRotationAngle > direction * player.TargetRotation)
         {
-            nextRotationAngle = targetRotation;
+            nextRotationAngle = player.TargetRotation;
         }
 
         player.SetRotation(nextRotationAngle);

@@ -70,12 +70,12 @@ public class PlayerThrustState : PlayerAliveState
             }
         }
 
-        var targetAngle = targetRotation;
+        var targetAngle = player.TargetRotation;
         if (Mathf.Abs(player.input.aimAngle) - 5 > 0) // TODO: arbitrary sensitivity of 5 degrees, make configurable
         {
             targetAngle = player.input.aimAngle < 0 ? 0 : 180;
         }
-        SetTargetRotation(targetAngle, 360);
+        player.SetTargetRotation(targetAngle, 360);
 
         if (!player.input.GoThrust || !player.JetpackActivationPossible || player.Fuel < 0.0f)
         {

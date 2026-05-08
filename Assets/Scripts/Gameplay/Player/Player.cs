@@ -113,6 +113,9 @@ public class Player : MonoBehaviour
     public int FuelsCollected { get; private set; }
     public int EnemiesDefeated { get; private set; }
 
+    public float TargetRotation { get; private set; }
+    public float RotationRate { get; private set; }
+
     public UnityEvent OnPickupCollected { get; set; } = new UnityEvent();
     public UnityEvent OnFuelUpdated { get; set; } = new UnityEvent();
     public UnityEvent OnJetpackStatusUpdated { get; set; } = new UnityEvent();
@@ -325,6 +328,12 @@ public class Player : MonoBehaviour
     {
         EnemiesDefeated += count;
         OnPickupCollected.Invoke();
+    }
+
+    public void SetTargetRotation(float angle, float degreesPerSecond)
+    {
+        TargetRotation = angle;
+        RotationRate = degreesPerSecond;
     }
 
     /// <summary>
