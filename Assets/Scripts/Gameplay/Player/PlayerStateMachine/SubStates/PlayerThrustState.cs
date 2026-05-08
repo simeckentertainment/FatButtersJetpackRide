@@ -70,6 +70,13 @@ public class PlayerThrustState : PlayerAliveState
             }
         }
 
+        var targetAngle = targetRotation;
+        if (Mathf.Abs(player.input.aimAngle) - 5 > 0) // TODO: arbitrary sensitivity of 5 degrees, make configurable
+        {
+            targetAngle = player.input.aimAngle < 0 ? 0 : 180;
+        }
+        SetTargetRotation(targetAngle, 360);
+
         if (!player.input.GoThrust || !player.JetpackActivationPossible || player.Fuel < 0.0f)
         {
             player.stateMachine.changeState(player.playerFallState);
@@ -95,6 +102,9 @@ public class PlayerThrustState : PlayerAliveState
     }
     public override void exit()
     {
+        // TODO: on exit, we need to make sure we're fully rotated in one direction or the other
+        // We could make the rotation a process triggered on the player rather than in this state so it will finish regardless of state
+
         thrusterVolumeCounter = Mathf.Clamp(stateAge,0,30);
         player.vfx.StopPrimaryThrusters();
         player.IgnoreIdleAnimationReset = true;

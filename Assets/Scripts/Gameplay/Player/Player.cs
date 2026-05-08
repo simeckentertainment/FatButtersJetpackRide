@@ -327,9 +327,13 @@ public class Player : MonoBehaviour
         OnPickupCollected.Invoke();
     }
 
-    public void UpdateRotation()
+    /// <summary>
+    /// Sets the y-axis rotation of the whole player object
+    /// </summary>
+    /// <param name="angle">0 = right, 180 = left</param>
+    public void SetRotation(float angle)
     {
-        transform.localRotation = Quaternion.Euler(0, input.aimAngle < 0 ? 0 : 180, 0);
+        transform.localRotation = Quaternion.Euler(0, angle, 0);
     }
 
     public void UpdateJetpackRotation()

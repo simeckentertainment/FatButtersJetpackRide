@@ -6,6 +6,9 @@ public class PlayerAliveState : PlayerState
     public float thrusterVolumeCounter;
     public override bool IsAliveState => true;
 
+    protected float targetRotation;
+    private float rotationRate;
+
     public PlayerAliveState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
 
@@ -134,9 +137,17 @@ public class PlayerAliveState : PlayerState
     #endregion
 
     #region CoreMechanicStuff
+
+    public void SetTargetRotation(float angle, float degreesPerSecond)
+    {
+        targetRotation = angle;
+        rotationRate = degreesPerSecond;
+    }
+
     private void AdjustRotationAngle()
     {
-        player.UpdateRotation();
+        SetPlayerRotation();
+
         player.UpdateJetpackRotation();
 
         if (player.input.GoCw && player.input.GoCcw) { return; }
@@ -149,6 +160,48 @@ public class PlayerAliveState : PlayerState
         {
             player.vfx.StartPlusRotParticles();
         }
+    }
+
+    private void SetPlayerRotation()
+    {
+        var currentPlayerRotation = player.transform.rotation.eulerAngles.y;
+        if (currentPlayerRotation == targetRotation)
+        {
+            return;
+        }
+
+        var direction = GetClosestRotationDirection(currentPlayerRotation, targetRotation); // -1 or 1
+        var nextRotationAngle = currentPlayerRotation + (rotationRate * direction * Time.deltaTime);
+        if (nextRotationAngle < 0)
+        {
+            nextRotationAngle += 360;
+        }
+
+        if (direction * nextRotationAngle > direction * targetRotation)
+        {
+            nextRotationAngle = targetRotation;
+        }
+
+        player.SetRotation(nextRotationAngle);
+    }
+
+    private int GetClosestRotationDirection(float currentAngle, float targetAngle)
+    {
+        var positiveDistance = targetAngle - currentAngle;
+        if (positiveDistance < 0)
+        {
+            positiveDistance += 360;
+        }
+
+        var negativeDistance = -(targetAngle - currentAngle);
+        if (negativeDistance < 0)
+        {
+            negativeDistance += 360;
+        }
+
+        return positiveDistance < negativeDistance ?
+            1 :
+            -1;
     }
 
     public void UseFuel()
