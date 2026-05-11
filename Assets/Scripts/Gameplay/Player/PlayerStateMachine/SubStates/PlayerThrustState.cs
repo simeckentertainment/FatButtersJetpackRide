@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerThrustState : PlayerAliveState
 {
+    private const float turnDelay = 0.5f;
+    private float remainingTurnDelay;
+
     public PlayerThrustState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
 
@@ -70,12 +73,7 @@ public class PlayerThrustState : PlayerAliveState
             }
         }
 
-        var targetAngle = player.TargetRotation;
-        if (Mathf.Abs(player.input.aimAngle) - 5 > 0) // TODO: arbitrary sensitivity of 5 degrees, make configurable
-        {
-            targetAngle = player.input.aimAngle < 0 ? 0 : 180;
-        }
-        player.SetTargetRotation(targetAngle, 360);
+        UpdateRotation();
 
         if (!player.input.GoThrust || !player.JetpackActivationPossible || player.Fuel < 0.0f)
         {
@@ -100,6 +98,26 @@ public class PlayerThrustState : PlayerAliveState
 
         base.FixedUpdate();
     }
+
+    private void UpdateRotation()
+    {
+        var targetAngle = player.TargetRotation;
+        if (Mathf.Abs(player.input.aimAngle) - 5 > 0) // TODO: arbitrary sensitivity of 5 degrees, make configurable
+        {
+            targetAngle = player.input.aimAngle < 0 ? 0 : 180;
+            remainingTurnDelay -= Time.deltaTime; // must hold for a duration before you can turn
+        }
+        else
+        {
+            remainingTurnDelay = turnDelay;
+        }
+
+        if (remainingTurnDelay <= 0)
+        {
+            player.SetTargetRotation(targetAngle, 360);
+        }
+    }
+
     public override void exit()
     {
         // TODO: on exit, we need to make sure we're fully rotated in one direction or the other

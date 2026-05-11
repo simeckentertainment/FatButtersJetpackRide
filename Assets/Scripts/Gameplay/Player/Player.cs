@@ -70,7 +70,6 @@ public class Player : MonoBehaviour
     [System.NonSerialized] public float GravityRoll;
     [SerializeField] public float KeyboardRollOffset;
     public int KeyboardSensitivity;
-    public bool corgiTurned;
 
     [Header("Walk mechanics")]
     [SerializeField] public float walkDirection; // Walk direction (-1 or 1)
@@ -97,8 +96,6 @@ public class Player : MonoBehaviour
     public bool hasPermaBall;
     public int ballTimerMax = 600;
     public bool killThrustTriggerTouch;
-    public enum PlayerDirection{Left,Right};
-    public PlayerDirection playerDirection;
     public bool LowGravMode;
 
     public bool IgnoreIdleAnimationReset { get; set; }
@@ -203,8 +200,6 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        //transform.Rotate(Vector3.back * 0.1f);
-        corgiTurned = false;
         skindex = collectibleData.CurrentSkin;
         vfx.ApplySkin(skindex);
         JetpackActivationPossible = true;

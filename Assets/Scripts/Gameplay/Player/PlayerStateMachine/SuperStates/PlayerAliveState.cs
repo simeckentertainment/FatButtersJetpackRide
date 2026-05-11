@@ -32,11 +32,6 @@ public class PlayerAliveState : PlayerState
 
     public override void FixedUpdate()
     {
-        if (!player.corgiTurned)
-        {
-            //This code will return when we implement facing left.
-            //DidThePlayerTurnChecker();
-        }
         player.JetpackActivationPossible = CanActivateJetpack();
         //These are the collision runners.
         AdjustRotationAngle();
@@ -62,10 +57,6 @@ public class PlayerAliveState : PlayerState
     }
 
     #region CollisionRunners
-    void DidThePlayerTurnChecker()
-    {
-        //This code will return when we implement facing left.
-    }
 
     private void HarmfulInteractionRunner()
     {
