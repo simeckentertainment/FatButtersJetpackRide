@@ -6,6 +6,9 @@ public class PlayerAliveState : PlayerState
     public float thrusterVolumeCounter;
     public override bool IsAliveState => true;
 
+    protected virtual float TurnDelay => 0f;
+    private float remainingTurnDelay;
+
     public PlayerAliveState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
 
@@ -41,6 +44,25 @@ public class PlayerAliveState : PlayerState
         thrusterVolumeRunner();
         if (player.FinishTouch) { player.stateMachine.changeState(player.playerWinState); }
         base.FixedUpdate();
+    }
+
+    protected virtual void UpdateTargetRotation(float speed)
+    {
+        var targetAngle = player.TargetRotation;
+        if (Mathf.Abs(player.input.aimAngle) > 0)
+        {
+            targetAngle = player.input.aimAngle < 0 ? 0 : 180;
+            remainingTurnDelay -= Time.deltaTime;
+        }
+        else
+        {
+            remainingTurnDelay = TurnDelay; // must hold for a duration before you can turn
+        }
+
+        if (remainingTurnDelay <= 0)
+        {
+            player.SetTargetRotation(targetAngle, speed);
+        }
     }
 
     private bool CanActivateJetpack()

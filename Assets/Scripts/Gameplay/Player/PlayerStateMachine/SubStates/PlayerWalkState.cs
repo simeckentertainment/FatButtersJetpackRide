@@ -50,13 +50,8 @@ public class PlayerWalkState : PlayerAliveState
             previousWalkSpeedEnum = walkSpeedEnum; //reset for "remembering" for next frame.
         }
 
-        var targetAngle = player.TargetRotation;
-        if (Mathf.Abs(player.input.aimAngle) - 5 > 0) // TODO: arbitrary sensitivity of 5 degrees, make configurable
-        {
-            targetAngle = player.input.aimAngle < 0 ? 0 : 180;
-        }
-        player.SetTargetRotation(targetAngle, 720);
-        
+        UpdateTargetRotation(720);
+
         if (player.IsFalling())
         {
             player.stateMachine.changeState(player.playerFallState);
