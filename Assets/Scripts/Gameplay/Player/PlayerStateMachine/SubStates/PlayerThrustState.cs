@@ -100,9 +100,6 @@ public class PlayerThrustState : PlayerAliveState
 
     public override void exit()
     {
-        // TODO: on exit, we need to make sure we're fully rotated in one direction or the other
-        // We could make the rotation a process triggered on the player rather than in this state so it will finish regardless of state
-
         thrusterVolumeCounter = Mathf.Clamp(stateAge,0,30);
         player.vfx.StopPrimaryThrusters();
         player.IgnoreIdleAnimationReset = true;
