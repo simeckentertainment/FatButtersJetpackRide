@@ -4,6 +4,7 @@ public class PlayerEnterDangleState : PlayerAliveState
 {
     private float stateAge;
     private float VolumeReductionThreshold;
+
     public PlayerEnterDangleState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
     }
@@ -35,6 +36,7 @@ public class PlayerEnterDangleState : PlayerAliveState
         {
             player.stateMachine.changeState(player.playerDangleState);
         }
+
         base.FixedUpdate();
     }
 
