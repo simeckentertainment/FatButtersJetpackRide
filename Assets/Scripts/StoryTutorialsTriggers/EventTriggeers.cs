@@ -19,14 +19,12 @@ public class EventTriggeers : MonoBehaviour
    public bool killThrust = true;
    
 
-
-
     // kill thrust until player picks jetpack.
     void Update()
     {
         if(killThrust)
         {
-          //  player.input.GoThrust = false;
+            player.input.GoThrust = false;
         }
     }
 
@@ -45,9 +43,9 @@ public class EventTriggeers : MonoBehaviour
     public void CameraTransition(bool inputDriverBool)
     {
         lootAtCamera.LookAt = bear;
-        //player.GetComponent<InputDriver>().enabled = inputDriverBool;
-       // player.input.aimAngle = 0;
-        //virtualCameraGO.transform.rotation = quaternion.Euler(0,0,0);
+        player.GetComponent<InputDriver>().enabled = inputDriverBool;
+        player.input.aimAngle = 0;
+        virtualCameraGO.transform.rotation = quaternion.Euler(0,0,0);
     }
 
  

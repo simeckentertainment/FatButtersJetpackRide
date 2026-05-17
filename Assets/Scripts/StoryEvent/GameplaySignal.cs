@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 public enum SignalId
 {
@@ -32,6 +31,5 @@ public static class GameplaySignal
     {
         if (signalId == SignalId.None || !Handlers.ContainsKey(signalId)) return;
         Handlers[signalId]?.Invoke();
-       
     }
 }
