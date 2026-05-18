@@ -2,6 +2,6 @@
 {
     protected override bool IsVisible()
     {
-        return Model.BallActive;
+        return Model.BallActive && Model.UIState == GameplayUIState.Base;
     }
 }
