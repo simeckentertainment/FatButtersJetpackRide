@@ -27,7 +27,6 @@ public class PlayerFallState : PlayerAliveState
     public override void FixedUpdate()
     {
         stateAge++;
-        player.ResetRechargeCounter();
 
         //Calm the sound the fuck down so we don't blow people's ears out.
         player.sfx.volume = Mathf.Clamp((VolumeReductionThreshold-stateAge)/VolumeReductionThreshold,0f,1f);
