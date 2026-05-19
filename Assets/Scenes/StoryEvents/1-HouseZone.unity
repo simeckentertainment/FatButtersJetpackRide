@@ -2004,6 +2004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holster: {fileID: 1430369612}
   jetpackPanel: {fileID: 4600383358545332261}
+  eventTriggeers: {fileID: 1452007228}
   player: {fileID: 2099492717}
   jetPackArrowTransform:
     Position: {x: 0, y: 0, z: 0}
