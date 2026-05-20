@@ -102,7 +102,6 @@ public class PlayerWalkState : PlayerAliveState
                 break;
             case WalkSpeed.Fast:
                 player.walkCurrentSpeed = player.fastWalkSpeed;
-                player.ResetRechargeCounter();
                 break;
         }
 

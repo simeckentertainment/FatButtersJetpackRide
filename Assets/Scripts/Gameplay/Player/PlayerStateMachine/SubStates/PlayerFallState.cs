@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class PlayerFallState : PlayerAliveState
 {
+    private float stateAge;
+    private float VolumeReductionThreshold;
+
     public PlayerFallState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
     }
 
-    float stateAge;
-    float VolumeReductionThreshold;
     public override void enter()
     {
         stateAge = 0;
@@ -21,9 +22,6 @@ public class PlayerFallState : PlayerAliveState
         base.enter();
     }
 
-    public override void Update(){
-        base.Update();
-    }
     public override void FixedUpdate()
     {
         stateAge++;
@@ -61,15 +59,12 @@ public class PlayerFallState : PlayerAliveState
         {
             player.stateMachine.changeState(player.playerEnterDangleState);
         }
+
         base.FixedUpdate();
     }
 
-    public override void exit(){
-        //if(player.anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f){
-            //player.animationPercentage = 1.0f;
-        //} else {
-            //player.animationPercentage = GetNormalizedTime();
-        //}
+    public override void exit()
+    {
         base.exit();
     }
 }

@@ -1,15 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerEnterDangleState : PlayerAliveState
 {
-    public PlayerEnterDangleState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine){
+    private float stateAge;
+    private float VolumeReductionThreshold;
 
+    public PlayerEnterDangleState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
+    {
     }
-    float stateAge;
-    float VolumeReductionThreshold;
-    public override void enter(){
+
+    public override void enter()
+    {
         PlayAnim("enterFallDangle");
         base.enter();
     }
@@ -17,6 +18,7 @@ public class PlayerEnterDangleState : PlayerAliveState
     public override void FixedUpdate()
     {
         stateAge++;
+        player.ResetRechargeCounter();
 
         //Calm the sound the fuck down so we don't blow people's ears out.
         player.sfx.volume = Mathf.Clamp((VolumeReductionThreshold-stateAge)/VolumeReductionThreshold,0f,1f);
@@ -34,14 +36,12 @@ public class PlayerEnterDangleState : PlayerAliveState
         {
             player.stateMachine.changeState(player.playerDangleState);
         }
+
         base.FixedUpdate();
     }
 
-    public override void exit(){
-        //if(player.anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f){
-            //player.animationPercentage = 1.0f;
-        //} else {
-            //player.animationPercentage = GetNormalizedTime();
-        //}
+    public override void exit()
+    {
+        base.exit();
     }
 }
