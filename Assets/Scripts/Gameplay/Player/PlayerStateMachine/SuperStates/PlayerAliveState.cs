@@ -6,6 +6,9 @@ public class PlayerAliveState : PlayerState
     public float thrusterVolumeCounter;
     public override bool IsAliveState => true;
 
+    protected virtual float TurnDelay => 0f;
+    private float remainingTurnDelay;
+
     public PlayerAliveState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
 
@@ -32,11 +35,6 @@ public class PlayerAliveState : PlayerState
 
     public override void FixedUpdate()
     {
-        if (!player.corgiTurned)
-        {
-            //This code will return when we implement facing left.
-            //DidThePlayerTurnChecker();
-        }
         player.JetpackActivationPossible = CanActivateJetpack();
         //These are the collision runners.
         AdjustRotationAngle();
@@ -46,6 +44,25 @@ public class PlayerAliveState : PlayerState
         thrusterVolumeRunner();
         if (player.FinishTouch) { player.stateMachine.changeState(player.playerWinState); }
         base.FixedUpdate();
+    }
+
+    protected virtual void UpdateTargetRotation(float speed)
+    {
+        var targetAngle = player.TargetRotation;
+        if (Mathf.Abs(player.input.aimAngle) > 0)
+        {
+            targetAngle = player.input.aimAngle < 0 ? 0 : 180;
+            remainingTurnDelay -= Time.deltaTime;
+        }
+        else
+        {
+            remainingTurnDelay = TurnDelay; // must hold for a duration before you can turn
+        }
+
+        if (remainingTurnDelay <= 0)
+        {
+            player.SetTargetRotation(targetAngle, speed);
+        }
     }
 
     private bool CanActivateJetpack()
@@ -62,10 +79,6 @@ public class PlayerAliveState : PlayerState
     }
 
     #region CollisionRunners
-    void DidThePlayerTurnChecker()
-    {
-        //This code will return when we implement facing left.
-    }
 
     private void HarmfulInteractionRunner()
     {
@@ -134,9 +147,14 @@ public class PlayerAliveState : PlayerState
     #endregion
 
     #region CoreMechanicStuff
+
     private void AdjustRotationAngle()
     {
-        if (player.input.GoCw & player.input.GoCcw) { return; }
+        SetPlayerRotation();
+
+        player.UpdateJetpackRotation();
+
+        if (player.input.GoCw && player.input.GoCcw) { return; }
         player.vfx.StopAllRotParticles();
         if (player.input.GoCcw)
         {
@@ -146,12 +164,48 @@ public class PlayerAliveState : PlayerState
         {
             player.vfx.StartPlusRotParticles();
         }
-        player.transform.rotation = Quaternion.Euler(Vector3.forward * player.input.aimAngle);//This line seems to be what's making the body rotation what it is.
     }
 
-    public void thrust()
+    private void SetPlayerRotation()
     {
-        player.rb.AddRelativeForce(0, player.thrust, 0);
+        var currentPlayerRotation = player.transform.rotation.eulerAngles.y;
+        if (Helper.isWithinMarginOfError(currentPlayerRotation, player.TargetRotation, 0.001f))
+        {
+            return;
+        }
+
+        var direction = GetClosestRotationDirection(currentPlayerRotation, player.TargetRotation); // -1 or 1
+        var nextRotationAngle = currentPlayerRotation + (player.RotationRate * direction * Time.deltaTime);
+        if (nextRotationAngle < 0)
+        {
+            nextRotationAngle += 360;
+        }
+
+        if (direction * nextRotationAngle > direction * player.TargetRotation)
+        {
+            nextRotationAngle = player.TargetRotation;
+        }
+
+        player.SetRotation(nextRotationAngle);
+    }
+
+    private int GetClosestRotationDirection(float currentAngle, float targetAngle)
+    {
+        var positiveDistance = targetAngle - currentAngle;
+        if (positiveDistance < 0)
+        {
+            positiveDistance += 360;
+        }
+
+        var negativeDistance = -(targetAngle - currentAngle);
+        if (negativeDistance < 0)
+        {
+            negativeDistance += 360;
+        }
+
+        return positiveDistance < negativeDistance ?
+            1 :
+            -1;
     }
 
     public void UseFuel()

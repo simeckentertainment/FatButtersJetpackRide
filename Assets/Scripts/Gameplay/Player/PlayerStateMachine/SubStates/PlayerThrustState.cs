@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerThrustState : PlayerAliveState
 {
+    protected override float TurnDelay => 0.5f;
+
     public PlayerThrustState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
 
@@ -61,20 +60,19 @@ public class PlayerThrustState : PlayerAliveState
             if (player.input.GoThrust)
             {
                 player.vfx.StartPrimaryThrusters();
-                thrust();
-                UseFuel(isBoosting);
-                GameplaySignal.Raise(SignalId.ThrustUsed);
             }
         }
-        if (stateAge > 3)
+        if (stateAge >= 3)
         {
             if (player.input.GoThrust)
             {
-                thrust();
+                player.Thrust();
                 UseFuel(isBoosting);
                 GameplaySignal.Raise(SignalId.ThrustUsed);
             }
         }
+
+        UpdateTargetRotation(360);
 
         if (!player.input.GoThrust || !player.JetpackActivationPossible || player.Fuel < 0.0f)
         {
@@ -99,6 +97,7 @@ public class PlayerThrustState : PlayerAliveState
 
         base.FixedUpdate();
     }
+
     public override void exit()
     {
         thrusterVolumeCounter = Mathf.Clamp(stateAge,0,30);

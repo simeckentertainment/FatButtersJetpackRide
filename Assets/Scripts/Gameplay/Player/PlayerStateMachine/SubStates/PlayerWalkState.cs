@@ -1,16 +1,15 @@
 using UnityEngine;
 
-
 public class PlayerWalkState : PlayerAliveState
 {
-    float animNormalizedTime; //since we're switching between different animations dynamically, we should handle normalized time tracking here.
-    float absoluteZ;
+    private float animNormalizedTime; //since we're switching between different animations dynamically, we should handle normalized time tracking here.
+    private float absoluteZ;
 
-    string[] forwardMove = { "ForeWalkSlow", "ForeWalkMid", "ForeWalkFast" };
-    string[] backwardMove = { "BackWalkSlow", "BackWalkFast" };
+    private string[] forwardMove = { "ForeWalkSlow", "ForeWalkMid", "ForeWalkFast" };
 
     WalkSpeed walkSpeedEnum;
     WalkSpeed previousWalkSpeedEnum;
+
     public PlayerWalkState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
     }
@@ -39,7 +38,8 @@ public class PlayerWalkState : PlayerAliveState
         if(durationOfState > 0)
         {
             animNormalizedTime = GetNormalizedTime(0); //for driving mid-animation changes
-        } else
+        }
+        else
         {
             animNormalizedTime = 0.0f;
         }
@@ -49,7 +49,9 @@ public class PlayerWalkState : PlayerAliveState
             SetWalkAnimation();
             previousWalkSpeedEnum = walkSpeedEnum; //reset for "remembering" for next frame.
         }
-        
+
+        UpdateTargetRotation(720);
+
         if (player.IsFalling())
         {
             player.stateMachine.changeState(player.playerFallState);
@@ -103,27 +105,11 @@ public class PlayerWalkState : PlayerAliveState
                 player.ResetRechargeCounter();
                 break;
         }
-        //Backwards walk speed is half of forward walk speed.
-        if(player.walkDirection == -1.0f)
-        {
-            player.walkCurrentSpeed *= 0.5f;
-        }
+
         player.rb.linearVelocity = new Vector3(player.walkDirection * player.walkCurrentSpeed, player.rb.linearVelocity.y, 0f);
     }
 
     void SetWalkAnimation()
-    {
-        if (player.walkDirection > 0.0f)
-        {
-            SetForwardWalkAnimWithTime();
-        }
-        else
-        {
-            SetBackwardWalkAnimWithTime();
-        } 
-    }
-
-    private void SetForwardWalkAnimWithTime()
     {
         switch (walkSpeedEnum)
         {
@@ -132,36 +118,17 @@ public class PlayerWalkState : PlayerAliveState
                 PlayAnim(forwardMove[0], animNormalizedTime);
                 break;
             case WalkSpeed.Medium:
-            //Debug.Log("Set Medium!");
+                //Debug.Log("Set Medium!");
                 PlayAnim(forwardMove[1], animNormalizedTime);
                 break;
             case WalkSpeed.Fast:
-                    //Debug.Log("Set Fast!");
+                //Debug.Log("Set Fast!");
                 PlayAnim(forwardMove[2], animNormalizedTime);
                 break;
             default: //no need to do anything because we're going to idle state.
                 break;
         }
     }
-    
-       private void SetBackwardWalkAnimWithTime()
-    {
-        switch (walkSpeedEnum)
-        {
-            case WalkSpeed.Slow:
-                PlayAnim(backwardMove[0], animNormalizedTime);
-                break;
-            case WalkSpeed.Medium:
-                PlayAnim(backwardMove[1], animNormalizedTime);
-                break;
-            case WalkSpeed.Fast:
-                PlayAnim(backwardMove[1], animNormalizedTime);
-                break;
-            default: //no need to do anything because we're going to idle state.
-                break;
-        }
-    }
-
 
     private enum WalkSpeed { Stop, Slow, Medium, Fast }
 }

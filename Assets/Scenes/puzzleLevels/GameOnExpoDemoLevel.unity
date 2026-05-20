@@ -1667,7 +1667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7000739106020178353, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 7017580111902912625, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2038,14 +2038,10 @@ PrefabInstance:
     - {fileID: 6157375582882485007, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
     - {fileID: 3296307487289247696, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
     - {fileID: 6401442338106262357, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
-    - {fileID: 5319051547290708391, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2436086615441256401, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1854570321}
     - targetCorrespondingSourceObject: {fileID: 712498707619235685, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 584752055}
@@ -6420,30 +6416,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab0e7283c4623bd428f0a90cd9f87800, type: 3}
---- !u!1 &1854570315 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2436086615441256401, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
-  m_PrefabInstance: {fileID: 446628066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1854570321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854570315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TrackerSettings:
-    BindingMode: 4
-    PositionDamping: {x: 0.1, y: 0.1, z: 0.1}
-    AngularDampingMode: 0
-    RotationDamping: {x: 1, y: 1, z: 1}
-    QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 0, z: -20}
 --- !u!4 &1865308189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 139932334871468497, guid: ab0e7283c4623bd428f0a90cd9f87800, type: 3}
