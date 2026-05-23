@@ -30,6 +30,7 @@ public class LevelStorySequenceController : MonoBehaviour
         currentStepIndex = 0;
         currentStepTriggerFired = false;
         currentStepCompletionStarted = false;
+        TryEnterCurrentStep();
     }
 
     public void TryFireTrigger(int stepIndex)
@@ -67,8 +68,6 @@ public class LevelStorySequenceController : MonoBehaviour
                     action.Execute(context);
             }
         }
-
-        StartCompletionForCurrentStep();
     }
 
 
