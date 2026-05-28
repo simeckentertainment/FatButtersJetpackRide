@@ -76,11 +76,11 @@ public class LevelSelectLighting : MonoBehaviour
 
     private void SetLighting(EpisodeLighting previous, EpisodeLighting next, float transitionPercent)
     {
-        if (!collectibleData.LevelBeaten[previous.LastLevelSelectButton.levelID])
+        if (!collectibleData.IsLevelUnlocked(next.FirstLevelSelectButton.levelID))
         {
             next.Lighting = disabledLighting;
         }
-        if (!collectibleData.LevelBeaten[previous.FirstLevelSelectButton.levelID])
+        if (!collectibleData.IsLevelUnlocked(previous.FirstLevelSelectButton.levelID))
         {
             previous.Lighting = disabledLighting;
         }
