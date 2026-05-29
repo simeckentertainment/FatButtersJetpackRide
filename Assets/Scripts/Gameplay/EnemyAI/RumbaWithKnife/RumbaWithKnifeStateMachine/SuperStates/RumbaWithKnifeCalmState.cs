@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RumbaWithKnifeSuperState : RumbaWithKnifeMasterState{
-    public RumbaWithKnifeSuperState(RumbaWithKnife rumba, RumbaWithKnifeStateMachine rumbaWithKnifeStateMachine) : base(rumba, rumbaWithKnifeStateMachine){
+public class RumbaWithKnifeCalmState : RumbaWithKnifeMasterState{
+    public RumbaWithKnifeCalmState(RumbaWithKnife rumba, RumbaWithKnifeStateMachine rumbaWithKnifeStateMachine) : base(rumba, rumbaWithKnifeStateMachine){
     }
 
 

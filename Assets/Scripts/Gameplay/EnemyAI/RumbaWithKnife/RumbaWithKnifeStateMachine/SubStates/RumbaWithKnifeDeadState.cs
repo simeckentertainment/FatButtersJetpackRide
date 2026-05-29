@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RumbaWithKnifeIdleState : RumbaWithKnifeDeathState{
-    public RumbaWithKnifeIdleState(RumbaWithKnife rumba, RumbaWithKnifeStateMachine rumbaWithKnifeStateMachine) : base(rumba, rumbaWithKnifeStateMachine){
+public class RumbaWithKnifeDeadState : RumbaWithKnifeCalmState{
+    public RumbaWithKnifeDeadState(RumbaWithKnife rumba, RumbaWithKnifeStateMachine rumbaWithKnifeStateMachine) : base(rumba, rumbaWithKnifeStateMachine){
     }
     Vector3 LeftMaxWanderLoc;
     Vector3 RightMaxWanderLoc;
