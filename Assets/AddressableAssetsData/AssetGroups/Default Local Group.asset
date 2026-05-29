@@ -266,6 +266,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af04cedec182f72469431ba5c37523ca
+    m_Address: Assets/Objects/UI/rounded rectangle.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: be0901e1b8a46694897fdc586b7c67d2
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/flag/Materials/ground.mat
     m_ReadOnly: 0
