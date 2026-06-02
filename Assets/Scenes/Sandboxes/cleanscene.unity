@@ -857,6 +857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cyborgBunny
       objectReference: {fileID: 0}
+    - target: {fileID: 1529465143711414431, guid: 88f9e83d630b05c4187892d07d648b56, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2621876256365031502, guid: 88f9e83d630b05c4187892d07d648b56, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2561,13 +2565,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5876693170218692038, guid: b21ee8e1a19b9e54ea05881f02e4cbfe, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8501466740456839654, guid: b21ee8e1a19b9e54ea05881f02e4cbfe, type: 3}
       propertyPath: m_Name
       value: RumbaWithKnife
       objectReference: {fileID: 0}
     - target: {fileID: 9128961756696806236, guid: b21ee8e1a19b9e54ea05881f02e4cbfe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.53
+      value: 29.77
       objectReference: {fileID: 0}
     - target: {fileID: 9128961756696806236, guid: b21ee8e1a19b9e54ea05881f02e4cbfe, type: 3}
       propertyPath: m_LocalPosition.y

@@ -12,6 +12,11 @@ public class RumbaWithKnifeCalmState : RumbaWithKnifeMasterState{
     }
 
     public override void Update(){
+        
+        if (PlayerDetected())
+        {
+            //Change to player detected state.
+        }
         base.Update();
     }
     public override void FixedUpdate()

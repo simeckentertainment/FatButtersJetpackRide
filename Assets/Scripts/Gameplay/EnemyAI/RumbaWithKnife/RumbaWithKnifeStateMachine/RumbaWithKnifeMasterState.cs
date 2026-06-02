@@ -39,4 +39,8 @@ public class RumbaWithKnifeMasterState{
     public virtual bool PlayerDetected(){
         return rumba.PlayerDetected;
     }
+    public virtual void SetRumbaRotation(float targetRot)
+    {
+        rumba.transform.rotation = Quaternion.Euler(new Vector3(rumba.transform.rotation.eulerAngles.x, targetRot, rumba.transform.rotation.eulerAngles.z));
+    }
 }

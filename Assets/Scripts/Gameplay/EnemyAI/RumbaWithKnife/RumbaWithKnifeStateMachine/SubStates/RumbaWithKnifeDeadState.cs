@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RumbaWithKnifeDeadState : RumbaWithKnifeCalmState{
+public class RumbaWithKnifeDeadState : RumbaWithKnifeDeathState{
     public RumbaWithKnifeDeadState(RumbaWithKnife rumba, RumbaWithKnifeStateMachine rumbaWithKnifeStateMachine) : base(rumba, rumbaWithKnifeStateMachine){
     }
     Vector3 LeftMaxWanderLoc;
@@ -11,7 +11,6 @@ public class RumbaWithKnifeDeadState : RumbaWithKnifeCalmState{
 
     public override void enter(){
         SetWanderLocs();
-        PlayAnim("SpinAnim");
         base.enter();
     }
     public override void Update(){

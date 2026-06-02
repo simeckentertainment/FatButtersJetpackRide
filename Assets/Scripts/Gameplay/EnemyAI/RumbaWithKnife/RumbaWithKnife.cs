@@ -15,23 +15,36 @@ public class RumbaWithKnife : MonoBehaviour{
     [SerializeField] public Player player;
     [SerializeField] public RumbaPlayerDetector playerDetector;
     [SerializeField] public Animator anim;
-    [SerializeField] public float idleSpeed;
+    [SerializeField] public float calmSpeed;
     [SerializeField] public float playerDetectedSpeed;
     [SerializeField] public float MadSpeed;
     [SerializeField] public float HP = 2.0f;
+    [SerializeField] public float leftFacingRot;
+    [SerializeField] public float rightFacingRot;
+    [SerializeField] public float calmTurnFrameCountMax;
+    [SerializeField] public float angryTurnFrameCountMax;
     public Vector3 spawnLoc {get; private set;}
-    public float WanderDistance;
+    public Vector3 wanderGoalLoc;
+
+    [SerializeField] public Direction direction = Direction.Left;
+    [SerializeField] public float WanderDistance;
 
     public bool PlayerDetected { get; private set; }
-    public RumbaWithKnifeIdleState rumbaWithKnifeIdleState { get; set; }
-    public RumbaWithKnifeDeadState rumbaWithKnifeDeadState { get; set; }
+    public RumbaWithKnifeIdleState rumbaIdleState { get; set; }
+    public RumbaWithKnifeDeadState rumbaDeadState { get; set; }
+    public RumbaWithKnifeTurnState rumbaTurnState { get; set; }
+    public RumbaWithKnifeRollState rumbaRollState { get; set; }
+        public RumbaWithKnifeSpinState rumbaSpinState { get; set; }
     // Start is called before the first frame update
     void Start(){
-       SetSpawnLoc();
-       stateMachine = GetComponent<RumbaWithKnifeStateMachine>();
-       rumbaWithKnifeIdleState = new RumbaWithKnifeIdleState(this, stateMachine);
-       rumbaWithKnifeDeadState = new RumbaWithKnifeDeadState(this, stateMachine);
-       stateMachine.Initialize(rumbaWithKnifeIdleState);
+        SetSpawnLoc();
+        stateMachine = GetComponent<RumbaWithKnifeStateMachine>();
+        rumbaIdleState = new RumbaWithKnifeIdleState(this, stateMachine);
+        rumbaDeadState = new RumbaWithKnifeDeadState(this, stateMachine);
+        rumbaTurnState = new RumbaWithKnifeTurnState(this, stateMachine);
+        rumbaRollState = new RumbaWithKnifeRollState(this, stateMachine);
+        rumbaSpinState = new RumbaWithKnifeSpinState(this, stateMachine);
+        stateMachine.Initialize(rumbaIdleState);
     }
 
     // Update is called once per frame
@@ -46,6 +59,13 @@ public class RumbaWithKnife : MonoBehaviour{
     void SetSpawnLoc()
     {
         spawnLoc = transform.position;
+    }
+
+    public enum Direction
+    {
+        Left,
+        Right,
+        Spinning,
     }
 }
 

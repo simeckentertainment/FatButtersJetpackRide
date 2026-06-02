@@ -48,9 +48,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6759465154549488191, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3080638101248317040, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -3080638101248317040, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
       propertyPath: m_TagString
       value: Harmful
+      objectReference: {fileID: 0}
+    - target: {fileID: -587462703474336018, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -587462703474336018, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
       propertyPath: m_TagString
@@ -201,10 +213,17 @@ MonoBehaviour:
   player: {fileID: 0}
   playerDetector: {fileID: 0}
   anim: {fileID: 6941359877416401218}
-  idleSpeed: 2
+  calmSpeed: 4
   playerDetectedSpeed: 5
   MadSpeed: 10
-  WanderDistance: 10
+  HP: 2
+  leftFacingRot: 270
+  rightFacingRot: 90
+  calmTurnFrameCountMax: 60
+  angryTurnFrameCountMax: 10
+  wanderGoalLoc: {x: 0, y: 0, z: 0}
+  direction: 1
+  WanderDistance: 20
 --- !u!114 &840216884288312275
 MonoBehaviour:
   m_ObjectHideFlags: 0
