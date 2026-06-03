@@ -296,8 +296,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: af04cedec182f72469431ba5c37523ca
-    m_Address: Assets/Objects/UI/rounded rectangle.png
+  - m_GUID: b7a1f51aecd01e749a8a717eca55ba36
+    m_Address: Assets/Objects/UI/level slider background.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
