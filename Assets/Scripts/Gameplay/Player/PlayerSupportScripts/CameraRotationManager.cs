@@ -40,7 +40,7 @@ public class CameraRotationManager : MonoBehaviour
         camAngleOffset = runningWobble ? GetWobbleOffset() : 0.0f;
         virtualCam.localRotation = deviceType == DeviceType.HandheldGyro ?
            Quaternion.Euler(0.0f, 0.0f, player.input.aimAngle * 2 + camAngleOffset):
-           virtualCam.localRotation = Quaternion.Euler(0.0f, 0.0f, camAngleOffset);
+           Quaternion.Euler(0.0f, 0.0f, camAngleOffset);
     }
 
     void InitiateWobble()

@@ -49,6 +49,8 @@ public class Player : MonoBehaviour
     [SerializeField] public AudioClip[] borks;
     [System.NonSerialized] public int baseThrust = 25;
     [SerializeField] public GameObject[] CollidersAndTriggers;
+    [SerializeField] private Transform jetpackTransform;
+
     [Header("Important internal data")]
     public float thrust;
     [System.NonSerialized] public float baseThrustWithUpgrades; // Base thrust including upgrades (used for boost calculations)
@@ -68,7 +70,6 @@ public class Player : MonoBehaviour
     [System.NonSerialized] public float GravityRoll;
     [SerializeField] public float KeyboardRollOffset;
     public int KeyboardSensitivity;
-    public bool corgiTurned;
 
     [Header("Walk mechanics")]
     [SerializeField] public float walkDirection; // Walk direction (-1 or 1)
@@ -95,8 +96,6 @@ public class Player : MonoBehaviour
     public bool hasPermaBall;
     public int ballTimerMax = 600;
     public bool killThrustTriggerTouch;
-    public enum PlayerDirection{Left,Right};
-    public PlayerDirection playerDirection;
     public bool LowGravMode;
 
     public bool IgnoreIdleAnimationReset { get; set; }
@@ -110,6 +109,9 @@ public class Player : MonoBehaviour
     public int BallsCollected { get; private set; }
     public int FuelsCollected { get; private set; }
     public int EnemiesDefeated { get; private set; }
+
+    public float TargetRotation { get; private set; }
+    public float RotationRate { get; private set; }
 
     public UnityEvent OnPickupCollected { get; set; } = new UnityEvent();
     public UnityEvent OnFuelUpdated { get; set; } = new UnityEvent();
@@ -198,8 +200,6 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        //transform.Rotate(Vector3.back * 0.1f);
-        corgiTurned = false;
         skindex = collectibleData.CurrentSkin;
         vfx.ApplySkin(skindex);
         JetpackActivationPossible = true;
@@ -323,6 +323,35 @@ public class Player : MonoBehaviour
     {
         EnemiesDefeated += count;
         OnPickupCollected.Invoke();
+    }
+
+    public void SetTargetRotation(float angle, float degreesPerSecond)
+    {
+        TargetRotation = angle;
+        RotationRate = degreesPerSecond;
+    }
+
+    /// <summary>
+    /// Sets the y-axis rotation of the whole player object
+    /// </summary>
+    /// <param name="angle">0 = right, 180 = left</param>
+    public void SetRotation(float angle)
+    {
+        transform.localRotation = Quaternion.Euler(0, angle, 0);
+    }
+
+    public void UpdateJetpackRotation()
+    {
+        var playerRotationRadians = (transform.rotation.eulerAngles.y + 90) * Mathf.Deg2Rad;
+        var xAngle = Mathf.Sin(playerRotationRadians) * -input.aimAngle;
+        var zAngle = Mathf.Cos(playerRotationRadians) * input.aimAngle;
+        
+        jetpackTransform.rotation = Quaternion.Euler(xAngle, transform.rotation.eulerAngles.y + 90, zAngle);
+    }
+
+    public void Thrust()
+    {
+        rb.AddForce(jetpackTransform.up * thrust);
     }
 
     #region DataStuff

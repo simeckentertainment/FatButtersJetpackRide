@@ -73,5 +73,16 @@ public class CollectibleData : ScriptableObject
         }
     }
 
+    public bool IsLevelUnlocked(int levelId)
+    {
+        var previousLevel = levelId - 1;
+        if (previousLevel < 0)
+        {
+            return true;
+        }
+
+        return LevelBeaten[previousLevel];
+    }
+
     public UnityEvent OnBonesChanged { get; set; } = new UnityEvent();
 }
