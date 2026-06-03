@@ -35,6 +35,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c75aa45e8844bc4bbb7166774ed6be9
+    m_Address: Assets/Objects/UI/stoplight/stoplight.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0cffd73732fdbdb488507abf10d25e37
     m_Address: Assets/New Universal Render Pipeline Asset_Renderer.asset
     m_ReadOnly: 0
@@ -168,6 +173,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60337d3bbb24c334db269cef87cc7249
+    m_Address: Assets/Objects/UI/stoplight/stoplight light shine.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 650dd9526735d5b46b79224bc6e94025
     m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader
     m_ReadOnly: 0
@@ -210,8 +220,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81c1713eb8ecec64aa1ef95fb3143984
+    m_Address: Assets/Objects/UI/stoplight/stoplight pole.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 81ef0588e479a9d4c968a12a8b7af8ae
     m_Address: Assets/Objects/PuzzlePieces/SkinDB/16-Pugalicious/Pugalicious.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8518ac1f34a8f354986577af44aaf856
+    m_Address: Assets/Objects/UI/stoplight/stoplight light on.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -222,6 +242,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8d2bb70cbf9db8d4da26e15b26e74248
     m_Address: Packages/com.unity.render-pipelines.universal/Shaders/SimpleLit.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 908c0c85d16195a4cb918bb4ee23ef00
+    m_Address: Assets/Objects/UI/stoplight/stoplight light base.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -263,6 +288,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ab4d3f6dd619f714a84eec27dc379e44
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/TerrainMods/Field/Bark3-2.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: abc9fe78177e39f419ce5b8db8a7b50e
+    m_Address: Assets/Objects/UI/stoplight/stoplight light off.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
