@@ -163,6 +163,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 514e3ac520cc1764b9e4a82af1556a09
+    m_Address: Assets/Objects/UI/level slider background short.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 580bee4a2ce7ac7469e09da339f2d8f6
     m_Address: Assets/New Universal Render Pipeline Asset.asset
     m_ReadOnly: 0
