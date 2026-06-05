@@ -241,6 +241,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a4a47a7c0fd7fa848ae38ed08c26841e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/RumbaWithKnife/rumba_mat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a63dcce266ac9dc41bd11321716eb9ea
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/WhirlyDirly/WhirlyDirlyPhysxMat.physicMaterial
     m_ReadOnly: 0

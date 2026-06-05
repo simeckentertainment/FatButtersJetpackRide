@@ -14,7 +14,6 @@ public class RumbaWithKnifeTurnState : RumbaWithKnifeCalmState{
 
      public override void enter()
     {
-        Debug.Log("Turning!");
         PlayAnim("SlowDriveAnim");
         SetIntendedDirection();
         DetermineActualDirection();

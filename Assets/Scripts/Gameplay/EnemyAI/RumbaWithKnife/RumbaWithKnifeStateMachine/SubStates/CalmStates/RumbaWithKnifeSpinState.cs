@@ -9,7 +9,6 @@ public class RumbaWithKnifeSpinState : RumbaWithKnifeCalmState{
 
      public override void enter()
     {
-        Debug.Log("Spinning!");
         PlayAnim("SpinAnim");
         base.enter();
     }

@@ -7,26 +7,21 @@ public class RumbaWithKnifeRollState : RumbaWithKnifeCalmState{
     }
     Vector3 startLoc;
     Vector3 goalLoc;
-    float DistToGoal;
+    RaycastHit leftHit;
+    RaycastHit rightHit;
 
     bool anim1Complete;
 
     public override void enter()
     {
-        Debug.Log("Rolling!");
 
         startLoc = rumba.transform.position;
         goalLoc = rumba.wanderGoalLoc;
         Debug.Log($"Start Location: {startLoc}, Goal Location: {goalLoc}");
-        SetDistToGoal();
+
         anim1Complete = false;
         PlayAnim("SlowStartDriveAnim");
         base.enter();
-    }
-
-    private void SetDistToGoal()
-    {
-        DistToGoal = Vector3.Distance(rumba.transform.position, goalLoc);
     }
 
     public override void Update(){
@@ -39,9 +34,15 @@ public class RumbaWithKnifeRollState : RumbaWithKnifeCalmState{
         {
             anim1Complete = anim1Runner();
         }
-        MoveToSpotForThisFrame();
-        SetDistToGoal();
-        if(Vector3.Distance(rumba.transform.position, startLoc) >= rumba.WanderDistance * 0.9f)
+        MoveToSpotForThisFrame(rumba.calmSpeed);
+
+        if(!Physics.Raycast(rumba.LeftCastPosObj.position, Vector3.down, out rightHit, 2.0f) || !Physics.Raycast(rumba.RightCastPosObj.position, Vector3.down, out leftHit, 2.0f) )
+        {
+            rumba.stateMachine.changeState(rumba.rumbaIdleState);
+        }
+
+
+        if(Vector3.Distance(rumba.transform.position, goalLoc) < rumba.WanderDistance * 0.1f)
         {
             rumba.stateMachine.changeState(rumba.rumbaIdleState);
         }
@@ -49,11 +50,11 @@ public class RumbaWithKnifeRollState : RumbaWithKnifeCalmState{
         base.FixedUpdate();
     }
 
-
     bool anim1Runner()
     {
-    if (rumba.anim.GetCurrentAnimatorStateInfo(0).IsName("SlowStartDriveAnim") && rumba.anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
+    if (CheckAnimName("SlowStartDriveAnim") && AnimFinished())
         {
+            anim1Complete = true;
             PlayAnim("SlowDriveAnim");
             return true;
        } else
@@ -62,12 +63,7 @@ public class RumbaWithKnifeRollState : RumbaWithKnifeCalmState{
         }
     }
 
-    void MoveToSpotForThisFrame()
-    {
-        Vector3 newPos = rumba.transform.position + rumba.transform.forward * rumba.calmSpeed * Time.fixedDeltaTime;
-        newPos.z = 0f;
-        rumba.transform.position = newPos;
-    }
+
 
 
 

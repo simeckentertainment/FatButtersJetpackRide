@@ -5,8 +5,6 @@ using UnityEngine;
 public class RumbaWithKnifeDeadState : RumbaWithKnifeDeathState{
     public RumbaWithKnifeDeadState(RumbaWithKnife rumba, RumbaWithKnifeStateMachine rumbaWithKnifeStateMachine) : base(rumba, rumbaWithKnifeStateMachine){
     }
-    Vector3 LeftMaxWanderLoc;
-    Vector3 RightMaxWanderLoc;
 
 
     public override void enter(){
@@ -27,7 +25,5 @@ public class RumbaWithKnifeDeadState : RumbaWithKnifeDeathState{
     }
     void SetWanderLocs()
     {
-        LeftMaxWanderLoc = new Vector3(rumba.spawnLoc.x - rumba.WanderDistance, rumba.spawnLoc.y, rumba.spawnLoc.z);
-        RightMaxWanderLoc = new Vector3(rumba.spawnLoc.x + rumba.WanderDistance, rumba.spawnLoc.y, rumba.spawnLoc.z);
     }
 }
