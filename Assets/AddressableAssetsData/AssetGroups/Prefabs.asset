@@ -8358,11 +8358,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 52b90f4496c98a74185ddc4f02606638
-    m_Address: Assets/Objects/PuzzlePieces/prefabs/BugReportButton.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 52c51744944b30b4395badb88a68a18b
     m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
       Short.prefab
