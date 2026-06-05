@@ -470,7 +470,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6803066134467704861}
+    m_TransformParent: {fileID: 5589696227763926868}
     m_Modifications:
     - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -482,7 +482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -490,7 +490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
       propertyPath: m_LocalRotation.y
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4aa19bd9b9c7a049b2f4c69b38ee8e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationAmount: 10
+  rotationAmount: 2
 --- !u!1 &770132695
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 770132696}
   - component: {fileID: 770132697}
   m_Layer: 0
-  m_Name: SetCameraLockedAction
+  m_Name: CameraLookAtBear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -979,7 +979,7 @@ GameObject:
   - component: {fileID: 1094900911}
   - component: {fileID: 1094900912}
   m_Layer: 0
-  m_Name: Playtimeline
+  m_Name: PlayBearTimeline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1270,7 +1270,7 @@ GameObject:
   - component: {fileID: 1387699008}
   - component: {fileID: 1387699009}
   m_Layer: 0
-  m_Name: UnLockThrustControls
+  m_Name: UnLockPlayerThrustControls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1314,7 +1314,7 @@ GameObject:
   - component: {fileID: 1418680781}
   - component: {fileID: 1418680782}
   m_Layer: 0
-  m_Name: LockControls
+  m_Name: LockPlayerThrust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1473,6 +1473,72 @@ Transform:
   - {fileID: 93124005}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1915402965
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5589696227763926868}
+    m_Modifications:
+    - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414113648770423324, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+      propertyPath: m_Name
+      value: 00-jetpack-hull (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414113648770423324, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+--- !u!4 &1915402966 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4641270582933864614, guid: 21bc956b47d953042b2b50318dc3ee1d, type: 3}
+  m_PrefabInstance: {fileID: 1915402965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1995436621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,7 +1675,7 @@ GameObject:
   - component: {fileID: 2048064947}
   - component: {fileID: 2048064948}
   m_Layer: 0
-  m_Name: UnlockControls
+  m_Name: UnlockPlayerControls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2336,7 +2402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7000739106020178353, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000061035156
+      value: 0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 7017580111902912625, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2696,7 +2762,7 @@ GameObject:
   - component: {fileID: 2087299399}
   - component: {fileID: 2087299400}
   m_Layer: 0
-  m_Name: LockControls
+  m_Name: LockPlayerControls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2746,7 +2812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5589696227763926868
 Transform:
   m_ObjectHideFlags: 0
@@ -2756,10 +2822,12 @@ Transform:
   m_GameObject: {fileID: 5105190499888000494}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.12, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 653975722}
+  - {fileID: 1915402966}
   m_Father: {fileID: 6803066134467704861}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6134615409868907175
@@ -2833,15 +2901,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6134615409868907175}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.14520124, z: -0, w: 0.9894022}
-  m_LocalPosition: {x: -13.52, y: 1.56, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 653975722}
   - {fileID: 5589696227763926868}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -16.698, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &6803066134467704862
 CapsuleCollider:
   m_ObjectHideFlags: 0
