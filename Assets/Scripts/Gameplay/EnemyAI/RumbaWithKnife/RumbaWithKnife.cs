@@ -13,13 +13,10 @@ public class RumbaWithKnife : MonoBehaviour{
 
 
     [System.NonSerialized] public RumbaWithKnifeStateMachine stateMachine; //This gets set at start.
-    [SerializeField] Rigidbody rb;
+    [SerializeField] public Rigidbody rb;
     [SerializeField] public Animator anim;
     [SerializeField] public MeshRenderer rumbaMesh; //Can't access the mat without this.
     [SerializeField] public ParticleSystem[] MadParticleSpouts;
-    [SerializeField] public Transform[] CastPosObjs;
-    [SerializeField] public Transform LeftCastPosObj; //This will change whenever we turn.
-    [SerializeField] public Transform RightCastPosObj;//This will change whenever we turn.
     [SerializeField] public float wallDistanceTrigger;
     [SerializeField] public float calmSpeed;
     [SerializeField] public float madSpeed;
@@ -28,25 +25,25 @@ public class RumbaWithKnife : MonoBehaviour{
     [System.NonSerialized] public float rightFacingRot = 90f;
     [System.NonSerialized] public float calmTurnFrameCountMax = 20;
     [System.NonSerialized] public float angryTurnFrameCountMax = 60;
+    [System.NonSerialized] public Direction cliffDetected = Direction.None;
+    [System.NonSerialized] public Direction wallDetected = Direction.None;
+    [SerializeField] public bool ignoreLeft;
+    [SerializeField] public bool ignoreRight;
 
     public Vector3 spawnLoc {get; private set;}
-    private bool angered;
+    public bool angered {get; private set;}
     [System.NonSerialized] public Vector3 wanderGoalLoc;
+    [System.NonSerialized] public Vector3 wanderRightMax;
+    [System.NonSerialized] public Vector3 wanderLeftMax;
 
-    public Direction direction = Direction.Left;
+    public Direction direction = Direction.Right;
     [SerializeField] public float WanderDistance;
-
-    public bool PlayerDetected { get; private set; }
     public RumbaWithKnifeIdleState rumbaIdleState { get; set; }
     public RumbaWithKnifeDeadState rumbaDeadState { get; set; }
     public RumbaWithKnifeTurnState rumbaTurnState { get; set; }
     public RumbaWithKnifeRollState rumbaRollState { get; set; }
     public RumbaWithKnifeSpinState rumbaSpinState { get; set; }
     public RumbaWithKnifeGetMadState rumbaGetMadState { get; set; }
-    public RumbaWithKnifeMadIdleState rumbaMadIdleState { get; set; }
-    public RumbaWithKnifeMadTurnState rumbaMadTurnState { get; set; }
-    public RumbaWithKnifeMadRollState rumbaMadRollState { get; set; }
-    public RumbaWithKnifeMadSpinState rumbaMadSpinState { get; set; }
     public RumbaWithKnifeSoftlockState rumbaSoftlockState {get; set;}
     // Start is called before the first frame update
     void Start(){
@@ -60,10 +57,6 @@ public class RumbaWithKnife : MonoBehaviour{
         rumbaRollState = new RumbaWithKnifeRollState(this, stateMachine);
         rumbaSpinState = new RumbaWithKnifeSpinState(this, stateMachine);
         rumbaGetMadState = new RumbaWithKnifeGetMadState(this, stateMachine);
-        rumbaMadIdleState = new RumbaWithKnifeMadIdleState(this, stateMachine);
-        rumbaMadTurnState = new RumbaWithKnifeMadTurnState(this, stateMachine);
-        rumbaMadRollState = new RumbaWithKnifeMadRollState(this, stateMachine);
-        rumbaMadSpinState = new RumbaWithKnifeMadSpinState(this, stateMachine);
         rumbaSoftlockState = new RumbaWithKnifeSoftlockState(this, stateMachine);
         stateMachine.Initialize(rumbaIdleState);
     }
@@ -71,12 +64,21 @@ public class RumbaWithKnife : MonoBehaviour{
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(!angered && Helper.isWithinMarginOfError(HP, 1.0f, 0.0001f))
+        if(!angered && Helper.isWithinMarginOfError(HP, 1.0f, 0.1f)) 
         {
-            Debug.Log(HP);
             angered = true;
             stateMachine.changeState(rumbaGetMadState);
         }
+
+        if(Helper.isWithinMarginOfError(HP, 0.0f, 0.1f)){
+            stateMachine.changeState(rumbaDeadState);
+        }
+        if(ignoreLeft && ignoreRight) //If we're softlocked
+        {
+            stateMachine.changeState(rumbaSoftlockState);
+
+        }
+
     }
 
     void SetSpawnLoc()
@@ -86,6 +88,7 @@ public class RumbaWithKnife : MonoBehaviour{
 
     public enum Direction
     {
+        None,
         Left,
         Right,
         Spinning,
@@ -98,19 +101,6 @@ public class RumbaWithKnife : MonoBehaviour{
         } else
         {
             foreach(ParticleSystem spout in MadParticleSpouts){spout.Stop();}
-        }
-    }
-
-        public virtual void CalibrateRaycastNodes()
-    { //Whichever one has a greater value goes on the right.
-        if(CastPosObjs[0].transform.position.x > CastPosObjs[1].transform.position.x)
-        {
-            RightCastPosObj = CastPosObjs[0];
-            LeftCastPosObj = CastPosObjs[1];
-        } else
-        {
-            RightCastPosObj = CastPosObjs[1];
-            LeftCastPosObj = CastPosObjs[0];
         }
     }
 }

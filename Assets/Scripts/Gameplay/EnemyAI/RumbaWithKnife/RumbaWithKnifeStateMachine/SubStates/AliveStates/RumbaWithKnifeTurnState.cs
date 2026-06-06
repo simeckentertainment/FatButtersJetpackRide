@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RumbaWithKnifeTurnState : RumbaWithKnifeCalmState{
+public class RumbaWithKnifeTurnState : RumbaWithKnifeAliveState{
     public RumbaWithKnifeTurnState(RumbaWithKnife rumba, RumbaWithKnifeStateMachine rumbaWithKnifeStateMachine) : base(rumba, rumbaWithKnifeStateMachine){
     }
     RumbaWithKnife.Direction intendedDirection;

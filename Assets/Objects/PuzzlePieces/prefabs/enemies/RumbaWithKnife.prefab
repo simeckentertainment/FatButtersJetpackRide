@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1719355020637545323}
+  - component: {fileID: 6708968960364149875}
   m_Layer: 0
   m_Name: Side1CastPos
   m_TagString: Untagged
@@ -25,12 +26,31 @@ Transform:
   m_GameObject: {fileID: 1994972078000370012}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.236, z: 1.033}
+  m_LocalPosition: {x: -0, y: 0.236, z: 1.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 17970816536148246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6708968960364149875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994972078000370012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e352f233d4cb7408deb91932b5d4e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rumba: {fileID: 7176801296060662926}
+  otherSensor: {fileID: 4789140925256339433}
+  side: 0
+  rotationCheckBlock: 30
+  wallLayerMask:
+    serializedVersion: 2
+    m_Bits: 24567
 --- !u!1 &8168044529428989742
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,6 +60,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4789140925256339433}
+  - component: {fileID: 1414352106726007261}
   m_Layer: 0
   m_Name: Side2CastPos
   m_TagString: Untagged
@@ -55,13 +76,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8168044529428989742}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.236, z: -1.066}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0.236, z: -1.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 17970816536148246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414352106726007261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8168044529428989742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e352f233d4cb7408deb91932b5d4e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rumba: {fileID: 7176801296060662926}
+  otherSensor: {fileID: 1719355020637545323}
+  side: 0
+  rotationCheckBlock: 30
+  wallLayerMask:
+    serializedVersion: 2
+    m_Bits: 24567
 --- !u!1001 &1815675516993155470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -612,14 +652,11 @@ MonoBehaviour:
   - {fileID: 4901469672840973082}
   - {fileID: 8296645365011747268}
   - {fileID: 3284692797318510972}
-  CastPosObjs:
-  - {fileID: 1719355020637545323}
-  - {fileID: 4789140925256339433}
-  LeftCastPosObj: {fileID: 0}
-  RightCastPosObj: {fileID: 0}
   wallDistanceTrigger: 5
   calmSpeed: 4
   madSpeed: 20
+  ignoreLeft: 0
+  ignoreRight: 0
   direction: 0
   WanderDistance: 20
 --- !u!114 &840216884288312275

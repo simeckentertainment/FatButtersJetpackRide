@@ -8,22 +8,13 @@ public class RumbaWithKnifeDeadState : RumbaWithKnifeDeathState{
 
 
     public override void enter(){
-        SetWanderLocs();
         base.enter();
     }
     public override void Update(){
-
-        if (PlayerDetected())
-        {
-            //Change to player detected state.
-        }
         base.Update();
     }
 
     public override void FixedUpdate(){
         base.FixedUpdate();
-    }
-    void SetWanderLocs()
-    {
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class RumbaWithKnifeSpinState : RumbaWithKnifeCalmState{
+public class RumbaWithKnifeSpinState : RumbaWithKnifeAliveState{
     public RumbaWithKnifeSpinState(RumbaWithKnife rumba, RumbaWithKnifeStateMachine rumbaWithKnifeStateMachine) : base(rumba, rumbaWithKnifeStateMachine){
     }
 

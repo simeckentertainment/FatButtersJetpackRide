@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RumbaWithKnifeRollState : RumbaWithKnifeCalmState{
+public class RumbaWithKnifeRollState : RumbaWithKnifeAliveState{
     public RumbaWithKnifeRollState(RumbaWithKnife rumba, RumbaWithKnifeStateMachine rumbaWithKnifeStateMachine) : base(rumba, rumbaWithKnifeStateMachine){
     }
     Vector3 startLoc;
@@ -34,15 +34,9 @@ public class RumbaWithKnifeRollState : RumbaWithKnifeCalmState{
         {
             anim1Complete = anim1Runner();
         }
-        MoveToSpotForThisFrame(rumba.calmSpeed);
+        MoveThisFrame();
 
-        if(!Physics.Raycast(rumba.LeftCastPosObj.position, Vector3.down, out rightHit, 2.0f) || !Physics.Raycast(rumba.RightCastPosObj.position, Vector3.down, out leftHit, 2.0f) )
-        {
-            rumba.stateMachine.changeState(rumba.rumbaIdleState);
-        }
-
-
-        if(Vector3.Distance(rumba.transform.position, goalLoc) < rumba.WanderDistance * 0.1f)
+        if( CheckForObstacles() || CheckForDestinationReached())
         {
             rumba.stateMachine.changeState(rumba.rumbaIdleState);
         }
@@ -62,7 +56,24 @@ public class RumbaWithKnifeRollState : RumbaWithKnifeCalmState{
             return false;
         }
     }
+    bool CheckForObstacles()
+    {
+        if(rumba.wallDetected != RumbaWithKnife.Direction.None && rumba.wallDetected == rumba.direction) //if there's a wall in our way...
+        {
+            return true;
+        }
+        if(rumba.cliffDetected != RumbaWithKnife.Direction.None && rumba.cliffDetected == rumba.direction) //if there's a cliff in front of us...
+        {
+            return true;
+        }
 
+        //None of the above, we're good to go.
+        return false;
+    }
+    bool CheckForDestinationReached()
+    {
+        return Vector3.Distance(rumba.transform.position, goalLoc) <= (rumba.WanderDistance * 0.1f);
+    }
 
 
 

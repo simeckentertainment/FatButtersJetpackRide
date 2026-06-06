@@ -13,7 +13,6 @@ public class RumbaWithKnifeMasterState{
     }
     public virtual void enter(){
         durationOfState = 0;
-        rumba.CalibrateRaycastNodes(); //Make sure that the raycast nodes are properly calibrated upon every state entry.
     }
     public virtual void enterNoanimate(){
         durationOfState = 0;
@@ -53,17 +52,15 @@ public class RumbaWithKnifeMasterState{
     {
         return rumba.anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f;
     }
-    public virtual bool PlayerDetected(){
-        return rumba.PlayerDetected;
-    }
     public virtual void SetRumbaRotation(float targetRot)
     {
         rumba.transform.rotation = Quaternion.Euler(new Vector3(rumba.transform.rotation.eulerAngles.x, targetRot, rumba.transform.rotation.eulerAngles.z));
     }
-    public virtual void MoveToSpotForThisFrame(float speed)
+    public virtual void MoveThisFrame()
     {
-        Vector3 newPos = rumba.transform.position + rumba.transform.forward * speed * Time.fixedDeltaTime;
-        newPos.z = 0f;
-        rumba.transform.position = newPos;
+        Vector3 moveDelta = rumba.transform.forward * (rumba.angered ? rumba.madSpeed : rumba.calmSpeed) * Time.fixedDeltaTime;
+        Vector3 newPos = new Vector3(rumba.rb.position.x + moveDelta.x,rumba.rb.position.y,0f);
+        rumba.rb.MovePosition(newPos);
     }
 }
+
