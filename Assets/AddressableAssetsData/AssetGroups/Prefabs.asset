@@ -8848,11 +8848,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5753ab0e1430b574f841cadf526deb32
-    m_Address: Assets/Objects/PuzzlePieces/prefabs/LevelSelect/LevelSelectLightManager.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 576ffed40a3fa4e498c2463eb06b41f9
     m_Address: Assets/CityMassivePack/Prefabs/Nature and Park/Pebles_1_B_1_.prefab
     m_ReadOnly: 0
