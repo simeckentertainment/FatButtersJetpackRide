@@ -25,6 +25,10 @@ public class RumbaWithKnifeIdleState : RumbaWithKnifeAliveState{
     public override void FixedUpdate(){
         base.FixedUpdate();
     }
+    public override void exit()
+    {
+        base.exit();
+    }   
 
     void PickDirection()
     {
@@ -45,19 +49,29 @@ public class RumbaWithKnifeIdleState : RumbaWithKnifeAliveState{
             rumba.wanderGoalLoc = new Vector3(Mathf.Lerp(rumba.transform.position.x, rumba.wanderRightMax.x, Random.Range(0.0f,1.0f)),rumba.transform.position.y, 0f);
         }
 
-        //Note: This completely ignores the logic above, but the end result SHOULD be that it sits there spinning and turning for an extra second or two which is funny.
-        switch(Random.Range(0, 3))
+        if(rumba.wanderGoalLoc.x > rumba.transform.position.x)
         {
-            case 0:
-                rumba.direction = RumbaWithKnife.Direction.Left;
-                break;
-            case 1:
-                rumba.direction = RumbaWithKnife.Direction.Right;
-                break;
-            default:
-                rumba.direction = RumbaWithKnife.Direction.Spinning;
-                break;
+            rumba.direction = RumbaWithKnife.Direction.Right;
+        } else
+        {
+            rumba.direction = RumbaWithKnife.Direction.Right;
         }
+
+
+
+
+        //switch(Random.Range(0, 3))
+        //{
+            //case 0:
+                //rumba.direction = RumbaWithKnife.Direction.Left;
+                //break;
+            //case 1:
+                //rumba.direction = RumbaWithKnife.Direction.Right;
+                //break;
+            //default:
+                //rumba.direction = RumbaWithKnife.Direction.Spinning;
+                //break;
+        //}
     }
     void PickAction()
     {

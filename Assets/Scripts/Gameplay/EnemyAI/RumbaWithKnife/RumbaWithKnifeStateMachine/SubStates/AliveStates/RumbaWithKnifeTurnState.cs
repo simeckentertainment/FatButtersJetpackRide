@@ -31,13 +31,7 @@ public class RumbaWithKnifeTurnState : RumbaWithKnifeAliveState{
 
 void SetIntendedDirection()
     {
-        if(rumba.transform.position.x > rumba.wanderGoalLoc.x)
-        {
-            intendedDirection = RumbaWithKnife.Direction.Left;
-        } else
-        {
-            intendedDirection = RumbaWithKnife.Direction.Right;
-        }
+        intendedDirection = rumba.direction;
     }
     private void SetToFromVals()
     {

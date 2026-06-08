@@ -14,7 +14,7 @@ public class RumbaWithKnifeRollState : RumbaWithKnifeAliveState{
 
     public override void enter()
     {
-
+        rumba.ignoreLeft = rumba.ignoreRight = false;
         startLoc = rumba.transform.position;
         goalLoc = rumba.wanderGoalLoc;
         Debug.Log($"Start Location: {startLoc}, Goal Location: {goalLoc}");
