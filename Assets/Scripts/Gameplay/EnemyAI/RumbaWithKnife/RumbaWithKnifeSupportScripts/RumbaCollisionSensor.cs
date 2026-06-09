@@ -6,21 +6,12 @@ public class RumbaCollisionSensor : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            if (IsPlayerOnTop(other))
-            {
-                rumba.HP -= 1.0f;
-            }
-        }
-        else
-        {
-            DetectWallHit(other);
-        }
+        if (!other.gameObject.CompareTag("Player")){DetectWallHit(other);}
     }
 
     private void DetectWallHit(Collision other)
     {
+        if(other.gameObject.tag == "Player" ||other.gameObject.tag == "PlayerDamageTrigger" ) {return;}
         BoxCollider box = GetComponent<BoxCollider>();
         Vector3 contactPoint = other.contacts[0].point;
         Vector3 localContact = transform.InverseTransformPoint(contactPoint);
@@ -36,16 +27,4 @@ public class RumbaCollisionSensor : MonoBehaviour
             rumba.wallDetected = RumbaWithKnife.Direction.Left;
         }
     }
-
-
-    private bool IsPlayerOnTop(Collision other)
-{
-    BoxCollider box = GetComponent<BoxCollider>();
-    Vector3 contactPoint = other.contacts[0].point;
-    Vector3 localContact = transform.InverseTransformPoint(contactPoint);
-    Vector3 halfExtents = box.size * 0.5f;
-    float tolerance = 0.01f;
-
-    return Mathf.Abs(localContact.y - halfExtents.y) < tolerance;
-}
 }

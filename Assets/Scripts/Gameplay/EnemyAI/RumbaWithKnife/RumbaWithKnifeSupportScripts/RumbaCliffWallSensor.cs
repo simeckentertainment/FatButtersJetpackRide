@@ -26,7 +26,7 @@ public class RumbaCliffWallSensor : MonoBehaviour
     }
     bool CheckForGround()
     {
-        if(Physics.Raycast(transform.position, -transform.up, out downCast, 3.0f)) //Long drops it stops and turns around. Short drops it just goes for it.
+        if(Physics.Raycast(transform.position, -transform.up, out downCast, 3.0f, wallLayerMask,QueryTriggerInteraction.Ignore)) //Long drops it stops and turns around. Short drops it just goes for it.
         {
             return true;
         } else
@@ -36,11 +36,8 @@ public class RumbaCliffWallSensor : MonoBehaviour
     }
     bool CheckForWall()
     {
-        if(Physics.Raycast(transform.position, transform.forward, out wallCheck, rumba.WanderDistance, wallLayerMask)) //cast forward to look for wall.
-
-
+        if(Physics.Raycast(transform.position, transform.forward, out wallCheck, rumba.WanderDistance, wallLayerMask,QueryTriggerInteraction.Ignore)) //cast forward to look for wall.
         {
-
 
             if(side == RumbaWithKnife.Direction.Left)
             {
@@ -88,6 +85,8 @@ public class RumbaCliffWallSensor : MonoBehaviour
         {
             rumba.ignoreRight = wallCheck || !groundCheck;
         }
+
+        
 
     }
     public enum Side {left, right}

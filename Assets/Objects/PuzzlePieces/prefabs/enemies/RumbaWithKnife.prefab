@@ -102,6 +102,102 @@ MonoBehaviour:
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 24567
+--- !u!1 &8701506719233845763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7279661946526532988}
+  - component: {fileID: 1031699693149179902}
+  - component: {fileID: 2427882101887484920}
+  - component: {fileID: 3533786542747677469}
+  m_Layer: 0
+  m_Name: rumbaPlayerSensor
+  m_TagString: EnemyWeakspot
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7279661946526532988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701506719233845763}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1720148393284106817}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1031699693149179902
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701506719233845763}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2427882101887484920
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701506719233845763}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.43, z: 1.34}
+  m_Center: {x: 0, y: 0.47, z: 0}
+--- !u!114 &3533786542747677469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701506719233845763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8f88a92adfad5a46b35189856b83adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rumba: {fileID: 7176801296060662926}
+  knife: {fileID: 3491384746762184887}
 --- !u!1001 &1815675516993155470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -446,10 +542,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -587462703474336018, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
-      propertyPath: m_TagString
-      value: EnemyWeakspot
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
       propertyPath: m_Name
       value: RumbaWithKnife
@@ -484,6 +576,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -502723688391336543, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4789140925256339433}
+    - targetCorrespondingSourceObject: {fileID: 7990827187359915766, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7279661946526532988}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
       insertIndex: -1
@@ -500,9 +595,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -587462703474336018, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
       insertIndex: -1
       addedObject: {fileID: 12657394868807379}
-    - targetCorrespondingSourceObject: {fileID: -587462703474336018, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7233054939928963642}
+    - targetCorrespondingSourceObject: {fileID: -3080638101248317040, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 5543893661679018617}
     - targetCorrespondingSourceObject: {fileID: -3080638101248317040, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3147375620333328029}
@@ -541,24 +636,43 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0000005, y: 0.46037632, z: 2.0000005}
   m_Center: {x: 0, y: 0.000000029802322, z: 0}
---- !u!114 &7233054939928963642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!4 &1720148393284106817 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7990827187359915766, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
+  m_PrefabInstance: {fileID: 8735346262304842935}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072638379963218521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 059d9ee0a6de6304b9f05566dd2e3fb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rumba: {fileID: 7176801296060662926}
 --- !u!1 &3172065606224055591 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3080638101248317040, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
   m_PrefabInstance: {fileID: 8735346262304842935}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &5543893661679018617
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3172065606224055591}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &3147375620333328029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -569,7 +683,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 11264
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -578,8 +692,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.61, y: 0.4655607, z: 1.55}
-  m_Center: {x: -0.0041072113, y: 0.10025717, z: 1.41}
+  m_Size: {x: 0.61, y: 0.34, z: 0.75}
+  m_Center: {x: -0.0041072113, y: 0.17, z: 1.81}
 --- !u!114 &3491384746762184887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +709,7 @@ MonoBehaviour:
   damage: 1
   damageOnCollision: 1
   damageOnTrigger: 1
+  PlayerCollisionDetected: 0
 --- !u!23 &5199613400539095037 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3536051325144480586, guid: 7f7df26c48068b74a8b9a7e85e165439, type: 3}
@@ -653,8 +768,8 @@ MonoBehaviour:
   - {fileID: 8296645365011747268}
   - {fileID: 3284692797318510972}
   wallDistanceTrigger: 5
-  calmSpeed: 4
-  madSpeed: 20
+  calmSpeed: 3
+  madSpeed: 6
   ignoreLeft: 0
   ignoreRight: 0
   direction: 0

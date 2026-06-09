@@ -36,6 +36,12 @@ public class RumbaWithKnifeIdleState : RumbaWithKnifeAliveState{
         Vector3 LeftWanderLoc = new Vector3(Mathf.Lerp(rumba.transform.position.x, rumba.wanderLeftMax.x, Random.Range(0.0f,1.0f)),rumba.transform.position.y, 0f);
         Vector3 RightWanderLoc = new Vector3(Mathf.Lerp(rumba.transform.position.x, rumba.wanderRightMax.x, Random.Range(0.0f,1.0f)),rumba.transform.position.y, 0f);
 
+        //If we're ignoring both directions, throw a tantrum!
+        if(rumba.ignoreLeft && rumba.ignoreRight)
+        {
+            rumba.stateMachine.changeState(rumba.rumbaSoftlockState);
+        }
+
         //If we're only ignoring one direction, pick the other one!
         if(rumba.ignoreLeft || rumba.ignoreRight){
             //rumba.direction = rumba.ignoreLeft ? RumbaWithKnife.Direction.Right :RumbaWithKnife.Direction.Left;
@@ -49,33 +55,17 @@ public class RumbaWithKnifeIdleState : RumbaWithKnifeAliveState{
             rumba.wanderGoalLoc = new Vector3(Mathf.Lerp(rumba.transform.position.x, rumba.wanderRightMax.x, Random.Range(0.0f,1.0f)),rumba.transform.position.y, 0f);
         }
 
-        if(rumba.wanderGoalLoc.x > rumba.transform.position.x)
+        if(rumba.wanderGoalLoc.x > rumba.transform.position.x) //Determine which direction to turn.
         {
             rumba.direction = RumbaWithKnife.Direction.Right;
         } else
         {
-            rumba.direction = RumbaWithKnife.Direction.Right;
+            rumba.direction = RumbaWithKnife.Direction.Left;
         }
-
-
-
-
-        //switch(Random.Range(0, 3))
-        //{
-            //case 0:
-                //rumba.direction = RumbaWithKnife.Direction.Left;
-                //break;
-            //case 1:
-                //rumba.direction = RumbaWithKnife.Direction.Right;
-                //break;
-            //default:
-                //rumba.direction = RumbaWithKnife.Direction.Spinning;
-                //break;
-        //}
     }
-    void PickAction()
+    void PickAction() 
     {
-        if(rumba.direction == RumbaWithKnife.Direction.Spinning)
+        if(rumba.direction == RumbaWithKnife.Direction.Spinning) //doesn't get used right now. Always defaults to turnstate.
         {
             rumba.stateMachine.changeState(rumba.rumbaSpinState);
         }

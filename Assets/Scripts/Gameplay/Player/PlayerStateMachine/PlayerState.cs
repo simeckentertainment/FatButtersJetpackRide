@@ -64,7 +64,6 @@ public class PlayerState
     }
     public string GetCurrentAnimName()
     {
-
         if (player.anim.GetCurrentAnimatorClipInfo(0).Length > 0){
             return player.anim.GetCurrentAnimatorClipInfo(0)[0].clip.name;
         } else {

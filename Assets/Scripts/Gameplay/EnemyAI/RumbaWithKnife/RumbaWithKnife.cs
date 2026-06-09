@@ -71,7 +71,7 @@ public class RumbaWithKnife : MonoBehaviour{
         }
 
         if(Helper.isWithinMarginOfError(HP, 0.0f, 0.1f)){
-            stateMachine.changeState(rumbaDeadState);
+            stateMachine.changeState(rumbaSoftlockState);
         }
         if(ignoreLeft && ignoreRight) //If we're softlocked
         {
