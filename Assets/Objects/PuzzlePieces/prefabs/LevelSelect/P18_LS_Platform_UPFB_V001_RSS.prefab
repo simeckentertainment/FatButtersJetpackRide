@@ -31,6 +31,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2679744009736033276}
   - {fileID: 483298884408000437}
   m_Father: {fileID: 6468836314112032377}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -121,7 +122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &483298884408000437
 RectTransform:
   m_ObjectHideFlags: 0
@@ -133,8 +134,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.15522, y: 0.84184, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2679744009736033276}
+  m_Children: []
   m_Father: {fileID: 1738478921394767710}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -276,14 +276,14 @@ RectTransform:
   m_GameObject: {fileID: 7362972387081499026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.442469, y: 1.1878741, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 483298884408000437}
+  m_Father: {fileID: 1738478921394767710}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.2613315}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1131500531801213432
@@ -357,15 +357,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -523,55 +525,55 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8047868754348886589, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d38fedd9373c31145996b0f8231f18ba, type: 2}
     - target: {fileID: -5008456200197934581, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d38fedd9373c31145996b0f8231f18ba, type: 2}
     - target: {fileID: -4278117495241892106, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d38fedd9373c31145996b0f8231f18ba, type: 2}
     - target: {fileID: -1372456973505535881, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d38fedd9373c31145996b0f8231f18ba, type: 2}
     - target: {fileID: -264430861247414160, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d38fedd9373c31145996b0f8231f18ba, type: 2}
     - target: {fileID: 519234131937799014, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d38fedd9373c31145996b0f8231f18ba, type: 2}
     - target: {fileID: 773838507640681120, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d38fedd9373c31145996b0f8231f18ba, type: 2}
     - target: {fileID: 919132149155446097, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
       propertyPath: m_Name
-      value: LS_Platform
+      value: P18_LS_Platform_UPFB_V001_RSS
       objectReference: {fileID: 0}
     - target: {fileID: 1220468753929994659, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 465c1b973f156de4ea8a6e38baf8ee3e, type: 2}
     - target: {fileID: 1609660626712235537, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d38fedd9373c31145996b0f8231f18ba, type: 2}
     - target: {fileID: 2221103866354829164, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d38fedd9373c31145996b0f8231f18ba, type: 2}
     - target: {fileID: 4899486392329470165, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d38fedd9373c31145996b0f8231f18ba, type: 2}
     - target: {fileID: 7046644522681670263, guid: 20c5ddef34a53014db8c0030d5828460, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 08bb4471fffe3504faa01f653f5d924b, type: 2}
     m_RemovedComponents: []
@@ -640,7 +642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df69a589d2d7184b9b1e0f6eb326828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneLoadData: {fileID: 0}
   button: {fileID: 8108163116518581978}
   levelID: 0
   IsBossLevel: 0

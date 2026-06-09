@@ -1,8 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelSelectUIModel : Model
 {
     [SerializeField] private LevelSelectScroller levelSelectScroller;
+    [SerializeField] private List<LevelButtonIDHolder> levelButtons;
+    [SerializeField] private LevelSelectButtonViewModel levelButtonViewModelPrefab;
+    [SerializeField] private Camera cam;
+    [SerializeField] private Transform uiButtonHolder;
 
     // initialize the UI state to none so that LevelSelectAssetVisibilityManager can enable UI elements when ready
     private LevelSelectUIState _uiState = LevelSelectUIState.None;
@@ -32,9 +37,24 @@ public class LevelSelectUIModel : Model
         }
     }
 
+    private void Start()
+    {
+        foreach (var levelButton in levelButtons)
+        {
+            var newViewModel = Instantiate(levelButtonViewModelPrefab, uiButtonHolder);
+            newViewModel.levelId = levelButton;
+            newViewModel.cam = cam;
+        }
+    }
+
     public void GoToMainMenu()
     {
         Levels.Load(Levels.TitleScreen);
+    }
+
+    public void GoToLevel(int levelId)
+    {
+        Levels.Load(levelId);
     }
 }
 

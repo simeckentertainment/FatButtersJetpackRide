@@ -188,6 +188,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSelectScroller: {fileID: 8950412885015963510}
+  levelButtons: []
+  levelButtonViewModelPrefab: {fileID: 7187276808922140161, guid: 9687fb25df013ad43b9abdf71c5aa854, type: 3}
+  cam: {fileID: 0}
+  uiButtonHolder: {fileID: 8252441954797754418}
 --- !u!1 &597024315614459065
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +960,7 @@ MonoBehaviour:
     Rotation: {x: 0, y: 0, z: 0}
     Scale: {x: 0, y: 0, z: 0}
   duration: 1
+  disableWhenDeactivated: 1
   isActive: 0
   uiState: 1
 --- !u!1 &8562286426157222517
@@ -1016,6 +1021,7 @@ MonoBehaviour:
     Rotation: {x: 0, y: 0, z: 0}
     Scale: {x: 0, y: 0, z: 0}
   duration: 1
+  disableWhenDeactivated: 1
   isActive: 0
   uiState: 1
 --- !u!1 &8987483796084790319
@@ -1739,6 +1745,7 @@ MonoBehaviour:
     Rotation: {x: 0, y: 0, z: 0}
     Scale: {x: 0, y: 0, z: 0}
   duration: 1
+  disableWhenDeactivated: 1
   isActive: 0
   uiState: 2
 --- !u!1 &8398035310341371607 stripped
