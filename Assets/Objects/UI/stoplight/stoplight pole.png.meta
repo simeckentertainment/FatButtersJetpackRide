@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 820916df2a3101e42875302fc1e26465
+guid: 81c1713eb8ecec64aa1ef95fb3143984
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,13 +43,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 283, y: 294, z: 312, w: 300}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -123,23 +123,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Butters Panel 1_0
+      name: stoplight pole_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 0
-        width: 600
-        height: 600
+        width: 997
+        height: 2000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 283, y: 294, z: 312, w: 300}
+      pivot: {x: 0, y: 0}
+      border: {x: 286, y: 441, z: 302, w: 411}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e842732844f87e741896f3e37ed162d4
-      internalID: 660794280
+      spriteID: e24beef5610b9cf4c911fae6b2fb471b
+      internalID: 1095594759
       vertices: []
       indices: 
       edges: []
@@ -148,8 +148,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: ca90dfc0034c79c4eb2b4b62ce1e0881
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -158,7 +158,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Butters Panel 1_0: 660794280
+      stoplight pole_0: 1095594759
+      stoplight pole_1: 961345952
+      stoplight pole_2: -1298330184
+      stoplight pole_3: 1685519175
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

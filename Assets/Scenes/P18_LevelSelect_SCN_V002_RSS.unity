@@ -11723,7 +11723,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 537712178}
-  - component: {fileID: 537712180}
   - component: {fileID: 537712179}
   m_Layer: 0
   m_Name: LevelSelectButtonManager
@@ -11760,18 +11759,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopMenu: {fileID: 0}
---- !u!114 &537712180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537712176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8751e8898a0b7e4590f712897e20c06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &540064055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54110,7 +54097,7 @@ PrefabInstance:
     - target: {fileID: 4216933111782919171, guid: 83fa2fc39063c1b41b0efe5a160e838d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 537712180}
+      objectReference: {fileID: 0}
     - target: {fileID: 4496518141089150933, guid: 83fa2fc39063c1b41b0efe5a160e838d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

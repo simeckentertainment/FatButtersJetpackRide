@@ -91,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 4176087722358850436, guid: 09806b5f6b730b14283c68eb9a7e4e90, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 660794280, guid: 820916df2a3101e42875302fc1e26465, type: 3}
+      objectReference: {fileID: 21300000, guid: 820916df2a3101e42875302fc1e26465, type: 3}
     - target: {fileID: 4385732250877082473, guid: 09806b5f6b730b14283c68eb9a7e4e90, type: 3}
       propertyPath: m_Name
       value: Menu Panel (grey)
