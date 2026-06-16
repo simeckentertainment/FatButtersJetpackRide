@@ -493,6 +493,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Model: {fileID: 3773901179660819232}
   Button: {fileID: 1312870023051878541}
+  shortcutInput:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: dc9b1708-180a-491f-9b65-bcae81f9bb78
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &5585036660188793860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1236,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Model: {fileID: 0}
   Button: {fileID: 3407363457622790654}
+  shortcutInput:
+    m_Name: Shortcut Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d6f51a88-5f59-415e-90b2-b66854c0efc7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 4db24555-d9ab-4030-8776-27e1046f7768
+      m_Path: <Gamepad>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shortcut Input
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 8e82898b-a907-407e-9809-e26664b18aed
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shortcut Input
+      m_Flags: 0
+    m_Flags: 0
   state: 2
 --- !u!114 &3407363457622790654 stripped
 MonoBehaviour:
@@ -1513,6 +1547,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Model: {fileID: 0}
   Button: {fileID: 3878701889810434521}
+  shortcutInput:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5ed4b5f4-801d-4a7b-8c63-c695a8a1dfea
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   state: 3
 --- !u!114 &3878701889810434521 stripped
 MonoBehaviour:
@@ -1726,6 +1769,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Model: {fileID: 3773901179660819232}
   Button: {fileID: 6250145284484639281}
+  shortcutInput:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 39914d31-f6f9-469a-ac85-c2efaeb45e04
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   state: 1
 --- !u!1001 &8589877251944595916
 PrefabInstance:
@@ -1766,6 +1818,22 @@ PrefabInstance:
     - target: {fileID: 716838076081521837, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -550
+      objectReference: {fileID: 0}
+    - target: {fileID: 733047242821601635, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 733047242821601635, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 733047242821601635, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 475
+      objectReference: {fileID: 0}
+    - target: {fileID: 733047242821601635, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -110
       objectReference: {fileID: 0}
     - target: {fileID: 782389602736744330, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1861,7 +1929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2531668859900434849, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -775
+      value: -795
       objectReference: {fileID: 0}
     - target: {fileID: 2531976549805317062, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
       propertyPath: m_Name
@@ -1925,7 +1993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3639184049131078932, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
       propertyPath: m_Size
-      value: 0.35789475
+      value: 0.35416666
       objectReference: {fileID: 0}
     - target: {fileID: 3639184049131078932, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
       propertyPath: m_Value
@@ -1945,7 +2013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3664386071321604917, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1450
+      value: -1470
       objectReference: {fileID: 0}
     - target: {fileID: 3704972057379756927, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1965,7 +2033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3704972057379756927, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -175
+      value: -195
       objectReference: {fileID: 0}
     - target: {fileID: 3945504168149191729, guid: c6e628619377da94dbedfdd50064eb1e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2227,4 +2295,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Model: {fileID: 3773901179660819232}
   Button: {fileID: 5161844439730916295}
+  shortcutInput:
+    m_Name: Shortcut Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3b0cf437-01cd-4b47-aae5-4dd77bf18901
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: f8c03dc1-954d-4880-903b-9744a3e373fb
+      m_Path: <Gamepad>/buttonEast
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shortcut Input
+      m_Flags: 0
+    - m_Name: 
+      m_Id: a73cab09-7406-4f8b-8cd1-9d121b858aec
+      m_Path: <Gamepad>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shortcut Input
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ee48c37d-d2e6-401b-b6a4-bb7ac7b3f986
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shortcut Input
+      m_Flags: 0
+    m_Flags: 0
   state: 0
