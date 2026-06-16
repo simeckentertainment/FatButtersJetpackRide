@@ -35,6 +35,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c75aa45e8844bc4bbb7166774ed6be9
+    m_Address: Assets/Objects/UI/stoplight/stoplight.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0cffd73732fdbdb488507abf10d25e37
     m_Address: Assets/New Universal Render Pipeline Asset_Renderer.asset
     m_ReadOnly: 0
@@ -123,6 +128,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30ab4290899152341ade14783d129d63
+    m_Address: Assets/Objects/UI/gear.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3a12313e2c662cd4c92ed8f9f3adc607
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/PathCubeMat.mat
     m_ReadOnly: 0
@@ -153,6 +163,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 514e3ac520cc1764b9e4a82af1556a09
+    m_Address: Assets/Objects/UI/level slider background short.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 580bee4a2ce7ac7469e09da339f2d8f6
     m_Address: Assets/New Universal Render Pipeline Asset.asset
     m_ReadOnly: 0
@@ -160,6 +175,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5ca697b782226cc428d298c4449f3ba2
     m_Address: Assets/Objects/PuzzlePieces/SkinDB/23-TimeBork/TimeBork.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60337d3bbb24c334db269cef87cc7249
+    m_Address: Assets/Objects/UI/stoplight/stoplight light shine.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -176,6 +196,11 @@ MonoBehaviour:
   - m_GUID: 6a9589fcfdc84af4aa7199263d48392a
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/Desert Village/Materials/Cliffs_Dark_1_Desert
       Village.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6efa7f3de61f4234fb98498f8a89129a
+    m_Address: Assets/Objects/UI/stoplight/stoplight light border.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -205,13 +230,33 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81c1713eb8ecec64aa1ef95fb3143984
+    m_Address: Assets/Objects/UI/stoplight/stoplight pole.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 81ef0588e479a9d4c968a12a8b7af8ae
     m_Address: Assets/Objects/PuzzlePieces/SkinDB/16-Pugalicious/Pugalicious.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8518ac1f34a8f354986577af44aaf856
+    m_Address: Assets/Objects/UI/stoplight/stoplight light on.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 857f832ec7ce8b347964543e501c340b
+    m_Address: Assets/Objects/UI/shop.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8d2bb70cbf9db8d4da26e15b26e74248
     m_Address: Packages/com.unity.render-pipelines.universal/Shaders/SimpleLit.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 908c0c85d16195a4cb918bb4ee23ef00
+    m_Address: Assets/Objects/UI/stoplight/stoplight light base.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -256,6 +301,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: abc9fe78177e39f419ce5b8db8a7b50e
+    m_Address: Assets/Objects/UI/stoplight/stoplight light off.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: be0901e1b8a46694897fdc586b7c67d2
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/flag/Materials/ground.mat
     m_ReadOnly: 0
@@ -279,6 +329,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c5bcb9cd58674d348b084c8bbc73e7d3
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/FloatingPlatform/ThreadplateMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7098a8d8c767844c973d3c7e8493779
+    m_Address: Assets/Objects/UI/bug.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
