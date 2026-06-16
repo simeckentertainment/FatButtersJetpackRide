@@ -11,8 +11,10 @@ public class LevelSelectButtonViewModel : ButtonViewModel<LevelSelectUIModel>
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
+
         transform.position = cam.WorldToScreenPoint(levelId.transform.position) + positionOffset;
 
         Plane plane = new Plane();
