@@ -6,6 +6,30 @@ public class ViewScroller : MonoBehaviour
     [SerializeField] private ScrollRect scrollRect;
     [SerializeField] private float padding = 20;
 
+    private void Start()
+    {
+        if (scrollRect == null)
+        {
+            scrollRect = GetComponent<ScrollRect>();
+        }
+
+        if (scrollRect == null)
+        {
+            Debug.LogError("No referenced ScrollRect component on ViewScroller");
+        }
+
+        var selectableChildren = transform.GetComponentsInChildren<Selectable>();
+        foreach(var child in selectableChildren)
+        {
+            var scrollHandler = child.GetComponent<ScrollToItem>();
+            if (scrollHandler == null)
+            {
+                scrollHandler = child.gameObject.AddComponent<ScrollToItem>();
+            }
+            scrollHandler.scrollView = this;
+        }
+    }
+
     public void ScrollToElement(RectTransform transform)
     {
         Vector2 scrollPosition = scrollRect.content.position;

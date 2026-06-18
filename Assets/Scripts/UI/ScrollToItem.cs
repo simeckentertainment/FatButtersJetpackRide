@@ -1,37 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
-//using UnityEngine.UIElements;
-
-//public class ScrollToItem : Selectable
-//{
-//    [SerializeField] private Selectable element;
-//    [SerializeField] private ViewScroller scrollView;
-
-//    protected override void Start()
-//    {
-//        base.Start();
-
-//        if (scrollView == null)
-//        {
-//            scrollView = GetComponentInParent<ViewScroller>();
-//        }
-//    }
-
-//    public override void OnSelect(BaseEventData eventData)
-//    {
-//        base.OnSelect(eventData);
-
-//        scrollView.ScrollToElement(transform);
-
-//        element.OnSelect.AddListener(OnSelect);
-//    }
-//}
 
 public class ScrollToItem : MonoBehaviour, ISelectHandler
 {
     [SerializeField] private RectTransform element;
-    [SerializeField] private ViewScroller scrollView;
+    [SerializeField] public ViewScroller scrollView;
 
     private void Start()
     {
@@ -48,6 +21,12 @@ public class ScrollToItem : MonoBehaviour, ISelectHandler
 
     public void OnSelect(BaseEventData eventData)
     {
+        if (element == null)
+        {
+            Debug.LogError("Aborting attempt to select ScrollToItem with no RectTransform");
+            return;
+        }
+
         scrollView.ScrollToElement(element);
     }
 }
