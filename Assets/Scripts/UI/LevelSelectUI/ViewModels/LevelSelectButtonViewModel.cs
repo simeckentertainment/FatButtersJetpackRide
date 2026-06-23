@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class LevelSelectButtonViewModel : ButtonViewModel<LevelSelectUIModel>
+public class LevelSelectButtonViewModel : ButtonViewModel<LevelSelectUIModel>, ISelectHandler
 {
     [SerializeField] public LevelButtonIDHolder levelId;
     [SerializeField] public Camera cam;
@@ -38,5 +39,10 @@ public class LevelSelectButtonViewModel : ButtonViewModel<LevelSelectUIModel>
     protected override void OnClick()
     {
         Model.GoToLevel(levelId.levelID);
+    }
+
+    public void OnSelect(BaseEventData eventData)
+    {
+        Model.ScrollToLevel(levelId);
     }
 }

@@ -56,6 +56,26 @@ public class LevelSelectUIModel : Model
     {
         Levels.Load(levelId);
     }
+
+    public void ScrollToLevel(LevelButtonIDHolder levelId)
+    {
+        var rightBound = levelSelectScroller.RightBound.position.x;
+        var leftBound = levelSelectScroller.LeftBound.position.x;
+        var targetPosition = levelId.transform.position.x;
+        if (targetPosition > rightBound)
+        {
+            targetPosition = rightBound;
+        }
+        if (targetPosition < leftBound)
+        {
+            targetPosition = leftBound;
+        }
+
+        var total = rightBound - leftBound;
+        var progress = targetPosition - leftBound;
+
+        LevelSelectScrollValue = progress / total;
+    }
 }
 
 public enum LevelSelectUIState
