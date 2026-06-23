@@ -43,6 +43,11 @@ public class LevelSelectButtonViewModel : ButtonViewModel<LevelSelectUIModel>, I
 
     public void OnSelect(BaseEventData eventData)
     {
-        Model.ScrollToLevel(levelId);
+        if (eventData is AxisEventData)
+        {
+            // this will scroll only when using the joystick or keyboard to select the level
+            // it will NOT scroll when selecting the level with a mouse click or screen touch
+            Model.ScrollToLevel(levelId);
+        }
     }
 }
