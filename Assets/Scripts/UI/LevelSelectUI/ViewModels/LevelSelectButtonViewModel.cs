@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class LevelSelectButtonViewModel : ButtonViewModel<LevelSelectUIModel>, ISelectHandler
 {
@@ -9,8 +10,25 @@ public class LevelSelectButtonViewModel : ButtonViewModel<LevelSelectUIModel>, I
     [SerializeField] public float scaleMultiplier = 1;
     [SerializeField] public float scaleDistanceMultiplier = 1;
     [SerializeField] public float scaleDistanceOffset;
+    [SerializeField] public Selectable upSelect;
+    [SerializeField] public Selectable downSelect;
 
     private CollectibleData collectibleData => SaveManager.Instance.collectibleData;
+
+    private void Start()
+    {
+        var newNavigation = new Navigation();
+        newNavigation.mode = Navigation.Mode.Explicit;
+
+        var nextLevel = Model.GetButtonViewModelWithId(levelId.levelID + 1);
+        var prevLevel = Model.GetButtonViewModelWithId(levelId.levelID - 1);
+        newNavigation.selectOnRight = nextLevel?.GetButton();
+        newNavigation.selectOnLeft = prevLevel?.GetButton();
+        newNavigation.selectOnUp = upSelect;
+        newNavigation.selectOnDown = downSelect;
+
+        GetButton().navigation = newNavigation;
+    }
 
     protected override void Update()
     {

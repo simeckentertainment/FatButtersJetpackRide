@@ -7,6 +7,11 @@ public abstract class ButtonViewModel<T> : ViewModel<T> where T : Model
     [SerializeField] protected Button Button;
     [SerializeField] private InputAction shortcutInput;
 
+    public Button GetButton()
+    {
+        return Button;
+    }
+
     protected override void Awake()
     {
         base.Awake();

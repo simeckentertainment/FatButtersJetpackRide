@@ -1,13 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelSelectUIModel : Model
 {
     [SerializeField] private LevelSelectScroller levelSelectScroller;
     [SerializeField] private List<LevelButtonIDHolder> levelButtons;
     [SerializeField] private LevelSelectButtonViewModel levelButtonViewModelPrefab;
+    [SerializeField] private Selectable levelSelectButtonUpSelect;
+    [SerializeField] private Selectable levelSelectButtonDownSelect;
     [SerializeField] private Camera cam;
     [SerializeField] private Transform uiButtonHolder;
+
+    private List<LevelSelectButtonViewModel> buttonViewModels = new List<LevelSelectButtonViewModel>();
 
     // initialize the UI state to none so that LevelSelectAssetVisibilityManager can enable UI elements when ready
     private LevelSelectUIState _uiState = LevelSelectUIState.None;
@@ -37,13 +42,17 @@ public class LevelSelectUIModel : Model
         }
     }
 
-    private void Start()
+    private void Awake()
     {
         foreach (var levelButton in levelButtons)
         {
             var newViewModel = Instantiate(levelButtonViewModelPrefab, uiButtonHolder);
             newViewModel.levelId = levelButton;
             newViewModel.cam = cam;
+            newViewModel.upSelect = levelSelectButtonUpSelect;
+            newViewModel.downSelect = levelSelectButtonDownSelect;
+
+            buttonViewModels.Add(newViewModel);
         }
     }
 
@@ -75,6 +84,19 @@ public class LevelSelectUIModel : Model
         var progress = targetPosition - leftBound;
 
         LevelSelectScrollValue = progress / total;
+    }
+
+    public LevelSelectButtonViewModel GetButtonViewModelWithId(int id)
+    {
+        foreach (var buttonViewModel in buttonViewModels)
+        {
+            if (buttonViewModel.levelId.levelID == id)
+            {
+                return buttonViewModel;
+            }
+        }
+
+        return null;
     }
 }
 
