@@ -439,12 +439,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 2032655602543926462}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -497,7 +497,7 @@ MonoBehaviour:
   Model: {fileID: 3773901179660819232}
   Button: {fileID: 1312870023051878541}
   shortcutInput:
-    m_Name: 
+    m_Name: Shortcut Input
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: dc9b1708-180a-491f-9b65-bcae81f9bb78
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1116,6 +1116,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Settings Button
       objectReference: {fileID: 0}
+    - target: {fileID: 2936264361337378927, guid: 1135d8a3c3d1ed244ae9c4cf6440cb20, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936264361337378927, guid: 1135d8a3c3d1ed244ae9c4cf6440cb20, type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 2032655602543926462}
+    - target: {fileID: 2936264361337378927, guid: 1135d8a3c3d1ed244ae9c4cf6440cb20, type: 3}
+      propertyPath: m_Navigation.m_SelectOnRight
+      value: 
+      objectReference: {fileID: 3878701889810434521}
     - target: {fileID: 5838052312093517549, guid: 1135d8a3c3d1ed244ae9c4cf6440cb20, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -1289,6 +1301,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5898839109687666934}
     m_Modifications:
+    - target: {fileID: 1631210637917417362, guid: 4a653fd42572f184199abececf5ac277, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631210637917417362, guid: 4a653fd42572f184199abececf5ac277, type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 1312870023051878541}
+    - target: {fileID: 1631210637917417362, guid: 4a653fd42572f184199abececf5ac277, type: 3}
+      propertyPath: m_Navigation.m_SelectOnRight
+      value: 
+      objectReference: {fileID: 3407363457622790654}
     - target: {fileID: 4186708379176443579, guid: 4a653fd42572f184199abececf5ac277, type: 3}
       propertyPath: m_Name
       value: BugReportButton
@@ -1392,19 +1416,50 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4186708379176443579, guid: 4a653fd42572f184199abececf5ac277, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7868684019715353053}
   m_SourcePrefab: {fileID: 100100000, guid: 4a653fd42572f184199abececf5ac277, type: 3}
 --- !u!114 &2032655602543926462 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1631210637917417362, guid: 4a653fd42572f184199abececf5ac277, type: 3}
   m_PrefabInstance: {fileID: 762877376185070380}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3498283127196347799}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3498283127196347799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4186708379176443579, guid: 4a653fd42572f184199abececf5ac277, type: 3}
+  m_PrefabInstance: {fileID: 762877376185070380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7868684019715353053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3498283127196347799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e173f0b22794b43978286fdb00fec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Model: {fileID: 3773901179660819232}
+  Button: {fileID: 2032655602543926462}
+  shortcutInput:
+    m_Name: Shortcut Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e1c43650-2ad1-406b-a343-f632e0d956c6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!224 &6648621528556330839 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6256325492726312059, guid: 4a653fd42572f184199abececf5ac277, type: 3}
@@ -1422,6 +1477,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shop Button
       objectReference: {fileID: 0}
+    - target: {fileID: 2936264361337378927, guid: 1135d8a3c3d1ed244ae9c4cf6440cb20, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936264361337378927, guid: 1135d8a3c3d1ed244ae9c4cf6440cb20, type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 3407363457622790654}
     - target: {fileID: 4314923476491338120, guid: 1135d8a3c3d1ed244ae9c4cf6440cb20, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1562,7 +1625,7 @@ MonoBehaviour:
   Model: {fileID: 0}
   Button: {fileID: 3878701889810434521}
   shortcutInput:
-    m_Name: 
+    m_Name: Shortcut Input
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 5ed4b5f4-801d-4a7b-8c63-c695a8a1dfea

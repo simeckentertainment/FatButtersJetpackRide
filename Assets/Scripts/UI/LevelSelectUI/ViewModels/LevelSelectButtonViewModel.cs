@@ -20,14 +20,14 @@ public class LevelSelectButtonViewModel : ButtonViewModel<LevelSelectUIModel>, I
         var newNavigation = new Navigation();
         newNavigation.mode = Navigation.Mode.Explicit;
 
-        var nextLevel = Model.GetButtonViewModelWithId(levelId.levelID + 1);
-        var prevLevel = Model.GetButtonViewModelWithId(levelId.levelID - 1);
+        var nextLevel = Model.GetLevelSelectButtonViewModelWithId(levelId.levelID + 1);
+        var prevLevel = Model.GetLevelSelectButtonViewModelWithId(levelId.levelID - 1);
         newNavigation.selectOnRight = nextLevel?.GetButton();
         newNavigation.selectOnLeft = prevLevel?.GetButton();
         newNavigation.selectOnUp = upSelect;
         newNavigation.selectOnDown = downSelect;
 
-        GetButton().navigation = newNavigation;
+        Button.navigation = newNavigation;
     }
 
     protected override void Update()

@@ -86,7 +86,7 @@ public class LevelSelectUIModel : Model
         LevelSelectScrollValue = progress / total;
     }
 
-    public LevelSelectButtonViewModel GetButtonViewModelWithId(int id)
+    public LevelSelectButtonViewModel GetLevelSelectButtonViewModelWithId(int id)
     {
         foreach (var buttonViewModel in buttonViewModels)
         {
@@ -97,6 +97,23 @@ public class LevelSelectUIModel : Model
         }
 
         return null;
+    }
+
+    public LevelSelectButtonViewModel GetMostCentralLevelSelectButton()
+    {
+        var minDistance = float.MaxValue;
+        LevelSelectButtonViewModel minDistanceButton = null;
+        foreach (var buttonViewModel in buttonViewModels)
+        {
+            var distance = Mathf.Abs(buttonViewModel.transform.position.x - transform.position.x);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                minDistanceButton = buttonViewModel;
+            }
+        }
+
+        return minDistanceButton;
     }
 }
 
