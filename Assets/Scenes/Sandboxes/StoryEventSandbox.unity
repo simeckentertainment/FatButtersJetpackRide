@@ -2105,9 +2105,9 @@ MonoBehaviour:
   - triggerStepIndex: 2
     completionType: 3
     completionTimerDuration: 3
-    completionSignalId: 0
+    completionSignalId: 1
     actions: []
-    runImmediately: 0
+    runImmediately: 1
   - triggerStepIndex: 0
     completionType: 0
     completionTimerDuration: 3
