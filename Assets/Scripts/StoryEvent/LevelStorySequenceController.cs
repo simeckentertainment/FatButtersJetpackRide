@@ -67,6 +67,8 @@ public class LevelStorySequenceController : MonoBehaviour
                     action.Execute(context);
             }
         }
+
+        StartCompletionForCurrentStep();
     }
 
 
