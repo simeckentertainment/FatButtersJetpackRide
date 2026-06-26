@@ -286,6 +286,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1967606004}
   stepIndex: 0
+--- !u!1 &669399219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 669399221}
+  - component: {fileID: 669399220}
+  m_Layer: 0
+  m_Name: StoryGameplayBridge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &669399220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669399219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d33fd4e9f58b89d42828fcf71cfed099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &669399221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669399219}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &750659455 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1768759883714213379, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
@@ -770,7 +814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 751281557860654251, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -175
+      value: -195
       objectReference: {fileID: 0}
     - target: {fileID: 830729898375086784, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_Size
@@ -830,7 +874,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1286515942172292467, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.24
+      value: 8.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286515942172292467, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 1339591435666749300, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -886,7 +934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1884168782251875957, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -775
+      value: -795
       objectReference: {fileID: 0}
     - target: {fileID: 1895105292318178393, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_IsActive
@@ -1184,6 +1232,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3687300725034864311, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3687300725034864311, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3687300725034864311, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3687300725034864311, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3736925419465433182, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1382,11 +1446,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6851405522882042913, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.3930002
+      value: 1.1500006
       objectReference: {fileID: 0}
     - target: {fileID: 6851405522882042913, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.526001
+      value: 0.5500002
       objectReference: {fileID: 0}
     - target: {fileID: 6950300878392614031, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_Name
@@ -1518,7 +1582,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7571705896339182308, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.24
+      value: 8.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7571705896339182308, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 7589184277706730441, guid: 9411cacd0d64df942bb967dd1f4ade9e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1984,6 +2052,7 @@ GameObject:
   - component: {fileID: 1967606004}
   - component: {fileID: 1967606006}
   - component: {fileID: 1967606005}
+  - component: {fileID: 1967606007}
   m_Layer: 0
   m_Name: StoryEventSystem
   m_TagString: Untagged
@@ -2022,26 +2091,34 @@ MonoBehaviour:
   - triggerStepIndex: 0
     completionType: 2
     completionTimerDuration: 5
-    completionSignalId: default
+    completionSignalId: 0
     actions:
     - {fileID: 1967606006}
     runImmediately: 0
   - triggerStepIndex: 1
     completionType: 2
     completionTimerDuration: 2
-    completionSignalId: default
+    completionSignalId: 0
     actions:
     - {fileID: 1967606005}
     runImmediately: 1
   - triggerStepIndex: 2
     completionType: 3
     completionTimerDuration: 3
-    completionSignalId: ThrustUsed
+    completionSignalId: 0
     actions: []
     runImmediately: 0
-  _currentStepIndex: 0
+  - triggerStepIndex: 0
+    completionType: 0
+    completionTimerDuration: 3
+    completionSignalId: 0
+    actions:
+    - {fileID: 1967606007}
+    runImmediately: 1
+  currentStepIndex: 0
   player: {fileID: 1428399598}
   uiManager: {fileID: 750659455}
+  gameplayBridge: {fileID: 669399220}
 --- !u!114 &1967606005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,6 +2157,19 @@ MonoBehaviour:
     Position: {x: 0, y: 340, z: 0}
     Rotation: {x: 0, y: 0, z: 0}
     Scale: {x: 1, y: 1, z: 1}
+--- !u!114 &1967606007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967606001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2fa8aaaa44daa43a1085ac14ea91e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2093,3 +2183,4 @@ SceneRoots:
   - {fileID: 1154765158}
   - {fileID: 1326931933}
   - {fileID: 1325237507}
+  - {fileID: 669399221}
