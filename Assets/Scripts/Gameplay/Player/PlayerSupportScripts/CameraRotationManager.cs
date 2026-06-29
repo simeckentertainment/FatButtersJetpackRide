@@ -19,7 +19,12 @@ public class CameraRotationManager : MonoBehaviour
     {
 
 #if UNITY_IOS || UNITY_ANDROID
+    if(SystemInfo.supportsGyroscope){
         deviceType = DeviceType.HandheldGyro;
+    } else{
+        deviceType = DeviceType.Stationary;
+    }
+
 #else
         deviceType = DeviceType.Stationary;
 #endif
