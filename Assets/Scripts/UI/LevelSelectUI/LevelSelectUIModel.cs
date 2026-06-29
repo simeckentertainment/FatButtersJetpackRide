@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class LevelSelectUIModel : Model
 {
     [SerializeField] private LevelSelectScroller levelSelectScroller;
-    [SerializeField] private List<LevelButtonIDHolder> levelButtons;
     [SerializeField] private LevelSelectButtonViewModel levelButtonViewModelPrefab;
     [SerializeField] private Selectable levelSelectButtonUpSelect;
     [SerializeField] private Selectable levelSelectButtonDownSelect;
@@ -44,6 +43,9 @@ public class LevelSelectUIModel : Model
 
     private void Awake()
     {
+        var levelButtons = FindObjectsByType<LevelButtonIDHolder>(FindObjectsSortMode.None);
+        // levelButtons will be unsorted, but that doesn't matter
+        // because we're find each button by ID rather than the order of thebuttonViewModels list
         foreach (var levelButton in levelButtons)
         {
             var newViewModel = Instantiate(levelButtonViewModelPrefab, uiButtonHolder);
