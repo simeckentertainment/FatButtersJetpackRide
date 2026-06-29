@@ -25,10 +25,12 @@ public class RumbaWithKnife : MonoBehaviour{
     [System.NonSerialized] public float rightFacingRot = 90f;
     [System.NonSerialized] public float calmTurnFrameCountMax = 20;
     [System.NonSerialized] public float angryTurnFrameCountMax = 60;
+    [SerializeField] public float deathRageCountMax = 120;
     [System.NonSerialized] public Direction cliffDetected = Direction.None;
     [System.NonSerialized] public Direction wallDetected = Direction.None;
     [SerializeField] public bool ignoreLeft;
     [SerializeField] public bool ignoreRight;
+    [SerializeField] public GameObject[] deathExplosionObjects;
 
     public Vector3 spawnLoc {get; private set;}
     public bool angered {get; private set;}
@@ -71,7 +73,7 @@ public class RumbaWithKnife : MonoBehaviour{
         }
 
         if(Helper.isWithinMarginOfError(HP, 0.0f, 0.1f)){
-            stateMachine.changeState(rumbaSoftlockState);
+            stateMachine.changeState(rumbaDeadState);
         }
         if(ignoreLeft && ignoreRight) //If we're softlocked
         {
