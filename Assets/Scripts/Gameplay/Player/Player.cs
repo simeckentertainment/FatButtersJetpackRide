@@ -200,6 +200,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        input.ToggleOnScreenControls(collectibleData.OnScreenControlsEnabled);
         skindex = collectibleData.CurrentSkin;
         vfx.ApplySkin(skindex);
         JetpackActivationPossible = true;

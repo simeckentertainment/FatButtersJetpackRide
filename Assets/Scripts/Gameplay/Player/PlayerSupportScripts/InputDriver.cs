@@ -59,7 +59,8 @@ public class InputDriver : MonoBehaviour
     [SerializeField] private InputAction GPBoostAction;
 
     [Header("OnScreen Control Vars")]
-    [SerializeField] private float OSRollOffset;
+    [SerializeField] private bool OnScreenControlsEnabled;
+    [SerializeField] private float OSCAimAngle;
     [SerializeField] private float OSRollSensitivity;
     [SerializeField] private bool OSCWPressed;
     [SerializeField] private bool OSCCWPressed;
@@ -110,26 +111,24 @@ public class InputDriver : MonoBehaviour
     {
         if (!inputEnabled) { return; } //Only accept input when input is enabled.
 
-
-        //Motion control checkers
-        TrackRollData(); //always be checking the roll data.
-        touchThrust = FilterTouchInput(); //Setting the touch thrust, filtering out other control methods.
+        if(!OnScreenControlsEnabled){
+            //Motion control checkers
+            TrackRollData(); //always be checking the roll data.
+            touchThrust = FilterTouchInput(); //Setting the touch thrust, filtering out other control methods.
+        }
         //OSC control checkers
-        SetOSControlValues();
-
+        if(OnScreenControlsEnabled){SetOSControlValues();}
 
         //Keyboard control checkers
         SetKBControlValues();
         //Gamepad Control checkers
         SetGPControlValues();
 
-
-
         //Amalgam variable checkers.
         GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed;
 
         //Final Aim Angle
-        aimAngle = deviceRoll + OSRollOffset + KBCurrentAngle + (GPAimVal * -45);
+        aimAngle = deviceRoll + OSCAimAngle + KBCurrentAngle + (GPAimVal * -45);
         // Boost detection: Multi-touch (mobile) or Thrust + L Shift key (Pc/Gamepad)
 
         GoBoost = touchBoostTriggered || OSBoostPressed || KBBoostPressed || GPBoostPressed;
@@ -145,6 +144,7 @@ public class InputDriver : MonoBehaviour
     }
     private bool FilterTouchInput()
     {
+        if(OSCCWPressed || OSCWPressed || OSThrustPressed){return false;} //don't get tricked by the on screen controls.
         touchCount = Input.touchCount;
         if (touchCount == 0) { return false; } //Don't run thrust if untouched
         if (PauseUtility.IsPaused) { return false; } //Don't run thrust if paused
@@ -159,20 +159,29 @@ public class InputDriver : MonoBehaviour
         touchBoostTriggered = touchCount > 1;
         return true;
     }
+    public void ToggleOnScreenControls(bool enabled)
+    {
+        OnScreenControlsEnabled = enabled;
+    }
     private void SetOSControlValues()
     {
         OSThrustPressed = OSthrustAction.ReadValue<float>() == 1.0f;
         OSCWPressed = OSCWAction.ReadValue<float>() == 1.0f;
         OSCCWPressed = OSCCWAction.ReadValue<float>() == 1.0f;
         OSBoostPressed = OSBoostAction.ReadValue<float>() == 1.0f;
-        if (OSCWPressed & OSCCWPressed) { return; }
+        if((!OSCWPressed && !OSCCWPressed) || (OSCWPressed && OSCCWPressed)) //Only accept a single directional input at a time, or wait patiently for input.
+        {
+            OSCAimAngle = 0.0f;
+            return;
+        }
+        
         if (OSCWPressed && aimAngle > -45.0f)
         {
-            OSRollOffset -= 0.25f * OSRollSensitivity;
+            OSCAimAngle -= 0.25f * OSRollSensitivity;
         }
         if (OSCCWPressed && aimAngle < 45.0f)
         {
-            OSRollOffset += 0.25f * OSRollSensitivity;
+            OSCAimAngle += 0.25f * OSRollSensitivity;
         }
     }
 
