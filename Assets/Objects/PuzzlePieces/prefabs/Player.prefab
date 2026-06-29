@@ -628,7 +628,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 3976227871123825074}
+  - {fileID: 0}
   - {fileID: 2122784116121297188}
   - {fileID: 0}
   - {fileID: 0}
@@ -646,6 +646,7 @@ MonoBehaviour:
   thrusterRechargeRate: 3
   KeyboardRollOffset: 0
   KeyboardSensitivity: 5
+  corgiTurned: 0
   walkDirection: 0
   slowWalkSpeed: 1
   mediumWalkSpeed: 5
@@ -665,6 +666,7 @@ MonoBehaviour:
   hasPermaBall: 0
   ballTimerMax: 600
   killThrustTriggerTouch: 0
+  playerDirection: 1
   LowGravMode: 0
   fallDelayThreshold: 15
 --- !u!114 &424248134581569978
