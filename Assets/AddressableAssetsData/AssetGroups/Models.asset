@@ -11742,6 +11742,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f7df26c48068b74a8b9a7e85e165439
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/RumbaWithKnife/RumbaWithKnife.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7fa1e51f9c8778b4aa37ee9a47dc98b6
     m_Address: Assets/CityMassivePack/3d Models/Signs/SignProp_2_A_5.fbx
     m_ReadOnly: 0
