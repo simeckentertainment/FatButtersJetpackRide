@@ -8358,11 +8358,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 52b90f4496c98a74185ddc4f02606638
-    m_Address: Assets/Objects/PuzzlePieces/prefabs/BugReportButton.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 52c51744944b30b4395badb88a68a18b
     m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Structures/Catwalk/Catwalk
       Short.prefab
@@ -8850,11 +8845,6 @@ MonoBehaviour:
   - m_GUID: 573ef1f633878a64f8caef594c1c31d5
     m_Address: Assets/Objects/PuzzlePieces/prefabs/statics/scifi/scifi warehouse/Props/Ducts/P18_Duct
       Vent_UPFB_V001_RSS.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5753ab0e1430b574f841cadf526deb32
-    m_Address: Assets/Objects/PuzzlePieces/prefabs/LevelSelect/LevelSelectLightManager.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
