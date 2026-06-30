@@ -1,20 +1,14 @@
 ﻿using UnityEngine.UI;
 
-public class LevelSelectSliderViewModel : SliderViewModel<LevelSelectUIModel>
+public abstract class LevelSelectTopButtonViewModel : ButtonViewModel<LevelSelectUIModel>
 {
     private bool needsRefreshNavigation = false;
 
     protected override void OnModelChanged()
     {
         base.OnModelChanged();
-        Slider.value = Model.LevelSelectScrollValue;
 
         needsRefreshNavigation = true; // delay the refresh to ensure the level select buttons have been moved
-    }
-
-    protected override void OnSliderChanged(float value)
-    {
-        Model.LevelSelectScrollValue = value;
     }
 
     private void LateUpdate()
@@ -31,11 +25,11 @@ public class LevelSelectSliderViewModel : SliderViewModel<LevelSelectUIModel>
         var newNavigation = new Navigation();
         newNavigation.mode = Navigation.Mode.Explicit;
 
-        newNavigation.selectOnRight = Slider.navigation.selectOnRight;
-        newNavigation.selectOnLeft = Slider.navigation.selectOnLeft;
-        newNavigation.selectOnUp = Model.GetMostCentralLevelSelectButton().GetButton();
-        newNavigation.selectOnDown = Slider.navigation.selectOnUp;
+        newNavigation.selectOnRight = Button.navigation.selectOnRight;
+        newNavigation.selectOnLeft = Button.navigation.selectOnLeft;
+        newNavigation.selectOnUp = Button.navigation.selectOnUp;
+        newNavigation.selectOnDown = Model.GetMostCentralLevelSelectButton().GetButton();
 
-        Slider.navigation = newNavigation;
+        Button.navigation = newNavigation;
     }
 }

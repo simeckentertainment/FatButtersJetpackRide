@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LevelSelectSetStateButtonViewModel : ButtonViewModel<LevelSelectUIModel>
+public class LevelSelectSetStateButtonViewModel : LevelSelectTopButtonViewModel
 {
     [SerializeField] private LevelSelectUIState state;
 
