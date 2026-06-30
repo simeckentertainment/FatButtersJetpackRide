@@ -498,11 +498,13 @@ MonoBehaviour:
       m_Action: GP Boost
       m_Flags: 0
     m_Flags: 0
-  OSRollOffset: 0
+  OnScreenControlsEnabled: 0
+  OSCAimAngle: 0
   OSRollSensitivity: 5
   OSCWPressed: 0
   OSCCWPressed: 0
   OSThrustPressed: 0
+  OSBoostDelayThreshold: 120
   OSBoostPressed: 0
   OSthrustAction:
     m_Name: O Sthrust
@@ -646,7 +648,6 @@ MonoBehaviour:
   thrusterRechargeRate: 3
   KeyboardRollOffset: 0
   KeyboardSensitivity: 5
-  corgiTurned: 0
   walkDirection: 0
   slowWalkSpeed: 1
   mediumWalkSpeed: 5
@@ -666,7 +667,6 @@ MonoBehaviour:
   hasPermaBall: 0
   ballTimerMax: 600
   killThrustTriggerTouch: 0
-  playerDirection: 1
   LowGravMode: 0
   fallDelayThreshold: 15
 --- !u!114 &424248134581569978

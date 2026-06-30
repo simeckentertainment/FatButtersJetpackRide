@@ -61,10 +61,12 @@ public class InputDriver : MonoBehaviour
     [Header("OnScreen Control Vars")]
     [SerializeField] private bool OnScreenControlsEnabled;
     [SerializeField] private float OSCAimAngle;
-    [SerializeField] private float OSRollSensitivity;
+    [SerializeField] private float OSAccelSensitivity;
     [SerializeField] private bool OSCWPressed;
     [SerializeField] private bool OSCCWPressed;
     [SerializeField] private bool OSThrustPressed;
+    [System.NonSerialized] private float OSBoostDelayCounter;
+    [SerializeField] private float OSBoostDelayThreshold;
     [SerializeField] private bool OSBoostPressed;
 
     [SerializeField] private InputAction OSthrustAction;
@@ -168,7 +170,27 @@ public class InputDriver : MonoBehaviour
         OSThrustPressed = OSthrustAction.ReadValue<float>() == 1.0f;
         OSCWPressed = OSCWAction.ReadValue<float>() == 1.0f;
         OSCCWPressed = OSCCWAction.ReadValue<float>() == 1.0f;
-        OSBoostPressed = OSBoostAction.ReadValue<float>() == 1.0f;
+
+        //Boost detection logic. On Screen Controls works a little differently than the rest in terms of boost.
+        //To keep the controls as simple as possible, we're putting a timer on the OSCs. After a few seconds of
+        //holding thrust, the boost kicks in automatically.
+
+        if (OSThrustPressed && !OSBoostPressed)
+        {
+            OSBoostDelayCounter++;
+
+            if(OSBoostDelayCounter > OSBoostDelayThreshold) OSBoostPressed = true;
+
+        } else
+        {
+            OSBoostDelayCounter = 0f;
+        }
+
+        if(OSBoostPressed && !OSThrustPressed) //turns off boost if thrust is released.
+        {
+            OSBoostPressed = false;
+        }
+
         if((!OSCWPressed && !OSCCWPressed) || (OSCWPressed && OSCCWPressed)) //Only accept a single directional input at a time, or wait patiently for input.
         {
             OSCAimAngle = 0.0f;
@@ -177,11 +199,11 @@ public class InputDriver : MonoBehaviour
         
         if (OSCWPressed && aimAngle > -45.0f)
         {
-            OSCAimAngle -= 0.25f * OSRollSensitivity;
+            OSCAimAngle -= 0.25f * OSAccelSensitivity;
         }
         if (OSCCWPressed && aimAngle < 45.0f)
         {
-            OSCAimAngle += 0.25f * OSRollSensitivity;
+            OSCAimAngle += 0.25f * OSAccelSensitivity;
         }
     }
 
