@@ -1,9 +1,16 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public abstract class ButtonViewModel<T> : ViewModel<T> where T : Model
 {
     [SerializeField] protected Button Button;
+    [SerializeField] private InputAction shortcutInput;
+
+    public Button GetButton()
+    {
+        return Button;
+    }
 
     protected override void Awake()
     {
@@ -18,6 +25,16 @@ public abstract class ButtonViewModel<T> : ViewModel<T> where T : Model
         }
 
         Button.onClick.AddListener(OnClick);
+
+        shortcutInput.Enable();
+    }
+
+    protected virtual void Update()
+    {
+        if (shortcutInput.triggered)
+        {
+            OnClick();
+        }
     }
 
     private void OnDestroy()

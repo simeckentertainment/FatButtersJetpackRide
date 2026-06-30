@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public abstract class SlideableViewModel<T> : ViewModel<T> where T : Model
 {
     [SerializeField] private EditorLocalTransform disabledTransformDifference = EditorLocalTransform.Zero;
 
     [SerializeField] protected float duration = 0.5f;
+    [SerializeField] protected bool disableWhenDeactivated = true;
 
     [Tooltip("Changes whether this item starts enabled or disabled")]
     [SerializeField] protected bool isActive;
@@ -30,6 +32,8 @@ public abstract class SlideableViewModel<T> : ViewModel<T> where T : Model
             endTransform = disabledTransform;
         }
         timeSinceMoveStart = 0;
+
+        RefreshGameObjectActive();
     }
 
     protected override void OnModelChanged()
@@ -56,6 +60,8 @@ public abstract class SlideableViewModel<T> : ViewModel<T> where T : Model
         {
             transform.UpdateFromEditorLocalTransform(disabledTransform);
         }
+
+        RefreshGameObjectActive();
     }
 
     private void Update()
@@ -72,6 +78,28 @@ public abstract class SlideableViewModel<T> : ViewModel<T> where T : Model
             var nextTransform = GetNextTransform(startTransform, endTransform, percentComplete);
             transform.UpdateFromEditorLocalTransform(nextTransform);
         }
+    }
+
+    private void RefreshGameObjectActive()
+    {
+        if (disableWhenDeactivated)
+        {
+            if (isActive)
+            {
+                // we cannot run a coroutine on an inactive gameobject, so set it active with no delay
+                gameObject.SetActive(isActive);
+            }
+            else
+            {
+                StartCoroutine(SetGameObjectActiveAfterDelay(isActive, duration));
+            }
+        }
+    }
+
+    private IEnumerator SetGameObjectActiveAfterDelay(bool active, float delay)
+    {
+        yield return new WaitForSecondsRealtime(delay);
+        gameObject.SetActive(active);
     }
 
     protected abstract EditorLocalTransform GetNextTransform(EditorLocalTransform startTransform, EditorLocalTransform endTransform, float percentComplete);

@@ -1,4 +1,4 @@
-﻿public class MainMenuButtonViewModel : ButtonViewModel<LevelSelectUIModel>
+﻿public class MainMenuButtonViewModel : LevelSelectTopButtonViewModel
 {
     protected override void OnClick()
     {

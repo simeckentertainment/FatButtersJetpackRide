@@ -1843,6 +1843,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Model: {fileID: 0}
   Button: {fileID: 5000284488454598577}
+  shortcutInput:
+    m_Name: Shortcut Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5038b0cf-b9b0-4040-9b6d-63f58e69f47e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: a3092822-827e-466d-9df9-e4b7b31c6566
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shortcut Input
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 0e655382-117a-4b69-94ad-6cef45f7239e
+      m_Path: <Gamepad>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shortcut Input
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &8855287762619786304
 GameObject:
   m_ObjectHideFlags: 0
