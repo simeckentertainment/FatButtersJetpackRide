@@ -17,7 +17,6 @@ public class RumbaWithKnifeRollState : RumbaWithKnifeAliveState{
         rumba.ignoreLeft = rumba.ignoreRight = false;
         startLoc = rumba.transform.position;
         goalLoc = rumba.wanderGoalLoc;
-        Debug.Log($"Start Location: {startLoc}, Goal Location: {goalLoc}");
 
         anim1Complete = false;
         PlayAnim("SlowStartDriveAnim");
