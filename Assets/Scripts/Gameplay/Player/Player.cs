@@ -280,13 +280,6 @@ public class Player : MonoBehaviour
             currentGroundColliders.Remove(id);
         }
     }
-
-    public void Jump()
-    {
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
-        IsJumping = true;
-    }
-
     public void PickUpBones(int count = 1)
     {
         BonesCollected += count;
@@ -380,5 +373,8 @@ public class Player : MonoBehaviour
         thrusterRechargeCounter = 0;
     }
     #endregion
-    
+    public float GetJumpForce()
+    {
+        return jumpForce;
+    }
 }

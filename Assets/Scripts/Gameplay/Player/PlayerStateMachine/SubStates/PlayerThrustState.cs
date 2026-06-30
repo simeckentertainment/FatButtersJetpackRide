@@ -8,12 +8,14 @@ public class PlayerThrustState : PlayerAliveState
     {
 
     }
+    float jumpTimerMax = 3f;
     int stateAge;
     public override void enter()
     {
         if (player.CanJump)
         {
-            player.Jump();
+            StartJumpSequence();
+            
             PlayAnim("JumpStart");
         }
 
@@ -30,7 +32,7 @@ public class PlayerThrustState : PlayerAliveState
             player.IsJumping = false;
         }
         StartNewGrr();
-        ActivateGravyBoat();
+        ActivateGravyBoat(); //For the thanksgiving skin
         base.enter();
     }
 
@@ -41,6 +43,11 @@ public class PlayerThrustState : PlayerAliveState
     public override void FixedUpdate()
     {
         stateAge++;
+        if (player.IsJumping && stateAge == 10) //10 frames is the jump delay. If you want to change this number,
+                                                //Be sure to adjust the animation accordingly.
+        {
+            RunJump();
+        }
         player.ResetRechargeCounter();
         // Handle boost logic within the state machine
         bool isBoosting = player.input.GoBoost && player.Fuel > 0f;
@@ -106,5 +113,13 @@ public class PlayerThrustState : PlayerAliveState
 
         base.exit();
     }
-    
+    void StartJumpSequence()
+    {
+        player.IsJumping = true;
+    }
+    public void RunJump()
+    {
+        player.rb.linearVelocity = new Vector3(player.rb.linearVelocity.x, player.GetJumpForce(), player.rb.linearVelocity.z);
+
+    }
 }

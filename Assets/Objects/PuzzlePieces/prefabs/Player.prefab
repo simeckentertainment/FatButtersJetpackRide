@@ -500,7 +500,7 @@ MonoBehaviour:
     m_Flags: 0
   OnScreenControlsEnabled: 0
   OSCAimAngle: 0
-  OSAccelSensitivity: 5
+  OSAccelSensitivity: 20
   OSCWPressed: 0
   OSCCWPressed: 0
   OSThrustPressed: 0
@@ -621,22 +621,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3ce08f6abc1a8fb4dbbaead6249c0271, type: 3}
   - {fileID: 8300000, guid: 72ca451d40dd05c4b8657e63f674ef9a, type: 3}
   CollidersAndTriggers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 3976227871123825074}
   - {fileID: 2122784116121297188}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   jetpackTransform: {fileID: 4573451228058555892}
   thrust: 0
   jumpForce: 12
