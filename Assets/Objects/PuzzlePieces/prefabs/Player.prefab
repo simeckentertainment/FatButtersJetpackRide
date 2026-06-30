@@ -500,7 +500,7 @@ MonoBehaviour:
     m_Flags: 0
   OnScreenControlsEnabled: 0
   OSCAimAngle: 0
-  OSRollSensitivity: 5
+  OSAccelSensitivity: 5
   OSCWPressed: 0
   OSCCWPressed: 0
   OSThrustPressed: 0

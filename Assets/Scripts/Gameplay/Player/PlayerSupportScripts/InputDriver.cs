@@ -194,15 +194,17 @@ public class InputDriver : MonoBehaviour
         if((!OSCWPressed && !OSCCWPressed) || (OSCWPressed && OSCCWPressed)) //Only accept a single directional input at a time, or wait patiently for input.
         {
             OSCAimAngle = 0.0f;
+            GoCw = GoCcw = false;
             return;
         }
         
         if (OSCWPressed && aimAngle > -45.0f)
         {
+            //GoCw = true;
             OSCAimAngle -= 0.25f * OSAccelSensitivity;
-        }
-        if (OSCCWPressed && aimAngle < 45.0f)
+        } else if (OSCCWPressed && aimAngle < 45.0f)
         {
+            //GoCcw = true;
             OSCAimAngle += 0.25f * OSAccelSensitivity;
         }
     }

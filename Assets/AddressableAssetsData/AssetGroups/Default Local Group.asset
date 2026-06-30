@@ -92,6 +92,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1e6f4b70bb96b32409b71d69bff5c95e
+    m_Address: Assets/Objects/PuzzlePieces/prefabs/enemies/ScreamBubble.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1f4f37dfb5dbd68448ba17bb5308b913
     m_Address: Assets/Objects/LegacyObjectsDONOTDELETE/env/Low Poly Environment Starter
       Kit/Source/Shader/URP/Water.shadergraph
@@ -188,6 +193,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68e2c56e183530d49abb041a0b8ebf14
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/bubble_mats.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6a151f652f5ba03458e9a7cd03ae88e8
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/Lava_Flowing_Shader/Shaders/Unlit_Lava_Distort.shader
     m_ReadOnly: 0
@@ -221,6 +231,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7b18c723eaa9f984f8813819cb6dbbf8
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/LevelSelectEnvAssets/NewLevelsComingSoonMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fc0590f47750f34aa62ae28f929217e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/phong1.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -311,6 +326,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6c512617ede626408dab42943466cf7
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/pinkMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: be0901e1b8a46694897fdc586b7c67d2
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/flag/Materials/ground.mat
     m_ReadOnly: 0
@@ -339,6 +359,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c7098a8d8c767844c973d3c7e8493779
     m_Address: Assets/Objects/UI/bug.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb72a906463efb9419854b9b8db15c10
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/eyeball_mats.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -374,6 +399,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d7fd1a3f99845664bb3dbbc6ec5d2963
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/crashed-spaceship/ShellMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de3ff63d4438c024781d270b9934436b
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/lips_mats.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

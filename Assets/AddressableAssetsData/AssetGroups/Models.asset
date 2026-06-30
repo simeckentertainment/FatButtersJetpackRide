@@ -23056,6 +23056,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9f2f4a12cc2ca8408f8fc04aa97bc6e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/ScreamBubbleV2.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f9f4606781f0a114fadf50ae304bb854
     m_Address: Assets/CityMassivePack/3d Models/Buildings/Building 17/Building_17_2_G.fbx
     m_ReadOnly: 0

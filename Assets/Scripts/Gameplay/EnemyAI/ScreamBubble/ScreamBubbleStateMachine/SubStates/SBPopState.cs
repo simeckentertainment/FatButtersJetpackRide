@@ -20,10 +20,12 @@ public class SBPopState : SBProvokedState
         screamBubble.bubbleAudio.Play();
         screamBubble.bubbleRenderer.enabled = false;
         screamBubble.attackCollider.enabled = false;
+        screamBubble.rb.isKinematic = true;
         //screamBubble.rb.isKinematic = true;
         screamBubble.GetComponent<Collider>().enabled = false;
         foreach (GameObject obj in screamBubble.PhysicsObjects){
-            obj.GetComponent<ParentConstraint>().constraintActive = false;
+            obj.GetComponent<Rigidbody>().isKinematic = false;
+            //obj.GetComponent<ParentConstraint>().constraintActive = false;
             obj.GetComponent<Rigidbody>().useGravity = true;
             obj.GetComponent<Collider>().enabled = true;
             obj.tag = "Friendly";

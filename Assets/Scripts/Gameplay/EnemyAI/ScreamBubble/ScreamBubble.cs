@@ -17,7 +17,7 @@ public class ScreamBubble : HarmfulObject
     [SerializeField] public AudioClip[] noticeSounds;
     [SerializeField] public AudioClip bubblePop;
     //[SerializeField] public Transform destinationVisualizer; //dev use only
-    [SerializeField] public MeshRenderer bubbleRenderer;
+    [SerializeField] public SkinnedMeshRenderer bubbleRenderer;
     [SerializeField] public GameObject[] PhysicsObjects;
 
     public SBIdleState sBIdleState { get; private set; }
