@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public PlayerThrustState playerThrustState { get; set; }
     public PlayerTummyDeathState playerTummyDeathState { get; set; }
     public PlayerWinState playerWinState {get; set;}
+    public PlayerJumpOnRumbaState playerJumpOnRumbaState {get; set;}
     [Header("Utility classes. Should be set in inspector.")]
     [SerializeField] public Rigidbody rb;
     [SerializeField] public InputDriver input;
@@ -214,6 +215,7 @@ public class Player : MonoBehaviour
         playerThrustState = new PlayerThrustState(this, stateMachine);
         playerTummyDeathState = new PlayerTummyDeathState(this, stateMachine);
         playerWinState = new PlayerWinState(this, stateMachine);
+        playerJumpOnRumbaState = new PlayerJumpOnRumbaState(this, stateMachine);
         stateMachine.Initialize(playerIdleState);
 
         _instance = this;

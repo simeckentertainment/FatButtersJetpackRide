@@ -24,6 +24,10 @@ public class CameraRotationManager : MonoBehaviour
         deviceType = DeviceType.Stationary;
 #endif
 
+#if UNITY_EDITOR //Lock the editor to stationary, dammit! ~Randy
+        deviceType = DeviceType.Stationary;
+#endif
+
 
         float effectiveDrag = player.rb.linearDamping / ( 1.0f + player.rb.linearDamping * Time.fixedDeltaTime);//We're calculating all wobble intensities based on terminal velocity. It's more consistent that way.
         PlayerMaxSpeed = (player.thrust - player.rb.mass * Mathf.Abs(Physics.gravity.y)) / (player.rb.mass * effectiveDrag);
