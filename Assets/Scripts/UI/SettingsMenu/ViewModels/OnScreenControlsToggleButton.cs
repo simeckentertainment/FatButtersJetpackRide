@@ -5,7 +5,7 @@
     {
         base.OnModelChanged();
         ToggleButton.isOn = Model.OnScreenControlsEnabled;
-        input.ToggleOnScreenControls(ToggleButton.isOn);
+        input.ToggleOnScreenControls(ToggleButton.isOn); 
     }
 
     protected override void OnToggleChanged(bool value)
