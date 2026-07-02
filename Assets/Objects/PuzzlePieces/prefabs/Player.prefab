@@ -108,7 +108,6 @@ GameObject:
   - component: {fileID: 4234924892832361580}
   - component: {fileID: 5489475134904606583}
   - component: {fileID: 5400759720034282628}
-  - component: {fileID: 3369087090117414387}
   - component: {fileID: 5123262552089871136}
   - component: {fileID: 3616357516114153126}
   - component: {fileID: 2798962652239046921}
@@ -248,104 +247,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3369087090117414387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648858350054200737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 565faa769df9d064cbd4d96cedcfc25f, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InputDriver, Assembly-CSharp
-        m_MethodName: OnThrust
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_ActionId: b8ad05c0-f738-4943-bdf3-e12f5af2f40d
-    m_ActionName: 'Gameplay/Thrust[/Keyboard/space]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InputDriver, Assembly-CSharp
-        m_MethodName: OnCWPress
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_ActionId: 2d6ca42a-9f42-46b6-b4a7-dae1ca0189cc
-    m_ActionName: 'Gameplay/TurnCW[/Keyboard/d]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InputDriver, Assembly-CSharp
-        m_MethodName: OnCCWPress
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_ActionId: 681febb8-24a5-4c1c-83c9-a173e500d5f6
-    m_ActionName: 'Gameplay/TurnCCW[/Keyboard/a]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 447b4b78-7e13-455d-aa8f-38dad6cbe993
-    m_ActionName: Gameplay/AdjustAngle
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InputDriver, Assembly-CSharp
-        m_MethodName: OnTouchThrust
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 95c36356-aaba-4a5f-9ae3-864921f11762
-    m_ActionName: 'Gameplay/TouchThrust[/Device Simulator Touchscreen/primaryTouch/press]'
-  m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: corgiControlScheme
-  m_DefaultActionMap: Gameplay
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &5123262552089871136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,8 +261,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputEnabled: 1
   deviceRoll: 0
+  cameraRot: {fileID: 0}
   KBCWPressed: 0
   KBCCWPressed: 0
+  KBThrustPressed: 0
+  KBBoostPressed: 0
   KBMinAngle: 5
   KBMaxAngle: 45
   KBAccelerationTimer: 0

@@ -42,7 +42,7 @@ public class CameraRotationManager : MonoBehaviour
     void Update()
     {
         //We're manually taking over camera rotations because letting Cinemachine do it was leading to unpredictable results.
-        if(!runningWobble && (player.IsGrounded))
+        if(!runningWobble && player.IsGrounded)
         {
             InitiateWobble();
         }
@@ -151,5 +151,12 @@ public class CameraRotationManager : MonoBehaviour
         return outRot;         
     }
 
-
+    public void SetStationary()
+    {
+        deviceType = DeviceType.Stationary;
+    }
+    public void SetMotionControlled()
+    {
+        deviceType = DeviceType.HandheldGyro;
+    }
 }
