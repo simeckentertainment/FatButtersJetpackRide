@@ -26,7 +26,7 @@ public class InputDriver : MonoBehaviour
     [System.NonSerialized] private static bool gyroInitialized = false;
     [System.NonSerialized] public bool hasMotionControls;
     [System.NonSerialized] private Quaternion deviceRotation;
-
+    [SerializeField] private float motionControlSmoothing = 0.1f;
     [System.NonSerialized] private Quaternion referenceRotation = Quaternion.identity;
     [System.NonSerialized] private bool touchThrust;
     [System.NonSerialized] private int touchCount;
@@ -322,7 +322,7 @@ public class InputDriver : MonoBehaviour
         }
         if(!HasGyroscope && HasAccelerometerFallback) { //no gyro, yes accelerometer.
             hasMotionControls = true;
-            deviceRoll = Input.acceleration.x * -45f;
+            deviceRoll = Mathf.Lerp(deviceRoll, Input.acceleration.x * -45f, motionControlSmoothing); //Need to apply some smoothing for accelerometer control.
             return;
         }
         if (HasGyroscope) //If we have the gyro, prefer that.
