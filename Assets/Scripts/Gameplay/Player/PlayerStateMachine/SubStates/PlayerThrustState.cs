@@ -15,7 +15,7 @@ public class PlayerThrustState : PlayerAliveState
         if (player.CanJump)
         {
             StartJumpSequence();
-            
+            player.input.DisableInput(); //The player can't stop a jump when winding up for a jump.
             PlayAnim("JumpStart");
         }
 
@@ -46,6 +46,7 @@ public class PlayerThrustState : PlayerAliveState
         if (player.IsJumping && stateAge == 10) //10 frames is the jump delay. If you want to change this number,
                                                 //Be sure to adjust the animation accordingly.
         {
+            player.input.EnableInput(); //re-enable the input after the jump takes off.
             RunJump();
         }
         player.ResetRechargeCounter();
