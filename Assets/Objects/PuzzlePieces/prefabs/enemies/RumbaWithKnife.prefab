@@ -120,7 +120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7279661946526532988
 Transform:
   m_ObjectHideFlags: 0
@@ -767,7 +767,7 @@ MonoBehaviour:
   - {fileID: 4901469672840973082}
   - {fileID: 8296645365011747268}
   - {fileID: 3284692797318510972}
-  wallDistanceTrigger: 5
+  wallDistanceTrigger: 1.5
   calmSpeed: 3
   madSpeed: 6
   deathRageCountMax: 120
