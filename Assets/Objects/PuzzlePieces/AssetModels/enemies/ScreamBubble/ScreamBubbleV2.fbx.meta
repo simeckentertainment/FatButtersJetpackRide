@@ -3,32 +3,7 @@ guid: f9f2f4a12cc2ca8408f8fc04aa97bc6e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: brain_mats
-    second: {fileID: 2100000, guid: 00355af748414e84db226d9bcf30d1fa, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: bubble_mats
-    second: {fileID: 2100000, guid: 68e2c56e183530d49abb041a0b8ebf14, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: eyeball_mats
-    second: {fileID: 2100000, guid: cb72a906463efb9419854b9b8db15c10, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lips_mats
-    second: {fileID: 2100000, guid: de3ff63d4438c024781d270b9934436b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: phong1
-    second: {fileID: 2100000, guid: 7fc0590f47750f34aa62ae28f929217e, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -54,18 +29,215 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
-    isReadable: 1
+    clipAnimations:
+    - serializedVersion: 16
+      name: SBIdle1
+      takeName: SBIdle1
+      internalID: 8741113335428793335
+      firstFrame: 0
+      lastFrame: 373
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ScreamBubble:ScreamBubble
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_geo
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_geo/ScreamBubble:right_eyebrow_mesh
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_geo/ScreamBubble:right_eyeball_mesh
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_geo/ScreamBubble:left_eyebrow_mesh
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_geo/ScreamBubble:left_eyeball_mesh
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_geo/ScreamBubble:bubble_mesh
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_geo/ScreamBubble:brain_mesh
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_geo/ScreamBubble:lips_mesh
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:head_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:head_jnt/ScreamBubble:r_eye_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:head_jnt/ScreamBubble:r_eye_jnt/ScreamBubble:r_eye_jnt_end
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:head_jnt/ScreamBubble:l_eye_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:head_jnt/ScreamBubble:l_eye_jnt/ScreamBubble:l_eye_jnt_end
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:head_jnt/ScreamBubble:l_brow_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:head_jnt/ScreamBubble:l_brow_jnt/ScreamBubble:l_brow_jnt_end
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:head_jnt/ScreamBubble:r_brow_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:head_jnt/ScreamBubble:r_brow_jnt/ScreamBubble:r_brow_jnt_end
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:mid_lip_top_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:mid_lip_top_jnt/ScreamBubble:mid_lip_top_jnt_end
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:mid_lip_bottom_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:mid_lip_bottom_jnt/ScreamBubble:mid_lip_bottom_jnt_end
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:l_lip_top_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:l_lip_top_jnt/ScreamBubble:l_lip_top_jnt_end
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:l_lip_edge_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:l_lip_edge_jnt/ScreamBubble:l_lip_edge_jnt_end
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:l_lip_bottom_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:l_lip_bottom_jnt/ScreamBubble:l_lip_bottom_jnt_end
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:r_lip_top_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:r_lip_top_jnt/ScreamBubble:r_lip_top_jnt_end
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:r_lip_bottom_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:r_lip_bottom_jnt/ScreamBubble:r_lip_bottom_jnt_end
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:r_lip_edge_jnt
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_joints/ScreamBubble:root_jnt/ScreamBubble:lip_master_jnt/ScreamBubble:r_lip_edge_jnt/ScreamBubble:r_lip_edge_jnt_end
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:mouth_ctrl
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:mouth_ctrl/ScreamBubble:left_lip_corner
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:mouth_ctrl/ScreamBubble:left_liptop_ctrl
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:mouth_ctrl/ScreamBubble:mid_liptop_ctrl
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:mouth_ctrl/ScreamBubble:right_liptop_ctrl
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:mouth_ctrl/ScreamBubble:right_lip_corner
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:mouth_ctrl/ScreamBubble:jaw_ctrl
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:mouth_ctrl/ScreamBubble:jaw_ctrl/ScreamBubble:mid_lipbottom_ctrl
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:mouth_ctrl/ScreamBubble:jaw_ctrl/ScreamBubble:left_lipbottom_ctrl
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:mouth_ctrl/ScreamBubble:jaw_ctrl/ScreamBubble:right_lipbottom_ctrl
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:left_eye_ctrl
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:right_eye_ctrl
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:left_brow_ctrl
+        weight: 1
+      - path: ScreamBubble:ScreamBubble/ScreamBubble:ScreamBubble_controls/ScreamBubble:PrimaryControl/ScreamBubble:right_brow_ctrl
+        weight: 1
+      - path: ScreamBubble:left
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SBIdle2
+      takeName: SBIdle2
+      internalID: -605791993682747954
+      firstFrame: 374
+      lastFrame: 550
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 374
+    - serializedVersion: 16
+      name: SBIdle3
+      takeName: SBIdle3
+      internalID: 8511111407061601212
+      firstFrame: 551
+      lastFrame: 1072
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 551
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 60
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    sortHierarchyByName: 1
+    sortHierarchyByName: 0
     importPhysicalCameras: 1
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 0
     importLights: 0
     nodeNameCollisionStrategy: 1
@@ -76,7 +248,7 @@ ModelImporter:
     keepQuads: 0
     weldVertices: 1
     bakeAxisConversion: 0
-    preserveHierarchy: 0
+    preserveHierarchy: 1
     skinWeightsMode: 1
     maxBonesPerVertex: 255
     minBoneWeight: 0.001
@@ -90,7 +262,7 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
@@ -113,8 +285,8 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 60
-    rootMotionBoneName: 
+    globalScale: 1
+    rootMotionBoneName: ScreamBubble:root_jnt
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -122,9 +294,9 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 0
+  importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 

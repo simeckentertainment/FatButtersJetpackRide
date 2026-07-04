@@ -11732,11 +11732,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7f6f0e666aff4be42a573e37184b9ad1
-    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/ScreamBubble.fbx
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7f7d3fd76ef61d5479943e8f669dedd7
     m_Address: Assets/CityMassivePack/3d Models/Street Props/Grate_1_C.fbx
     m_ReadOnly: 0

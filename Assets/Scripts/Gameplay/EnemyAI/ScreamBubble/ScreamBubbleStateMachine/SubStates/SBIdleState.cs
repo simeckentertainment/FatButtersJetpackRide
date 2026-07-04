@@ -1,3 +1,4 @@
+using System.CodeDom;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class SBIdleState : SBUnprovokedState
 
     public override void enter()
     {
-        PlayNewSound();
+        PlayNewAnimWithSound();
 
         startPos = screamBubble.transform.position;
         oldCoords = screamBubble.transform.position;
@@ -43,8 +44,8 @@ public class SBIdleState : SBUnprovokedState
             DetermineNextCoords();
             screamBubble.hitWall = false;
         }
-        if(screamBubble.bubbleAudio.time > currentClip.length*0.99f){
-            PlayNewSound();
+        if(GetAnimNormalizedTime() >= 0.99f){
+            PlayNewAnimWithSound();
         }
         if (screamBubble.PlayerInSightDistance){
             RaycastHit LineOfSightChecker;
@@ -68,15 +69,11 @@ public class SBIdleState : SBUnprovokedState
     void DetermineNextCoords()
     {
         bool lineOfSightClear = false;
-        while (!lineOfSightClear)
-        {
-           lineOfSightClear = EnsureClearLineOfSightToNewTarget(); 
-        }
+        while (!lineOfSightClear) lineOfSightClear = EnsureClearLineOfSightToNewTarget(); //Keep trying till ya get it, buddy.
         
         Vector3 newCoords = movementTargetPos;
         movementVector = (newCoords - oldCoords).normalized;
         targetCoords = newCoords;
-
     }
 
     private bool EnsureClearLineOfSightToNewTarget()
@@ -93,8 +90,11 @@ public class SBIdleState : SBUnprovokedState
         }
     }
 
-    void PlayNewSound(){
-        currentClip = screamBubble.idleSounds[Random.Range(0,screamBubble.idleSounds.Length)];
+    void PlayNewAnimWithSound(){
+        int arrayIndex = Random.Range(1,screamBubble.idleSounds.Length);
+        //We've picked an idle animation and cound combo now.
+        PlayAnim("SBIdle" + arrayIndex);
+        currentClip = screamBubble.idleSounds[arrayIndex];
         screamBubble.bubbleAudio.clip = currentClip;
         screamBubble.bubbleAudio.Play();
     }

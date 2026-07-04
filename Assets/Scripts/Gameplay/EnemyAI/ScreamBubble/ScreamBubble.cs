@@ -5,12 +5,14 @@ public class ScreamBubble : HarmfulObject
     [SerializeField] public ScreamBubbleStateMachine stateMachine;
     [SerializeField] public Rigidbody rb;
     [SerializeField] public Collider attackCollider;
+    [SerializeField] public Animator anim;
     public bool hitWall;
     public bool popped;
     public bool PlayerInSightDistance;
     public bool targetAcquired;
     public GameObject target;
     [SerializeField] public AudioSource bubbleAudio;
+    [SerializeField] public AnimationClip[] idleAnims;
     [SerializeField] public AudioClip[] idleSounds;
     [SerializeField] public AudioClip AttackSound;
     [SerializeField] public AudioClip raspberrySound;
