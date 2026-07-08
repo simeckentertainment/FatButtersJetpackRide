@@ -28,7 +28,7 @@ public class SBPopState : SBProvokedState
             obj.GetComponent<Rigidbody>().useGravity = true;
             obj.GetComponent<Collider>().enabled = true;
             obj.tag = "Friendly";
-            obj.transform.SetParent(null);
+            //obj.transform.SetParent(null);
         }
         
         base.enter();

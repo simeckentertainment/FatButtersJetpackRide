@@ -49,15 +49,16 @@ public class ScreamBubble : HarmfulObject
         }
     }
 
-    protected override void OnPlayerTouched(Player player)
-    {
-        base.OnPlayerTouched(player);
-        popped = true;
-    }
-
     public void PlayAudio(AudioClip clip)
     {
         bubbleAudio.clip = clip;
         bubbleAudio.Play();
+    }
+
+
+    protected override void OnPlayerTouched(Player player)
+    {
+        base.OnPlayerTouched(player);
+        popped = true;
     }
 }

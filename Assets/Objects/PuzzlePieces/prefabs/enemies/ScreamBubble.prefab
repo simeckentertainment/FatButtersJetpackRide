@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 6366853884258013970}
+    - target: {fileID: 8808235464800889014, guid: f9f2f4a12cc2ca8408f8fc04aa97bc6e, type: 3}
+      propertyPath: m_TagString
+      value: Harmful
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -121,10 +125,10 @@ PrefabInstance:
       addedObject: {fileID: 5445531373710112375}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f9f2f4a12cc2ca8408f8fc04aa97bc6e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 884407581251219907}
+      addedObject: {fileID: 1039834199191625722}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f9f2f4a12cc2ca8408f8fc04aa97bc6e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4441105104854761373}
+      addedObject: {fileID: 6302627792613813373}
     - targetCorrespondingSourceObject: {fileID: -1465818179920590784, guid: f9f2f4a12cc2ca8408f8fc04aa97bc6e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4320190854561489977}
@@ -217,7 +221,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.09, y: 0.83, z: 1.43}
   m_Center: {x: -0.54, y: 0.08, z: -0.14}
@@ -323,7 +327,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.09, y: 0.83, z: 1.43}
   m_Center: {x: -0.54, y: 0.17, z: 0.12}
@@ -409,7 +413,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 18.9, z: 20.19}
   m_Center: {x: 0, y: 0, z: 11.66}
@@ -420,7 +424,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3781190264810945721}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb58c797b11c04448b64e3368368644d, type: 3}
   m_Name: 
@@ -617,13 +621,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085ae9d36eb1a7a4e9090fb926dfe568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 0
   damageOnCollision: 1
   damageOnTrigger: 0
   PlayerCollisionDetected: 0
   stateMachine: {fileID: 1543568373536835454}
   rb: {fileID: 5445531373710112375}
-  attackCollider: {fileID: 884407581251219907}
+  attackCollider: {fileID: 6302627792613813373}
   anim: {fileID: 318934070622599069}
   hitWall: 0
   popped: 0
@@ -694,30 +698,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 56
   m_CollisionDetection: 0
---- !u!136 &884407581251219907
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5985366864060189096}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.44
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: -1.5, z: 0}
---- !u!114 &4441105104854761373
+--- !u!114 &1039834199191625722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -733,6 +714,29 @@ MonoBehaviour:
   damageOnCollision: 1
   damageOnTrigger: 0
   PlayerCollisionDetected: 0
+--- !u!136 &6302627792613813373
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5985366864060189096}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: -1.51, z: 0}
 --- !u!4 &6366853884258013970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f9f2f4a12cc2ca8408f8fc04aa97bc6e, type: 3}
