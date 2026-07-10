@@ -51,8 +51,8 @@ public class SBIdleState : SBUnprovokedState
 
         if (NewTargetPW.done || NewTargetPW == null) //If we're not actively looking for our next target, we're going there.
         {
-        screamBubble.transform.forward = screamBubble.rb.linearVelocity.normalized;
-        screamBubble.rb.AddForce((targetCoords-screamBubble.transform.position)*.25f,ForceMode.Force);
+            screamBubble.transform.forward = screamBubble.rb.linearVelocity.normalized;
+            screamBubble.rb.AddForce((targetCoords-screamBubble.transform.position)*.25f,ForceMode.Force);
             if (Helper.isWithinMarginOfError(screamBubble.transform.position, targetCoords, 1.0f))
             {
                 oldCoords = targetCoords;
@@ -81,6 +81,7 @@ public class SBIdleState : SBUnprovokedState
                 screamBubble.rb.linearVelocity = Vector3.zero;
                 screamBubble.stateMachine.changeState(screamBubble.sBNoticePlayerState);
             }
+            NewTargetPW.Stop();
         }
         base.FixedUpdate();
     
@@ -95,7 +96,7 @@ public class SBIdleState : SBUnprovokedState
                 Vector3 newCoords = movementTargetPos;
                 movementVector = (newCoords - oldCoords).normalized;
                 targetCoords = newCoords;
-                yield break; //We got it!
+                yield break; //We got it! Kill the loop!
             }
             yield return null; //It's okay buddy, try again till ya get it.
         }
