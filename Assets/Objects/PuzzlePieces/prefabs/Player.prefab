@@ -261,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputEnabled: 1
   deviceRoll: 0
+  motionControlSmoothing: 0.1
   cameraRot: {fileID: 0}
   KBCWPressed: 0
   KBCCWPressed: 0
@@ -530,6 +531,7 @@ MonoBehaviour:
   jetpackTransform: {fileID: 4573451228058555892}
   thrust: 0
   jumpForce: 12
+  hurtJumpForce: 50
   maxFuel: 0
   tummy: 0
   maxTummy: 0

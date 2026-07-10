@@ -30,7 +30,7 @@ public class PlayerHurtState : PlayerAliveState
 
     public override void FixedUpdate()
     {
-        player.rb.AddExplosionForce(100.0f,player.HarmfulTouchObjectPosition,10.0f,10.0f,ForceMode.Force);
+        player.rb.AddExplosionForce(player.hurtJumpForce,player.HarmfulTouchObjectPosition,10.0f,10.0f,ForceMode.Force);
         stateAge++;
         if(GetNormalizedTime()>= 0.85f){
             player.stateMachine.changeState(player.playerFallState);

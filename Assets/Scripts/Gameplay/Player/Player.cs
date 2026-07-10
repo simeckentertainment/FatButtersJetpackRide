@@ -22,7 +22,6 @@ public class Player : MonoBehaviour
     public PlayerStateMachine stateMachine;
     public PlayerIdleState playerIdleState { get; set; }
     public PlayerWalkState playerWalkState{get;set;}
-
     public PlayerFallState playerFallState { get; set; }
     public PlayerEnterDangleState playerEnterDangleState { get; set; }
     public PlayerDangleState playerDangleState { get; set; }
@@ -56,6 +55,7 @@ public class Player : MonoBehaviour
     public float thrust;
     [System.NonSerialized] public float baseThrustWithUpgrades; // Base thrust including upgrades (used for boost calculations)
     [SerializeField] private float jumpForce = 12;
+    [SerializeField] public float hurtJumpForce = 100.0f;
 
     public float maxFuel;
     [System.NonSerialized] public float fuelPercent;
