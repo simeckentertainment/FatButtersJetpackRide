@@ -81,7 +81,6 @@ public class SBIdleState : SBUnprovokedState
                 screamBubble.rb.linearVelocity = Vector3.zero;
                 screamBubble.stateMachine.changeState(screamBubble.sBNoticePlayerState);
             }
-            NewTargetPW.Stop();
         }
         base.FixedUpdate();
     
