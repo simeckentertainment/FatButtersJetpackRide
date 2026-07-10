@@ -1,6 +1,4 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Animations.Rigging;
 using UnityEngine.InputSystem;
 /*
 #if !UNITY_EDITOR && UNITY_ANDROID
@@ -23,21 +21,24 @@ public class InputDriver : MonoBehaviour
     [Header("Mobile input variables")]
     [SerializeField] private float deviceRoll;
     public static bool HasGyroscope { get { return SystemInfo.supportsGyroscope; } }
+    public static bool HasAccelerometerFallback { get {return SystemInfo.supportsAccelerometer;}}
+    public static bool MotionControlsAvailable;
     [System.NonSerialized] private static bool gyroInitialized = false;
-    [System.NonSerialized] public bool hasGyro;
+    [System.NonSerialized] public bool hasMotionControls;
     [System.NonSerialized] private Quaternion deviceRotation;
-
+    [SerializeField] private float motionControlSmoothing = 0.1f;
     [System.NonSerialized] private Quaternion referenceRotation = Quaternion.identity;
     [System.NonSerialized] private bool touchThrust;
     [System.NonSerialized] private int touchCount;
     [System.NonSerialized] private bool touchBoostTriggered;
+    [SerializeField] CameraRotationManager cameraRot;
 
     [Header("Keyboard input variables")]
     //Keyboard variables
     [SerializeField] private bool KBCWPressed;
     [SerializeField] private bool KBCCWPressed;
-    [System.NonSerialized] private bool KBThrustPressed;
-    [System.NonSerialized] private bool KBBoostPressed;
+    [SerializeField] private bool KBThrustPressed;
+    [SerializeField] private bool KBBoostPressed;
     [SerializeField] private float KBMinAngle;
     [SerializeField] private float KBMaxAngle;
     [System.NonSerialized] private float KBCurrentAngle;
@@ -59,11 +60,14 @@ public class InputDriver : MonoBehaviour
     [SerializeField] private InputAction GPBoostAction;
 
     [Header("OnScreen Control Vars")]
-    [SerializeField] private float OSRollOffset;
-    [SerializeField] private float OSRollSensitivity;
+    [SerializeField] private bool OnScreenControlsEnabled;
+    [SerializeField] private float OSCAimAngle;
+    [SerializeField] private float OSAccelSensitivity;
     [SerializeField] private bool OSCWPressed;
     [SerializeField] private bool OSCCWPressed;
     [SerializeField] private bool OSThrustPressed;
+    [System.NonSerialized] private float OSBoostDelayCounter;
+    [SerializeField] private float OSBoostDelayThreshold;
     [SerializeField] private bool OSBoostPressed;
 
     [SerializeField] private InputAction OSthrustAction;
@@ -104,32 +108,48 @@ public class InputDriver : MonoBehaviour
         GPAimAction.Enable();
         GPBoostAction.Enable();
         GPThrustAction.Enable();
+        MotionControlsAvailable = HasGyroscope || HasAccelerometerFallback;
+        cameraRot.SetStationary();
     }
 
     void FixedUpdate()
     {
+
         if (!inputEnabled) { return; } //Only accept input when input is enabled.
-
-
-        //Motion control checkers
-        TrackRollData(); //always be checking the roll data.
-        touchThrust = FilterTouchInput(); //Setting the touch thrust, filtering out other control methods.
-        //OSC control checkers
-        SetOSControlValues();
-
-
-        //Keyboard control checkers
-        SetKBControlValues();
-        //Gamepad Control checkers
-        SetGPControlValues();
-
-
-
+        SetAllControlValues();
+        switch (QueryCurrentInputMethod())
+        {
+            case CurrentInputMethod.OnScreenControls:
+                cameraRot.SetStationary();
+                ClearStaleGPInputs();
+                ClearStaleKBInputs();
+                ClearStaleMotionControlInputs();
+                break;
+            case CurrentInputMethod.Gamepad:
+                cameraRot.SetStationary();
+                ClearStaleKBInputs();
+                ClearStaleMotionControlInputs();
+                ClearStaleOSCInputs();
+                break;
+            case CurrentInputMethod.Keyboard:
+                cameraRot.SetStationary();
+                ClearStaleGPInputs();
+                ClearStaleMotionControlInputs();
+                ClearStaleOSCInputs();
+                break;
+            case CurrentInputMethod.MotionControls:
+                cameraRot.SetMotionControlled();
+                ClearStaleGPInputs();
+                ClearStaleKBInputs();
+                ClearStaleOSCInputs();
+                touchThrust = FilterTouchInput();
+                break;
+        }
         //Amalgam variable checkers.
         GoThrust = OSThrustPressed || KBThrustPressed || touchThrust || GPThrustPressed;
 
         //Final Aim Angle
-        aimAngle = deviceRoll + OSRollOffset + KBCurrentAngle + (GPAimVal * -45);
+        aimAngle = deviceRoll + OSCAimAngle + KBCurrentAngle + (GPAimVal * -45);
         // Boost detection: Multi-touch (mobile) or Thrust + L Shift key (Pc/Gamepad)
 
         GoBoost = touchBoostTriggered || OSBoostPressed || KBBoostPressed || GPBoostPressed;
@@ -143,12 +163,59 @@ public class InputDriver : MonoBehaviour
     {
         inputEnabled = false;
     }
+
+    public CurrentInputMethod QueryCurrentInputMethod()
+    {
+        // Go in order from least likely to most likely. On screen controls, then keyboard, then controller, then motion.
+        //We're only doing one control method at a time.
+        if(OnScreenControlsEnabled) //&& (OSCWPressed || OSCCWPressed || OSThrustPressed || OSBoostPressed))
+        {
+            return CurrentInputMethod.OnScreenControls;
+        }
+        if(KBCWPressed || KBCCWPressed || KBThrustPressed || KBBoostPressed)
+        {
+            return CurrentInputMethod.Keyboard;
+        }
+        if(GPBoostPressed || GPThrustPressed || Mathf.Abs(GPAimVal) > JoystickActivationMinimum)
+        {
+            return CurrentInputMethod.Gamepad;
+        }
+        return CurrentInputMethod.MotionControls;
+
+
+    }
+    private void SetAllControlValues()
+    {
+        SetOSControlValues();
+        SetGPControlValues();
+        SetKBControlValues();
+        TrackMotionControlRollData();
+    }
+    public bool CheckForMotionControls()
+    {
+        if(!SystemInfo.supportsGyroscope && !SystemInfo.supportsAccelerometer) //no motion controls.
+        {
+            deviceRoll = 0.0f;
+            return false;
+        }
+        if(!SystemInfo.supportsGyroscope && SystemInfo.supportsAccelerometer) { //no gyro, yes accelerometer.
+            deviceRoll = Input.acceleration.x * -45f;
+            return true;
+        }
+        if (SystemInfo.supportsGyroscope)
+        {
+            if(!gyroInitialized) InitializeGyro();
+            return true;
+        }
+        return false;
+    }
     private bool FilterTouchInput()
     {
+        if(OSCCWPressed || OSCWPressed || OSThrustPressed){return false;} //don't get tricked by the on screen controls.
+        if (PauseUtility.IsPaused) { return false; } //Don't run thrust if paused
         touchCount = Input.touchCount;
         if (touchCount == 0) { return false; } //Don't run thrust if untouched
-        if (PauseUtility.IsPaused) { return false; } //Don't run thrust if paused
-        //if (OSthrustAction.ReadValue<float>() == 1.0f){ return false;} //Don't run Thrust if on screen thrust is touched
+
         if (OSCWAction.ReadValue<float>() == 1.0f & Input.touchCount == 1) { return false; } //Don't run thrust if only on screen CW is touched
         if (OSCCWAction.ReadValue<float>() == 1.0f & Input.touchCount == 1) { return false; } //Don't run thrust if if only on screen CCW is touched
         //If any of the above are true, we're not considering ourselves touched.
@@ -159,20 +226,51 @@ public class InputDriver : MonoBehaviour
         touchBoostTriggered = touchCount > 1;
         return true;
     }
+    public void ToggleOnScreenControls(bool enabled)
+    {
+        OnScreenControlsEnabled = enabled;
+    }
     private void SetOSControlValues()
     {
         OSThrustPressed = OSthrustAction.ReadValue<float>() == 1.0f;
         OSCWPressed = OSCWAction.ReadValue<float>() == 1.0f;
         OSCCWPressed = OSCCWAction.ReadValue<float>() == 1.0f;
-        OSBoostPressed = OSBoostAction.ReadValue<float>() == 1.0f;
-        if (OSCWPressed & OSCCWPressed) { return; }
+
+        //Boost detection logic. On Screen Controls works a little differently than the rest in terms of boost.
+        //To keep the controls as simple as possible, we're putting a timer on the OSCs. After a few seconds of
+        //holding thrust, the boost kicks in automatically.
+
+        if (OSThrustPressed && !OSBoostPressed)
+        {
+            OSBoostDelayCounter++;
+
+            if(OSBoostDelayCounter > OSBoostDelayThreshold) OSBoostPressed = true;
+
+        } else
+        {
+            OSBoostDelayCounter = 0f;
+        }
+
+        if(OSBoostPressed && !OSThrustPressed) //turns off boost if thrust is released.
+        {
+            OSBoostPressed = false;
+        }
+
+        if((!OSCWPressed && !OSCCWPressed) || (OSCWPressed && OSCCWPressed)) //Only accept a single directional input at a time, or wait patiently for input.
+        {
+            OSCAimAngle = 0.0f;
+            GoCw = GoCcw = false;
+            return;
+        }
+        
         if (OSCWPressed && aimAngle > -45.0f)
         {
-            OSRollOffset -= 0.25f * OSRollSensitivity;
-        }
-        if (OSCCWPressed && aimAngle < 45.0f)
+            //GoCw = true;
+            OSCAimAngle -= 0.25f * OSAccelSensitivity;
+        } else if (OSCCWPressed && aimAngle < 45.0f)
         {
-            OSRollOffset += 0.25f * OSRollSensitivity;
+            //GoCcw = true;
+            OSCAimAngle += 0.25f * OSAccelSensitivity;
         }
     }
 
@@ -214,40 +312,34 @@ public class InputDriver : MonoBehaviour
 
     #endregion
 
-    private void TrackRollData()
+    private void TrackMotionControlRollData()
     {
-        if (!HasGyroscope)
+        if(!HasGyroscope && !HasAccelerometerFallback) //no motion controls. SHOULD be dead code but safeguard here just in case.
         {
+            hasMotionControls = false;
             deviceRoll = 0.0f;
-            hasGyro = false;
+            return;
         }
-        else
+        if(!HasGyroscope && HasAccelerometerFallback) { //no gyro, yes accelerometer.
+            hasMotionControls = true;
+            deviceRoll = Mathf.Lerp(deviceRoll, Input.acceleration.x * -45f, motionControlSmoothing); //Need to apply some smoothing for accelerometer control.
+            return;
+        }
+        if (HasGyroscope) //If we have the gyro, prefer that.
         {
-            hasGyro = true;
-            if (!gyroInitialized)
-            {
-                Input.gyro.enabled = true;                // enable the gyroscope
-                Input.gyro.updateInterval = 0.0167f;    // set the update interval to it's highest value (60 Hz)
-                gyroInitialized = true;
-                deviceRoll = 0.0f;
-            }
-            else
-            {
-                if (Input.gyro.gravity == Vector3.zero)
-                {
-                    deviceRoll = GetRollDataFallback();
-                }
-                else
-                {
-                    deviceRoll = GetRollDataFromGravity(Input.gyro.gravity);
-                    if (deviceRoll > 20.0f & deviceRoll < 340.0f)
-                    {
-                    }
-                }
-            }
+            hasMotionControls = true;
+            if(!gyroInitialized) InitializeGyro();
+            deviceRoll = Input.gyro.gravity == Vector3.zero ? GetRollDataFallback() : GetRollDataFromGravity(Input.gyro.gravity);
         }
     }
 
+    private void InitializeGyro()
+    {
+        Input.gyro.enabled = true;                // enable the gyroscope
+        Input.gyro.updateInterval = 0.0167f;    // set the update interval to it's highest value (60 Hz)
+        gyroInitialized = true;
+        deviceRoll = 0.0f;
+    }
     private float GetRollDataFallback()
     {
         Quaternion eliminationOfXY = Quaternion.Inverse(Quaternion.FromToRotation(referenceRotation * Vector3.forward, deviceRotation * Vector3.forward));
@@ -259,11 +351,25 @@ public class InputDriver : MonoBehaviour
         return gravData.x * -45.0f;
     }
 
-
-
-    
-
-
-
+    private void ClearStaleMotionControlInputs()
+    {
+        deviceRoll = 0;
+        touchThrust = touchBoostTriggered = false;
+    }
+    private void ClearStaleOSCInputs()
+    {
+        OSCWPressed = OSCCWPressed = OSThrustPressed = OSBoostPressed  = false;
+    }
+    private void ClearStaleGPInputs()
+    {
+        GPThrustPressed = GPBoostPressed = false;
+        GPAimVal = 0f;
+    }
+    private void ClearStaleKBInputs()
+    {
+        KBCurrentAngle = KBAccelerationTimer = 0f;
+        KBCWPressed = KBCCWPressed = KBThrustPressed =KBBoostPressed = false;
+    }
+    public enum CurrentInputMethod {MotionControls, Gamepad, OnScreenControls, Keyboard}
 
 }

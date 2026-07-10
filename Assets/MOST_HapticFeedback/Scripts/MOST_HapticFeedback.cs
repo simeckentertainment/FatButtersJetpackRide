@@ -299,8 +299,8 @@ namespace Solo.MOST_IN_ONE
             if (Gamepad.current != null)
             {
                 // add controller support with legit methods
-                IOSDefaultHapticsToAndroidPatterns(type, out var pattern, out var amp);
-                GenerateGamepad(pattern, amp);
+                IOSDefaultHapticsToAndroidPatterns(type, out var thisPattern, out var thisAmp);
+                GenerateGamepad(thisPattern, thisAmp);
             }
         }
 

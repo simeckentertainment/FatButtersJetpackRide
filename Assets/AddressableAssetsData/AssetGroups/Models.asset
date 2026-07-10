@@ -11732,11 +11732,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7f6f0e666aff4be42a573e37184b9ad1
-    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/ScreamBubble.fbx
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7f7d3fd76ef61d5479943e8f669dedd7
     m_Address: Assets/CityMassivePack/3d Models/Street Props/Grate_1_C.fbx
     m_ReadOnly: 0
@@ -23053,6 +23048,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f9b0e77b24e6e7840a5fe85ded6d838e
     m_Address: Assets/CityMassivePack/3d Models/Street Props/FireEscape_B_2.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9f2f4a12cc2ca8408f8fc04aa97bc6e
+    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/ScreamBubbleV2.fbx
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

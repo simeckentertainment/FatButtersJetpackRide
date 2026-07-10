@@ -8,6 +8,7 @@ public class RumbaWithKnifeDeadState : RumbaWithKnifeDeathState{
 
 
     public override void enter(){
+        Player.Instance.AddEnemiesDefeated();
         PlayAnim("StuckAnim");
         base.enter();
     }

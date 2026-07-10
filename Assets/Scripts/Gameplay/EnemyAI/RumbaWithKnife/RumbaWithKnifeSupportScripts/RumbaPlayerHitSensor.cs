@@ -4,20 +4,38 @@ public class RumbaPlayerHitSensor : MonoBehaviour
 {
     [SerializeField] RumbaWithKnife rumba;
     [SerializeField] HarmfulObject knife;
+    //if = invincibilityFrame
+    [SerializeField] private float ifMax = 60f;
+    [SerializeField] private float ifCounter;
+    [SerializeField] private bool ifCounting;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        ifCounter = 0f;
+        ifCounting = false;
+    }
+
+    void Update()
+    {
+        if (ifCounting)
+        {
+            ifCounter++;
+            if(ifCounter > ifMax)
+            {
+                ifCounting = false;
+                ifCounter = 0f;
+            }
+        }
+    }
+    
     void OnCollisionEnter(Collision collision)
     {
-        Player player = collision.collider.gameObject.GetComponentInParent<Player>();
-        if (knife.PlayerCollisionDetected)
+        if(ifCounting) return;
+        Player player = collision.collider.GetComponentInParent<Player>();
+        if (player != null && player.gameObject.CompareTag("Player")) 
         {
-            return;
+            rumba.HP -=1; 
+            ifCounting = true;
         }
-        
-
-        if (player)
-        {
-            rumba.HP -=1;
-            player.stateMachine.changeState(player.playerJumpOnRumbaState);
-        }   
     }
 }

@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 1
+  m_CurrentQuality: 0
   m_QualitySettings:
   - serializedVersion: 4
     name: Looks worse, runs better
@@ -21,13 +21,13 @@ QualitySettings:
     skinWeights: 255
     globalTextureMipmapLimit: 2
     textureMipmapLimitSettings: []
-    anisotropicTextures: 0
+    anisotropicTextures: 2
     antiAliasing: 0
     softParticles: 0
     softVegetation: 0
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
-    useLegacyDetailDistribution: 1
+    useLegacyDetailDistribution: 0
     adaptiveVsync: 0
     vSyncCount: 0
     realtimeGICPUUsage: 25
@@ -35,8 +35,8 @@ QualitySettings:
     adaptiveVsyncExtraB: 0
     lodBias: 0.4
     maximumLODLevel: 0
-    enableLODCrossFade: 1
-    streamingMipmapsActive: 0
+    enableLODCrossFade: 0
+    streamingMipmapsActive: 1
     streamingMipmapsAddAllCameras: 1
     streamingMipmapsMemoryBudget: 512
     streamingMipmapsRenderersPerFrame: 512
@@ -45,7 +45,7 @@ QualitySettings:
     particleRaycastBudget: 16
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 16
-    asyncUploadPersistentBuffer: 1
+    asyncUploadPersistentBuffer: 0
     resolutionScalingFixedDPIFactor: 1
     customRenderPipeline: {fileID: 11400000, guid: f9221b7415533664fa05ff6202572d18, type: 2}
     terrainQualityOverrides: 0
@@ -88,7 +88,7 @@ QualitySettings:
     lodBias: 1
     maximumLODLevel: 0
     enableLODCrossFade: 1
-    streamingMipmapsActive: 0
+    streamingMipmapsActive: 1
     streamingMipmapsAddAllCameras: 1
     streamingMipmapsMemoryBudget: 512
     streamingMipmapsRenderersPerFrame: 512

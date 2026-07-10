@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Unity.Services.CloudSave.Models.Data.Player;
+using System.Linq;
 
 public class CollectibleCounterModel : Model
 {
@@ -10,6 +11,8 @@ public class CollectibleCounterModel : Model
 
     [SerializeField] private EditorLocalTransform collectibleArrowTransform;
     [SerializeField] private EditorLocalTransform corgiSenseArrowTransform;
+    [Header("Type-specfic vars go here")]
+    [SerializeField] private Transform enemyHolder;
 
     private int _totalBones;
     public int TotalBones
@@ -153,6 +156,17 @@ public class CollectibleCounterModel : Model
     {
         // if we'd like to make this slightly more performant, we will have to maintain that all levels have 
         // a transform where all of the pickups and enemies live under, then we can just check transforms there
+
+        //Yep, let's do that, and this'll make it more accurate imo.
+        //We're building in an enemy exception so that we don't add TOO much code to Drake's excellent work ~Randy
+        if(tag == "Harmful" && enemyHolder != null) return countEnemiesInEnemyTransform();
         return GameObject.FindGameObjectsWithTag(tag).Length;
+    }
+
+    private int countEnemiesInEnemyTransform()
+    {
+        //Debug.Log("We're here!");
+        //return enemyHolder.GetComponentsInChildren<HarmfulObject>().Count();
+        return enemyHolder.childCount;
     }
 }

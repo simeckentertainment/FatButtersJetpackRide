@@ -503,11 +503,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ed9a4c60689b099449de186d65ce6321
-    m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/ScreamBubble/Audio/chargeLaser.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ef7254e451ea0f24fbd63f477ab727a8
     m_Address: Assets/Objects/PuzzlePieces/AssetModels/enemies/kissyfish/Audio/chaseplayer.wav
     m_ReadOnly: 0

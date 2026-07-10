@@ -5,19 +5,21 @@ public class ScreamBubble : HarmfulObject
     [SerializeField] public ScreamBubbleStateMachine stateMachine;
     [SerializeField] public Rigidbody rb;
     [SerializeField] public Collider attackCollider;
+    [SerializeField] public Animator anim;
     public bool hitWall;
     public bool popped;
     public bool PlayerInSightDistance;
     public bool targetAcquired;
     public GameObject target;
     [SerializeField] public AudioSource bubbleAudio;
+    [SerializeField] public AnimationClip[] idleAnims;
     [SerializeField] public AudioClip[] idleSounds;
     [SerializeField] public AudioClip AttackSound;
     [SerializeField] public AudioClip raspberrySound;
     [SerializeField] public AudioClip[] noticeSounds;
     [SerializeField] public AudioClip bubblePop;
     //[SerializeField] public Transform destinationVisualizer; //dev use only
-    [SerializeField] public MeshRenderer bubbleRenderer;
+    [SerializeField] public SkinnedMeshRenderer bubbleRenderer;
     [SerializeField] public GameObject[] PhysicsObjects;
 
     public SBIdleState sBIdleState { get; private set; }
@@ -47,15 +49,16 @@ public class ScreamBubble : HarmfulObject
         }
     }
 
-    protected override void OnPlayerTouched(Player player)
-    {
-        base.OnPlayerTouched(player);
-        popped = true;
-    }
-
     public void PlayAudio(AudioClip clip)
     {
         bubbleAudio.clip = clip;
         bubbleAudio.Play();
+    }
+
+
+    protected override void OnPlayerTouched(Player player)
+    {
+        base.OnPlayerTouched(player);
+        popped = true;
     }
 }

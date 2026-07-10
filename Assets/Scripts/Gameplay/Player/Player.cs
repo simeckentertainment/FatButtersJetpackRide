@@ -22,7 +22,6 @@ public class Player : MonoBehaviour
     public PlayerStateMachine stateMachine;
     public PlayerIdleState playerIdleState { get; set; }
     public PlayerWalkState playerWalkState{get;set;}
-
     public PlayerFallState playerFallState { get; set; }
     public PlayerEnterDangleState playerEnterDangleState { get; set; }
     public PlayerDangleState playerDangleState { get; set; }
@@ -56,6 +55,7 @@ public class Player : MonoBehaviour
     public float thrust;
     [System.NonSerialized] public float baseThrustWithUpgrades; // Base thrust including upgrades (used for boost calculations)
     [SerializeField] private float jumpForce = 12;
+    [SerializeField] public float hurtJumpForce = 100.0f;
 
     public float maxFuel;
     [System.NonSerialized] public float fuelPercent;
@@ -201,6 +201,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        input.ToggleOnScreenControls(collectibleData.OnScreenControlsEnabled);
         skindex = collectibleData.CurrentSkin;
         vfx.ApplySkin(skindex);
         JetpackActivationPossible = true;
@@ -279,13 +280,6 @@ public class Player : MonoBehaviour
             currentGroundColliders.Remove(id);
         }
     }
-
-    public void Jump()
-    {
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
-        IsJumping = true;
-    }
-
     public void PickUpBones(int count = 1)
     {
         BonesCollected += count;
@@ -379,5 +373,8 @@ public class Player : MonoBehaviour
         thrusterRechargeCounter = 0;
     }
     #endregion
-    
+    public float GetJumpForce()
+    {
+        return jumpForce;
+    }
 }

@@ -12,7 +12,6 @@ public class SBPopState : SBProvokedState
 
     public override void enter(){
         Player.Instance.AddEnemiesDefeated();
-
         screamBubble.popped = false;
         screamBubble.rb.linearVelocity = Vector3.zero;
         screamBubble.bubbleAudio.loop = false;
@@ -20,13 +19,16 @@ public class SBPopState : SBProvokedState
         screamBubble.bubbleAudio.Play();
         screamBubble.bubbleRenderer.enabled = false;
         screamBubble.attackCollider.enabled = false;
-        //screamBubble.rb.isKinematic = true;
+        screamBubble.rb.isKinematic = true;
+        screamBubble.anim.enabled = false;
         screamBubble.GetComponent<Collider>().enabled = false;
         foreach (GameObject obj in screamBubble.PhysicsObjects){
-            obj.GetComponent<ParentConstraint>().constraintActive = false;
+            obj.GetComponent<Rigidbody>().isKinematic = false;
+            //obj.GetComponent<ParentConstraint>().constraintActive = false;
             obj.GetComponent<Rigidbody>().useGravity = true;
             obj.GetComponent<Collider>().enabled = true;
             obj.tag = "Friendly";
+            //obj.transform.SetParent(null);
         }
         
         base.enter();

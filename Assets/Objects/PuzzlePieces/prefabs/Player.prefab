@@ -108,7 +108,6 @@ GameObject:
   - component: {fileID: 4234924892832361580}
   - component: {fileID: 5489475134904606583}
   - component: {fileID: 5400759720034282628}
-  - component: {fileID: 3369087090117414387}
   - component: {fileID: 5123262552089871136}
   - component: {fileID: 3616357516114153126}
   - component: {fileID: 2798962652239046921}
@@ -248,104 +247,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3369087090117414387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648858350054200737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 565faa769df9d064cbd4d96cedcfc25f, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InputDriver, Assembly-CSharp
-        m_MethodName: OnThrust
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_ActionId: b8ad05c0-f738-4943-bdf3-e12f5af2f40d
-    m_ActionName: 'Gameplay/Thrust[/Keyboard/space]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InputDriver, Assembly-CSharp
-        m_MethodName: OnCWPress
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_ActionId: 2d6ca42a-9f42-46b6-b4a7-dae1ca0189cc
-    m_ActionName: 'Gameplay/TurnCW[/Keyboard/d]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InputDriver, Assembly-CSharp
-        m_MethodName: OnCCWPress
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_ActionId: 681febb8-24a5-4c1c-83c9-a173e500d5f6
-    m_ActionName: 'Gameplay/TurnCCW[/Keyboard/a]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 447b4b78-7e13-455d-aa8f-38dad6cbe993
-    m_ActionName: Gameplay/AdjustAngle
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InputDriver, Assembly-CSharp
-        m_MethodName: OnTouchThrust
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 95c36356-aaba-4a5f-9ae3-864921f11762
-    m_ActionName: 'Gameplay/TouchThrust[/Device Simulator Touchscreen/primaryTouch/press]'
-  m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: corgiControlScheme
-  m_DefaultActionMap: Gameplay
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &5123262552089871136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,8 +261,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputEnabled: 1
   deviceRoll: 0
+  motionControlSmoothing: 0.1
+  cameraRot: {fileID: 0}
   KBCWPressed: 0
   KBCCWPressed: 0
+  KBThrustPressed: 0
+  KBBoostPressed: 0
   KBMinAngle: 5
   KBMaxAngle: 45
   KBAccelerationTimer: 0
@@ -498,11 +403,13 @@ MonoBehaviour:
       m_Action: GP Boost
       m_Flags: 0
     m_Flags: 0
-  OSRollOffset: 0
-  OSRollSensitivity: 5
+  OnScreenControlsEnabled: 0
+  OSCAimAngle: 0
+  OSAccelSensitivity: 20
   OSCWPressed: 0
   OSCCWPressed: 0
   OSThrustPressed: 0
+  OSBoostDelayThreshold: 120
   OSBoostPressed: 0
   OSthrustAction:
     m_Name: O Sthrust
@@ -619,25 +526,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3ce08f6abc1a8fb4dbbaead6249c0271, type: 3}
   - {fileID: 8300000, guid: 72ca451d40dd05c4b8657e63f674ef9a, type: 3}
   CollidersAndTriggers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 3976227871123825074}
   - {fileID: 2122784116121297188}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   jetpackTransform: {fileID: 4573451228058555892}
   thrust: 0
   jumpForce: 12
+  hurtJumpForce: 50
   maxFuel: 0
   tummy: 0
   maxTummy: 0
@@ -1043,6 +937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1346442685541309370}
+  - component: {fileID: 936013376342858613}
   m_Layer: 13
   m_Name: HolsterHolder
   m_TagString: Untagged
@@ -1065,6 +960,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 24298243253955847}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1818360608 &936013376342858613
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865711603512279296}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffset: {x: 0, y: -0.251229, z: 0.10953331}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_Active: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 7387053156495606333}
+    weight: 1
 --- !u!1 &2122784116121297188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,8 +1006,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122784116121297188}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000012472053, y: -0.00000016815063, z: -0.17364787, w: 0.9848078}
-  m_LocalPosition: {x: 1.1500007, y: 0.5500001, z: 0.00000035762787}
+  m_LocalRotation: {x: 0.00000012472051, y: -0.00000016815066, z: -0.1736477, w: 0.9848079}
+  m_LocalPosition: {x: 1.1500006, y: 0.55, z: 0.00000019074417}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1278,6 +1193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 749940349019524589}
+  - component: {fileID: 6100217144320559078}
   m_Layer: 13
   m_Name: CombinedJetpackHolder
   m_TagString: Untagged
@@ -1294,11 +1210,62 @@ Transform:
   m_GameObject: {fileID: 3012294477403970364}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.00000002421439, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4573451228058555892}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1818360608 &6100217144320559078
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012294477403970364}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffset: {x: 0, y: 0.018472493, z: 0.015986029}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_Active: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 4847429446411060960}
+    weight: 1
+--- !u!1 &3302485048989906778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4847429446411060960}
+  m_Layer: 13
+  m_Name: jetpackHosterTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4847429446411060960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3302485048989906778}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.101, y: 0, z: -0.267}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7387053156495606333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3976227871123825074
 GameObject:
@@ -1373,6 +1340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4327710231136176013}
+  - component: {fileID: 8306937254876518228}
   m_Layer: 13
   m_Name: rightJetpackHolder
   m_TagString: Untagged
@@ -1400,6 +1368,26 @@ Transform:
   - {fileID: 1793872656138166878}
   m_Father: {fileID: 4573451228058555892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1818360608 &8306937254876518228
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3982533551630474551}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0.7885982, y: 0, z: 0}
+  m_TranslationOffset: {x: 0.7885982, y: 0.018472493, z: 0.015986029}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_Active: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 4847429446411060960}
+    weight: 1
 --- !u!1 &4402909335416429740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5643092642459432838}
+  - component: {fileID: 4143528839619530364}
   m_Layer: 13
   m_Name: leftJetpackHolder
   m_TagString: Untagged
@@ -1596,6 +1585,26 @@ Transform:
   - {fileID: 821369915406832818}
   m_Father: {fileID: 4573451228058555892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1818360608 &4143528839619530364
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979743622017215804}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: -0.78859824, y: 0, z: 0}
+  m_TranslationOffset: {x: -0.78859824, y: 0.018472493, z: 0.015986029}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_Active: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 4847429446411060960}
+    weight: 1
 --- !u!1 &5719762618088543596
 GameObject:
   m_ObjectHideFlags: 0
@@ -4159,6 +4168,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9170096173543520038}
+    - targetCorrespondingSourceObject: {fileID: -3554938319580374715, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4847429446411060960}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1befcb54278689d47a09695c2c0e7e3c, type: 3}
       insertIndex: -1

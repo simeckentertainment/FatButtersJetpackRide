@@ -57,14 +57,9 @@ public class RumbaWithKnifeRollState : RumbaWithKnifeAliveState{
     }
     bool CheckForObstacles()
     {
-        if(rumba.wallDetected != RumbaWithKnife.Direction.None && rumba.wallDetected == rumba.direction) //if there's a wall in our way...
-        {
-            return true;
-        }
-        if(rumba.cliffDetected != RumbaWithKnife.Direction.None && rumba.cliffDetected == rumba.direction) //if there's a cliff in front of us...
-        {
-            return true;
-        }
+        if(rumba.wallDetected != RumbaWithKnife.Direction.None && rumba.wallDetected == rumba.direction) return true; //if there's a wall in our way...
+        if((rumba.direction == RumbaWithKnife.Direction.Right && rumba.ignoreRight) || (rumba.direction == RumbaWithKnife.Direction.Left && rumba.ignoreLeft)) return true;
+        if(rumba.cliffDetected != RumbaWithKnife.Direction.None && rumba.cliffDetected == rumba.direction) return true; //if there's a cliff in front of us...
 
         //None of the above, we're good to go.
         return false;
