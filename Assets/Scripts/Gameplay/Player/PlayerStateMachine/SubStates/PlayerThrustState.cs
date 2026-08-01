@@ -108,6 +108,7 @@ public class PlayerThrustState : PlayerAliveState
 
     public override void exit()
     {
+        player.input.EnableInput();
         thrusterVolumeCounter = Mathf.Clamp(stateAge,0,30);
         player.vfx.StopPrimaryThrusters();
         player.IgnoreIdleAnimationReset = true;

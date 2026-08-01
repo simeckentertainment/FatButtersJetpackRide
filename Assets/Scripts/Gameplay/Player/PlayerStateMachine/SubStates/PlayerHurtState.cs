@@ -32,7 +32,7 @@ public class PlayerHurtState : PlayerAliveState
     {
         player.rb.AddExplosionForce(player.hurtJumpForce,player.HarmfulTouchObjectPosition,10.0f,10.0f,ForceMode.Force);
         stateAge++;
-        if(GetNormalizedTime()>= 0.85f){
+        if (stateAge >= 22f){ // hardcoding the animation length in frames.
             player.stateMachine.changeState(player.playerFallState);
         }
         
