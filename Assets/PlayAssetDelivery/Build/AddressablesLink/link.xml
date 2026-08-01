@@ -135,6 +135,7 @@
     <type fullname="SaveManager" preserve="all" />
     <type fullname="SceneLoadData" preserve="all" />
     <type fullname="ScreamBubble" preserve="all" />
+    <type fullname="ScreamBubblePuppyChecker" preserve="all" />
     <type fullname="ScreamBubbleStateMachine" preserve="all" />
     <type fullname="ScrollingUVs_Layers" preserve="all" />
     <type fullname="SegwayBear" preserve="all" />
